@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#04201f">
+<title>Como usar o panovi viewer</title>
+<link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/guide.html">
+<link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/guide.html">
+<link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/guide.html">
+<link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/guide.html">
+<link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/guide.html">
+<meta name="description" content="Vídeos do YouTube ou arquivos mp4: é só colar a URL. Como usar o panovi viewer para dar zoom e percorrer vídeos amplos no navegador.">
+<meta property="og:title" content="Como usar o panovi viewer">
+<meta property="og:description" content="YouTube ou mp4. Cole a URL e dê zoom em vídeos amplos depois de gravados.">
+<meta property="og:image" content="https://panovi.app/img/hero.jpg">
+<link rel="icon" type="image/png" href="../img/icon.png">
+<link rel="apple-touch-icon" href="../img/icon.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --ink:#04201f;
+  --paper:#f4f3ee;
+  --paper-dim:#9fb0ac;
+  --green:#00f994;
+  --rule:rgba(244,243,238,.14);
+  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--paper);font-family:var(--sans);
+  line-height:1.9;font-feature-settings:"palt" 1;overflow-x:hidden}
+a{color:var(--green)}
+
+.col{width:min(980px,calc(100% - 44px));margin-inline:auto}
+
+.mast{display:flex;align-items:center;gap:14px;padding:30px 0 0;flex-wrap:wrap}
+.mast a{display:flex;align-items:center;gap:14px;text-decoration:none}
+.icon{width:44px;height:44px;border-radius:11px}
+.mark{font-size:21px;font-weight:600;letter-spacing:.14em;color:var(--green)}
+.mark-sub{font-size:11px;letter-spacing:.22em;color:var(--paper-dim);text-transform:uppercase}
+
+.open{padding:72px 0 0}
+.open h1{font-size:clamp(32px,6.4vw,68px);font-weight:800;line-height:1.16;letter-spacing:-.035em}
+.open h1 em{font-style:normal;color:var(--green)}
+.open p{margin-top:26px;max-width:34em;color:var(--paper-dim);font-size:clamp(15px,1.8vw,18px)}
+
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.button{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 22px;
+  border-radius:12px;font-weight:700;text-decoration:none;font-size:15px}
+.button.primary{background:var(--green);color:var(--ink)}
+.button.ghost{border:1px solid var(--rule);color:var(--paper)}
+.button.ghost:hover{border-color:var(--green);color:var(--green)}
+
+.chapter{padding-top:96px;border-top:1px solid var(--rule);margin-top:80px}
+.eyebrow{font-size:11px;letter-spacing:.24em;color:var(--green);text-transform:uppercase;
+  display:block;margin-bottom:20px}
+h2{font-size:clamp(25px,4.2vw,44px);font-weight:800;line-height:1.26;letter-spacing:-.03em;max-width:17em}
+h2 em{font-style:normal;color:var(--green)}
+.body{margin-top:22px;max-width:36em;color:var(--paper-dim);font-size:clamp(15px,1.7vw,17px)}
+.body strong{color:var(--paper)}
+
+.steps{margin-top:44px;counter-reset:s}
+.step{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:baseline;
+  padding:26px 0;border-top:1px solid var(--rule)}
+.step:last-child{border-bottom:1px solid var(--rule)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);
+  font-size:clamp(30px,5vw,54px);font-weight:200;color:var(--green);letter-spacing:-.04em;line-height:1}
+.step h3{font-size:clamp(17px,2.2vw,21px);font-weight:700;letter-spacing:-.01em}
+.step p{margin-top:6px;color:var(--paper-dim);font-size:15px}
+
+.sources{display:grid;gap:18px;margin-top:40px}
+@media(min-width:760px){.sources{grid-template-columns:1fr 1fr;gap:22px}}
+.source{padding:26px;border:1px solid var(--rule);border-radius:16px}
+.source h3{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.source h3 span{color:var(--green)}
+.source p{margin-top:10px;color:var(--paper-dim);font-size:14.5px}
+.source ul{margin-top:14px;list-style:none}
+.source li{padding:8px 0;border-top:1px solid var(--rule);font-size:13.5px;
+  font-family:var(--mono);color:var(--paper);overflow-wrap:anywhere}
+
+.aside{margin-top:30px;padding-left:20px;border-left:2px solid var(--green);
+  max-width:38em;color:var(--paper-dim);font-size:14.5px}
+.aside strong{color:var(--paper)}
+.aside + .aside{margin-top:18px}
+
+code{font-family:var(--mono);font-size:.92em;color:var(--paper);
+  background:rgba(244,243,238,.07);padding:.1em .4em;border-radius:5px;overflow-wrap:anywhere}
+
+.builder{margin-top:36px;padding:24px;border:1px solid var(--rule);border-radius:16px;max-width:44em}
+.builder label{display:block;font-size:13px;color:var(--paper-dim);margin-bottom:8px}
+.builder-row{display:flex;gap:10px;flex-wrap:wrap}
+.builder input{flex:1 1 260px;min-height:46px;padding:0 14px;border-radius:10px;
+  border:1px solid var(--rule);background:rgba(0,0,0,.25);color:var(--paper);font:inherit;font-size:15px}
+.builder input:focus{outline:2px solid var(--green);outline-offset:1px}
+.builder button{min-height:46px;padding:0 18px;border:0;border-radius:10px;
+  background:var(--green);color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
+.builder output{display:block;margin-top:16px;min-height:1.9em;font-size:14px;color:var(--paper-dim);overflow-wrap:anywhere}
+.builder output a{font-family:var(--mono)}
+.builder .error{color:#ff8f8f}
+
+.keys{margin-top:36px;display:grid;gap:30px}
+@media(min-width:760px){.keys{grid-template-columns:repeat(3,1fr)}}
+.keys h3{font-size:13px;letter-spacing:.18em;color:var(--green);text-transform:uppercase;margin-bottom:8px}
+.keys dl div{display:flex;justify-content:space-between;gap:14px;padding:10px 0;
+  border-top:1px solid var(--rule);font-size:14px}
+.keys dt{white-space:nowrap}
+.keys dd{color:var(--paper-dim);text-align:right}
+kbd{display:inline-block;min-width:1.9em;padding:.1em .45em;border-radius:6px;text-align:center;
+  font:700 12px/1.6 var(--mono);background:rgba(244,243,238,.08);box-shadow:inset 0 -2px rgba(0,0,0,.3)}
+
+.faq{margin-top:34px;max-width:40em}
+.faq dt{font-weight:700;margin-top:30px;font-size:clamp(15.5px,1.8vw,17.5px)}
+.faq dd{margin:8px 0 0;color:var(--paper-dim);font-size:15px}
+
+.end{margin-top:110px;padding:40px 0 70px;border-top:1px solid var(--rule);
+  font-size:13px;color:var(--paper-dim);display:flex;flex-wrap:wrap;gap:8px 26px}
+.end a{text-decoration:none}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1LM1MCM9W5');
+</script>
+</head>
+<body>
+
+<header class="col mast">
+  <a href="./">
+    <img class="icon" src="../img/icon.png" alt="" width="44" height="44">
+    <span class="mark">panovi viewer</span>
+  </a>
+  <span class="mark-sub">zoom e movimento em qualquer vídeo</span>
+</header>
+
+<section class="col open">
+  <h1>YouTube ou mp4.<br><em>Cole a URL. Dê zoom.</em></h1>
+  <p>O panovi viewer é um visualizador no navegador para dar zoom e percorrer vídeos amplos. Sem instalar nada, sem cadastro. Cole a URL de um vídeo e chegue perto do que você quiser ver.</p>
+  <div class="cta">
+    <a class="button primary" href="./?url=https%3A%2F%2Fpanovi.app%2Fimg%2Fkintoki.mp4">Testar com um vídeo de exemplo →</a>
+    <a class="button ghost" href="./">Abrir o visualizador</a>
+  </div>
+</section>
+
+<main class="col">
+
+  <section class="chapter">
+    <span class="eyebrow">01 — Como funciona</span>
+    <h2>Só <em>três passos.</em></h2>
+    <div class="steps">
+      <div class="step"><div><h3>Cole a URL</h3><p>Cole no campo lá em cima uma URL do YouTube ou de um arquivo de vídeo, como um mp4.</p></div></div>
+      <div class="step"><div><h3>Abra</h3><p>Clique em “Abrir vídeo” e a reprodução começa. Marque “Tela cheia” para abrir ocupando a tela toda.</p></div></div>
+      <div class="step"><div><h3>Dê zoom e arraste</h3><p>Dê zoom com a roda do mouse ou com o gesto de pinça e arraste até o ponto que quiser. Clique duas vezes (ou toque duas vezes) para voltar ao quadro inteiro.</p></div></div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <span class="eyebrow">02 — O que ele abre</span>
+    <h2>Vídeos do YouTube <em>e arquivos de vídeo.</em></h2>
+    <p class="body">O tipo de URL é detectado automaticamente. Nos dois casos, o zoom e o movimento funcionam do mesmo jeito.</p>
+    <div class="sources">
+      <div class="source">
+        <h3><span>▶</span> YouTube</h3>
+        <p>Funciona com vídeos públicos e não listados. Estes formatos de URL são aceitos.</p>
+        <ul>
+          <li>https://www.youtube.com/watch?v=…</li>
+          <li>https://youtu.be/…</li>
+          <li>https://www.youtube.com/shorts/…</li>
+          <li>Um ID de vídeo de 11 caracteres</li>
+        </ul>
+      </div>
+      <div class="source">
+        <h3><span>◼</span> Arquivos de vídeo (mp4 etc.)</h3>
+        <p>Qualquer URL de arquivo de vídeo que o navegador consiga reproduzir diretamente. Um mp4 (H.264) roda em quase todos os navegadores.</p>
+        <ul>
+          <li>https://example.com/movie.mp4</li>
+          <li>A URL de um arquivo no GitHub Pages, no seu próprio servidor ou em um armazenamento na nuvem</li>
+        </ul>
+      </div>
+    </div>
+    <div class="aside">
+      <p><strong>Para vídeos ultra-amplos, publicar como mp4 é o melhor.</strong> Com um arquivo de vídeo, o visualizador lê a proporção real, então “Ajustar” ocupa a altura da tela e você percorre para os lados a partir daí. Com o YouTube, as faixas pretas do próprio player, em cima e embaixo, são ampliadas junto com o vídeo.</p>
+    </div>
+    <div class="aside">
+      <p><strong>Sobre a qualidade no YouTube.</strong> O visualizador não consegue escolher a qualidade do YouTube por você. Quando o vídeo abre, aparece um aviso: use a engrenagem no canto inferior direito do player → Qualidade → a maior resolução e depois clique em “Pronto”. Você pode mudar a qualquer momento em “⚙ Qualidade”, no canto superior direito.</p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <span class="eyebrow">03 — Compartilhe como link</span>
+    <h2>Passe o vídeo adiante <em>como uma URL.</em></h2>
+    <p class="body">Acrescente <code>?url=URL_DO_VIDEO</code> ao endereço do visualizador e a página carrega esse vídeo assim que abre. Quando você abre um vídeo no visualizador, a barra de endereço já fica nesse formato. Salve como favorito ou mande do jeito que está por mensagem ou e-mail.</p>
+    <form class="builder" id="link-builder" novalidate>
+      <label for="builder-input">URL do vídeo (YouTube ou mp4)</label>
+      <div class="builder-row">
+        <input id="builder-input" type="text" inputmode="url" spellcheck="false" autocomplete="off" placeholder="https://www.youtube.com/watch?v=…">
+        <button type="submit">Gerar o link</button>
+      </div>
+      <output id="builder-output" for="builder-input" aria-live="polite"></output>
+    </form>
+  </section>
+
+  <section class="chapter">
+    <span class="eyebrow">04 — Controles</span>
+    <h2>Mouse, dedos <em>ou teclado.</em></h2>
+    <p class="body">Os botões embaixo do vídeo fazem o mesmo. “Tudo” mostra o quadro inteiro, “Ajustar” preenche a tela e “Esquerda / Centro / Direita” deslizam até essa parte do quadro.</p>
+    <div class="keys">
+      <section>
+        <h3>Mouse e toque</h3>
+        <dl>
+          <div><dt>Clique / toque</dt><dd>Reproduzir / pausar</dd></div>
+          <div><dt>Roda / pinça</dt><dd>Aproximar / afastar</dd></div>
+          <div><dt>Arrastar</dt><dd>Mover a imagem</dd></div>
+          <div><dt>Clique duplo</dt><dd>Voltar ao quadro inteiro</dd></div>
+        </dl>
+      </section>
+      <section>
+        <h3>Enquadramento</h3>
+        <dl>
+          <div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Mover para os lados</dd></div>
+          <div><dt><kbd>↑</kbd> <kbd>↓</kbd> <kbd>+</kbd> <kbd>−</kbd></dt><dd>Aproximar / afastar</dd></div>
+          <div><dt><kbd>R</kbd></dt><dd>Voltar ao quadro inteiro</dd></div>
+          <div><dt><kbd>F</kbd></dt><dd>Tela cheia</dd></div>
+          <div><dt><kbd>?</kbd></dt><dd>Esta lista</dd></div>
+        </dl>
+      </section>
+      <section>
+        <h3>Reprodução</h3>
+        <dl>
+          <div><dt><kbd>K</kbd> <kbd>Espaço</kbd></dt><dd>Reproduzir / pausar</dd></div>
+          <div><dt><kbd>J</kbd> <kbd>L</kbd></dt><dd>Voltar / avançar 10 s</dd></div>
+          <div><dt><kbd>M</kbd></dt><dd>Ativar/desativar som</dd></div>
+          <div><dt><kbd>0</kbd>–<kbd>9</kbd></dt><dd>Ir para 0–90%</dd></div>
+        </dl>
+      </section>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <span class="eyebrow">05 — Perguntas frequentes</span>
+    <h2>Dúvidas comuns.</h2>
+    <dl class="faq">
+      <dt>Meu vídeo é enviado para algum lugar?</dt>
+      <dd>Não. O visualizador apenas reproduz, no seu navegador, o vídeo da URL que você digitou. Nada é armazenado nem enviado. Só o nível de zoom e a posição da visualização ficam guardados no seu navegador para a próxima vez.</dd>
+      <dt>Um vídeo do YouTube não abre.</dt>
+      <dd>Vídeos cujo autor não permite a reprodução em outros sites, ou que têm restrição de idade, de região ou de login, não podem ser abertos aqui. Use o link “Abrir no YouTube” que aparece na tela.</dd>
+      <dt>Digitei a URL de um mp4, mas ele não reproduz.</dt>
+      <dd>A URL precisa ser baixável diretamente pelo navegador. URLs de páginas de compartilhamento (como links do Google Drive) ou que exigem login não funcionam. Alguns formatos, como HEVC (H.265), não rodam em todos os navegadores; um mp4 em H.264 é a escolha segura.</dd>
+      <dt>O vídeo abre sem som.</dt>
+      <dd>Os navegadores costumam começar sem som por causa das regras de reprodução automática. Pressione <kbd>M</kbd> para ativar o som.</dd>
+      <dt>Funciona no celular?</dt>
+      <dd>Sim. Faça o gesto de pinça para dar zoom e mova com um dedo. Na horizontal, a imagem fica maior.</dd>
+    </dl>
+  </section>
+
+  <footer class="end">
+    <a href="./">Abrir o panovi viewer</a>
+    <a href="../../pt/">Sobre o panovi</a>
+    <span>Os vídeos nunca são armazenados nem enviados.</span>
+    <a href="/viewer/guide.html" lang="ja" hreflang="ja">日本語</a>
+    <a href="/viewer/en/guide.html" lang="en" hreflang="en">English</a>
+    <a href="/viewer/es/guide.html" lang="es" hreflang="es">Español</a>
+  </footer>
+</main>
+
+<script type="module">
+import { parseVideoSource, searchForSource } from '../js/video-source.js';
+
+const form = document.querySelector('#link-builder');
+const input = document.querySelector('#builder-input');
+const output = document.querySelector('#builder-output');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const source = parseVideoSource(input.value);
+  output.replaceChildren();
+  if (!source) {
+    output.textContent = 'Digite uma URL do YouTube ou de um arquivo de vídeo que comece com http(s).';
+    output.className = 'error';
+    return;
+  }
+
+  output.className = '';
+  const link = new URL(`./${searchForSource(source)}`, window.location.href).href;
+  const anchor = document.createElement('a');
+  anchor.href = link;
+  anchor.textContent = link;
+  output.append(anchor);
+  try {
+    await navigator.clipboard.writeText(link);
+    output.append(document.createTextNode(' (copiado)'));
+  } catch {
+    // Clipboard access can be denied; the link stays visible for manual copying.
+  }
+});
+</script>
+</body>
+</html>

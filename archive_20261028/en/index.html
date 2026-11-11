@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>panovi — Set it down. Capture edge to edge.</title>
+<meta name="description" content="Just set two iPhones on a tripod. Their footage becomes one ultra-wide video. Shoot everything, zoom in later. For sports days, recitals and travel. No cloud — everything stays on your iPhones.">
+<meta property="og:title" content="panovi — Set it down. Capture edge to edge.">
+<meta property="og:description" content="Two iPhones, one ultra-wide video. Shoot it all, zoom in later. No cloud.">
+<meta property="og:image" content="https://panovi.app/img/hero.jpg">
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" href="/img/icon.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --ink:#04201f;
+  --ink2:#062b29;
+  --paper:#f4f3ee;
+  --dim:#9fb0ac;
+  --green:#00f994;
+  --rule:rgba(244,243,238,.13);
+  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;
+  --pad:clamp(78px,10vw,164px);
+}
+
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--sans);
+  line-height:1.9;font-feature-settings:"palt" 1;overflow-x:hidden}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+
+.col{width:min(1120px,calc(100% - 44px));margin-inline:auto}
+.col-n{width:min(820px,calc(100% - 44px));margin-inline:auto}
+
+/* ───── 上に貼りつく帯 ───── */
+.nav{position:fixed;inset:0 0 auto;z-index:60;border-bottom:1px solid transparent;
+  transition:background .35s,backdrop-filter .35s,border-color .35s}
+.nav.is-stuck{background:rgba(4,32,31,.84);backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--rule)}
+.nav-in{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand img{width:30px;height:30px;border-radius:8px}
+.brand b{font-size:18px;font-weight:600;letter-spacing:.13em;color:var(--green)}
+.nav-links{margin-left:auto;display:flex;gap:26px}
+.nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim);letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover{color:var(--paper)}
+@media(max-width:900px){.nav-links{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 26px;
+  border-radius:999px;text-decoration:none;font-size:14.5px;font-weight:700;letter-spacing:.02em;
+  border:1px solid transparent;cursor:pointer;white-space:nowrap;font-family:inherit;
+  transition:transform .18s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--green);color:#042a20}
+.btn-line{border-color:rgba(244,243,238,.34);color:var(--paper)}
+.btn-line:hover{border-color:var(--green);color:var(--green)}
+.btn-sm{padding:9px 18px;font-size:13px}
+
+/* ───── 一枚目 ───── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;
+  padding:120px 0 76px;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.hero-grid{display:grid;grid-template-areas:"intro" "demo" "details";gap:28px}
+.hero-intro{grid-area:intro;min-width:0}
+.hero-details{grid-area:details;min-width:0}
+.hero-demo{grid-area:demo;min-width:0;margin:0;align-self:center}
+.hero-demo video{width:100%;height:auto;aspect-ratio:32/21;object-fit:contain;
+  background:#0b0c2d;border:1px solid rgba(244,243,238,.28);border-radius:18px;
+  box-shadow:0 18px 54px rgba(0,0,0,.25)}
+.hero-demo figcaption{margin-top:14px;color:#dfe6e3;font-size:12.5px;line-height:1.7}
+.hero-demo figcaption strong{display:block;color:var(--green);font-size:13.5px;margin-bottom:3px}
+@media(min-width:980px){
+  .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    grid-template-areas:"intro demo" "details demo";gap:0 44px}
+  .hero-intro{align-self:end}
+  .hero-details{align-self:start}
+}
+@media(max-width:979px){.hero{min-height:auto;padding:108px 0 64px}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(4,32,31,.52) 0%,rgba(4,32,31,.22) 30%,rgba(4,32,31,.9) 84%,var(--ink) 100%)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--green);margin-bottom:22px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--green)}
+.hero h1{font-size:clamp(34px,7.2vw,48px);font-weight:800;line-height:1.11;letter-spacing:-.04em;
+  text-shadow:0 2px 44px rgba(0,0,0,.45)}
+.hero h1 em{font-style:normal;color:var(--green)}
+@media(min-width:980px){.hero h1{font-size:clamp(34px,3.5vw,46px)}}
+.hero-lead{margin-top:26px;max-width:33em;font-size:clamp(15px,1.8vw,18.5px);color:#dfe6e3}
+.hero-cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px}
+@media(max-width:979px){.hero-lead{margin-top:0}}
+.cue{position:absolute;left:50%;bottom:16px;translate:-50% 0;font-size:10.5px;letter-spacing:.22em;
+  color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:8px}
+.cue i{width:1px;height:32px;background:linear-gradient(var(--dim),transparent)}
+@media(max-width:760px){.cue{display:none}}
+
+/* ───── 数字の帯 ───── */
+.stats{background:var(--ink2);border-block:1px solid var(--rule)}
+.stats-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule)}
+@media(min-width:820px){.stats-in{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--ink2);padding:34px 22px;text-align:center}
+.stat b{display:block;font-size:clamp(27px,4vw,42px);font-weight:800;letter-spacing:-.03em;
+  color:var(--green);line-height:1.12}
+.stat span{display:block;margin-top:9px;font-size:12.5px;color:var(--dim);line-height:1.7}
+
+/* 左右の素材と結合結果の作例 */
+.demo-grid{display:grid;gap:32px;margin-top:40px}
+@media(min-width:900px){.demo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.demo-card{min-width:0;margin:0}
+.demo-card video{width:100%;aspect-ratio:32/21;background:#0b0c2d;
+  border:1px solid var(--rule);border-radius:18px}
+.demo-card figcaption{margin-top:16px}
+.demo-card h3{font-size:20px;line-height:1.4;letter-spacing:-.02em}
+.demo-card p{margin-top:6px;color:var(--dim);font-size:13.5px}
+.demo-card a{display:inline-block;margin-top:8px;color:var(--green);font-size:13px;
+  text-underline-offset:4px}
+.demo-card a:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+
+/* ───── 章 ───── */
+.sec{padding:var(--pad) 0}
+.alt{background:var(--ink2)}
+.eyebrow{font-size:11px;letter-spacing:.26em;color:var(--green);text-transform:uppercase;
+  display:block;margin-bottom:18px}
+h2{font-size:clamp(26px,4.3vw,50px);font-weight:800;line-height:1.24;letter-spacing:-.034em;max-width:16em}
+h2 em{font-style:normal;color:var(--green)}
+.body{margin-top:22px;max-width:36em;color:var(--dim);font-size:clamp(15px,1.7vw,17px)}
+.body + .body{margin-top:14px}
+.body strong{color:var(--paper)}
+.mid{text-align:center}
+.mid h2,.mid .body{margin-inline:auto}
+
+.shot{margin:46px 0 0}
+.shot img{width:100%}
+.shot figcaption{margin-top:13px;font-size:12.5px;color:var(--dim);line-height:1.75}
+.shot .n{color:var(--green);font-weight:700;margin-right:.5em}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.trio figure{margin:0}
+.trio a.zoom{display:block;cursor:zoom-in}
+.trio img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block}
+.trio figcaption{margin-top:8px;font-size:12.5px;color:var(--dim);line-height:1.6}
+.trio .n{display:block;color:var(--green);font-weight:700}
+.lb{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.93);display:flex;align-items:center;justify-content:center;padding:28px;cursor:zoom-out}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;border-radius:4px}
+.duo{display:grid;gap:18px;margin-top:46px}
+@media(min-width:780px){.duo{grid-template-columns:1fr 1fr;gap:24px}}
+.duo figure{margin:0}
+.duo img{width:100%}
+.duo figcaption{margin-top:13px;font-size:12.5px;color:var(--dim);line-height:1.75}
+.duo .n{color:var(--green);font-weight:700;margin-right:.5em}
+.cap{margin-top:13px;font-size:12.5px;color:var(--dim)}
+
+.list{margin-top:36px;max-width:38em}
+.list li{list-style:none;padding:18px 0 18px 30px;border-top:1px solid var(--rule);
+  font-size:clamp(15px,1.7vw,17px);position:relative}
+.list li::before{content:"";position:absolute;left:2px;top:30px;width:13px;height:1px;background:var(--green)}
+.list li:last-child{border-bottom:1px solid var(--rule)}
+
+/* 画面いっぱいの帯 */
+.band{position:relative;isolation:isolate;background:#000}
+.band video,.band img{width:100%;max-height:80svh;object-fit:cover}
+.band-over{position:absolute;inset:auto 0 0;padding:clamp(24px,4.5vw,52px) 0;
+  background:linear-gradient(transparent,rgba(4,32,31,.9))}
+.band-over h3{font-size:clamp(18px,2.6vw,28px);font-weight:800;letter-spacing:-.02em}
+.band-over p{margin-top:7px;color:#cfdad7;font-size:14px;max-width:34em}
+
+.note{margin-top:32px;padding:24px 26px;border-left:2px solid var(--green);
+  background:rgba(0,249,148,.05);max-width:42em;color:var(--dim);font-size:14.5px}
+.note strong{color:var(--paper)}
+.note a{color:var(--green)}
+.note p + p{margin-top:12px}
+
+/* 使い方 */
+.steps{margin-top:52px;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+@media(min-width:880px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--ink);padding:40px 32px}
+.alt .step{background:var(--ink2)}
+.step b{display:block;font-size:44px;font-weight:200;color:var(--green);letter-spacing:-.05em;line-height:1}
+.step h3{margin-top:16px;font-size:19px;font-weight:700;letter-spacing:-.01em}
+.step p{margin-top:9px;color:var(--dim);font-size:14.5px}
+
+/* 料金 */
+.price{margin-top:42px;width:100%;border-collapse:collapse}
+.price th,.price td{text-align:left;padding:18px 0;border-top:1px solid var(--rule);
+  font-size:clamp(14.5px,1.7vw,16px);vertical-align:baseline}
+.price tr:last-child th,.price tr:last-child td{border-bottom:1px solid var(--rule)}
+.price th{font-weight:500;color:var(--dim);width:54%;padding-right:18px}
+.price td{font-weight:700}
+.price .y{color:var(--green)}
+
+/* FAQ */
+.faq{margin-top:38px;max-width:44em}
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 42px 22px 0;position:relative;
+  font-weight:700;font-size:clamp(15.5px,1.8vw,17.5px)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:18px;color:var(--green);
+  font-size:23px;font-weight:300;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 24px;color:var(--dim);font-size:15px;max-width:40em}
+
+/* 体験ビューア */
+.xp{margin-top:44px}
+.xp-stage{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;
+  border:1px solid var(--rule);touch-action:none;cursor:grab;user-select:none}
+.xp-stage:active{cursor:grabbing}
+.xp-film{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+.xp-film video{display:block;background:#000;
+  /* ★上の `img,video{max-width:100%}` を打ち消す。
+     打ち消さないと JS が指定した幅（画面より広い）が容器の幅まで縮められ、
+     位置だけは広い前提で計算されるので**映像が左へ飛んで真っ黒**になる。 */
+  max-width:none;min-width:0}
+.xp-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+/* ★ポスターは**最初の絵が出るまで**as wide as you saw it.24MBの読み込みを待つあいだ真っ黒にしない。 */
+.xp.is-ready .xp-poster{display:none}
+.xp.is-live .xp-poster{opacity:1}
+.xp:not(.is-live) .xp-film{display:none}
+.xp-loading{position:absolute;inset:auto 0 0;display:none;justify-content:center;padding:14px;
+  font-size:13px;color:#eaf1ee}
+.xp.is-live:not(.is-ready) .xp-loading{display:flex}
+.xp.is-live:not(.is-ready) .xp-hint{display:none}
+.xp-start{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;text-align:center;padding:24px;
+  background:linear-gradient(rgba(4,32,31,.4),rgba(4,32,31,.82))}
+.xp.is-live .xp-start{display:none}
+.xp-start p{color:#dfe6e3;font-size:13.5px;max-width:30em}
+.xp-hint{position:absolute;left:50%;bottom:16px;translate:-50% 0;font-size:12.5px;color:#eaf1ee;
+  background:rgba(4,32,31,.76);padding:8px 16px;border-radius:999px;transition:opacity .45s;pointer-events:none}
+.xp-hint.is-gone{opacity:0}
+.xp:not(.is-live) .xp-hint{opacity:0}
+.xp-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:16px 0 0}
+.xp-bar .gap{flex:1 1 auto}
+.xp-chip{background:transparent;border:1px solid var(--rule);color:var(--paper);padding:8px 15px;
+  border-radius:999px;font:inherit;font-size:13px;cursor:pointer;transition:.2s}
+.xp-chip:hover{border-color:var(--green);color:var(--green)}
+.xp-chip:disabled{opacity:.34;cursor:default}
+.xp-zoom{font-size:13px;color:var(--green);font-weight:700;min-width:3.6em;text-align:right}
+.xp-note{margin-top:14px;font-size:12.5px;color:var(--dim)}
+.links{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
+
+/* 締め */
+.end{padding:var(--pad) 0;text-align:center;border-top:1px solid var(--rule);
+  background:radial-gradient(120% 140% at 50% 0%,rgba(0,249,148,.1),transparent 62%)}
+.foot{border-top:1px solid var(--rule);padding:32px 0 58px;font-size:13px;color:var(--dim);
+  display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center}
+.foot a{color:var(--green);text-decoration:none}
+
+/* 出てくる動き */
+.rise{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rise.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .btn:hover{transform:none}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1LM1MCM9W5');
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="col nav-in">
+    <a class="brand" href="#top"><img src="/img/icon.png" alt=""><b>panovi</b></a>
+    <nav class="nav-links">
+      <a href="#why">Features</a>
+      <a href="#match">Full match</a>
+      <a href="#try">Try it</a>
+      <a href="#how">How it works</a>
+      <a href="#price">Pricing</a>
+      <a href="../" lang="ja">日本語</a>
+    </nav>
+    <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6797261654">App Store</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="/img/hero_poster.jpg" alt="">
+  </div>
+  <div class="col hero-grid">
+    <div class="hero-intro">
+      <span class="kicker">two iPhones, one wide frame</span>
+      <h1>Wide shot, or close-up?<br><em>Stop choosing.</em></h1>
+    </div>
+    <figure class="hero-demo">
+      <video controls muted loop playsinline preload="none" poster="/img/demo-mountain-poster.jpg"
+             width="1280" height="840" aria-label="Mt. Kintoki: left and right recordings and the stitched result, five seconds, silent" aria-describedby="hero-demo-caption">
+        <source src="/img/demo-mountain.mp4" type="video/mp4">
+        <a href="/img/demo-mountain.mp4">Open the Mt. Kintoki demo video</a>
+      </video>
+      <figcaption id="hero-demo-caption">
+        <strong>Filmed on Mt. Kintoki · 5-second demo</strong>
+        Two recordings above, one panorama below. Press play to compare (no sound).
+      </figcaption>
+    </figure>
+    <div class="hero-details">
+      <p class="hero-lead">Just set two iPhones side by side on a tripod. The left and right footage becomes one ultra-wide video. Shoot wide, zoom in when you watch.</p>
+      <div class="hero-cta">
+        <a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654">Get it on the App Store</a>
+        <a class="btn btn-line" href="#try">Play with real footage</a>
+      </div>
+    </div>
+  </div>
+  <div class="cue">SCROLL<i></i></div>
+</section>
+
+<section class="stats">
+  <div class="col stats-in">
+    <div class="stat"><b>2 iPhones</b><span>Just the iPhones you own, plus a tripod</span></div>
+    <div class="stat"><b>4K × 2</b><span>Left and right are each recorded in 4K</span></div>
+    <div class="stat"><b>$0</b><span>Record as long as you like; stitches under 3 min are unlimited</span></div>
+    <div class="stat"><b>No cloud</b><span>Works on fields and mountaintops with no signal</span></div>
+  </div>
+</section>
+
+<section class="sec alt" id="examples" aria-labelledby="examples-title">
+  <div class="col">
+    <span class="eyebrow">Two videos, one panorama</span>
+    <h2 id="examples-title">Before and <em>after stitching.</em></h2>
+    <p class="body">The two iPhone recordings are on top, with the actual stitched result below. Compare a view from Mt. Kintoki and a passing train in the city. Each example is five seconds long, with no sound.</p>
+    <div class="demo-grid">
+      <figure class="demo-card">
+        <video controls muted loop playsinline preload="none" poster="/img/demo-mountain-poster.jpg"
+               width="1280" height="840" aria-label="Mt. Kintoki: left and right recordings and the stitched result, five seconds, silent" aria-describedby="demo-mountain-caption">
+          <source src="/img/demo-mountain.mp4" type="video/mp4">
+          <a href="/img/demo-mountain.mp4">Open the Mt. Kintoki demo video</a>
+        </video>
+        <figcaption id="demo-mountain-caption">
+          <h3>A view from Mt. Kintoki</h3>
+          <p>Two views become one panorama, stretching across to Mt. Fuji.</p>
+          <a href="/img/demo-mountain.mp4" download>Download the mountain demo (5s · MP4)</a>
+        </figcaption>
+      </figure>
+      <figure class="demo-card">
+        <video controls muted loop playsinline preload="none" poster="/img/demo-city-poster.jpg"
+               width="1280" height="840" aria-label="City: left and right recordings and the stitched result, five seconds, silent" aria-describedby="demo-city-caption">
+          <source src="/img/demo-city.mp4" type="video/mp4">
+          <a href="/img/demo-city.mp4">Open the city demo video</a>
+        </video>
+        <figcaption id="demo-city-caption">
+          <h3>A train passing through the city</h3>
+          <p>Footage recorded by two iPhones at the same time, joined into one wide view.</p>
+          <a href="/img/demo-city.mp4" download>Download the city demo (5s · MP4)</a>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="cap">Press play to watch. The videos have been resized for this page.</p>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="col rise">
+    <span class="eyebrow">01 — The whole scene, and your kid</span>
+    <h2>With one camera,<br><em>you always give one up.</em></h2>
+    <p class="body">Sports day or the school recital: shoot wide for the whole scene, or zoom in on your kid? With a single camera you are always giving one of them up.</p>
+    <p class="body">panovi shoots wide and lets you zoom in afterwards. Each side is recorded in 4K, so you keep far more detail than one camera covering the same width.</p>
+    <figure class="shot">
+      <img src="/img/wide.jpg" alt="Ultra-wide footage with everything in frame, edge to edge" loading="lazy">
+      <figcaption><span class="n">When shooting</span>Keep everything in, edge to edge</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="/img/zoom.jpg" alt="A 1:1 crop of Mt. Fuji from the same footage — signboard text and the town still legible" loading="lazy">
+      <figcaption><span class="n">When watching</span>Zoom in. A 1:1 crop of the same footage — not upscaled</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="col rise">
+    <span class="eyebrow">02 — Just set it down</span>
+    <h2>You never have to<em>pan the camera.</em></h2>
+    <p class="body">Once it is on the tripod, you never touch it. There is no aiming, so none of this happens:</p>
+    <ul class="list">
+      <li>You were lost in the goal and forgot to point the camera</li>
+      <li>Your kid outran the frame and slipped out of the shot</li>
+      <li>You were so busy filming that you never actually watched</li>
+    </ul>
+    <p class="body" style="margin-top:32px">No more glancing at the screen wondering if it is still framed. The decisive moment is always inside the picture.</p>
+  </div>
+</section>
+
+<section class="sec" id="match">
+  <div class="col rise">
+    <span class="eyebrow">03 — The whole match</span>
+    <h2>On the tripod,<br><em>never moved once.</em></h2>
+    <p class="body">Both goals and both benches stay in frame the whole time. Use a third iPhone as a remote: start and stop recording, check the seam, see each camera&rsquo;s battery and free space, and pull videos over — all without touching the cameras. You just watch the game.</p>
+  </div>
+</section>
+
+<div class="band">
+  <video data-src="/img/soccer.mp4" poster="/img/soccer_poster.jpg" muted loop playsinline preload="none"
+         aria-label="Match footage with the whole pitch in one frame"></video>
+</div>
+
+<section class="sec">
+  <div class="col rise">
+    <div class="note">
+      <p><strong>This clip is rougher than the real output.</strong>The stitched result of this match, shot on ultra-wide, is <strong>4110 × 1214</strong>. Here the foreground is trimmed and the clip is downscaled to 1920 px wide to keep the page light.</p>
+      <p style="margin-top:12px">Ultra-wide reaches the corner flags, but each pixel covers more ground than the wide lens. If you plan to zoom in, shoot on wide (the "Try it" demo below was shot on wide).</p>
+    </div>
+    <figure style="margin:32px 0 0">
+      <img src="/img/soccer_zoom.jpg" alt="A 1:1 crop of the same match footage — every player is visible" loading="lazy">
+      <figcaption class="cap">A 1200×394 crop from the clip above at 1:1 — not upscaled</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec alt" id="try">
+  <div class="col rise mid">
+    <span class="eyebrow">04 — Try it</span>
+    <h2>Zoom in,<br><em>right on this page.</em></h2>
+    <p class="body">This is a real stitched result, cropped to 16:9. Drag to pan, scroll or pinch to zoom. You can do exactly the same with your own videos inside the app.</p>
+  </div>
+  <div class="col xp rise" id="xp" data-zoom="0.4" data-cx="0.62" data-cy="0.50" data-ar="4.0508">
+    <div class="xp-stage">
+      <img class="xp-poster" src="/img/viewer_poster.jpg" alt="" loading="lazy">
+      <div class="xp-film">
+        <video playsinline muted loop preload="none"
+               data-src="/img/viewer.mp4" data-fallback="/img/viewer_4k.mp4"></video>
+      </div>
+      <div class="xp-start">
+        <button class="btn btn-fill" type="button" data-act="start">Load the footage</button>
+        <p>A full-resolution stitched result shot on the wide lens. Tap to start loading (12 s, 24 MB)</p>
+      </div>
+      <div class="xp-loading">Loading… (24 MB)</div>
+      <div class="xp-hint">Drag to pan — scroll or pinch to zoom</div>
+    </div>
+    <div class="xp-bar">
+      <button class="xp-chip" data-act="play" type="button">Play</button>
+      <button class="xp-chip" data-frame="left" type="button">Left</button>
+      <button class="xp-chip" data-frame="center" type="button">Center</button>
+      <button class="xp-chip" data-frame="right" type="button">Right</button>
+      <button class="xp-chip" data-zoom-by="1.5" type="button">Zoom in +</button>
+      <button class="xp-chip" data-zoom-by="0.6667" data-act="out" type="button">Zoom out −</button>
+      <button class="xp-chip" data-act="whole" type="button">Fit all</button>
+      <button class="xp-chip" data-act="reset" type="button">Reset</button>
+      <span class="gap"></span>
+      <span class="xp-zoom">1.0×</span>
+    </div>
+    <p class="xp-note">An actual stitched result shot on the wide lens: 6060×1496, 12 s, silent, with only the black canvas border trimmed. Press "Fit all" to see edge to edge.</p>
+    <div class="links">
+      <a class="btn btn-line" href="/viewer/en/">Explore freely (panovi viewer)</a>
+      <a class="btn btn-line" href="/viewer/en/guide.html">How the viewer works</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="lens">
+  <div class="col rise">
+    <span class="eyebrow">05 — Choose your lens</span>
+    <h2>Reach the edges,<br><em>or fill the frame.</em></h2>
+    <p class="body">The same pitch shot on ultra-wide and wide. Ultra-wide reaches the corner flags; wide has a narrower view, so the same player appears larger and sharper. You choose the lens before you shoot.</p>
+    <p class="body">The stitched size also depends on the lens.<strong>4110×1214 on ultra-wide, 6188×1508 on wide</strong>. Wide keeps about 1.5× more horizontal detail.</p>
+  </div>
+</section>
+
+<div class="band">
+  <video data-src="/img/soccer_wide.mp4" poster="/img/soccer_wide_poster.jpg" muted loop playsinline preload="none"
+         aria-label="The same pitch shot on the wide lens"></video>
+  <div class="band-over"><div class="col">
+    <h3>Shot on the wide lens</h3>
+    <p>A narrower view than ultra-wide, so each player is larger and sharper</p>
+  </div></div>
+</div>
+
+<section class="sec alt">
+  <div class="col rise">
+    <span class="eyebrow">06 — On the road</span>
+    <h2>Keep the view<em>as wide as you saw it.</em></h2>
+    <p class="body">From the summit all the way to Mt. Fuji. Views too wide for one camera fit in a single video, drifting clouds and all. Not just for special days — walks and trips too.</p>
+  </div>
+</section>
+
+<div class="band">
+  <img src="/img/hero.jpg" alt="From the summit of Mt. Kintoki — an ultra-wide frame reaching Mt. Fuji" loading="lazy">
+  <div class="band-over"><div class="col">
+    <h3>From the summit of Mt. Kintoki</h3>
+    <p>Shot on two iPhones and stitched as-is (4032×1380)</p>
+  </div></div>
+</div>
+
+<section class="sec">
+  <div class="col rise">
+    <span class="eyebrow">07 — Unlike a 360° camera</span>
+    <h2>Spend your pixels<br><em>only where you are looking.</em></h2>
+    <p class="body">A 360° camera spreads its pixels in every direction, so any single direction gets fewer of them and distant subjects stay small. panovi concentrates every pixel where you are looking — wide, yet still big and punchy.</p>
+    <ul class="list">
+      <li>No special gear to buy. Two iPhones you already own, plus a tripod</li>
+      <li>No subscription, no account. Your footage never leaves your phones</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec alt" id="youtube">
+  <div class="col rise">
+    <span class="eyebrow">08 — To YouTube</span>
+    <h2>From shooting to publishing, <em>iPhone only.</em></h2>
+    <p class="body">Shoot at the field, stitch in the car or on the train home, and watch on the big screen when you walk in. Publishing to YouTube happens right from the phone too — no computer, no cloud subscription.</p>
+    <ul class="list">
+      <li>8K — exports the ultra-wide video at 8K size, so it stays sharp even on a big screen</li>
+      <li>8K + VR (360°) — a format YouTube&rsquo;s VR viewer plays. Viewers pan around and zoom into any spot themselves, as if they were standing there</li>
+    </ul>
+    <div style="position:relative;aspect-ratio:16/9;margin-top:30px;border-radius:12px;overflow:hidden;background:#000">
+      <iframe src="https://www.youtube-nocookie.com/embed/4H52UkEouJ0" title="panovi 8K + VR (360°) sample" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <p class="cap">A real 8K + VR (360°) export from the app. Drag to look around. On a phone, open it in the YouTube app for gyro and pinch zoom. <a href="https://www.youtube.com/watch?v=4H52UkEouJ0" target="_blank" rel="noopener">Open on YouTube ↗</a></p>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="col rise">
+    <span class="eyebrow">09 — How it works</span>
+    <h2>There are only<em>three steps.</em></h2>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>Pair</h3><p>Show a QR code on one iPhone, scan it with the other. That is it.</p></div>
+      <div class="step"><b>02</b><h3>Place</h3><p>Set the two side by side on the tripod. The screen shows the overlap while you adjust the angle.</p></div>
+      <div class="step"><b>03</b><h3>Shoot, then stitch</h3><p>Record and stitch. The finished video saves to your camera roll.</p></div>
+    </div>
+    <div class="note" id="borrow" style="margin-top:26px">
+      <p><strong>The second iPhone can be borrowed.</strong> Recording and transfer are free, so a family member&rsquo;s or friend&rsquo;s iPhone becomes your second camera the moment they install the free app. No shared Apple ID or iCloud needed — any two iPhones pair by reading a QR code (iOS 18 or later). The only thing that can ever cost money is a stitch of 3 minutes or longer, and only on your device doing the stitching — never on the borrowed one.</p>
+    </div>
+    <div class="note" id="tripod" style="margin-top:26px">
+      <p><strong>How to build the tripod rig.</strong>Take any tripod you own, add <a href="https://www.amazon.co.jp/dp/B0HFZNJWCX?tag=petanote-22" target="_blank" rel="noopener sponsored">a dual bracket plate (Amazon)</a>, and screw on two <a href="https://link.amazon/B0cYKJkFr" target="_blank" rel="noopener sponsored">MagSafe tripod mounts (Amazon)</a>. The iPhones snap on magnetically, so mounting and removing them on site takes a second. Place the two so the lenses meet near the center — the in-app placement check guides the angle.</p>
+    </div>
+    <div class="trio">
+      <figure>
+        <a class="zoom" href="/img/tripod_parts.jpg"><img src="/img/tripod_parts.jpg" alt="The rig: two MagSafe mounts screwed onto a dual bracket plate" loading="lazy"></a>
+        <figcaption><span class="n">1. Assemble</span>Screw two mounts onto the plate. No tools needed</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="/img/tripod_rig.jpg"><img src="/img/tripod_rig.jpg" alt="The finished rig seen from the front: two MagSafe rings the iPhones snap onto" loading="lazy"></a>
+        <figcaption><span class="n">2. The finished rig</span>iPhones snap onto these rings</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="/img/tripod_standing.jpg"><img src="/img/tripod_standing.jpg" alt="The finished rig on a tripod, phones angled so the lenses meet near the center" loading="lazy"></a>
+        <figcaption><span class="n">3. Place</span>Snap the phones on, lenses meeting near the center</figcaption>
+      </figure>
+    </div>
+    <p class="cap">Tap a photo to enlarge.</p>
+  </div>
+</section>
+
+<section class="sec alt" id="price">
+  <div class="col rise">
+    <span class="eyebrow">10 — Pricing</span>
+    <h2>The basics are<em>free.</em></h2>
+    <p class="body">The only thing that costs money is stitching videos 3 minutes or longer.</p>
+    <table class="price">
+      <tr><th>Recording</th><td class="y">Free — any length, any number</td></tr>
+      <tr><th>Transfer between iPhones</th><td class="y">Free</td></tr>
+      <tr><th>Placement check & 3-second preview</th><td class="y">Free</td></tr>
+      <tr><th>Stitches under 3 min</th><td class="y">Always free, unlimited</td></tr>
+      <tr><th>Stitches 3 min and longer</th><td>3 free / then an event pass or a one-time unlock</td></tr>
+    </table>
+    <div class="note">
+      <p><strong>After the 3 free stitches, pick whichever fits.</strong></p>
+      <p><strong>Event pass (24 hours)</strong> — a ticket for &ldquo;just this one day&rdquo;. From the first stitch you use it on, you get 24 hours of unlimited long stitches. The clock starts when you first use it, not when you buy it — so buying it the night before costs you nothing. One pass covers a whole sports day, recital or match day.</p>
+      <p><strong>One-time unlock</strong> — pay once, unlimited forever. Not a subscription. The right choice if you will keep using it.</p>
+      <p>See the App Store for prices. No special gear either — two iPhones you already own, and a tripod.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="col rise">
+    <span class="eyebrow">11 — FAQ</span>
+    <h2>Things you may wonder.</h2>
+    <div class="faq">
+      <details><summary>Is my footage sent anywhere?</summary>
+        <p>No. All processing happens on the iPhones. No account, no login, and your footage never touches the internet. It works on fields and mountaintops with no signal.</p></details>
+      <details><summary>How many iPhones do I need?</summary>
+        <p>Two for shooting. A third can act as a remote in your hand: start and stop recording, check the seam, see each camera&rsquo;s battery and free space, and pull videos over (optional). You can also try panovi with a single iPhone first — sample videos are built in, so you can see what a stitched result looks like.</p></details>
+      <details><summary>Do the two iPhones have to be the same model?</summary>
+        <p>No. Different models work — the app automatically picks a lens both can use.</p></details>
+      <details><summary>Do I need a tripod?</summary>
+        <p>Yes, to hold the two phones side by side. Use one that can carry both; the trick is getting the lenses close together.</p></details>
+      <details><summary>What if the tripod gets bumped mid-recording?</summary>
+        <p>The stitch can be split at the bump and recalibrated. If a result looks off, retry options are right on the screen.</p></details>
+      <details><summary>How long can I record?</summary>
+        <p>There is no recording limit — as long as battery and storage last. A power-save mode can turn the screen black while recording to stretch the battery. Only the stitch length affects pricing.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="end">
+  <div class="col-n">
+    <span class="eyebrow">get panovi</span>
+    <h2 class="mid" style="margin-inline:auto">Set it down,<em>capture edge to edge.</em></h2>
+    <p class="body mid">Stitches under 3 minutes are free forever. Try it with the two iPhones you already have.</p>
+    <div style="margin-top:36px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654">Get it on the App Store</a>
+      <a class="btn btn-line" href="#try">See the footage first</a>
+    </div>
+  </div>
+</section>
+
+<footer class="col foot">
+  <span>© 2026 starclip</span>
+  <span>Your footage stays on your iPhones. Nowhere else.</span>
+  <a href="/viewer/en/">panovi viewer</a>
+  <a href="/en/privacy/">Privacy Policy</a>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('is-stuck', window.scrollY > 24);
+onScroll(); addEventListener('scroll', onScroll, { passive: true });
+
+// 画面に入ったら持ち上げる
+const io = new IntersectionObserver((es) => {
+  es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { rootMargin: '0px 0px -10% 0px' });
+document.querySelectorAll('.rise').forEach((el) => io.observe(el));
+
+// 帯の動画は、見えているあいだだけ読み込んで回す
+const vio = new IntersectionObserver((es) => {
+  es.forEach((e) => {
+    const v = e.target;
+    if (e.isIntersecting) {
+      if (!v.src && v.dataset.src) v.src = v.dataset.src;
+      v.play().catch(() => {});
+    } else v.pause();
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.band video').forEach((v) => vio.observe(v));
+</script>
+<script src="/viewer.js"></script>
+<div class="lb" id="lightbox" hidden><img alt=""></div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),pic=lb.querySelector('img');
+  function close(){lb.hidden=true;pic.src='';document.documentElement.style.overflow='';}
+  document.querySelectorAll('a.zoom').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();pic.src=a.href;
+      var t=a.querySelector('img');pic.alt=t?t.alt:'';
+      lb.hidden=false;document.documentElement.style.overflow='hidden';
+    });
+  });
+  lb.addEventListener('click',close);
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});
+})();
+</script>
+</body>
+</html>

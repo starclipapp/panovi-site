@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#04201f">
+    <meta name="description" content="Cole uma URL do YouTube ou de um mp4 e dê zoom e percorra qualquer vídeo amplo direto no navegador.">
+    <title>panovi viewer</title>
+    <link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/">
+    <link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/">
+    <link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/">
+    <link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/">
+    <link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    <link rel="apple-touch-icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../styles.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1LM1MCM9W5');
+</script>
+</head>
+  <body>
+    <main class="app-shell">
+      <section class="source-panel" aria-label="Abrir um vídeo">
+        <div class="compact-brand">
+          <img class="brand-icon" src="../img/icon.png" alt="" width="38" height="38">
+          <h1>panovi viewer</h1>
+        </div>
+        <form id="url-form" class="url-form" novalidate>
+          <label class="sr-only" for="youtube-url">URL do YouTube ou de um arquivo de vídeo</label>
+          <input
+            id="youtube-url"
+            name="youtube-url"
+            type="text"
+            inputmode="url"
+            autocomplete="url"
+            spellcheck="false"
+            placeholder="URL do YouTube ou https://…/jogo.mp4"
+            aria-describedby="url-error"
+          >
+          <div class="source-actions">
+            <button class="primary-button" type="submit">
+              <span>Abrir vídeo</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <label class="fullscreen-option">
+              <input id="open-fullscreen" type="checkbox" checked>
+              <span>Tela cheia</span>
+            </label>
+            <button id="help-button" type="button" class="utility-button help-button" aria-label="Ajuda dos atalhos de teclado" aria-keyshortcuts="?">?</button>
+            <a class="guide-link" href="./guide.html">Como usar</a>
+            <details class="lang-menu">
+              <summary class="guide-link" aria-label="Idioma: PT">PT</summary>
+              <div class="lang-menu-list">
+                <a href="/viewer/" lang="ja" hreflang="ja">日本語</a>
+                <a href="/viewer/en/" lang="en" hreflang="en">English</a>
+                <a href="/viewer/pt/" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a>
+                <a href="/viewer/es/" lang="es" hreflang="es">Español</a>
+              </div>
+            </details>
+          </div>
+        </form>
+        <p id="url-error" class="field-error" role="alert"></p>
+      </section>
+
+      <section id="viewer-shell" class="viewer-shell" aria-label="Visualizador de vídeo panorâmico">
+        <section id="quality-gate" class="quality-gate is-hidden" aria-labelledby="quality-gate-title">
+          <div class="quality-gate-copy">
+            <h2 id="quality-gate-title">Escolha a qualidade mais alta</h2>
+            <p>Se a barra de controles não aparecer, <strong>clique / toque</strong> no vídeo → <strong>engrenagem (canto inferior direito)</strong> → <strong>Qualidade</strong> → a <strong>maior resolução</strong></p>
+          </div>
+          <div class="quality-gate-actions">
+            <p id="quality-status" class="quality-status" aria-live="polite">Clique ou toque no vídeo para mostrar a barra de controles</p>
+            <button id="quality-confirm-button" type="button" class="quality-confirm-button" aria-label="Concluir o ajuste de qualidade">Pronto</button>
+          </div>
+        </section>
+
+        <div id="viewer-viewport" class="viewer-viewport" data-interaction-mode="viewing">
+          <div id="player-transform" class="player-transform">
+            <div id="player-mount"></div>
+          </div>
+          <div id="gesture-layer" class="gesture-layer" aria-label="Clique para reproduzir ou pausar. Arraste para mover o vídeo"></div>
+          <div class="live-readout" aria-live="polite">
+            <span class="readout-dot"></span>
+            <span id="zoom-readout">100%</span>
+          </div>
+          <button id="exit-fullscreen-button" type="button" class="exit-fullscreen-button" aria-label="Sair da tela cheia">
+            <span aria-hidden="true">✕</span>
+          </button>
+          <button id="quality-settings-button" type="button" class="quality-settings-button is-hidden" aria-label="Mudar a qualidade do YouTube">
+            <span aria-hidden="true">⚙</span>
+            <span>Qualidade</span>
+          </button>
+
+          <div id="empty-state" class="viewer-state viewer-empty">
+            <p class="state-kicker">VISUALIZADOR PANORÂMICO</p>
+            <h2>Vídeos amplos, com o enquadramento que você quiser.</h2>
+            <p>Cole no campo acima uma URL do YouTube ou de um arquivo de vídeo (como um mp4).</p>
+            <p><a class="text-link" href="./?url=https%3A%2F%2Fpanovi.app%2Fimg%2Fkintoki.mp4">Testar com um vídeo de exemplo →</a> <a class="text-link" href="./guide.html">Como usar</a></p>
+          </div>
+
+          <div id="loading-state" class="viewer-state is-hidden" aria-live="polite">
+            <span class="loader" aria-hidden="true"></span>
+            <p>Preparando o vídeo…</p>
+          </div>
+
+          <div id="error-state" class="viewer-state error-state is-hidden" role="alert">
+            <p class="state-kicker">ERRO DE REPRODUÇÃO</p>
+            <h2 id="player-error-title">Não foi possível carregar o vídeo</h2>
+            <p id="player-error-message"></p>
+            <div class="error-actions">
+              <button id="retry-button" type="button" class="secondary-button">Tentar de novo</button>
+              <a id="open-youtube-link" class="text-link" href="https://www.youtube.com/" target="_blank" rel="noopener">Abrir no YouTube ↗</a>
+            </div>
+          </div>
+
+          <div id="toast" class="toast is-hidden" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="control-deck">
+          <div class="control-group transport-controls" aria-label="Controles de reprodução">
+            <button id="rewind-button" type="button" class="icon-button" aria-label="Voltar 10 segundos">−10</button>
+            <button id="play-button" type="button" class="play-button" aria-label="Reproduzir">
+              <span id="play-icon" aria-hidden="true">▶</span>
+            </button>
+            <button id="forward-button" type="button" class="icon-button" aria-label="Avançar 10 segundos">+10</button>
+          </div>
+
+          <div class="control-group zoom-controls" aria-label="Controles de zoom">
+            <span class="control-label">ZOOM</span>
+            <button type="button" class="mini-button" data-scale="1" title="Mostrar o quadro inteiro">Tudo</button>
+            <button type="button" class="mini-button" data-scale="fill" title="Preencher a tela">Ajustar</button>
+            <button type="button" class="mini-button" data-scale="fill-2" title="O dobro do tamanho ajustado">2×</button>
+            <label class="zoom-slider-label">
+              <span class="sr-only">Nível de zoom</span>
+              <input id="zoom-slider" type="range" min="100" max="500" step="5" value="100">
+            </label>
+          </div>
+
+          <div class="control-group framing-controls" aria-label="Posição da visualização">
+            <span class="control-label">VISTA</span>
+            <button type="button" class="mini-button" data-frame="left">Esquerda</button>
+            <button type="button" class="mini-button" data-frame="center">Centro</button>
+            <button type="button" class="mini-button" data-frame="right">Direita</button>
+          </div>
+
+          <div class="control-group utility-controls">
+            <button id="reset-button" type="button" class="utility-button">Redefinir</button>
+          </div>
+        </div>
+
+        <dialog id="shortcut-help" class="shortcut-help" aria-labelledby="shortcut-help-title">
+          <div class="shortcut-help-card">
+            <div class="shortcut-help-header">
+              <div>
+                <p class="quality-kicker">TECLADO E GESTOS</p>
+                <h2 id="shortcut-help-title">Controles</h2>
+              </div>
+              <button id="help-close-button" type="button" class="help-close-button" aria-label="Fechar ajuda">×</button>
+            </div>
+            <div class="shortcut-help-grid">
+              <section>
+                <h3>Reprodução</h3>
+                <dl>
+                  <div><dt><kbd>K</kbd> <kbd>Espaço</kbd></dt><dd>Reproduzir / pausar</dd></div>
+                  <div><dt><kbd>J</kbd> <kbd>L</kbd></dt><dd>Voltar / avançar 10 s</dd></div>
+                  <div><dt><kbd>Shift</kbd> + <kbd>←</kbd> <kbd>→</kbd></dt><dd>Voltar / avançar 10 s</dd></div>
+                  <div><dt><kbd>M</kbd></dt><dd>Ativar/desativar som</dd></div>
+                  <div><dt><kbd>0–9</kbd></dt><dd>Ir para esse ponto</dd></div>
+                </dl>
+              </section>
+              <section>
+                <h3>Enquadramento</h3>
+                <dl>
+                  <div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Deslizar suavemente, um terço por vez</dd></div>
+                  <div><dt><kbd>↑</kbd> <kbd>↓</kbd></dt><dd>Aproximar / afastar</dd></div>
+                  <div><dt><kbd>+</kbd> <kbd>−</kbd></dt><dd>Aproximar / afastar</dd></div>
+                  <div><dt><kbd>R</kbd></dt><dd>Redefinir a visualização</dd></div>
+                  <div><dt><kbd>F</kbd></dt><dd>Tela cheia</dd></div>
+                  <div><dt><kbd>?</kbd></dt><dd>Esta ajuda</dd></div>
+                </dl>
+              </section>
+              <section>
+                <h3>Mouse e toque</h3>
+                <dl>
+                  <div><dt>Clique / toque</dt><dd>Reproduzir / pausar</dd></div>
+                  <div><dt>Arrastar</dt><dd>Mover o vídeo</dd></div>
+                  <div><dt>Roda / pinça</dt><dd>Zoom</dd></div>
+                  <div><dt>Clique / toque duplo</dt><dd>Redefinir a visualização</dd></div>
+                </dl>
+              </section>
+            </div>
+          </div>
+        </dialog>
+      </section>
+    </main>
+
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>
