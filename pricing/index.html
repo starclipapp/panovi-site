@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">
+<!-- アプリの料金所「詳しく」(StitchView.swift の ?from=tollgate) の入口。
+     料金の説明はトップの #price に1つだけ置く(額は国で違うので書かない)。
+     ここは端末の言語に合うページの #price へ送るだけ。?from= は計測のため残す。 -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://panovi.app/#price">
+<meta http-equiv="refresh" content="0; url=/#price">
+<script>
+(function () {
+  var l = (navigator.language || "en").toLowerCase();
+  var p = l.indexOf("ja") === 0 ? "/" : l.indexOf("pt") === 0 ? "/pt/" : l.indexOf("es") === 0 ? "/es/" : "/en/";
+  location.replace(p + location.search + "#price");
+})();
+</script>
+<title>panovi</title></head>
+<body><p><a href="/#price">料金</a> · <a href="/en/#price">Pricing</a> · <a href="/pt/#price">Preços</a> · <a href="/es/#price">Precios</a></p></body></html>
