@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://panovi.app/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/es/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/pt/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/es/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/es/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/guide.html"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/en/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/guide.html"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/pt/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/guide.html"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/viewer/es/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/viewer/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/viewer/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/viewer/pt/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/guide.html"/>
+  </url>
+</urlset>
