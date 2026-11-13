@@ -107,6 +107,18 @@ Paste the URL of a video you published on YouTube, or of an mp4, into [panovi vi
 
 Mostly, yes. Recording, transfer between devices and the setup check are free for any length, and stitches under 3 minutes are always free, with no limit on how many. The only thing that can cost money is a long stitch of 3 minutes or longer.
 
+### Will I ever be charged unexpectedly?
+
+No. panovi never charges you on its own. You only pay when you choose to buy an event pass or the one-time unlock yourself, and the App Store always asks you to confirm the purchase (with Face ID or similar). There is no subscription and no auto-renewal, so you can use it with peace of mind.
+
+### Can my 3 free stitches get used up without me knowing?
+
+No. When you stitch a video of 3 minutes or longer, the app asks on screen whether to use one of your free stitches. It only uses one when you choose to.
+
+### If a stitch fails, do I lose a free stitch or my event pass?
+
+No. A stitch only counts when the stitched video is saved successfully. If it fails, or stops before it's clear whether it was saved, it doesn't count. Re-stitching the same recording isn't counted twice. The 24 hours of an event pass also start only when the first save succeeds.
+
 ### What happens with stitches of 3 minutes or longer?
 
 You can try them 3 times for free. After that, choose between an “event pass (24 hours)” and a “one-time unlock”.

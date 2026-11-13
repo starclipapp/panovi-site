@@ -107,6 +107,18 @@ Cole o link de um vídeo publicado no YouTube, ou a URL de um mp4, no [panovi vi
 
 O essencial é grátis. Gravar, transferir entre iPhones e verificar o alinhamento é grátis, com qualquer duração, e uniões de menos de 3 minutos são sempre grátis, sem limite. A única coisa que pode custar dinheiro são as uniões longas, de 3 minutos ou mais.
 
+### Posso ser cobrado de repente, sem saber?
+
+Não. O panovi nunca cobra nada por conta própria. Você só paga quando decide comprar um passe de evento ou a compra única, e a App Store sempre pede para você confirmar a compra (com Face ID ou similar). Não há assinatura nem renovação automática. Pode usar com tranquilidade.
+
+### As 3 uniões grátis podem acabar sem eu perceber?
+
+Não. Quando você une um vídeo de 3 minutos ou mais, o app pergunta na tela se quer usar uma das uniões grátis. Ele só usa quando você escolhe.
+
+### Se a união falhar, perco uma união grátis ou o passe de evento?
+
+Não. Só conta quando o vídeo unido é salvo com sucesso. Se falhar, ou parar antes de saber se foi salvo, não conta. Unir de novo a mesma gravação não conta duas vezes. As 24 horas do passe de evento também só começam quando o primeiro vídeo é salvo com sucesso.
+
 ### Como funcionam as uniões de 3 minutos ou mais?
 
 Você pode testar 3 vezes de graça. Depois, escolha entre o “passe de evento (24 horas)” e o “Ilimitado (compra única)”.
