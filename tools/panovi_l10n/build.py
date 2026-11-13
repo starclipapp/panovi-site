@@ -21,8 +21,7 @@ import langs as L  # noqa: E402
 
 PANOVI = HERE.parent.parent
 JP = re.compile(r"[぀-ヿ㐀-鿿＀-￯　-〿]")
-# ★運営会社の名前（法人名）は固有名詞なので、どの言語のページにも日本語のまま出す
-JA_LINK = re.compile(r'<a [^>]*lang="ja"[^>]*>日本語</a>|金子電器株式会社')
+JA_LINK = re.compile(r'<a [^>]*lang="ja"[^>]*>日本語</a>')
 
 APPSTORE_JP = "https://apps.apple.com/jp/app/id6797261654"
 # 国を指定しない形。開いた人の国の App Store に飛ぶ(米国・ブラジル・ウルグアイ・メキシコ向け)

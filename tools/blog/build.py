@@ -43,9 +43,13 @@ APPSTORE_JP = "https://apps.apple.com/jp/app/id6797261654"
 APPSTORE_ANY = "https://apps.apple.com/app/id6797261654"
 
 # 運営会社（会社ページ・フッタ・構造化データの唯一の情報源）
-COMPANY_NAME = "金子電器株式会社"
+COMPANY_NAME = {"ja": "金子電器株式会社", "en": "Kaneko Denki Co., Ltd."}  # 英語の正式表記は無いので、この形に決めた（2026-11-13）
 COMPANY_ADDR = {"ja": "広島市安芸区中野15-5", "en": "15-5 Nakano, Aki-ku, Hiroshima, Japan"}
 COMPANY_PAGE_DATE = "2026-11-13"  # 会社ページを直したらここも直す（サイトマップの lastmod）
+
+
+def company_name(lang):
+    return COMPANY_NAME["ja" if lang == "ja" else "en"]
 
 
 def company_org(lang):
@@ -56,7 +60,7 @@ def company_org(lang):
     else:
         addr = {"@type": "PostalAddress", "addressCountry": "JP", "addressRegion": "Hiroshima",
                 "addressLocality": "Aki-ku, Hiroshima", "streetAddress": "15-5 Nakano"}
-    return {"@type": "Organization", "name": COMPANY_NAME, "address": addr,
+    return {"@type": "Organization", "name": company_name(lang), "address": addr,
             "brand": {"@type": "Brand", "name": "panovi"}, "url": SITE + LANGS[lang][1] + "company/"}
 
 
@@ -756,12 +760,12 @@ def company_page(lang):
                  "Veja o contato na Política de Privacidade"),
           "es": ("Responsable", "Dirección", "Servicio", "Contacto", "panovi (app para iPhone) y panovi.app",
                  "Consulta el contacto en la Política de privacidad")}[lang]
-    addr = COMPANY_ADDR["ja"] if lang == "ja" else f'{COMPANY_ADDR["en"]}<br><span lang="ja">{COMPANY_ADDR["ja"]}</span>'
+    addr = COMPANY_ADDR["ja" if lang == "ja" else "en"]
     body = f"""<article class="col-n post">
   <p class="crumb"><a href="{LANGS[lang][1]}">← panovi</a></p>
   <h1>{esc(u['company_title'])}</h1>
   <table class="co">
-    <tr><th>{L_[0]}</th><td><span lang="ja">{COMPANY_NAME}</span></td></tr>
+    <tr><th>{L_[0]}</th><td>{esc(company_name(lang))}</td></tr>
     <tr><th>{L_[1]}</th><td>{addr}</td></tr>
     <tr><th>{L_[2]}</th><td>{esc(L_[4])}</td></tr>
     <tr><th>{L_[3]}</th><td><a href="{privacy}">{esc(L_[5])}</a></td></tr>
@@ -769,7 +773,7 @@ def company_page(lang):
 </article>"""
     paths = {lg: company_path(lg) for lg in LANGS}
     head = ld(dict({"@context": "https://schema.org"}, **company_org(lang))) + breadcrumb_ld(lang, [(u["company_title"], paths[lang])])
-    desc = f"{u['company_title']}: {COMPANY_NAME} — panovi"
+    desc = f"{u['company_title']}: {company_name(lang)} — panovi"
     return page(lang, title=f"{u['company_title']} | panovi", desc=desc, path=paths[lang], paths=paths,
                 image="", body=body, extra_head=head)
 
@@ -898,7 +902,7 @@ def llms_txt(posts):
            "- Pricing: recording, transfer, setup checks and stitches under 3 minutes are free with no limit. "
            "Stitches of 3 minutes or longer: free 3 times, then a 24-hour event pass or a one-time unlock (not a subscription).",
            "- Unlike a 360° camera, panovi spends its pixels only in the direction you film, so distant subjects stay larger.",
-           f"- Operator: {COMPANY_NAME} ({COMPANY_ADDR['en']}).",
+           f"- Operator: {COMPANY_NAME['en']} ({COMPANY_NAME['ja']}), {COMPANY_ADDR['en']}.",
            "- Japanese: panovi は2台のiPhoneでパノラマ動画（パノラマビデオ）を作るアプリ。運動会・発表会・旅行・サッカーの試合に。",
            "",
            "## App and site", "",
