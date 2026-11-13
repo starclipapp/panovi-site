@@ -92,7 +92,7 @@ UI = {
         "nav": "ガイド", "home": "panovi について", "blog_title": "panovi の使いかた",
         "blog_lead": "はじめての1本から、旅行やスポーツで使うコツ、新しい機能まで。panovi を使いこなすための記事をまとめています。",
         "blog_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi の使いかた。運動会・旅行・サッカーで使うコツや新機能のお知らせ。",
-        "all": "すべて", "latest": "使いかた・ヒント", "latest_more": "記事をすべて見る",
+        "post_link": "くわしい手順", "all": "すべて", "latest": "使いかた・ヒント", "latest_more": "記事をすべて見る",
         "latest_lead": "はじめての1本から、旅行やスポーツで使うコツまで。",
         "start_here": "まずはここから", "read": "読む",
         "cta_h": "panovi を試してみる", "cta_p": "撮影は何分でも無料。3分未満の結合はずっと無料です。",
@@ -106,7 +106,7 @@ UI = {
         "nav": "Guides", "home": "About panovi", "blog_title": "panovi guides",
         "blog_lead": "From your first video to tips for travel and sports, plus what’s new. Everything you need to get the most out of panovi.",
         "blog_desc": "How to use panovi, the panoramic video app that turns two iPhones into one ultra-wide video: guides, tips for sports days, travel and soccer, and news.",
-        "all": "All", "latest": "Guides & tips", "latest_more": "See all guides",
+        "post_link": "Step-by-step guide", "all": "All", "latest": "Guides & tips", "latest_more": "See all guides",
         "latest_lead": "From your first video to tips for travel and sports.",
         "start_here": "Start here", "read": "Read",
         "cta_h": "Try panovi", "cta_p": "Recording is free for any length. Stitches under 3 minutes are always free.",
@@ -120,7 +120,7 @@ UI = {
         "nav": "Guias", "home": "Sobre o panovi", "blog_title": "Guias do panovi",
         "blog_lead": "Do primeiro vídeo às dicas para viagens e esportes, além das novidades. Tudo para você aproveitar o panovi ao máximo.",
         "blog_desc": "Como usar o panovi, o app de vídeo panorâmico que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas para viagens e futebol, e novidades.",
-        "all": "Todos", "latest": "Guias e dicas", "latest_more": "Ver todos os guias",
+        "post_link": "Passo a passo", "all": "Todos", "latest": "Guias e dicas", "latest_more": "Ver todos os guias",
         "latest_lead": "Do primeiro vídeo às dicas para viagens e esportes.",
         "start_here": "Comece por aqui", "read": "Ler",
         "cta_h": "Experimente o panovi", "cta_p": "Gravar é grátis, sem limite de tempo. Uniões com menos de 3 minutos são sempre grátis.",
@@ -134,7 +134,7 @@ UI = {
         "nav": "Guías", "home": "Acerca de panovi", "blog_title": "Guías de panovi",
         "blog_lead": "Desde tu primer video hasta consejos para viajes y deportes, además de las novedades. Todo para sacarle el máximo provecho a panovi.",
         "blog_desc": "Cómo usar panovi, la app de video panorámico que convierte dos iPhone en un solo video: guías, consejos para viajes y fútbol, y novedades.",
-        "all": "Todos", "latest": "Guías y consejos", "latest_more": "Ver todas las guías",
+        "post_link": "Paso a paso", "all": "Todos", "latest": "Guías y consejos", "latest_more": "Ver todas las guías",
         "latest_lead": "Desde tu primer video hasta consejos para viajes y deportes.",
         "start_here": "Empieza aquí", "read": "Leer",
         "cta_h": "Prueba panovi", "cta_p": "Grabar es gratis, sin límite de tiempo. Las uniones de menos de 3 minutos son siempre gratis.",
@@ -873,6 +873,22 @@ def latest_block(lang, posts):
 </section>"""
 
 
+POST_MARK = re.compile(r"<!-- blog:post:([a-z0-9-]+):start -->")
+
+
+def post_links(lang, home, posts):
+    """トップの <!-- blog:post:<slug>:start/end --> に、その記事へのリンクを入れる。公開前は空のまま。"""
+    by_slug = {p.slug: p for p in posts}
+    for slug in POST_MARK.findall(home):
+        p = by_slug.get(slug)
+        new = (f'<p style="margin-top:12px"><a href="{blog_path(lang, slug)}">{esc(UI[lang]["post_link"])}：'
+               f'{esc(p.title(lang))} →</a></p>') if p else ""
+        if p and lang != "ja":
+            new = new.replace("：", ": ")
+        home = splice(home, f"<!-- blog:post:{slug}:start -->", f"<!-- blog:post:{slug}:end -->", new, HOME_FILE[lang])
+    return home
+
+
 def home_seo(lang, home_html):
     """トップの <head> に差し込む: keywords と、ページの「よくある質問」から作る FAQPage。
     FAQ は画面に出ている文をそのまま使う（構造化データと表示を食い違わせない）。"""
@@ -1085,6 +1101,7 @@ def main():
         write(root, f"{blog_path(lg).lstrip('/')}feed.xml", feed(lg, posts), written)
         home = (root / HOME_FILE[lg]).read_text(encoding="utf-8")
         home = splice(home, "<!-- blog:latest:start -->", "<!-- blog:latest:end -->", latest_block(lg, posts), HOME_FILE[lg])
+        home = post_links(lg, home, posts)
         home = splice(home, "<!-- seo:start -->", "<!-- seo:end -->", home_seo(lg, home), HOME_FILE[lg])
         write(root, HOME_FILE[lg], home, written)
     faq = load_faq()
