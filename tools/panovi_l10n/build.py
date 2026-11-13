@@ -89,7 +89,8 @@ def main_table(lang):
 MAIN_TEXT = [
     # head
     # 構造化データ（SoftwareApplication）
-    T('"url": "https://panovi.app/en/"', '"url": "https://panovi.app/pt/"', '"url": "https://panovi.app/es/"'),
+    # ★"url": "…/en/" は WebSite（ブログの生成器が差し込む）にも出るので、downloadUrl まで含めて1つに絞る
+    T('"url": "https://panovi.app/en/", "downloadUrl"', '"url": "https://panovi.app/pt/", "downloadUrl"', '"url": "https://panovi.app/es/", "downloadUrl"'),
     T('"alternateName": ["panovi panoramic video", "Panorama Video"]',
       '"alternateName": ["panovi vídeo panorâmico", "Panorama Video"]',
       '"alternateName": ["panovi video panorámico", "Panorama Video"]'),
@@ -114,6 +115,7 @@ MAIN_TEXT = [
     T('<a href="#how">How it works</a>', '<a href="#how">Como funciona</a>', '<a href="#how">Cómo funciona</a>'),
     T('<a href="#price">Pricing</a>', '<a href="#price">Preços</a>', '<a href="#price">Precios</a>'),
     # ブログ（上の帯とフッタ）
+    T('<a href="/en/faq/">FAQ</a>', '<a href="/pt/faq/">Perguntas frequentes</a>', '<a href="/es/faq/">Preguntas frecuentes</a>'),
     T('<a href="/en/blog/">Guides</a>', '<a href="/pt/blog/">Guias</a>', '<a href="/es/blog/">Guías</a>', 2),
     # hero
     T('<span class="kicker">two iPhones, one wide frame</span>',
