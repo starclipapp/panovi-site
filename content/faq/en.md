@@ -107,6 +107,10 @@ Paste the URL of a video you published on YouTube, or of an mp4, into [panovi vi
 
 Mostly, yes. Recording, transfer between devices and the setup check are free for any length, and stitches under 3 minutes are always free, with no limit on how many. The only thing that can cost money is a long stitch of 3 minutes or longer.
 
+### Can I enjoy panovi without paying?
+
+Absolutely. Stitches under 3 minutes are always free, with no limit on how many, so you can make as many short videos as you like: a view on your trip, a moment on a walk, a scene with your kids. Start by shooting lots of short clips and enjoy how wide panovi can go. If you later want to keep a whole game or recital in one long video, that's the time to pick an event pass or the one-time unlock.
+
 ### Will I ever be charged unexpectedly?
 
 No. panovi never charges you on its own. You only pay when you choose to buy an event pass or the one-time unlock yourself, and the App Store always asks you to confirm the purchase (with Face ID or similar). There is no subscription and no auto-renewal, so you can use it with peace of mind.

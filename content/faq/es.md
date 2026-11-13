@@ -107,6 +107,10 @@ Pega la URL de un video que publicaste en YouTube, o la URL de un mp4, en [panov
 
 Sí, lo básico es gratis. Grabar, transferir entre iPhone y verificar la alineación es gratis sin importar los minutos, y las uniones de menos de 3 minutos son siempre gratis y sin límite. Lo único que puede costar dinero son las uniones largas, de 3 minutos o más.
 
+### ¿Puedo disfrutar panovi sin pagar?
+
+Claro que sí. Las uniones de menos de 3 minutos son siempre gratis y sin límite, así que puedes hacer todos los videos cortos que quieras: un paisaje en tu viaje, un momento en un paseo, una escena con tus hijos. Empieza grabando muchos videos cortos y disfruta de lo amplio que puede ser panovi. Si después quieres guardar un partido o una presentación completa en un video largo, ese es el momento de elegir el pase de evento o la compra única.
+
 ### ¿Me pueden cobrar de repente, sin darme cuenta?
 
 No. panovi nunca cobra nada por su cuenta. Solo pagas cuando tú decides comprar un pase de evento o la compra única, y la App Store siempre te pide confirmar la compra (con Face ID o similar). No hay suscripción ni renovación automática. Puedes usarla con tranquilidad.
