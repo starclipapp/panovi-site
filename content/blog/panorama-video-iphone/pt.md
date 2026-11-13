@@ -1,7 +1,7 @@
 ---
 title: Como gravar vídeo panorâmico no iPhone? — A diferença para a foto panorâmica e 3 jeitos de gravar
 description: O modo “Pano” da câmera do iPhone tira fotos. Para gravar um vídeo panorâmico, com tudo em movimento, há 3 jeitos: gravar com a ultra-angular, usar o modo de um iPhone do panovi ou gravar com dois iPhones. Comparamos as diferenças e ajudamos você a escolher.
-image_alt: Cena de um vídeo panorâmico gravado com dois iPhones, do alto da montanha até o monte Fuji
+image_alt: As imagens de dois iPhones, esquerdo e direito, unidas em um só vídeo panorâmico
 keywords: vídeo panorâmico iPhone, como gravar vídeo panorâmico no iPhone, como fazer vídeo panorâmico, app de vídeo panorâmico, panorama em vídeo iPhone, diferença câmera 360
 ---
 

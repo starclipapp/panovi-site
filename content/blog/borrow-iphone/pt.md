@@ -1,13 +1,13 @@
 ---
 title: Como emprestar o iPhone com segurança? — Use o “Acesso Guiado” para deixar só o panovi na tela
 description: O segundo iPhone do seu vídeo panorâmico pode ser emprestado de alguém da família ou de um amigo. Com o “Acesso Guiado”, que já vem no iPhone, o aparelho emprestado fica preso ao panovi e ninguém vê fotos, mensagens nem notificações. Da configuração à limpeza depois da gravação, em 3 minutos de leitura.
-image_alt: Dois iPhones lado a lado em um tripé, gravando um vídeo panorâmico
+image_alt: Um iPhone preso ao panovi com o Acesso Guiado; Fotos, Mensagens e notificações ficam bloqueados
 keywords: emprestar iPhone com segurança, acesso guiado iPhone, como usar acesso guiado, configurar acesso guiado, vídeo panorâmico dois iPhones
 ---
 
 **Resumo**: para emprestar o iPhone a alguém, use o **“Acesso Guiado”**, que já vem em todo iPhone. Ative a opção uma vez no iPhone de quem empresta, abra o panovi, **clique três vezes no botão lateral e toque em “Iniciar”**. Pronto: o iPhone fica preso à tela do panovi, e ninguém consegue ver a Tela de Início, as fotos, as mensagens nem as notificações. Quando terminar, **clique três vezes de novo e digite o código** para sair. O segundo iPhone do **vídeo panorâmico** do panovi pode ser emprestado, e esse cuidado deixa muito mais fácil pedir “me empresta o seu?”.
 
-![Dois iPhones lado a lado em um tripé, gravando](/img/tripod_standing.jpg "O segundo pode ser o iPhone de alguém da família ou de um amigo. Funciona com modelos diferentes e com outra Conta Apple")
+![Um iPhone preso ao panovi com o Acesso Guiado](/img/guided-access.jpg "Com o Acesso Guiado, só o panovi fica na tela. Fotos e Mensagens não abrem, e nenhuma notificação aparece")
 
 ## Por que “emprestar” é tão importante
 

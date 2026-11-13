@@ -1,13 +1,13 @@
 ---
 title: How to lend your iPhone safely — keep it on panovi with Guided Access
 description: The second iPhone for a panoramic video can be one you borrow from family or a friend. With Guided Access, built into every iPhone, the borrowed iPhone stays on the panovi screen — no photos, no messages, no notifications. Here is how to set it up, shoot, and clean up afterward, in about three minutes.
-image_alt: Two iPhones side by side on a tripod, recording a panoramic video
+image_alt: An iPhone locked to panovi with Guided Access; Photos, Messages and notifications are blocked
 keywords: lend iPhone safely, guided access iPhone, how to use guided access, guided access setup, borrow an iPhone to film, two iPhones panoramic video
 ---
 
 **In short**: when you lend someone your iPhone, use **Guided Access**, which is built into every iPhone. Turn it on once on the lender's iPhone, then open panovi, **triple-click the side button, and tap Start**. That's it — the iPhone stays on the panovi screen, and nobody can see the Home Screen, Photos, Messages, or notifications. When you're done, **triple-click again and enter the passcode** to end it. The second iPhone for a panovi **panoramic video** can be a borrowed one, so this is the small bit of prep that makes "Can I borrow your iPhone?" an easy ask.
 
-![Two iPhones side by side on a tripod](/img/tripod_standing.jpg "The second iPhone can belong to family or a friend. Different models and different Apple IDs pair just fine")
+![An iPhone locked to panovi with Guided Access](/img/guided-access.jpg "During Guided Access, only panovi is on screen. Photos and Messages won’t open, and no notifications appear")
 
 ## Why lending matters
 

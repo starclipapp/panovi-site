@@ -1,2 +1,3 @@
 date: 2026-11-20
+image: /img/one-iphone.jpg
 category: news

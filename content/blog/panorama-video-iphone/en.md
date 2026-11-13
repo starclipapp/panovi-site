@@ -1,7 +1,7 @@
 ---
 title: How to shoot panoramic video on iPhone — how it differs from Pano photos, and 3 ways to do it
 description: The iPhone Camera’s “Pano” mode takes photos. To shoot a moving panoramic video, there are 3 ways: film with the ultra wide lens, use panovi’s “Record with one phone,” or shoot with two iPhones. We compare how they differ and how to choose.
-image_alt: A frame from a panoramic video shot on two iPhones, taking in everything from a mountain summit to Mount Fuji
+image_alt: Footage from a left and a right iPhone joined into one panoramic video
 keywords: panoramic video iPhone, how to shoot panoramic video on iPhone, panorama video iPhone, panorama video app, iPhone pano video, ultra wide video iPhone, 360 camera alternative
 ---
 

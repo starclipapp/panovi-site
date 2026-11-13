@@ -1,6 +1,7 @@
 ---
 title: You can now shoot with one iPhone — wide and ultra wide at the same time
 description: The new “Record with one phone” records with the wide and ultra wide lenses at the same time and turns them into one video. Here is how it works, from zooming while you shoot and recording your zoom to fixing how close you get afterward.
+image_alt: Diagram of what one iPhone records at once: the wide (1×) and ultra-wide (0.5×) cameras
 ---
 
 panovi now has a way to **shoot with just one iPhone**. When you can’t get a second iPhone, or you want to start filming the moment the idea strikes, you can use only the one in your hand. No tripod needed either — just hold it and shoot. This post shows how it works and how to use it.

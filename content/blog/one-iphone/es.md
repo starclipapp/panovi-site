@@ -1,6 +1,7 @@
 ---
 title: Ahora puedes grabar con un solo iPhone — gran angular y ultra gran angular a la vez
 description: El nuevo modo “Grabar con un iPhone” graba al mismo tiempo con el lente gran angular y el ultra gran angular, y los une en un solo video. Te explicamos el zoom al grabar, cómo se guarda el zoom y cómo corregir el acercamiento después.
+image_alt: Esquema de lo que graba un solo iPhone a la vez: la cámara gran angular (1×) y la ultra gran angular (0.5×)
 ---
 
 panovi ahora tiene una forma de **grabar con un solo iPhone**. Sirve para cuando no puedes conseguir un segundo iPhone o cuando quieres grabar en el momento, solo con el que traes contigo. Tampoco necesitas trípode: solo sostenlo en la mano y graba. En este artículo te explicamos cómo funciona y cómo usarlo.

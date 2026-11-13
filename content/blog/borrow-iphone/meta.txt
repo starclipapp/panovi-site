@@ -1,4 +1,4 @@
 date: 2026-11-14
 category: start
-image: /img/tripod_standing.jpg
+image: /img/guided-access.jpg
 order: 5

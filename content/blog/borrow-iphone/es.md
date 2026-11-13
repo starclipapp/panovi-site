@@ -1,13 +1,13 @@
 ---
 title: ¿Cómo prestar tu iPhone sin preocuparte? — Deja solo panovi en pantalla con Acceso guiado
 description: El segundo iPhone para tu video panorámico puede ser prestado por un familiar o un amigo. Con Acceso guiado, que viene incluido en todos los iPhone, el iPhone prestado se queda fijo en panovi y nadie puede ver sus fotos, mensajes ni notificaciones. Te explicamos en 3 minutos desde la configuración hasta qué hacer después de grabar.
-image_alt: Dos iPhone uno al lado del otro en un trípode, grabando un video panorámico
+image_alt: Un iPhone fijado en panovi con Acceso guiado; Fotos, Mensajes y notificaciones quedan bloqueados
 keywords: prestar iPhone de forma segura, acceso guiado iPhone, cómo usar acceso guiado, configurar acceso guiado, video panorámico dos iPhone, pedir prestado un iPhone para grabar
 ---
 
 **En resumen**: para prestar tu iPhone, usa **Acceso guiado**, una función que ya viene incluida en todos los iPhone. Actívala una vez en el iPhone de quien lo presta, abre panovi, **presiona tres veces el botón lateral y toca “Iniciar”**. Con eso, el iPhone se queda fijo en panovi: nadie puede ver la pantalla de inicio, Fotos, Mensajes ni las notificaciones. Al terminar, **presiona tres veces de nuevo e ingresa el código** para desbloquearlo. Con panovi, el segundo iPhone de tu **video panorámico** puede ser prestado, así que este paso hace mucho más fácil pedir “¿me prestas tu iPhone?”.
 
-![Dos iPhone uno al lado del otro en un trípode, grabando](/img/tripod_standing.jpg "El segundo iPhone puede ser de un familiar o un amigo. Se conectan aunque sean de modelos distintos y usen otra Cuenta de Apple")
+![Un iPhone fijado en panovi con Acceso guiado](/img/guided-access.jpg "Con Acceso guiado, solo panovi queda en pantalla. Fotos y Mensajes no se abren, y no aparecen notificaciones")
 
 ## Por qué importa poder prestarlo
 
