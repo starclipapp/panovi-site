@@ -80,8 +80,6 @@ def main_table(lang):
         ("/viewer/en/guide.html", f"/viewer/{d}/guide.html", 1),
         ("/viewer/en/", f"/viewer/{d}/", 2),
         ("/en/privacy/", f"/{d}/privacy/", 1),
-        # 見出しの無い章(#match)を指していた空のリンク。pt/es には持ち込まない
-        ('      <a href="#match">Whole match</a>\n', "", 1),
         ('<script src="/viewer.js?v=20261108"></script>', '<script src="/viewer.js?v=20261108"></script>', 1),
     ] + [x for x in MAIN_TEXT]
 
@@ -115,7 +113,7 @@ MAIN_TEXT = [
     T('<a href="#how">How it works</a>', '<a href="#how">Como funciona</a>', '<a href="#how">Cómo funciona</a>'),
     T('<a href="#price">Pricing</a>', '<a href="#price">Preços</a>', '<a href="#price">Precios</a>'),
     # ブログ（上の帯とフッタ）
-    T('<a href="/en/faq/">FAQ</a>', '<a href="/pt/faq/">Perguntas frequentes</a>', '<a href="/es/faq/">Preguntas frecuentes</a>', 2),
+    T('<a href="/en/faq/">FAQ</a>', '<a href="/pt/faq/">FAQ</a>', '<a href="/es/faq/">FAQ</a>', 2),
     T('<a class="btn btn-line" href="/en/faq/#pricing">Read the pricing FAQ</a>',
       '<a class="btn btn-line" href="/pt/faq/#preços">Ver as perguntas sobre preços</a>',
       '<a class="btn btn-line" href="/es/faq/#precios">Ver las preguntas sobre precios</a>'),

@@ -43,10 +43,45 @@ def _a(kind, code, label, cur, extra=""):
     return f'<a href="{href}" lang="{code}" hreflang="{code}"{current}{extra}>{label}</a>'
 
 
+GLOBE = ('<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
+         'aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9'
+         'M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"/></svg>')
+
+
+def lang_menu(cur, hrefs):
+    """上の帯の言語切替（プルダウン）。押すと4言語を自分の言葉で並べる。スマホでも出す。
+    hrefs: 言語コード → そのページの各言語のURL。"""
+    short = dict((c, s) for c, _, s in LANGS)[cur]
+    links = "".join(f'<a href="{hrefs[c]}" lang="{c}" hreflang="{c}"{" aria-current=\"page\"" if c == cur else ""}>{name}</a>'
+                    for c, name, _ in LANGS)
+    return (f'<details class="nav-lang"><summary aria-label="{LANG_WORD[cur]}: {short}">{GLOBE}{short}</summary>'
+            f'<div class="nav-lang-list">{links}</div></details>')
+
+
 def nav(cur):
-    """上の帯（PCのみ表示）。4言語の記号を並べ、今の言語に印。"""
-    links = "".join(_a("main", c, short, cur) for c, _, short in LANGS)
-    return f'<span class="nav-lang" role="group" aria-label="{LANG_WORD[cur]}">{links}</span>'
+    """トップページの上の帯の言語切替。"""
+    return lang_menu(cur, PAGES["main"])
+
+
+# 言語切替の見た目と、外を押したら閉じる動き（トップ・ブログ共通）
+LANG_MENU_CSS = (
+    ".nav-lang{position:relative}"
+    ".nav-lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:12.5px;"
+    "letter-spacing:.08em;color:var(--dim);padding:6px 11px;border-radius:999px;border:1px solid var(--rule);transition:.2s}"
+    ".nav-lang summary::-webkit-details-marker{display:none}"
+    ".nav-lang summary::after{content:\"\";width:5px;height:5px;border-right:1.5px solid currentColor;"
+    "border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);margin-left:2px}"
+    ".nav-lang[open] summary,.nav-lang summary:hover{color:var(--paper);border-color:rgba(244,243,238,.34)}"
+    ".nav-lang-list{position:absolute;right:0;top:calc(100% + 8px);min-width:160px;padding:6px;display:flex;"
+    "flex-direction:column;background:#062b29;border:1px solid var(--rule);border-radius:12px;"
+    "box-shadow:0 16px 44px rgba(0,0,0,.45);z-index:70}"
+    ".nav-lang-list a{padding:8px 12px;border-radius:8px;font-size:14px;letter-spacing:.02em;color:var(--paper);"
+    "text-decoration:none;white-space:nowrap}"
+    ".nav-lang-list a:hover{background:rgba(244,243,238,.08)}"
+    ".nav-lang-list a[aria-current]{color:var(--green);pointer-events:none}"
+)
+LANG_MENU_JS = ("<script>document.addEventListener('click',function(e){document.querySelectorAll('details.nav-lang[open]')"
+                ".forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script>")
 
 
 def foot(cur, kind="main"):

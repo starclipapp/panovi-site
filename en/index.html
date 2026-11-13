@@ -57,16 +57,28 @@ a{color:inherit}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
 .brand img{width:30px;height:30px;border-radius:8px}
 .brand b{font-size:18px;font-weight:600;letter-spacing:.13em;color:var(--green)}
-.nav-links{margin-left:auto;display:flex;gap:26px}
-.nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim);letter-spacing:.04em;transition:color .2s}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:16px}
+.nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim);letter-spacing:.04em;white-space:nowrap;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--paper)}
-@media(max-width:900px){.nav-links{display:none}}
-.nav-links a{white-space:nowrap}
-/* 中くらいの幅では折り返さないよう、ページ内へ飛ぶ項目は料金だけ残す（使いかた・FAQ・言語は残す） */
-@media(max-width:1180px){.nav-links{gap:20px}.nav-links>a[href^="#"]:not([href="#price"]){display:none}}
-.nav-lang{display:flex;gap:12px;padding-left:22px;border-left:1px solid var(--rule)}
-.nav-links .nav-lang a{font-size:12.5px;letter-spacing:.08em}
-.nav-links a[aria-current],.foot a[aria-current]{color:var(--paper);pointer-events:none}
+/* 上の帯は2つのまとまり: このページの中（できること〜料金）と、別のページ（ガイド・FAQ。枠で囲む） */
+.nav-group{display:flex;align-items:center;gap:22px}
+.nav-read{gap:2px;padding:3px;border:1px solid var(--rule);border-radius:999px}
+.nav-read a{padding:5px 13px;border-radius:999px}
+.nav-read a:hover{background:rgba(244,243,238,.08)}
+/* 中くらいの幅では、このページの中の項目は料金だけ残す。狭い画面ではガイド・FAQ と言語切替、さらに狭いと言語切替だけ */
+@media(max-width:1120px){.nav-main a:not([href="#price"]){display:none}}
+@media(max-width:900px){.nav-main{display:none}}
+@media(max-width:480px){.nav-read{display:none}}
+.nav-lang{position:relative}
+.nav-lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:12.5px;letter-spacing:.08em;color:var(--dim);padding:6px 11px;border-radius:999px;border:1px solid var(--rule);transition:.2s}
+.nav-lang summary::-webkit-details-marker{display:none}
+.nav-lang summary::after{content:"";width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);margin-left:2px}
+.nav-lang[open] summary,.nav-lang summary:hover{color:var(--paper);border-color:rgba(244,243,238,.34)}
+.nav-lang-list{position:absolute;right:0;top:calc(100% + 8px);min-width:160px;padding:6px;display:flex;flex-direction:column;background:#062b29;border:1px solid var(--rule);border-radius:12px;box-shadow:0 16px 44px rgba(0,0,0,.45);z-index:70}
+.nav-lang-list a{padding:8px 12px;border-radius:8px;font-size:14px;letter-spacing:.02em;color:var(--paper);text-decoration:none;white-space:nowrap}
+.nav-lang-list a:hover{background:rgba(244,243,238,.08)}
+.nav-lang-list a[aria-current]{color:var(--green);pointer-events:none}
+.foot a[aria-current]{color:var(--paper);pointer-events:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 26px;
   border-radius:999px;text-decoration:none;font-size:14.5px;font-weight:700;letter-spacing:.02em;
   border:1px solid transparent;cursor:pointer;white-space:nowrap;font-family:inherit;
@@ -269,14 +281,9 @@ h2 em{font-style:normal;color:var(--green)}
   <div class="col nav-in">
     <a class="brand" href="#top"><img src="/img/icon.png" alt=""><b>panovi</b></a>
     <nav class="nav-links">
-      <a href="#why">What it does</a>
-      <a href="#match">Whole match</a>
-      <a href="#try">Try it</a>
-      <a href="#how">How it works</a>
-      <a href="#price">Pricing</a>
-      <a href="/en/blog/">Guides</a>
-      <a href="/en/faq/">FAQ</a>
-      <span class="nav-lang" role="group" aria-label="Language"><a href="/" lang="ja" hreflang="ja">JA</a><a href="/en/" lang="en" hreflang="en" aria-current="page">EN</a><a href="/pt/" lang="pt-BR" hreflang="pt-BR">PT</a><a href="/es/" lang="es" hreflang="es">ES</a></span>
+      <div class="nav-group nav-main"><a href="#why">What it does</a><a href="#try">Try it</a><a href="#how">How it works</a><a href="#price">Pricing</a></div>
+      <div class="nav-group nav-read"><a href="/en/blog/">Guides</a><a href="/en/faq/">FAQ</a></div>
+      <details class="nav-lang"><summary aria-label="Language: EN"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"/></svg>EN</summary><div class="nav-lang-list"><a href="/" lang="ja" hreflang="ja">日本語</a><a href="/en/" lang="en" hreflang="en" aria-current="page">English</a><a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/" lang="es" hreflang="es">Español</a></div></details>
     </nav>
     <a class="btn btn-fill btn-sm" href="https://apps.apple.com/jp/app/id6797261654">App Store</a>
   </div>
@@ -633,5 +640,6 @@ document.querySelectorAll('.band video').forEach((v) => vio.observe(v));
   addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});
 })();
 </script>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.nav-lang[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script>
 </body>
 </html>

@@ -67,7 +67,7 @@ CAT = {
 # 画面の決まり文句
 UI = {
     "ja": {
-        "nav": "使いかた", "home": "panovi について", "blog_title": "panovi の使いかた",
+        "nav": "ガイド", "home": "panovi について", "blog_title": "panovi の使いかた",
         "blog_lead": "はじめての1本から、旅行やスポーツで使うコツ、新しい機能まで。panovi を使いこなすための記事をまとめています。",
         "blog_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi の使いかた。運動会・旅行・サッカーで使うコツや新機能のお知らせ。",
         "all": "すべて", "latest": "使いかた・ヒント", "latest_more": "記事をすべて見る",
@@ -76,7 +76,7 @@ UI = {
         "cta_h": "panovi を試してみる", "cta_p": "撮影は何分でも無料。3分未満の結合はずっと無料です。",
         "cta_btn": "App Store で入手", "back": "記事の一覧へ", "feed": "RSS",
         "foot_note": "撮った映像は、あなたのiPhoneの中だけに。", "privacy": "プライバシーポリシー",
-        "faq": "よくある質問", "faq_lead": "panovi について、よく聞かれることをまとめました。準備するもの、撮り方、料金、うまくいかないときまで。", "faq_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi のよくある質問。必要なもの、撮影の長さ、サッカーの試合の撮り方、料金、プライバシーまで。", "faq_more": "すべての質問を見る", "toc": "目次",
+        "faq": "FAQ", "faq_lead": "panovi について、よく聞かれることをまとめました。準備するもの、撮り方、料金、うまくいかないときまで。", "faq_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi のよくある質問。必要なもの、撮影の長さ、サッカーの試合の撮り方、料金、プライバシーまで。", "faq_more": "すべての質問を見る", "toc": "目次",
         "lang": "言語", "scheduled": "予約", "draft": "下書き",
         "suffix": "panovi パノラマ動画アプリ",
     },
@@ -90,7 +90,7 @@ UI = {
         "cta_h": "Try panovi", "cta_p": "Recording is free for any length. Stitches under 3 minutes are always free.",
         "cta_btn": "Get it on the App Store", "back": "All guides", "feed": "RSS",
         "foot_note": "Your footage stays on your iPhones.", "privacy": "Privacy Policy",
-        "faq": "Frequently asked questions", "faq_lead": "Common questions about panovi — what you need, how to shoot, pricing, and what to do when something goes wrong.", "faq_desc": "FAQ for panovi, the app that makes panoramic video with two iPhones: what you need, recording length, filming a whole soccer match, pricing and privacy.", "faq_more": "See all questions", "toc": "Contents",
+        "faq": "FAQ", "faq_lead": "Common questions about panovi — what you need, how to shoot, pricing, and what to do when something goes wrong.", "faq_desc": "FAQ for panovi, the app that makes panoramic video with two iPhones: what you need, recording length, filming a whole soccer match, pricing and privacy.", "faq_more": "See all questions", "toc": "Contents",
         "lang": "Language", "scheduled": "Scheduled", "draft": "Draft",
         "suffix": "panovi panoramic video app",
     },
@@ -104,7 +104,7 @@ UI = {
         "cta_h": "Experimente o panovi", "cta_p": "Gravar é grátis, sem limite de tempo. Uniões com menos de 3 minutos são sempre grátis.",
         "cta_btn": "Baixar na App Store", "back": "Todos os guias", "feed": "RSS",
         "foot_note": "Suas gravações ficam só nos seus iPhones.", "privacy": "Política de Privacidade",
-        "faq": "Perguntas frequentes", "faq_lead": "As perguntas mais comuns sobre o panovi: o que você precisa, como gravar, preços e o que fazer quando algo não dá certo.", "faq_desc": "Perguntas frequentes sobre o panovi, o app que faz vídeo panorâmico com dois iPhones: o que precisa, tempo de gravação, como filmar um jogo de futebol inteiro, preços e privacidade.", "faq_more": "Ver todas as perguntas", "toc": "Índice",
+        "faq": "FAQ", "faq_lead": "As perguntas mais comuns sobre o panovi: o que você precisa, como gravar, preços e o que fazer quando algo não dá certo.", "faq_desc": "Perguntas frequentes sobre o panovi, o app que faz vídeo panorâmico com dois iPhones: o que precisa, tempo de gravação, como filmar um jogo de futebol inteiro, preços e privacidade.", "faq_more": "Ver todas as perguntas", "toc": "Índice",
         "lang": "Idioma", "scheduled": "Agendado", "draft": "Rascunho",
         "suffix": "panovi, app de vídeo panorâmico",
     },
@@ -118,7 +118,7 @@ UI = {
         "cta_h": "Prueba panovi", "cta_p": "Grabar es gratis, sin límite de tiempo. Las uniones de menos de 3 minutos son siempre gratis.",
         "cta_btn": "Descargar en la App Store", "back": "Todas las guías", "feed": "RSS",
         "foot_note": "Tus grabaciones se quedan solo en tus iPhone.", "privacy": "Política de privacidad",
-        "faq": "Preguntas frecuentes", "faq_lead": "Las preguntas más comunes sobre panovi: qué necesitas, cómo grabar, precios y qué hacer cuando algo no sale bien.", "faq_desc": "Preguntas frecuentes sobre panovi, la app que hace video panorámico con dos iPhone: qué necesitas, duración de grabación, cómo grabar un partido de fútbol completo, precios y privacidad.", "faq_more": "Ver todas las preguntas", "toc": "Contenido",
+        "faq": "FAQ", "faq_lead": "Las preguntas más comunes sobre panovi: qué necesitas, cómo grabar, precios y qué hacer cuando algo no sale bien.", "faq_desc": "Preguntas frecuentes sobre panovi, la app que hace video panorámico con dos iPhone: qué necesitas, duración de grabación, cómo grabar un partido de fútbol completo, precios y privacidad.", "faq_more": "Ver todas las preguntas", "toc": "Contenido",
         "lang": "Idioma", "scheduled": "Programado", "draft": "Borrador",
         "suffix": "panovi, app de video panorámico",
     },
@@ -395,12 +395,18 @@ a{color:var(--green)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{width:28px;height:28px;border-radius:7px}
 .brand b{font-size:17px;font-weight:600;letter-spacing:.13em;color:var(--green)}
-.nav-links{margin-left:auto;display:flex;align-items:center;gap:22px}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:14px}
 .nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim)}
 .nav-links a:hover{color:var(--paper)}
 .nav-links a.btn-fill{color:#042a20}
 .nav-links a[aria-current]{color:var(--paper)}
-@media(max-width:640px){.nav-links .wide{display:none}}
+@media(max-width:760px){.nav-links .wide{display:none}}
+.nav-read{display:flex;gap:2px;padding:3px;border:1px solid var(--rule);border-radius:999px}
+.nav-read a{padding:5px 12px;border-radius:999px;white-space:nowrap}
+.nav-read a:hover{background:rgba(244,243,238,.08)}
+.nav-read a[aria-current]{background:rgba(244,243,238,.1)}
+@media(max-width:480px){.nav-read{display:none}}
+""" + L.LANG_MENU_CSS + """
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:999px;
   text-decoration:none;font-size:14.5px;font-weight:700;white-space:nowrap;border:1px solid transparent}
 .btn-fill{background:var(--green);color:#042a20}
@@ -561,8 +567,8 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
     <a class="brand" href="{home}"><img src="/img/icon.png" alt=""><b>panovi</b></a>
     <nav class="nav-links">
       <a class="wide" href="{home}">{esc(u['home'])}</a>
-      <a href="{blog_path(lang)}"{' aria-current="page"' if path == blog_path(lang) else ''}>{esc(u['nav'])}</a>
-      <a class="wide" href="{faq_path(lang)}"{' aria-current="page"' if path == faq_path(lang) else ''}>{esc(u['faq'])}</a>
+      <div class="nav-read"><a href="{blog_path(lang)}"{' aria-current="page"' if path == blog_path(lang) else ''}>{esc(u['nav'])}</a><a href="{faq_path(lang)}"{' aria-current="page"' if path == faq_path(lang) else ''}>{esc(u['faq'])}</a></div>
+      {L.lang_menu(LANGS[lang][0], {LANGS[lg][0]: pp for lg, pp in paths.items()})}
       <a class="btn btn-fill btn-sm" href="{appstore(lang)}" data-appstore="nav">App Store</a>
     </nav>
   </div>
@@ -581,6 +587,7 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
   {lang_links(paths, lang)}
 </footer>
 {CLICK_JS}
+{L.LANG_MENU_JS}
 {scripts}</body>
 </html>
 """
