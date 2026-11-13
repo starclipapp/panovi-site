@@ -41,6 +41,10 @@ No. Different models work together. The app automatically picks a lens both can 
 
 No. Any two iPhones pair just by scanning a QR code. An iPhone borrowed from family or a friend is fine. Recording and transfer are free, so the person you borrow from only needs to install the free app.
 
+### When I lend my iPhone, can I keep my photos and notifications private?
+
+Yes. With Guided Access, built into every iPhone, the lent iPhone stays locked to panovi: no Home Screen, no Photos or Messages, and no notifications. Turn it on in Settings > Accessibility > Guided Access, open panovi, triple-click the side button and tap Start. To finish, triple-click again and enter the passcode. panovi itself only asks for “add only” access to Photos, to save videos. Step by step: “[How to lend your iPhone safely](post:borrow-iphone)”.
+
 ### Do I need a tripod, and what should I get?
 
 Yes, when you shoot with two iPhones. We recommend your existing tripod plus a bracket plate for two phones and two MagSafe tripod mounts. “[Placing your iPhones for a clean stitch](post:tripod-setup)” shows how to put it together, with photos. With “Record with one phone”, you can also shoot handheld without a tripod.

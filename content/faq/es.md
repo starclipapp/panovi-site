@@ -41,6 +41,10 @@ No. Funciona con modelos distintos. La app elige automáticamente un lente que f
 
 No. Cualquier par de iPhone se conecta solo con leer un código QR. Puede ser un iPhone prestado por un familiar o un amigo. Grabar y transferir es gratis, así que solo tiene que instalar la app gratuita.
 
+### Si presto mi iPhone, ¿puedo proteger mis fotos y notificaciones?
+
+Sí. Con Acceso guiado, que viene en todos los iPhone, el iPhone prestado se queda en panovi: sin pantalla de inicio, sin Fotos ni Mensajes y sin notificaciones. Actívalo en Configuración > Accesibilidad > Acceso guiado, abre panovi, presiona tres veces el botón lateral y toca Iniciar. Para terminar, presiona tres veces otra vez e ingresa el código. panovi solo pide acceso a Fotos para “solo agregar”, para guardar los videos. Paso a paso: “[¿Cómo prestar tu iPhone sin preocuparte?](post:borrow-iphone)”.
+
 ### ¿Necesito un trípode? ¿Qué tengo que conseguir?
 
 Sí, para grabar con dos iPhone lo necesitas. Te recomendamos ponerle a un trípode que ya tengas una placa de soporte para dos y dos soportes de trípode compatibles con MagSafe. Te mostramos cómo armarlo, con fotos, en “[Cómo colocarlos para una unión limpia](post:tripod-setup)”. Con “Grabar con un iPhone”, también puedes grabar en la mano, sin trípode.

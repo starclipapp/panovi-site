@@ -41,6 +41,10 @@ Não. Modelos diferentes funcionam. O app escolhe automaticamente uma lente que 
 
 Não. Quaisquer dois iPhones se conectam lendo um código QR. Pode ser o iPhone de alguém da família ou de um amigo. Gravar e transferir é grátis, então a pessoa só precisa instalar o app gratuito.
 
+### Ao emprestar meu iPhone, dá para proteger minhas fotos e notificações?
+
+Dá. Com o Acesso Guiado, que já vem em todo iPhone, o iPhone emprestado fica preso ao panovi: sem tela de Início, sem Fotos ou Mensagens e sem notificações. Ative em Ajustes > Acessibilidade > Acesso Guiado, abra o panovi, clique três vezes no botão lateral e toque em Iniciar. Para terminar, clique três vezes de novo e digite o código. O próprio panovi só pede acesso a Fotos para “apenas adicionar”, para salvar os vídeos. Passo a passo: “[Como emprestar o iPhone com segurança?](post:borrow-iphone)”.
+
 ### Preciso de um tripé? O que devo comprar?
 
 Sim, para gravar com dois iPhones. Recomendamos usar o tripé que você já tem com uma placa dupla e dois suportes MagSafe para tripé. Mostramos como montar, com fotos, em “[Como posicionar para uma emenda perfeita](post:tripod-setup)”. Com o “Gravar com um iPhone”, dá para gravar na mão, sem tripé.
