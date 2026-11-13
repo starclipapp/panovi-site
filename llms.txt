@@ -1,0 +1,41 @@
+# panovi
+
+> panovi is an iPhone app (iOS 18 or later) that makes panoramic videos. Place two iPhones side by side on one tripod; the app joins their left and right footage into one ultra-wide panoramic video, edge to edge. Shoot the whole scene, then zoom in when you watch. A single-iPhone mode records with the wide and ultra wide lenses at once.
+
+Key facts:
+
+- Use cases: school sports days and recitals, travel scenery (mountains, coasts, cityscapes), and filming a whole soccer or rugby match from a fixed tripod without panning.
+- Each side is recorded in 4K, so the joined video keeps more detail than one phone covering the same width. Results can be exported for YouTube as 8K-size video or 8K + VR (360°).
+- Pairing is by QR code between any two iPhones (different models and Apple IDs are fine). A third iPhone can act as a remote (start/stop, seam check, battery and storage, fetching videos).
+- Everything runs on the iPhones. No cloud, no account, works without a signal.
+- Pricing: recording, transfer, setup checks and stitches under 3 minutes are free with no limit. Stitches of 3 minutes or longer: free 3 times, then a 24-hour event pass or a one-time unlock (not a subscription).
+- Unlike a 360° camera, panovi spends its pixels only in the direction you film, so distant subjects stay larger.
+- Japanese: panovi は2台のiPhoneでパノラマ動画（パノラマビデオ）を作るアプリ。運動会・発表会・旅行・サッカーの試合に。
+
+## App and site
+
+- [App Store](https://apps.apple.com/app/id6797261654): panovi on the App Store
+- [English site](https://panovi.app/en/): features, demo, pricing, FAQ
+- [日本語サイト](https://panovi.app/): 機能・体験・料金・よくある質問
+- [Português](https://panovi.app/pt/) / [Español](https://panovi.app/es/)
+- [panovi viewer](https://panovi.app/viewer/en/): zoom and pan any ultra-wide video (YouTube or mp4) in the browser
+
+## Guides (English)
+
+- [Getting started with panovi — shooting your first video](https://panovi.app/en/blog/first-video/): How to shoot an edge-to-edge panoramic video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.
+- [Placing your iPhones for a clean stitch — the tripod and the shallow V](https://panovi.app/en/blog/tripod-setup/): How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam in your panoramic video. Plus how to use the setup check and the 3-second preview.
+
+## 使いかた（日本語）
+
+- [はじめての panovi — 最初の1本を撮るまで](https://panovi.app/blog/first-video/): iPhone 2台と三脚で、端から端まで入ったパノラマ動画（パノラマビデオ）を撮る手順。つなぐ・置く・撮る・つなげる・寄って見る、を順に説明します。
+- [きれいにつながる置き方 — 三脚と「ハの字」のコツ](https://panovi.app/blog/tripod-setup/): パノラマ動画をきれいにつなぐために。2台のiPhoneを1本の三脚に載せる金具の組み方と、つなぎ目が目立たない置き方のコツ。配置の確認と3秒の確認の使い方も。
+
+## Guias (Português)
+
+- [Primeiros passos com o panovi — até o seu primeiro vídeo](https://panovi.app/pt/blog/first-video/): Como gravar um vídeo panorâmico, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.
+- [Como posicionar para uma emenda perfeita — o tripé e o segredo do “V”](https://panovi.app/pt/blog/tripod-setup/): Como montar o suporte para colocar dois iPhones em um só tripé e como posicioná-los para a emenda do vídeo panorâmico ficar bonita. E como usar a verificação de alinhamento e a prévia de 3 segundos.
+
+## Guías (Español)
+
+- [Tu primer video con panovi — paso a paso](https://panovi.app/es/blog/first-video/): Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.
+- [Cómo colocarlos para una unión limpia — el trípode y la forma de V](https://panovi.app/es/blog/tripod-setup/): Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión del video panorámico se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.

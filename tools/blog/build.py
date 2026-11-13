@@ -18,6 +18,8 @@
   - 記事ページと一覧ページ（4言語）、RSS（4言語）
   - sitemap.xml の <!-- blog:start --> 〜 <!-- blog:end --> の間
   - トップページ（4言語）の <!-- blog:latest:start --> 〜 <!-- blog:latest:end --> の間（入門＋新しい2本）
+  - トップページ（4言語）の <!-- seo:start --> 〜 <!-- seo:end --> の間（keywords と、画面の FAQ から作る FAQPage）
+  - llms.txt（AI 向けの案内。アプリの要点と4言語の記事一覧）
 """
 import argparse
 import datetime as dt
@@ -117,6 +119,24 @@ UI = {
         "suffix": "panovi, app de video panorámico",
     },
 }
+# 検索語（meta keywords と構造化データの keywords）。言語の基本 ＋ 分類 ＋ 記事の keywords:
+KEYWORDS = {
+    "ja": ["panovi", "パノラマ動画", "パノラマビデオ", "iPhone", "iPhone 2台", "超ワイド動画", "ワイド動画", "三脚", "同時撮影"],
+    "en": ["panovi", "panoramic video", "panorama video", "iPhone", "two iPhones", "ultra-wide video", "tripod"],
+    "pt": ["panovi", "vídeo panorâmico", "iPhone", "dois iPhones", "vídeo ultra-amplo", "tripé"],
+    "es": ["panovi", "video panorámico", "iPhone", "dos iPhone", "video ultrapanorámico", "trípode"],
+}
+CAT_KEYWORDS = {
+    "start":    {"ja": ["使い方", "撮り方"], "en": ["how to", "getting started"], "pt": ["como usar"], "es": ["cómo usar"]},
+    "tips":     {"ja": ["撮影のコツ"], "en": ["tips"], "pt": ["dicas"], "es": ["consejos"]},
+    "everyday": {"ja": ["運動会", "発表会", "撮影"], "en": ["sports day", "recital"], "pt": ["gravar"], "es": ["grabar"]},
+    "sports":   {"ja": ["サッカー 撮影", "試合 撮影", "固定カメラ"], "en": ["film soccer match", "sports recording"],
+                 "pt": ["filmar futebol", "gravar jogo"], "es": ["grabar fútbol", "grabar partido"]},
+    "news":     {"ja": ["新機能"], "en": ["new feature"], "pt": ["novidade"], "es": ["novedad"]},
+}
+# 「よくある質問」の見出し。この ## の下の ### を問い、その下を答えとして FAQPage を作る
+FAQ_HEADING = {"ja": "よくある質問", "en": "Frequently asked questions", "pt": "Perguntas frequentes", "es": "Preguntas frecuentes"}
+
 MONTHS = {
     "en": "January February March April May June July August September October November December".split(),
     "pt": "janeiro fevereiro março abril maio junho julho agosto setembro outubro novembro dezembro".split(),
@@ -207,6 +227,10 @@ class Post:
     def alt(self, lg):
         return self.text[lg][0].get("image_alt", "")
 
+    def keywords(self, lg):
+        own = [k.strip() for k in self.text[lg][0].get("keywords", "").split(",") if k.strip()]
+        return list(dict.fromkeys(own + CAT_KEYWORDS[self.category][lg] + KEYWORDS[lg]))
+
 
 def load_posts():
     if not CONTENT.is_dir():
@@ -221,6 +245,8 @@ class Ctx:
         self.published = published  # 公開する slug の集合
         self.slug = slug
         self.warnings = []
+        self.faq = []        # [(問い, 答えのHTML)]  「よくある質問」の節から集める
+        self.in_faq = False
 
 
 def resolve(target, ctx):
@@ -282,8 +308,16 @@ def render_body(md, ctx):
             out.append(cta(ctx.lang, ctx.slug))
         elif first.startswith("### "):
             out.append(f"<h3>{inline(first[4:], ctx)}</h3>")
+            if ctx.in_faq:
+                ctx.faq.append([first[4:].strip(), []])
         elif first.startswith("## "):
             out.append(f"<h2>{inline(first[3:], ctx)}</h2>")
+            ctx.in_faq = first[3:].strip() == FAQ_HEADING[ctx.lang]
+        elif all(ln.startswith("|") for ln in lines) and len(lines) >= 3 and re.fullmatch(r"[|:\- ]+", lines[1]):
+            cells = lambda ln: [c.strip() for c in ln.strip().strip("|").split("|")]
+            head = "".join(f"<th>{inline(c, ctx)}</th>" for c in cells(lines[0]))
+            rows = "".join("<tr>" + "".join(f"<td>{inline(c, ctx)}</td>" for c in cells(ln)) + "</tr>" for ln in lines[2:])
+            out.append(f'<div class="tbl"><table><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>')
         elif m := re.fullmatch(r'!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)', b.strip()):
             alt, src, cap = m.groups()
             if not (SITE_ROOT / src.lstrip("/")).is_file():
@@ -308,6 +342,8 @@ def render_body(md, ctx):
             if any(re.match(r"(- |\d+\. |#|>)", ln) for ln in lines[1:]):
                 fail(f"{ctx.slug}/{ctx.lang}: 見出し・箇条書きの前後には空行を入れる: {first[:40]!r}")
             out.append(f"<p>{inline(joiner.join(ln.strip() for ln in lines), ctx)}</p>")
+        if ctx.in_faq and ctx.faq and not first.startswith("#"):
+            ctx.faq[-1][1].append(out[-1])
     return "\n".join(out)
 
 
@@ -375,6 +411,7 @@ a{color:var(--green)}
 .post .lead{margin-top:16px;color:var(--dim);font-size:clamp(15px,1.8vw,17px)}
 .hero-img{margin:30px 0 8px;border-radius:12px;overflow:hidden;border:1px solid var(--rule)}
 .prose{font-size:clamp(15.5px,1.8vw,17px)}
+.post h1+.prose{margin-top:24px}
 .prose>*+*{margin-top:1.15em}
 .prose h2{margin-top:2.3em;font-size:clamp(21px,3vw,27px);font-weight:800;line-height:1.4;letter-spacing:-.02em;
   padding-top:.9em;border-top:1px solid var(--rule)}
@@ -388,6 +425,11 @@ a{color:var(--green)}
 .prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
+.tbl{overflow-x:auto}
+.prose table{width:100%;border-collapse:collapse;font-size:.92em}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid var(--rule)}
+.prose th{color:var(--green);font-weight:700;white-space:nowrap}
+.prose td{color:#d9e2df}
 .note{padding:18px 22px;border-left:2px solid var(--green);background:rgba(0,249,148,.06);border-radius:0 8px 8px 0}
 .note p{color:var(--dim)}
 .cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:2.6em 0 0;padding:24px;
@@ -448,7 +490,7 @@ def lang_links(paths, cur):
     return f'<span class="foot-lang" role="group" aria-label="{UI[cur]["lang"]}">{links}</span>'
 
 
-def page(lang, *, title, desc, path, paths, image, body, og_type="website", extra_head="", scripts=""):
+def page(lang, *, title, desc, path, paths, image, body, og_type="website", extra_head="", scripts="", keywords=None):
     u = UI[lang]
     img = f"{SITE}{image}" if image else f"{SITE}/img/hero.jpg"
     home = LANGS[lang][1]
@@ -461,6 +503,7 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
 <meta name="generator" content="{GENERATOR}">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
+<meta name="keywords" content="{esc(", ".join(keywords or KEYWORDS[lang]))}">
 <link rel="canonical" href="{SITE}{path}">
 {hreflang_links(paths)}
 <link rel="alternate" type="application/rss+xml" title="{esc(u['blog_title'])}" href="{SITE}{blog_path(lang)}feed.xml">
@@ -523,12 +566,28 @@ def status_flag(p, lang, today):
     return ""
 
 
-def json_ld(p, lang):
+def strip_tags(h):
+    return html.unescape(re.sub(r"<[^>]+>", "", h)).strip()
+
+
+def faq_ld(pairs):
+    import json
+    if not pairs:
+        return ""
+    d = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in pairs]}
+    return f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>\n'
+
+
+def json_ld(p, lang, faq=()):
     import json
     d = {
         "@context": "https://schema.org", "@type": "BlogPosting",
         "headline": p.title(lang), "description": p.desc(lang),
         "datePublished": p.date.isoformat(), "inLanguage": LANGS[lang][0],
+        "keywords": ", ".join(p.keywords(lang)),
+        "about": {"@type": "SoftwareApplication", "name": "panovi", "operatingSystem": "iOS",
+                  "applicationCategory": "PhotographyApplication", "url": SITE + LANGS[lang][1]},
         "mainEntityOfPage": f"{SITE}{blog_path(lang, p.slug)}",
         "author": {"@type": "Organization", "name": "starclip"},
         "publisher": {"@type": "Organization", "name": "starclip",
@@ -536,7 +595,8 @@ def json_ld(p, lang):
     }
     if p.image:
         d["image"] = f"{SITE}{p.image}"
-    return f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>\n'
+    return (f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>\n'
+            + faq_ld([(strip_tags(q), strip_tags(" ".join(a))) for q, a in faq if a]))
 
 
 def article_page(p, lang, posts, published, today):
@@ -564,7 +624,8 @@ def article_page(p, lang, posts, published, today):
 {more_html}"""
     paths = {lg: blog_path(lg, p.slug) for lg in LANGS}
     out = page(lang, title=f"{p.title(lang)} | {u['suffix']}", desc=p.desc(lang), path=paths[lang], paths=paths,
-               image=p.image, body=body, og_type="article", extra_head=json_ld(p, lang))
+               image=p.image, body=body, og_type="article", extra_head=json_ld(p, lang, ctx.faq),
+               keywords=p.keywords(lang))
     return out, ctx.warnings
 
 
@@ -648,6 +709,49 @@ def latest_block(lang, posts):
   .bl-cat{{font-size:11.5px;letter-spacing:.08em;color:var(--green)}}
   .bl-card b{{font-size:16.5px;line-height:1.55}}</style>
 </section>"""
+
+
+def home_seo(lang, home_html):
+    """トップの <head> に差し込む: keywords と、ページの「よくある質問」から作る FAQPage。
+    FAQ は画面に出ている文をそのまま使う（構造化データと表示を食い違わせない）。"""
+    pairs = re.findall(r"<details><summary>(.*?)</summary>\s*<p>(.*?)</p></details>", home_html, flags=re.S)
+    kw = f'<meta name="keywords" content="{esc(", ".join(KEYWORDS[lang] + CAT_KEYWORDS["everyday"][lang] + CAT_KEYWORDS["sports"][lang]))}">\n'
+    return (kw + faq_ld([(strip_tags(q), strip_tags(a)) for q, a in pairs])).rstrip("\n")
+
+
+def llms_txt(posts):
+    """AI 向けの案内（https://llmstxt.org の形）。アプリの要点と、記事の一覧を言語ごとに。"""
+    out = ["# panovi", "",
+           "> panovi is an iPhone app (iOS 18 or later) that makes panoramic videos. Place two iPhones side by side "
+           "on one tripod; the app joins their left and right footage into one ultra-wide panoramic video, edge to edge. "
+           "Shoot the whole scene, then zoom in when you watch. A single-iPhone mode records with the wide and ultra wide "
+           "lenses at once.", "",
+           "Key facts:", "",
+           "- Use cases: school sports days and recitals, travel scenery (mountains, coasts, cityscapes), "
+           "and filming a whole soccer or rugby match from a fixed tripod without panning.",
+           "- Each side is recorded in 4K, so the joined video keeps more detail than one phone covering the same width. "
+           "Results can be exported for YouTube as 8K-size video or 8K + VR (360°).",
+           "- Pairing is by QR code between any two iPhones (different models and Apple IDs are fine). "
+           "A third iPhone can act as a remote (start/stop, seam check, battery and storage, fetching videos).",
+           "- Everything runs on the iPhones. No cloud, no account, works without a signal.",
+           "- Pricing: recording, transfer, setup checks and stitches under 3 minutes are free with no limit. "
+           "Stitches of 3 minutes or longer: free 3 times, then a 24-hour event pass or a one-time unlock (not a subscription).",
+           "- Unlike a 360° camera, panovi spends its pixels only in the direction you film, so distant subjects stay larger.",
+           "- Japanese: panovi は2台のiPhoneでパノラマ動画（パノラマビデオ）を作るアプリ。運動会・発表会・旅行・サッカーの試合に。",
+           "",
+           "## App and site", "",
+           "- [App Store](https://apps.apple.com/app/id6797261654): panovi on the App Store",
+           f"- [English site]({SITE}/en/): features, demo, pricing, FAQ",
+           f"- [日本語サイト]({SITE}/): 機能・体験・料金・よくある質問",
+           f"- [Português]({SITE}/pt/) / [Español]({SITE}/es/)",
+           f"- [panovi viewer]({SITE}/viewer/en/): zoom and pan any ultra-wide video (YouTube or mp4) in the browser",
+           ""]
+    names = {"en": "Guides (English)", "ja": "使いかた（日本語）", "pt": "Guias (Português)", "es": "Guías (Español)"}
+    for lg in ("en", "ja", "pt", "es"):
+        out += [f"## {names[lg]}", ""]
+        out += [f"- [{p.title(lg)}]({SITE}{blog_path(lg, p.slug)}): {p.desc(lg)}" for p in posts]
+        out.append("")
+    return "\n".join(out)
 
 
 def splice(text, start, end, new, where):
@@ -766,9 +870,11 @@ def main():
             write(root, f"{blog_path(lg, p.slug).lstrip('/')}index.html", out, written)
         write(root, f"{blog_path(lg).lstrip('/')}index.html", index_page(lg, posts, today), written)
         write(root, f"{blog_path(lg).lstrip('/')}feed.xml", feed(lg, posts), written)
-        home = root / HOME_FILE[lg]
-        write(root, HOME_FILE[lg], splice(home.read_text(encoding="utf-8"), "<!-- blog:latest:start -->",
-                                          "<!-- blog:latest:end -->", latest_block(lg, posts), HOME_FILE[lg]), written)
+        home = (root / HOME_FILE[lg]).read_text(encoding="utf-8")
+        home = splice(home, "<!-- blog:latest:start -->", "<!-- blog:latest:end -->", latest_block(lg, posts), HOME_FILE[lg])
+        home = splice(home, "<!-- seo:start -->", "<!-- seo:end -->", home_seo(lg, home), HOME_FILE[lg])
+        write(root, HOME_FILE[lg], home, written)
+    write(root, "llms.txt", llms_txt(posts), written)
     sm = root / "sitemap.xml"
     write(root, "sitemap.xml", splice(sm.read_text(encoding="utf-8"), "<!-- blog:start -->", "<!-- blog:end -->",
                                       sitemap_block(posts), "sitemap.xml"), written)
