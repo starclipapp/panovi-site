@@ -24,24 +24,28 @@ Key facts:
 
 ## Guides (English)
 
+- [How to lend your iPhone safely — keep it on panovi with Guided Access](https://panovi.app/en/blog/borrow-iphone/): The second iPhone for a panoramic video can be one you borrow from family or a friend. With Guided Access, built into every iPhone, the borrowed iPhone stays on the panovi screen — no photos, no messages, no notifications. Here is how to set it up, shoot, and clean up afterward, in about three minutes.
 - [Getting started with panovi — shooting your first video](https://panovi.app/en/blog/first-video/): How to shoot an edge-to-edge panoramic video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.
 - [Placing your iPhones for a clean stitch — the tripod and the shallow V](https://panovi.app/en/blog/tripod-setup/): How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam in your panoramic video. Plus how to use the setup check and the 3-second preview.
 - [Film a whole soccer match — where to set up, the remote and the battery](https://panovi.app/en/blog/whole-match/): How to film a match from start to finish as a panoramic video, with both goals in frame, without touching the tripod. Where to set up, a third iPhone as a remote, power save, free space, and pricing for long stitches.
 
 ## 使いかた（日本語）
 
+- [iPhoneを安心して貸すには？ — 「アクセスガイド」で panovi の画面だけにする](https://panovi.app/blog/borrow-iphone/): パノラマ動画の2台目は、家族や友達に借りたiPhoneで撮れます。iPhoneに最初から入っている「アクセスガイド」を使えば、貸したiPhoneは panovi の画面から動かず、写真もメッセージも通知も見られません。設定から撮影後の片付けまで、3分で分かる手順です。
 - [はじめての panovi — 最初の1本を撮るまで](https://panovi.app/blog/first-video/): iPhone 2台と三脚で、端から端まで入ったパノラマ動画（パノラマビデオ）を撮る手順。つなぐ・置く・撮る・つなげる・寄って見る、を順に説明します。
 - [きれいにつながる置き方 — 三脚と「ハの字」のコツ](https://panovi.app/blog/tripod-setup/): パノラマ動画をきれいにつなぐために。2台のiPhoneを1本の三脚に載せる金具の組み方と、つなぎ目が目立たない置き方のコツ。配置の確認と3秒の確認の使い方も。
 - [サッカーの試合を、まるごと撮る — 置き場所・リモコン・電池の段取り](https://panovi.app/blog/whole-match/): 三脚に置いたまま、両ゴールまで入れて試合を最後までパノラマ動画で撮るための段取り。置き場所、3台目のリモコン、省エネ、空き容量、長い結合の料金まで。
 
 ## Guias (Português)
 
+- [Como emprestar o iPhone com segurança? — Use o “Acesso Guiado” para deixar só o panovi na tela](https://panovi.app/pt/blog/borrow-iphone/): O segundo iPhone do seu vídeo panorâmico pode ser emprestado de alguém da família ou de um amigo. Com o “Acesso Guiado”, que já vem no iPhone, o aparelho emprestado fica preso ao panovi e ninguém vê fotos, mensagens nem notificações. Da configuração à limpeza depois da gravação, em 3 minutos de leitura.
 - [Primeiros passos com o panovi — até o seu primeiro vídeo](https://panovi.app/pt/blog/first-video/): Como gravar um vídeo panorâmico, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.
 - [Como posicionar para uma emenda perfeita — o tripé e o segredo do “V”](https://panovi.app/pt/blog/tripod-setup/): Como montar o suporte para colocar dois iPhones em um só tripé e como posicioná-los para a emenda do vídeo panorâmico ficar bonita. E como usar a verificação de alinhamento e a prévia de 3 segundos.
 - [Filme o jogo de futebol inteiro — onde colocar, controle remoto e bateria](https://panovi.app/pt/blog/whole-match/): Como se preparar para filmar um jogo do começo ao fim em vídeo panorâmico, com as duas traves na imagem e o tripé parado. Onde colocar, o terceiro iPhone como controle, economia de energia, espaço livre e o preço das uniões longas.
 
 ## Guías (Español)
 
+- [¿Cómo prestar tu iPhone sin preocuparte? — Deja solo panovi en pantalla con Acceso guiado](https://panovi.app/es/blog/borrow-iphone/): El segundo iPhone para tu video panorámico puede ser prestado por un familiar o un amigo. Con Acceso guiado, que viene incluido en todos los iPhone, el iPhone prestado se queda fijo en panovi y nadie puede ver sus fotos, mensajes ni notificaciones. Te explicamos en 3 minutos desde la configuración hasta qué hacer después de grabar.
 - [Tu primer video con panovi — paso a paso](https://panovi.app/es/blog/first-video/): Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.
 - [Cómo colocarlos para una unión limpia — el trípode y la forma de V](https://panovi.app/es/blog/tripod-setup/): Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión del video panorámico se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.
 - [Graba el partido de fútbol completo — ubicación, control remoto y batería](https://panovi.app/es/blog/whole-match/): Cómo preparar todo para grabar un partido entero en video panorámico, con el trípode fijo y las dos porterías en la imagen. Ubicación, un tercer iPhone como control remoto, ahorro de energía, espacio libre y el precio de las uniones largas.

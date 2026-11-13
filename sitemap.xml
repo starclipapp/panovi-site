@@ -203,7 +203,7 @@
   </url>
   <url>
     <loc>https://panovi.app/blog/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
@@ -212,7 +212,7 @@
   </url>
   <url>
     <loc>https://panovi.app/en/blog/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
@@ -221,7 +221,7 @@
   </url>
   <url>
     <loc>https://panovi.app/pt/blog/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
@@ -230,12 +230,48 @@
   </url>
   <url>
     <loc>https://panovi.app/es/blog/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/blog/borrow-iphone/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/borrow-iphone/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/en/blog/borrow-iphone/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/borrow-iphone/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/pt/blog/borrow-iphone/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/borrow-iphone/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/es/blog/borrow-iphone/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/borrow-iphone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/borrow-iphone/"/>
   </url>
   <url>
     <loc>https://panovi.app/blog/first-video/</loc>
