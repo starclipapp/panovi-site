@@ -61,6 +61,9 @@ a{color:inherit}
 .nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim);letter-spacing:.04em;transition:color .2s}
 .nav-links a:hover{color:var(--paper)}
 @media(max-width:900px){.nav-links{display:none}}
+.nav-links a{white-space:nowrap}
+/* 中くらいの幅では折り返さないよう、ページ内へ飛ぶ項目は料金だけ残す（使いかた・FAQ・言語は残す） */
+@media(max-width:1180px){.nav-links{gap:20px}.nav-links>a[href^="#"]:not([href="#price"]){display:none}}
 .nav-lang{display:flex;gap:12px;padding-left:22px;border-left:1px solid var(--rule)}
 .nav-links .nav-lang a{font-size:12.5px;letter-spacing:.08em}
 .nav-links a[aria-current],.foot a[aria-current]{color:var(--paper);pointer-events:none}
@@ -272,6 +275,7 @@ h2 em{font-style:normal;color:var(--green)}
       <a href="#how">使い方</a>
       <a href="#price">料金</a>
       <a href="/blog/">使いかた</a>
+      <a href="/faq/">よくある質問</a>
       <span class="nav-lang" role="group" aria-label="言語"><a href="/" lang="ja" hreflang="ja" aria-current="page">JA</a><a href="/en/" lang="en" hreflang="en">EN</a><a href="/pt/" lang="pt-BR" hreflang="pt-BR">PT</a><a href="/es/" lang="es" hreflang="es">ES</a></span>
     </nav>
     <a class="btn btn-fill btn-sm" href="https://apps.apple.com/jp/app/id6797261654">App Store</a>
@@ -495,6 +499,7 @@ h2 em{font-style:normal;color:var(--green)}
       <p><strong>買い切り</strong> — 一度の支払いで、そのあとはずっと無制限。月額ではありません。これからも使い続けるならこちら。</p>
       <p>価格は App Store でご確認ください。専用の機材も要りません。すでにお持ちの iPhone 2台と、三脚だけ。</p>
     </div>
+    <div class="links"><a class="btn btn-line" href="/faq/#料金">料金のよくある質問を見る</a></div>
   </div>
 </section>
 

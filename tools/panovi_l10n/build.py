@@ -115,7 +115,10 @@ MAIN_TEXT = [
     T('<a href="#how">How it works</a>', '<a href="#how">Como funciona</a>', '<a href="#how">Cómo funciona</a>'),
     T('<a href="#price">Pricing</a>', '<a href="#price">Preços</a>', '<a href="#price">Precios</a>'),
     # ブログ（上の帯とフッタ）
-    T('<a href="/en/faq/">FAQ</a>', '<a href="/pt/faq/">Perguntas frequentes</a>', '<a href="/es/faq/">Preguntas frecuentes</a>'),
+    T('<a href="/en/faq/">FAQ</a>', '<a href="/pt/faq/">Perguntas frequentes</a>', '<a href="/es/faq/">Preguntas frecuentes</a>', 2),
+    T('<a class="btn btn-line" href="/en/faq/#pricing">Read the pricing FAQ</a>',
+      '<a class="btn btn-line" href="/pt/faq/#preços">Ver as perguntas sobre preços</a>',
+      '<a class="btn btn-line" href="/es/faq/#precios">Ver las preguntas sobre precios</a>'),
     T('<a href="/en/blog/">Guides</a>', '<a href="/pt/blog/">Guias</a>', '<a href="/es/blog/">Guías</a>', 2),
     # hero
     T('<span class="kicker">two iPhones, one wide frame</span>',
