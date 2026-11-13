@@ -32,7 +32,29 @@ done
 - 人が大きく映る映像は、本人の許可があるものだけ（サッカーはトップのデモだけ許可あり）
 - 曲は市販のものを使わない。YouTube の「オーディオ ライブラリ」から付ける
 
+## 曲
+
+```sh
+bash tools/shorts/add_music.sh ~/Movies/panovi-shorts/panovi-short-ja.mp4 "Cheery Monday.mp3" 0.5 \
+  ~/Movies/panovi-shorts/panovi-short-ja-music.mp4
+```
+
+- 使ってよいのは、YouTube で使えると明記された曲だけ。市販の曲は使わない
+- 今使っているのは Kevin MacLeod（incompetech.com）の **Cheery Monday**（CC BY 4.0）。
+  曲は https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cheery%20Monday.mp3 から取れる。
+  **説明欄に作者を書くのが条件**（下の「出すとき」）
+- 雰囲気は「明るく・のんびり・楽しい」。壮大な曲・緊張感のある曲は「こわい」と感じられた（2026-11-14）
+- YouTube のアプリから上げるときに「サウンドを追加」で付けてもよい（その場合は曲を付けていない版を上げる）
+
 ## 出すとき
 
 - 題に場所と検索語、最後に `#shorts`。説明欄の1行目にその言語のブログ記事の URL
+- Kevin MacLeod の曲を使ったら、説明欄の最後に次の3行（曲名を直す）
+
+  ```
+  Music: "Cheery Monday" Kevin MacLeod (incompetech.com)
+  Licensed under Creative Commons: By Attribution 4.0
+  https://creativecommons.org/licenses/by/4.0/
+  ```
+
 - 4言語は同じチャンネルでよい。1日ずつずらして出す。最初のコメントに記事の URL を書いて固定する
