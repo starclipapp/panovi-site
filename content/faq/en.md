@@ -43,7 +43,7 @@ No. Any two iPhones pair just by scanning a QR code. An iPhone borrowed from fam
 
 ### Do I need a tripod, and what should I get?
 
-Yes, when you shoot with two iPhones. We recommend your existing tripod plus a bracket plate for two phones and two MagSafe tripod mounts. “[Placing your iPhones for a clean stitch](post:tripod-setup)” shows how to put it together, with photos.
+Yes, when you shoot with two iPhones. We recommend your existing tripod plus a bracket plate for two phones and two MagSafe tripod mounts. “[Placing your iPhones for a clean stitch](post:tripod-setup)” shows how to put it together, with photos. With “Record with one phone”, you can also shoot handheld without a tripod.
 
 ### Do I need an internet connection?
 
@@ -78,6 +78,10 @@ Without touching the cameras, you can start and stop recording, check the seam, 
 ### Can I shoot with just one iPhone?
 
 Yes. “Record with one phone” records with the wide and ultra wide lenses at the same time and turns them into one video. You can zoom while you shoot, and the zoom is recorded too, so you can fix how close you get afterward. It works on iPhones that have an ultra wide lens and can record with two lenses at the same time.
+
+### Can I shoot handheld, without a tripod?
+
+Yes. With “Record with one phone” you don’t need a tripod. It records with the wide and ultra wide lenses of a single iPhone at the same time, so you can just hold it and shoot whenever the moment strikes, on a walk or on a trip. When you shoot with two iPhones, use a tripod to keep both pointed and fixed.
 
 ## Stitching, saving and watching
 

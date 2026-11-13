@@ -136,6 +136,12 @@ a{color:var(--green)}
 .foot a{color:var(--green);text-decoration:none}
 .foot-lang{display:flex;flex-wrap:wrap;gap:6px 16px}
 .foot a[aria-current]{color:var(--paper);pointer-events:none}
+.foot a.foot-sub{font-size:12px;color:var(--dim)}
+.foot a.foot-sub:hover{color:var(--green)}
+.co{margin-top:30px;width:100%;border-collapse:collapse}
+.co th,.co td{text-align:left;vertical-align:top;padding:16px 0;border-top:1px solid var(--rule);font-size:15.5px}
+.co tr:last-child th,.co tr:last-child td{border-bottom:1px solid var(--rule)}
+.co th{width:34%;color:var(--dim);font-weight:500;padding-right:16px}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
 <script>
@@ -168,13 +174,14 @@ a{color:var(--green)}
 </div>
 </main>
 <footer class="col foot">
-  <span>© 2026 starclip</span>
+  <span>© 2026 panovi</span>
   <span>Tus grabaciones se quedan solo en tus iPhone.</span>
   <a href="/es/">panovi</a>
   <a href="/es/blog/">Guías</a>
   <a href="/es/faq/">FAQ</a>
   <a href="/es/blog/feed.xml">RSS</a>
   <a href="/es/privacy/">Política de privacidad</a>
+  <a class="foot-sub" href="/es/company/">Empresa</a>
   <span class="foot-lang" role="group" aria-label="Idioma"><a href="/blog/" lang="ja" hreflang="ja">日本語</a><a href="/en/blog/" lang="en" hreflang="en">English</a><a href="/pt/blog/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/blog/" lang="es" hreflang="es" aria-current="page">Español</a></span>
 </footer>
 <script>

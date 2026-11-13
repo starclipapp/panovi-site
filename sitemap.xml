@@ -166,6 +166,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/faq/"/>
   </url>
   <url>
+    <loc>https://panovi.app/company/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/company/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/company/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/company/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/company/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/en/company/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/company/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/company/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/company/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/company/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/pt/company/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/company/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/company/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/company/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/company/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/es/company/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/company/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/company/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/company/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/company/"/>
+  </url>
+  <url>
     <loc>https://panovi.app/blog/</loc>
     <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>

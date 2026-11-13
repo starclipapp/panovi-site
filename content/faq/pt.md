@@ -43,7 +43,7 @@ Não. Quaisquer dois iPhones se conectam lendo um código QR. Pode ser o iPhone 
 
 ### Preciso de um tripé? O que devo comprar?
 
-Sim, para gravar com dois iPhones. Recomendamos usar o tripé que você já tem com uma placa dupla e dois suportes MagSafe para tripé. Mostramos como montar, com fotos, em “[Como posicionar para uma emenda perfeita](post:tripod-setup)”.
+Sim, para gravar com dois iPhones. Recomendamos usar o tripé que você já tem com uma placa dupla e dois suportes MagSafe para tripé. Mostramos como montar, com fotos, em “[Como posicionar para uma emenda perfeita](post:tripod-setup)”. Com o “Gravar com um iPhone”, dá para gravar na mão, sem tripé.
 
 ### O panovi precisa de internet?
 
@@ -78,6 +78,10 @@ Sem tocar nas câmeras, você inicia e para a gravação, confere a emenda, vê 
 ### Dá para gravar com um iPhone só?
 
 Dá. O “Gravar com um iPhone” grava com a lente grande-angular e a ultra-angular ao mesmo tempo e une tudo em um só vídeo. Você pode dar zoom durante a gravação, e o movimento do zoom também fica registrado, então dá para ajustar o enquadramento depois. Funciona nos iPhones que têm lente ultra-angular e conseguem gravar com as duas lentes ao mesmo tempo.
+
+### Dá para gravar com o iPhone na mão, sem tripé?
+
+Dá. Com o “Gravar com um iPhone” você não precisa de tripé. Ele grava ao mesmo tempo com a grande-angular e a ultra-angular de um só iPhone, então dá para segurar na mão e gravar quando der vontade, num passeio ou numa viagem. Para gravar com dois iPhones, use um tripé para deixar os dois fixos e alinhados.
 
 ## Unir, salvar e assistir
 

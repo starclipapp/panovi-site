@@ -20,7 +20,7 @@ El video panorámico conserva ese ancho horizontal y **también guarda el tiempo
 | Forma | Qué necesitas | Amplitud | Detalle | Para qué sirve |
 |---|---|---|---|---|
 | ① Ultra gran angular (0.5x) de la cámara del iPhone | Un iPhone | Amplia | El de un iPhone | Cuando solo quieres grabar más amplio |
-| ② “Grabar con un iPhone” de panovi | Un iPhone | Amplia | Nítido en el centro gracias al gran angular | Pequeños recuerdos de un paseo o un viaje |
+| ② “Grabar con un iPhone” de panovi | Un iPhone (puede ser en la mano) | Amplia | Nítido en el centro gracias al gran angular | Pequeños recuerdos de un paseo o un viaje |
 | ③ Dos iPhone con panovi | Dos iPhone + trípode | La más amplia | Cada lado en 4K | Festivales deportivos escolares, presentaciones, paisajes espectaculares, partidos de fútbol |
 
 ## ① Graba con el ultra gran angular (0.5x) de la cámara del iPhone

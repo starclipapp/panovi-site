@@ -43,7 +43,7 @@ No. Cualquier par de iPhone se conecta solo con leer un código QR. Puede ser un
 
 ### ¿Necesito un trípode? ¿Qué tengo que conseguir?
 
-Sí, para grabar con dos iPhone lo necesitas. Te recomendamos ponerle a un trípode que ya tengas una placa de soporte para dos y dos soportes de trípode compatibles con MagSafe. Te mostramos cómo armarlo, con fotos, en “[Cómo colocarlos para una unión limpia](post:tripod-setup)”.
+Sí, para grabar con dos iPhone lo necesitas. Te recomendamos ponerle a un trípode que ya tengas una placa de soporte para dos y dos soportes de trípode compatibles con MagSafe. Te mostramos cómo armarlo, con fotos, en “[Cómo colocarlos para una unión limpia](post:tripod-setup)”. Con “Grabar con un iPhone”, también puedes grabar en la mano, sin trípode.
 
 ### ¿panovi funciona sin conexión a internet?
 
@@ -78,6 +78,10 @@ Sin tocar las cámaras, puedes iniciar y detener la grabación, revisar la zona 
 ### ¿Puedo grabar con un solo iPhone?
 
 Sí. “Grabar con un iPhone” graba al mismo tiempo con el lente gran angular y el ultra gran angular, y los une en un solo video. Puedes hacer zoom mientras grabas, y el movimiento del zoom se guarda, así que puedes corregir el acercamiento después. Funciona en los iPhone que tienen lente ultra gran angular y pueden grabar con dos lentes al mismo tiempo.
+
+### ¿Puedo grabar con el iPhone en la mano, sin trípode?
+
+Sí. Con “Grabar con un iPhone” no necesitas trípode. Graba al mismo tiempo con el gran angular y el ultra gran angular de un solo iPhone, así que puedes sostenerlo en la mano y grabar cuando quieras, en un paseo o en un viaje. Si grabas con dos iPhone, usa un trípode para dejarlos fijos y bien orientados.
 
 ## Unir, guardar y ver
 

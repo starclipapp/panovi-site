@@ -21,7 +21,8 @@ import langs as L  # noqa: E402
 
 PANOVI = HERE.parent.parent
 JP = re.compile(r"[぀-ヿ㐀-鿿＀-￯　-〿]")
-JA_LINK = re.compile(r'<a [^>]*lang="ja"[^>]*>日本語</a>')
+# ★運営会社の名前（法人名）は固有名詞なので、どの言語のページにも日本語のまま出す
+JA_LINK = re.compile(r'<a [^>]*lang="ja"[^>]*>日本語</a>|金子電器株式会社')
 
 APPSTORE_JP = "https://apps.apple.com/jp/app/id6797261654"
 # 国を指定しない形。開いた人の国の App Store に飛ぶ(米国・ブラジル・ウルグアイ・メキシコ向け)
@@ -113,6 +114,7 @@ MAIN_TEXT = [
     T('<a href="#how">How it works</a>', '<a href="#how">Como funciona</a>', '<a href="#how">Cómo funciona</a>'),
     T('<a href="#price">Pricing</a>', '<a href="#price">Preços</a>', '<a href="#price">Precios</a>'),
     # ブログ（上の帯とフッタ）
+    T('<a class="foot-sub" href="/en/company/">Company</a>', '<a class="foot-sub" href="/pt/company/">Empresa</a>', '<a class="foot-sub" href="/es/company/">Empresa</a>'),
     T('<a href="/en/faq/">FAQ</a>', '<a href="/pt/faq/">FAQ</a>', '<a href="/es/faq/">FAQ</a>', 2),
     T('<a class="btn btn-line" href="/en/faq/#pricing">Read the pricing FAQ</a>',
       '<a class="btn btn-line" href="/pt/faq/#preços">Ver as perguntas sobre preços</a>',
@@ -455,9 +457,9 @@ MAIN_TEXT = [
     T("<summary>Do I need a tripod?</summary>",
       "<summary>Preciso de um tripé?</summary>",
       "<summary>¿Necesito un trípode?</summary>"),
-    T("<p>Yes, to hold the two phones side by side. Use one that can carry both; the trick is getting the lenses close together.</p>",
-      "<p>Sim, para segurar os dois celulares lado a lado. Use um que aguente os dois; o segredo é deixar as lentes bem próximas.</p>",
-      "<p>Sí, para sostener los dos teléfonos uno al lado del otro. Usa uno que aguante ambos; el truco es que las cámaras queden bien juntas.</p>"),
+    T("<p>Yes, to hold the two phones side by side. Use one that can carry both; the trick is getting the lenses close together. With “Record with one phone”, which records with the wide and ultra wide lenses of a single iPhone, you can also shoot handheld without a tripod.</p>",
+      "<p>Sim, para segurar os dois celulares lado a lado. Use um que aguente os dois; o segredo é deixar as lentes bem próximas. Com o “Gravar com um iPhone”, que grava com a grande-angular e a ultra-angular de um só iPhone, dá para gravar na mão, sem tripé.</p>",
+      "<p>Sí, para sostener los dos teléfonos uno al lado del otro. Usa uno que aguante ambos; el truco es que las cámaras queden bien juntas. Con “Grabar con un iPhone”, que graba con el gran angular y el ultra gran angular de un solo iPhone, también puedes grabar en la mano, sin trípode.</p>"),
     T("<summary>What if the tripod gets bumped mid-recording?</summary>",
       "<summary>E se alguém esbarrar no tripé durante a gravação?</summary>",
       "<summary>¿Y si alguien choca con el trípode a mitad de la grabación?</summary>"),

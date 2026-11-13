@@ -20,7 +20,7 @@ O vídeo panorâmico mantém a largura horizontal e **também guarda o tempo**. 
 | Jeito | Do que você precisa | Amplitude | Detalhe | Melhor para |
 |---|---|---|---|---|
 | ① Ultra-angular da câmera padrão (0,5x) | 1 iPhone | Ampla | O de 1 iPhone | Quando você só quer gravar algo amplo |
-| ② “Gravar com um iPhone” do panovi | 1 iPhone | Ampla | Centro nítido, com a grande-angular | Pequenos registros de passeios e viagens |
+| ② “Gravar com um iPhone” do panovi | 1 iPhone (pode ser na mão) | Ampla | Centro nítido, com a grande-angular | Pequenos registros de passeios e viagens |
 | ③ panovi com 2 iPhones | 2 iPhones + tripé | A mais ampla | Cada lado em 4K | Dia de esportes da escola, apresentações, paisagens incríveis, jogos de futebol |
 
 ## ① Gravar com a ultra-angular (0,5x) da câmera padrão

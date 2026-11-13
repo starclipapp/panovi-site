@@ -42,6 +42,24 @@ JP = re.compile(r"[぀-ヿ㐀-鿿＀-￯　-〿]")
 APPSTORE_JP = "https://apps.apple.com/jp/app/id6797261654"
 APPSTORE_ANY = "https://apps.apple.com/app/id6797261654"
 
+# 運営会社（会社ページ・フッタ・構造化データの唯一の情報源）
+COMPANY_NAME = "金子電器株式会社"
+COMPANY_ADDR = {"ja": "広島市安芸区中野15-5", "en": "15-5 Nakano, Aki-ku, Hiroshima, Japan"}
+COMPANY_PAGE_DATE = "2026-11-13"  # 会社ページを直したらここも直す（サイトマップの lastmod）
+
+
+def company_org(lang):
+    """構造化データの Organization（運営会社）。"""
+    if lang == "ja":
+        addr = {"@type": "PostalAddress", "addressCountry": "JP", "addressRegion": "広島県",
+                "addressLocality": "広島市安芸区", "streetAddress": "中野15-5"}
+    else:
+        addr = {"@type": "PostalAddress", "addressCountry": "JP", "addressRegion": "Hiroshima",
+                "addressLocality": "Aki-ku, Hiroshima", "streetAddress": "15-5 Nakano"}
+    return {"@type": "Organization", "name": COMPANY_NAME, "address": addr,
+            "brand": {"@type": "Brand", "name": "panovi"}, "url": SITE + LANGS[lang][1] + "company/"}
+
+
 # 原稿のファイル名の言語 → (html lang / hreflang, サイトのパスの頭)
 LANGS = {
     "ja": ("ja", "/"),
@@ -76,7 +94,7 @@ UI = {
         "cta_h": "panovi を試してみる", "cta_p": "撮影は何分でも無料。3分未満の結合はずっと無料です。",
         "cta_btn": "App Store で入手", "back": "記事の一覧へ", "feed": "RSS",
         "foot_note": "撮った映像は、あなたのiPhoneの中だけに。", "privacy": "プライバシーポリシー",
-        "faq": "FAQ", "faq_lead": "panovi について、よく聞かれることをまとめました。準備するもの、撮り方、料金、うまくいかないときまで。", "faq_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi のよくある質問。必要なもの、撮影の長さ、サッカーの試合の撮り方、料金、プライバシーまで。", "faq_more": "すべての質問を見る", "toc": "目次",
+        "company": "運営会社", "company_title": "運営会社", "faq": "FAQ", "faq_lead": "panovi について、よく聞かれることをまとめました。準備するもの、撮り方、料金、うまくいかないときまで。", "faq_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi のよくある質問。必要なもの、撮影の長さ、サッカーの試合の撮り方、料金、プライバシーまで。", "faq_more": "すべての質問を見る", "toc": "目次",
         "lang": "言語", "scheduled": "予約", "draft": "下書き",
         "suffix": "panovi パノラマ動画アプリ",
     },
@@ -90,7 +108,7 @@ UI = {
         "cta_h": "Try panovi", "cta_p": "Recording is free for any length. Stitches under 3 minutes are always free.",
         "cta_btn": "Get it on the App Store", "back": "All guides", "feed": "RSS",
         "foot_note": "Your footage stays on your iPhones.", "privacy": "Privacy Policy",
-        "faq": "FAQ", "faq_lead": "Common questions about panovi — what you need, how to shoot, pricing, and what to do when something goes wrong.", "faq_desc": "FAQ for panovi, the app that makes panoramic video with two iPhones: what you need, recording length, filming a whole soccer match, pricing and privacy.", "faq_more": "See all questions", "toc": "Contents",
+        "company": "Company", "company_title": "Company", "faq": "FAQ", "faq_lead": "Common questions about panovi — what you need, how to shoot, pricing, and what to do when something goes wrong.", "faq_desc": "FAQ for panovi, the app that makes panoramic video with two iPhones: what you need, recording length, filming a whole soccer match, pricing and privacy.", "faq_more": "See all questions", "toc": "Contents",
         "lang": "Language", "scheduled": "Scheduled", "draft": "Draft",
         "suffix": "panovi panoramic video app",
     },
@@ -104,7 +122,7 @@ UI = {
         "cta_h": "Experimente o panovi", "cta_p": "Gravar é grátis, sem limite de tempo. Uniões com menos de 3 minutos são sempre grátis.",
         "cta_btn": "Baixar na App Store", "back": "Todos os guias", "feed": "RSS",
         "foot_note": "Suas gravações ficam só nos seus iPhones.", "privacy": "Política de Privacidade",
-        "faq": "FAQ", "faq_lead": "As perguntas mais comuns sobre o panovi: o que você precisa, como gravar, preços e o que fazer quando algo não dá certo.", "faq_desc": "Perguntas frequentes sobre o panovi, o app que faz vídeo panorâmico com dois iPhones: o que precisa, tempo de gravação, como filmar um jogo de futebol inteiro, preços e privacidade.", "faq_more": "Ver todas as perguntas", "toc": "Índice",
+        "company": "Empresa", "company_title": "Empresa responsável", "faq": "FAQ", "faq_lead": "As perguntas mais comuns sobre o panovi: o que você precisa, como gravar, preços e o que fazer quando algo não dá certo.", "faq_desc": "Perguntas frequentes sobre o panovi, o app que faz vídeo panorâmico com dois iPhones: o que precisa, tempo de gravação, como filmar um jogo de futebol inteiro, preços e privacidade.", "faq_more": "Ver todas as perguntas", "toc": "Índice",
         "lang": "Idioma", "scheduled": "Agendado", "draft": "Rascunho",
         "suffix": "panovi, app de vídeo panorâmico",
     },
@@ -118,7 +136,7 @@ UI = {
         "cta_h": "Prueba panovi", "cta_p": "Grabar es gratis, sin límite de tiempo. Las uniones de menos de 3 minutos son siempre gratis.",
         "cta_btn": "Descargar en la App Store", "back": "Todas las guías", "feed": "RSS",
         "foot_note": "Tus grabaciones se quedan solo en tus iPhone.", "privacy": "Política de privacidad",
-        "faq": "FAQ", "faq_lead": "Las preguntas más comunes sobre panovi: qué necesitas, cómo grabar, precios y qué hacer cuando algo no sale bien.", "faq_desc": "Preguntas frecuentes sobre panovi, la app que hace video panorámico con dos iPhone: qué necesitas, duración de grabación, cómo grabar un partido de fútbol completo, precios y privacidad.", "faq_more": "Ver todas las preguntas", "toc": "Contenido",
+        "company": "Empresa", "company_title": "Empresa responsable", "faq": "FAQ", "faq_lead": "Las preguntas más comunes sobre panovi: qué necesitas, cómo grabar, precios y qué hacer cuando algo no sale bien.", "faq_desc": "Preguntas frecuentes sobre panovi, la app que hace video panorámico con dos iPhone: qué necesitas, duración de grabación, cómo grabar un partido de fútbol completo, precios y privacidad.", "faq_more": "Ver todas las preguntas", "toc": "Contenido",
         "lang": "Idioma", "scheduled": "Programado", "draft": "Borrador",
         "suffix": "panovi, app de video panorámico",
     },
@@ -162,6 +180,10 @@ def fmt_date(d, lang):
 def blog_path(lang, slug=None):
     p = LANGS[lang][1] + "blog/"
     return p + f"{slug}/" if slug else p
+
+
+def company_path(lang):
+    return LANGS[lang][1] + "company/"
 
 
 def faq_path(lang):
@@ -489,6 +511,12 @@ a{color:var(--green)}
 .foot a{color:var(--green);text-decoration:none}
 .foot-lang{display:flex;flex-wrap:wrap;gap:6px 16px}
 .foot a[aria-current]{color:var(--paper);pointer-events:none}
+.foot a.foot-sub{font-size:12px;color:var(--dim)}
+.foot a.foot-sub:hover{color:var(--green)}
+.co{margin-top:30px;width:100%;border-collapse:collapse}
+.co th,.co td{text-align:left;vertical-align:top;padding:16px 0;border-top:1px solid var(--rule);font-size:15.5px}
+.co tr:last-child th,.co tr:last-child td{border-bottom:1px solid var(--rule)}
+.co th{width:34%;color:var(--dim);font-weight:500;padding-right:16px}
 """
 
 GTAG = """<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
@@ -577,13 +605,14 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
 {body}
 </main>
 <footer class="col foot">
-  <span>© 2026 starclip</span>
+  <span>© 2026 panovi</span>
   <span>{esc(u['foot_note'])}</span>
   <a href="{home}">panovi</a>
   <a href="{blog_path(lang)}">{esc(u['nav'])}</a>
   <a href="{faq_path(lang)}">{esc(u['faq'])}</a>
   <a href="{blog_path(lang)}feed.xml">{u['feed']}</a>
   <a href="{privacy}">{esc(u['privacy'])}</a>
+  <a class="foot-sub" href="{company_path(lang)}">{esc(u['company'])}</a>
   {lang_links(paths, lang)}
 </footer>
 {CLICK_JS}
@@ -643,9 +672,8 @@ def json_ld(p, lang, faq=()):
         "about": {"@type": "SoftwareApplication", "name": "panovi", "operatingSystem": "iOS",
                   "applicationCategory": "PhotographyApplication", "url": SITE + LANGS[lang][1]},
         "mainEntityOfPage": f"{SITE}{blog_path(lang, p.slug)}",
-        "author": {"@type": "Organization", "name": "starclip"},
-        "publisher": {"@type": "Organization", "name": "starclip",
-                      "logo": {"@type": "ImageObject", "url": f"{SITE}/img/icon.png"}},
+        "author": company_org(lang),
+        "publisher": dict(company_org(lang), logo={"@type": "ImageObject", "url": f"{SITE}/img/icon.png"}),
     }
     if p.image:
         d["image"] = f"{SITE}{p.image}"
@@ -715,6 +743,35 @@ def index_page(lang, posts, today):
                    for i, p in enumerate(posts)]}}) + breadcrumb_ld(lang, [(u["nav"], paths[lang])])
     return page(lang, title=f"{u['blog_title']} | {u['suffix']}", desc=u["blog_desc"], path=paths[lang], paths=paths,
                 image=first.image if first else "", body=body, scripts=FILTER_JS, extra_head=head)
+
+
+def company_page(lang):
+    u = UI[lang]
+    privacy = {"ja": "/privacy/", "en": "/en/privacy/", "pt": "/pt/privacy/", "es": "/es/privacy/"}[lang]
+    L_ = {"ja": ("運営会社", "所在地", "サービス", "お問い合わせ", "panovi（iPhoneアプリ）・panovi.app",
+                 "プライバシーポリシーに載せている連絡先へ"),
+          "en": ("Operator", "Address", "Service", "Contact", "panovi (iPhone app) and panovi.app",
+                 "See the contact details in the Privacy Policy"),
+          "pt": ("Responsável", "Endereço", "Serviço", "Contato", "panovi (app para iPhone) e panovi.app",
+                 "Veja o contato na Política de Privacidade"),
+          "es": ("Responsable", "Dirección", "Servicio", "Contacto", "panovi (app para iPhone) y panovi.app",
+                 "Consulta el contacto en la Política de privacidad")}[lang]
+    addr = COMPANY_ADDR["ja"] if lang == "ja" else f'{COMPANY_ADDR["en"]}<br><span lang="ja">{COMPANY_ADDR["ja"]}</span>'
+    body = f"""<article class="col-n post">
+  <p class="crumb"><a href="{LANGS[lang][1]}">← panovi</a></p>
+  <h1>{esc(u['company_title'])}</h1>
+  <table class="co">
+    <tr><th>{L_[0]}</th><td><span lang="ja">{COMPANY_NAME}</span></td></tr>
+    <tr><th>{L_[1]}</th><td>{addr}</td></tr>
+    <tr><th>{L_[2]}</th><td>{esc(L_[4])}</td></tr>
+    <tr><th>{L_[3]}</th><td><a href="{privacy}">{esc(L_[5])}</a></td></tr>
+  </table>
+</article>"""
+    paths = {lg: company_path(lg) for lg in LANGS}
+    head = ld(dict({"@context": "https://schema.org"}, **company_org(lang))) + breadcrumb_ld(lang, [(u["company_title"], paths[lang])])
+    desc = f"{u['company_title']}: {COMPANY_NAME} — panovi"
+    return page(lang, title=f"{u['company_title']} | panovi", desc=desc, path=paths[lang], paths=paths,
+                image="", body=body, extra_head=head)
 
 
 def load_faq():
@@ -817,8 +874,7 @@ def home_seo(lang, home_html):
     FAQ は画面に出ている文をそのまま使う（構造化データと表示を食い違わせない）。"""
     pairs = re.findall(r"<details><summary>(.*?)</summary>\s*<p>(.*?)</p></details>", home_html, flags=re.S)
     kw = f'<meta name="keywords" content="{esc(", ".join(KEYWORDS[lang] + CAT_KEYWORDS["everyday"][lang] + CAT_KEYWORDS["sports"][lang]))}">\n'
-    org = ld({"@context": "https://schema.org", "@type": "Organization", "name": "starclip", "url": SITE + "/",
-              "logo": SITE + "/img/icon.png", "brand": {"@type": "Brand", "name": "panovi"}})
+    org = ld(dict({"@context": "https://schema.org"}, **company_org(lang), logo=SITE + "/img/icon.png"))
     site = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "panovi", "url": SITE + LANGS[lang][1],
                "inLanguage": LANGS[lang][0]})
     return (kw + org + site + faq_ld([(strip_tags(q), strip_tags(a)) for q, a in pairs])).rstrip("\n")
@@ -842,6 +898,7 @@ def llms_txt(posts):
            "- Pricing: recording, transfer, setup checks and stitches under 3 minutes are free with no limit. "
            "Stitches of 3 minutes or longer: free 3 times, then a 24-hour event pass or a one-time unlock (not a subscription).",
            "- Unlike a 360° camera, panovi spends its pixels only in the direction you film, so distant subjects stay larger.",
+           f"- Operator: {COMPANY_NAME} ({COMPANY_ADDR['en']}).",
            "- Japanese: panovi は2台のiPhoneでパノラマ動画（パノラマビデオ）を作るアプリ。運動会・発表会・旅行・サッカーの試合に。",
            "",
            "## App and site", "",
@@ -875,6 +932,11 @@ def sitemap_block(posts, has_faq=False, faq_date=None):
         alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{paths["en"]}"/>'
         for lg in LANGS:
             out.append(f"  <url>\n    <loc>{SITE}{paths[lg]}</loc>\n    <lastmod>{faq_date}</lastmod>\n{alts}\n  </url>")
+    paths = {lg: company_path(lg) for lg in LANGS}
+    alts = "\n".join(f'    <xhtml:link rel="alternate" hreflang="{LANGS[lg][0]}" href="{SITE}{pp}"/>' for lg, pp in paths.items())
+    alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{paths["en"]}"/>'
+    for lg in LANGS:
+        out.append(f"  <url>\n    <loc>{SITE}{paths[lg]}</loc>\n    <lastmod>{COMPANY_PAGE_DATE}</lastmod>\n{alts}\n  </url>")
     for slug_or_none in [None] + [p.slug for p in posts]:
         paths = {lg: blog_path(lg, slug_or_none) for lg in LANGS}
         last = max(p.date for p in posts) if slug_or_none is None and posts else \
@@ -1027,6 +1089,8 @@ def main():
             out, w, n = faq_page(lg, faq, published)
             warnings += w
             write(root, f"{faq_path(lg).lstrip('/')}index.html", out, written)
+    for lg in LANGS:
+        write(root, f"{company_path(lg).lstrip('/')}index.html", company_page(lg), written)
     write(root, "llms.txt", llms_txt(posts), written)
     seo_pass(root, written)
     sm = root / "sitemap.xml"

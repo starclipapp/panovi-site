@@ -33,7 +33,7 @@ NEW = [p for ps in PAGES.values() for p in ps if "/pt/" in p or "/es/" in p]
 
 # 訳さなくてよい(どの言語でも同じ)もの
 SAME_OK = {
-    "panovi", "App Store", "FAQ", "4K × 2", "1.0×", "Zoom +", "© 2026 starclip", "panovi viewer",
+    "panovi", "App Store", "FAQ", "4K × 2", "1.0×", "Zoom +", "© 2026 panovi", "panovi viewer",
     "JA", "EN", "PT", "ES", "日本語", "English", "Português", "Español", "100%", "ZOOM",
     "2×", "−10", "+10", "▶", "?", "×", "✕", "⚙", "→", "01", "02", "03", "Bluetooth", "YouTube",
     "Zoom", "K", "J", "L", "M", "F", "R", "Shift", "←", "→", "↑", "↓", "−", "+", "0–9", "0", "9",

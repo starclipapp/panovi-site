@@ -20,7 +20,7 @@ A panoramic video keeps the full wide view **and keeps time too**. Drifting clou
 | Method | What you need | Width | Detail | Best for |
 |---|---|---|---|---|
 | (1) Standard Camera’s ultra wide (0.5x) | One iPhone | Wide | One iPhone’s worth | When you just want to film wide |
-| (2) panovi “Record with one phone” | One iPhone | Wide | Sharp wide lens in the center | Quick clips on a walk or a trip |
+| (2) panovi “Record with one phone” | One iPhone (handheld is fine) | Wide | Sharp wide lens in the center | Quick clips on a walk or a trip |
 | (3) panovi with two iPhones | Two iPhones + a tripod | Widest | 4K on each side | Sports days, recitals, stunning views, soccer matches |
 
 ## (1) Film with the standard Camera’s ultra wide lens (0.5x)

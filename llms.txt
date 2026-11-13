@@ -10,6 +10,7 @@ Key facts:
 - Everything runs on the iPhones. No cloud, no account, works without a signal.
 - Pricing: recording, transfer, setup checks and stitches under 3 minutes are free with no limit. Stitches of 3 minutes or longer: free 3 times, then a 24-hour event pass or a one-time unlock (not a subscription).
 - Unlike a 360° camera, panovi spends its pixels only in the direction you film, so distant subjects stay larger.
+- Operator: 金子電器株式会社 (15-5 Nakano, Aki-ku, Hiroshima, Japan).
 - Japanese: panovi は2台のiPhoneでパノラマ動画（パノラマビデオ）を作るアプリ。運動会・発表会・旅行・サッカーの試合に。
 
 ## App and site
