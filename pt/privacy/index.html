@@ -38,19 +38,13 @@
         footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: var(--text-dim); }
     </style>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1LM1MCM9W5');
-</script>
+<script src="/consent.js?v=20261113"></script>
 </head>
 <body>
 <div class="wrap">
     <div class="brand"><a href="/pt/">panovi</a></div>
     <h1>Política de Privacidade</h1>
-    <p class="updated">Última atualização: 28 de outubro de 2026 — <a href="/privacy/" lang="ja" hreflang="ja">日本語</a> · <a href="/en/privacy/" lang="en" hreflang="en">English</a> · <a href="/es/privacy/" lang="es" hreflang="es">Español</a></p>
+    <p class="updated">Última atualização: 13 de novembro de 2026 — <a href="/privacy/" lang="ja" hreflang="ja">日本語</a> · <a href="/en/privacy/" lang="en" hreflang="en">English</a> · <a href="/es/privacy/" lang="es" hreflang="es">Español</a></p>
 
     <div class="highlight">
         <p>O panovi não coleta nenhuma informação pessoal nem dados de uso. Não é preciso criar conta, e nada é enviado para servidores externos.</p>
@@ -74,7 +68,7 @@
     <table>
         <tr><th>Câmera</th><td>Gravar vídeo.</td></tr>
         <tr><th>Microfone</th><td>Gravar o áudio junto com o vídeo.</td></tr>
-        <tr><th>Fototeca</th><td>Encontrar e juntar os vídeos gravados e salvar os resultados.</td></tr>
+        <tr><th>Fototeca</th><td>Usada apenas para salvar os vídeos unidos em Fotos. O panovi nunca lê as fotos que já estão na sua fototeca.</td></tr>
     </table>
 
     <h2>5. Compras dentro do app</h2>
@@ -84,8 +78,10 @@
     <h2>6. Registros de diagnóstico</h2>
     <p>Os registros de diagnóstico ficam armazenados apenas no aparelho. Eles nunca são enviados, a menos que você mesmo os compartilhe.</p>
 
-    <h2>7. Análise do site</h2>
+    <h2 id="analytics">7. Análise do site</h2>
     <p>Este site (panovi.app, incluindo esta página) usa o Google Analytics para entender como ele é usado. O Google Analytics usa cookies para coletar informações como páginas vistas, tempo na página e região aproximada, tratadas de acordo com a política de privacidade do Google. Veja <a href="https://policies.google.com/technologies/partner-sites?hl=pt-BR" target="_blank" rel="noopener">Como o Google usa informações de sites que usam seus serviços</a>.</p>
+    <p>Para quem visita a partir da Europa (UE, EEE, Reino Unido e Suíça), pedimos permissão antes de carregar o Google Analytics, e nenhum cookie é usado até que você permita. Em qualquer região, você pode mudar isso a qualquer momento pelo botão abaixo (se escolher “Recusar”, ele não será mais carregado).</p>
+    <p><button type="button" onclick="window.panoviConsent&amp;&amp;panoviConsent.open()" style="font:inherit;padding:8px 18px;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer">Alterar as configurações de cookies</button></p>
     <p>Isso vale <strong>apenas para o site</strong>. O app continua sem coletar nenhum dado do usuário.</p>
 
     <h2>8. Alterações nesta política</h2>

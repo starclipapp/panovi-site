@@ -38,19 +38,13 @@
         footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: var(--text-dim); }
     </style>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1LM1MCM9W5');
-</script>
+<script src="/consent.js?v=20261113"></script>
 </head>
 <body>
 <div class="wrap">
     <div class="brand"><a href="/">panovi</a></div>
     <h1>プライバシーポリシー</h1>
-    <p class="updated">最終更新日: 2026年10月28日 — <a href="/en/privacy/" lang="en" hreflang="en">English</a> · <a href="/pt/privacy/" lang="pt-BR" hreflang="pt-BR">Português</a> · <a href="/es/privacy/" lang="es" hreflang="es">Español</a></p>
+    <p class="updated">最終更新日: 2026年11月13日 — <a href="/en/privacy/" lang="en" hreflang="en">English</a> · <a href="/pt/privacy/" lang="pt-BR" hreflang="pt-BR">Português</a> · <a href="/es/privacy/" lang="es" hreflang="es">Español</a></p>
 
     <div class="highlight">
         <p>panoviは、ユーザーの個人情報・利用データを一切収集しません。アカウント登録は不要で、外部サーバーへの送信も行いません。</p>
@@ -74,7 +68,7 @@
     <table>
         <tr><th>カメラ</th><td>動画の撮影に使用します。</td></tr>
         <tr><th>マイク</th><td>動画への音声記録に使用します。</td></tr>
-        <tr><th>フォトライブラリ</th><td>撮影済み動画の検索・結合、および合成した動画の保存に使用します。</td></tr>
+        <tr><th>フォトライブラリ</th><td>結合した動画をカメラロールに保存するためだけに使い、もとからある写真は読みません。</td></tr>
     </table>
 
     <h2>5. アプリ内課金について</h2>
@@ -84,8 +78,10 @@
     <h2>6. 動作ログについて</h2>
     <p>不具合診断のための動作ログは端末内にのみ保存されます。ユーザーご自身が共有操作を行った場合を除き、外部に送信されることはありません。</p>
 
-    <h2>7. 公式サイトのアクセス解析について</h2>
+    <h2 id="analytics">7. 公式サイトのアクセス解析について</h2>
     <p>本ウェブサイト(panovi.app。本ページを含みます)では、利用状況の把握のために Google Analytics を使用しています。Google Analytics は Cookie を利用して、閲覧ページ・滞在時間・おおよその地域などの情報を収集します。収集された情報は Google のプライバシーポリシーに基づいて管理されます。詳しくは<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Google のポリシーと規約</a>をご覧ください。</p>
+    <p>ヨーロッパ（EU・EEA・イギリス・スイス）からご覧の方には、Google Analytics を読み込む前に許可をおたずねします。許可いただくまで Cookie は使いません。どの地域の方も、下のボタンからいつでも設定を変えられます（「許可しない」を選ぶと、それ以降は読み込みません）。</p>
+    <p><button type="button" onclick="window.panoviConsent&amp;&amp;panoviConsent.open()" style="font:inherit;padding:8px 18px;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer">Cookie の設定を変える</button></p>
     <p>これは<strong>ウェブサイトについての説明</strong>です。アプリ本体は引き続き、いかなるユーザーデータも収集しません。</p>
 
     <h2>8. ポリシーの変更</h2>

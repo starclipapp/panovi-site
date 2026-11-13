@@ -523,13 +523,7 @@ a{color:var(--green)}
 .co th{width:34%;color:var(--dim);font-weight:500;padding-right:16px}
 """
 
-GTAG = """<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1LM1MCM9W5');
-</script>"""
+GTAG = '<script src="/consent.js?v=20261113"></script>'  # GA の読み込みと EU などの Cookie の同意（/consent.js）
 
 # App Store へのクリックを数える（記事ごと）。利用者を増やすのが目的なので、どの記事が効いたかを見る
 CLICK_JS = """<script>
