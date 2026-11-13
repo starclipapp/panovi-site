@@ -201,5 +201,41 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/first-video/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/first-video/"/>
   </url>
+  <url>
+    <loc>https://panovi.app/blog/tripod-setup/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/tripod-setup/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/en/blog/tripod-setup/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/tripod-setup/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/pt/blog/tripod-setup/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/tripod-setup/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/es/blog/tripod-setup/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/tripod-setup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/tripod-setup/"/>
+  </url>
 <!-- blog:end -->
 </urlset>
