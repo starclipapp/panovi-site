@@ -23,6 +23,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/img/icon.png">
 <link rel="apple-touch-icon" href="/img/icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Guías de panovi", "description": "Cómo usar panovi, la app de video panorámico que convierte dos iPhone en un solo video: guías, consejos para viajes y fútbol, y novedades.", "inLanguage": "es", "url": "https://panovi.app/es/blog/", "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://panovi.app/es/blog/first-video/", "name": "Tu primer video con panovi — paso a paso"}, {"@type": "ListItem", "position": 2, "url": "https://panovi.app/es/blog/tripod-setup/", "name": "Cómo colocarlos para una unión limpia — el trípode y la forma de V"}, {"@type": "ListItem", "position": 3, "url": "https://panovi.app/es/blog/whole-match/", "name": "Graba el partido de fútbol completo — ubicación, control remoto y batería"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "panovi", "item": "https://panovi.app/es/"}, {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://panovi.app/es/blog/"}]}</script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#04201f;--ink2:#062b29;--paper:#f4f3ee;--dim:#9fb0ac;--green:#00f994;
@@ -101,6 +103,12 @@ a{color:var(--green)}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}
+.toc{margin-top:26px;padding:18px 22px;border:1px solid var(--rule);border-radius:12px;background:var(--ink2)}
+.toc b{font-size:13px;color:var(--green);letter-spacing:.06em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2 220px;font-size:14.5px}
+.toc a{color:var(--paper);text-decoration:none}
+.toc a:hover{color:var(--green)}
+.prose h3{scroll-margin-top:76px}.prose h2{scroll-margin-top:76px}
 .prose table{width:100%;border-collapse:collapse;font-size:.92em}
 .prose th,.prose td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid var(--rule)}
 .prose th{color:var(--green);font-weight:700;white-space:nowrap}
@@ -138,6 +146,7 @@ a{color:var(--green)}
     <nav class="nav-links">
       <a class="wide" href="/es/">Acerca de panovi</a>
       <a href="/es/blog/" aria-current="page">Guías</a>
+      <a class="wide" href="/es/faq/">Preguntas frecuentes</a>
       <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6797261654" data-appstore="nav">App Store</a>
     </nav>
   </div>
@@ -148,14 +157,16 @@ a{color:var(--green)}
   <p>Desde tu primer video hasta consejos para viajes y deportes, además de las novedades. Todo para sacarle el máximo provecho a panovi.</p>
 </section>
 <div class="col">
-  <div class="filters" role="group"><button type="button" aria-pressed="true" data-cat="">Todos</button><button type="button" aria-pressed="false" data-cat="start">Primeros pasos</button></div>
-  <div class="cards"><a class="card big" href="/es/blog/first-video/" data-cat="start"><div class="pic"><img src="/img/wide.jpg" alt="Video ultrapanorámico desde la cima de una montaña, grabado con dos iPhone y unido en uno solo" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">Empieza aquí</span><time datetime="2026-11-13">13 de noviembre de 2026</time></div><h2>Tu primer video con panovi — paso a paso</h2><p>Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.</p></div></a><a class="card" href="/es/blog/tripod-setup/" data-cat="start"><div class="pic"><img src="/img/tripod_standing.jpg" alt="Dos iPhone en un trípode, en forma de V, con las cámaras juntas cerca del centro" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">Primeros pasos</span><time datetime="2026-11-13">13 de noviembre de 2026</time></div><h2>Cómo colocarlos para una unión limpia — el trípode y la forma de V</h2><p>Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión del video panorámico se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.</p></div></a></div>
+  <div class="filters" role="group"><button type="button" aria-pressed="true" data-cat="">Todos</button><button type="button" aria-pressed="false" data-cat="start">Primeros pasos</button><button type="button" aria-pressed="false" data-cat="sports">Deportes</button></div>
+  <div class="cards"><a class="card big" href="/es/blog/first-video/" data-cat="start"><div class="pic"><img src="/img/wide.jpg" alt="Video ultrapanorámico desde la cima de una montaña, grabado con dos iPhone y unido en uno solo" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">Empieza aquí</span><time datetime="2026-11-13">13 de noviembre de 2026</time></div><h2>Tu primer video con panovi — paso a paso</h2><p>Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.</p></div></a><a class="card" href="/es/blog/tripod-setup/" data-cat="start"><div class="pic"><img src="/img/tripod_standing.jpg" alt="Dos iPhone en un trípode, en forma de V, con las cámaras juntas cerca del centro" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">Primeros pasos</span><time datetime="2026-11-13">13 de noviembre de 2026</time></div><h2>Cómo colocarlos para una unión limpia — el trípode y la forma de V</h2><p>Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión del video panorámico se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.</p></div></a><a class="card" href="/es/blog/whole-match/" data-cat="sports"><div class="pic"><img src="/img/soccer_wide_poster.jpg" alt="Una escena ultrapanorámica con la cancha de fútbol completa, de extremo a extremo" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">Deportes</span><time datetime="2026-11-13">13 de noviembre de 2026</time></div><h2>Graba el partido de fútbol completo — ubicación, control remoto y batería</h2><p>Cómo preparar todo para grabar un partido entero en video panorámico, con el trípode fijo y las dos porterías en la imagen. Ubicación, un tercer iPhone como control remoto, ahorro de energía, espacio libre y el precio de las uniones largas.</p></div></a></div>
 </div>
 </main>
 <footer class="col foot">
   <span>© 2026 starclip</span>
   <span>Tus grabaciones se quedan solo en tus iPhone.</span>
   <a href="/es/">panovi</a>
+  <a href="/es/blog/">Guías</a>
+  <a href="/es/faq/">Preguntas frecuentes</a>
   <a href="/es/blog/feed.xml">RSS</a>
   <a href="/es/privacy/">Política de privacidad</a>
   <span class="foot-lang" role="group" aria-label="Idioma"><a href="/blog/" lang="ja" hreflang="ja">日本語</a><a href="/en/blog/" lang="en" hreflang="en">English</a><a href="/pt/blog/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/blog/" lang="es" hreflang="es" aria-current="page">Español</a></span>

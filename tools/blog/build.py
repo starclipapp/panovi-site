@@ -76,6 +76,7 @@ UI = {
         "cta_h": "panovi を試してみる", "cta_p": "撮影は何分でも無料。3分未満の結合はずっと無料です。",
         "cta_btn": "App Store で入手", "back": "記事の一覧へ", "feed": "RSS",
         "foot_note": "撮った映像は、あなたのiPhoneの中だけに。", "privacy": "プライバシーポリシー",
+        "faq": "よくある質問", "faq_lead": "panovi について、よく聞かれることをまとめました。準備するもの、撮り方、料金、うまくいかないときまで。", "faq_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi のよくある質問。必要なもの、撮影の長さ、サッカーの試合の撮り方、料金、プライバシーまで。", "faq_more": "すべての質問を見る", "toc": "目次",
         "lang": "言語", "scheduled": "予約", "draft": "下書き",
         "suffix": "panovi パノラマ動画アプリ",
     },
@@ -89,6 +90,7 @@ UI = {
         "cta_h": "Try panovi", "cta_p": "Recording is free for any length. Stitches under 3 minutes are always free.",
         "cta_btn": "Get it on the App Store", "back": "All guides", "feed": "RSS",
         "foot_note": "Your footage stays on your iPhones.", "privacy": "Privacy Policy",
+        "faq": "Frequently asked questions", "faq_lead": "Common questions about panovi — what you need, how to shoot, pricing, and what to do when something goes wrong.", "faq_desc": "FAQ for panovi, the app that makes panoramic video with two iPhones: what you need, recording length, filming a whole soccer match, pricing and privacy.", "faq_more": "See all questions", "toc": "Contents",
         "lang": "Language", "scheduled": "Scheduled", "draft": "Draft",
         "suffix": "panovi panoramic video app",
     },
@@ -102,6 +104,7 @@ UI = {
         "cta_h": "Experimente o panovi", "cta_p": "Gravar é grátis, sem limite de tempo. Uniões com menos de 3 minutos são sempre grátis.",
         "cta_btn": "Baixar na App Store", "back": "Todos os guias", "feed": "RSS",
         "foot_note": "Suas gravações ficam só nos seus iPhones.", "privacy": "Política de Privacidade",
+        "faq": "Perguntas frequentes", "faq_lead": "As perguntas mais comuns sobre o panovi: o que você precisa, como gravar, preços e o que fazer quando algo não dá certo.", "faq_desc": "Perguntas frequentes sobre o panovi, o app que faz vídeo panorâmico com dois iPhones: o que precisa, tempo de gravação, como filmar um jogo de futebol inteiro, preços e privacidade.", "faq_more": "Ver todas as perguntas", "toc": "Índice",
         "lang": "Idioma", "scheduled": "Agendado", "draft": "Rascunho",
         "suffix": "panovi, app de vídeo panorâmico",
     },
@@ -115,6 +118,7 @@ UI = {
         "cta_h": "Prueba panovi", "cta_p": "Grabar es gratis, sin límite de tiempo. Las uniones de menos de 3 minutos son siempre gratis.",
         "cta_btn": "Descargar en la App Store", "back": "Todas las guías", "feed": "RSS",
         "foot_note": "Tus grabaciones se quedan solo en tus iPhone.", "privacy": "Política de privacidad",
+        "faq": "Preguntas frecuentes", "faq_lead": "Las preguntas más comunes sobre panovi: qué necesitas, cómo grabar, precios y qué hacer cuando algo no sale bien.", "faq_desc": "Preguntas frecuentes sobre panovi, la app que hace video panorámico con dos iPhone: qué necesitas, duración de grabación, cómo grabar un partido de fútbol completo, precios y privacidad.", "faq_more": "Ver todas las preguntas", "toc": "Contenido",
         "lang": "Idioma", "scheduled": "Programado", "draft": "Borrador",
         "suffix": "panovi, app de video panorámico",
     },
@@ -158,6 +162,10 @@ def fmt_date(d, lang):
 def blog_path(lang, slug=None):
     p = LANGS[lang][1] + "blog/"
     return p + f"{slug}/" if slug else p
+
+
+def faq_path(lang):
+    return LANGS[lang][1] + "faq/"
 
 
 def appstore(lang):
@@ -210,7 +218,10 @@ class Post:
         if self.image and not (SITE_ROOT / self.image.lstrip("/")).is_file():
             fail(f"{d}/meta.txt: image のファイルが無い: {self.image}")
         self.order = int(meta.get("order", "999"))
+        self.modified = None
         self.draft = meta.get("draft", "no").lower() in ("yes", "true", "1")
+        # 書き直した日（任意）。無ければ公開日。構造化データの dateModified に使う
+        self.modified = dt.date.fromisoformat(meta["updated"]) if meta.get("updated") else self.date
         self.text = {}
         missing = [lg for lg in LANGS if not (d / f"{lg}.md").is_file()]
         self.missing = missing
@@ -239,6 +250,16 @@ def load_posts():
 
 
 # ───────────────────────── 本文（小さなMarkdown） ─────────────────────────
+def anchor(text, used):
+    """見出しの id。文字から作るので、問いを足しても既存のリンクが変わらない。"""
+    base = re.sub(r"[^\w]+", "-", strip_tags(text)).strip("-").lower()[:60] or "s"
+    a, n = base, 2
+    while a in used:
+        a, n = f"{base}-{n}", n + 1
+    used.add(a)
+    return a
+
+
 class Ctx:
     def __init__(self, lang, published, slug):
         self.lang = lang
@@ -247,6 +268,13 @@ class Ctx:
         self.warnings = []
         self.faq = []        # [(問い, 答えのHTML)]  「よくある質問」の節から集める
         self.in_faq = False
+        self.faq_all = False  # FAQ ページ: すべての節の ### を問いとして集める
+        self.ids = set()
+        self.toc = []         # [(id, 見出し)]  ## の目次
+
+
+def strip_tags(h):
+    return html.unescape(re.sub(r"<[^>]+>", "", h)).strip()
 
 
 def resolve(target, ctx):
@@ -307,12 +335,14 @@ def render_body(md, ctx):
         if b.strip() == "{{appstore}}":
             out.append(cta(ctx.lang, ctx.slug))
         elif first.startswith("### "):
-            out.append(f"<h3>{inline(first[4:], ctx)}</h3>")
+            out.append(f'<h3 id="{anchor(first[4:], ctx.ids)}">{inline(first[4:], ctx)}</h3>')
             if ctx.in_faq:
                 ctx.faq.append([first[4:].strip(), []])
         elif first.startswith("## "):
-            out.append(f"<h2>{inline(first[3:], ctx)}</h2>")
-            ctx.in_faq = first[3:].strip() == FAQ_HEADING[ctx.lang]
+            hid = anchor(first[3:], ctx.ids)
+            ctx.toc.append((hid, first[3:].strip()))
+            out.append(f'<h2 id="{hid}">{inline(first[3:], ctx)}</h2>')
+            ctx.in_faq = ctx.faq_all or first[3:].strip() == FAQ_HEADING[ctx.lang]
         elif all(ln.startswith("|") for ln in lines) and len(lines) >= 3 and re.fullmatch(r"[|:\- ]+", lines[1]):
             cells = lambda ln: [c.strip() for c in ln.strip().strip("|").split("|")]
             head = "".join(f"<th>{inline(c, ctx)}</th>" for c in cells(lines[0]))
@@ -426,6 +456,12 @@ a{color:var(--green)}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}
+.toc{margin-top:26px;padding:18px 22px;border:1px solid var(--rule);border-radius:12px;background:var(--ink2)}
+.toc b{font-size:13px;color:var(--green);letter-spacing:.06em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2 220px;font-size:14.5px}
+.toc a{color:var(--paper);text-decoration:none}
+.toc a:hover{color:var(--green)}
+.prose h3{scroll-margin-top:76px}.prose h2{scroll-margin-top:76px}
 .prose table{width:100%;border-collapse:collapse;font-size:.92em}
 .prose th,.prose td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid var(--rule)}
 .prose th{color:var(--green);font-weight:700;white-space:nowrap}
@@ -526,6 +562,7 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
     <nav class="nav-links">
       <a class="wide" href="{home}">{esc(u['home'])}</a>
       <a href="{blog_path(lang)}"{' aria-current="page"' if path == blog_path(lang) else ''}>{esc(u['nav'])}</a>
+      <a class="wide" href="{faq_path(lang)}"{' aria-current="page"' if path == faq_path(lang) else ''}>{esc(u['faq'])}</a>
       <a class="btn btn-fill btn-sm" href="{appstore(lang)}" data-appstore="nav">App Store</a>
     </nav>
   </div>
@@ -537,6 +574,8 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
   <span>© 2026 starclip</span>
   <span>{esc(u['foot_note'])}</span>
   <a href="{home}">panovi</a>
+  <a href="{blog_path(lang)}">{esc(u['nav'])}</a>
+  <a href="{faq_path(lang)}">{esc(u['faq'])}</a>
   <a href="{blog_path(lang)}feed.xml">{u['feed']}</a>
   <a href="{privacy}">{esc(u['privacy'])}</a>
   {lang_links(paths, lang)}
@@ -566,8 +605,16 @@ def status_flag(p, lang, today):
     return ""
 
 
-def strip_tags(h):
-    return html.unescape(re.sub(r"<[^>]+>", "", h)).strip()
+def ld(d):
+    import json
+    return f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>\n'
+
+
+def breadcrumb_ld(lang, trail):
+    """trail: [(名前, パス)]。先頭に panovi（その言語のトップ）を足す。"""
+    items = [("panovi", LANGS[lang][1])] + trail
+    return ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + pth} for i, (n, pth) in enumerate(items)]})
 
 
 def faq_ld(pairs):
@@ -595,7 +642,9 @@ def json_ld(p, lang, faq=()):
     }
     if p.image:
         d["image"] = f"{SITE}{p.image}"
+    d["dateModified"] = p.modified.isoformat()
     return (f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>\n'
+            + breadcrumb_ld(lang, [(UI[lang]["nav"], blog_path(lang)), (p.title(lang), blog_path(lang, p.slug))])
             + faq_ld([(strip_tags(q), strip_tags(" ".join(a))) for q, a in faq if a]))
 
 
@@ -652,8 +701,53 @@ def index_page(lang, posts, today):
   <div class="cards">{cards}</div>
 </div>"""
     paths = {lg: blog_path(lg) for lg in LANGS}
+    head = ld({"@context": "https://schema.org", "@type": "CollectionPage", "name": u["blog_title"],
+               "description": u["blog_desc"], "inLanguage": LANGS[lang][0], "url": SITE + paths[lang],
+               "mainEntity": {"@type": "ItemList", "itemListElement": [
+                   {"@type": "ListItem", "position": i + 1, "url": SITE + blog_path(lang, p.slug), "name": p.title(lang)}
+                   for i, p in enumerate(posts)]}}) + breadcrumb_ld(lang, [(u["nav"], paths[lang])])
     return page(lang, title=f"{u['blog_title']} | {u['suffix']}", desc=u["blog_desc"], path=paths[lang], paths=paths,
-                image=first.image if first else "", body=body, scripts=FILTER_JS)
+                image=first.image if first else "", body=body, scripts=FILTER_JS, extra_head=head)
+
+
+def load_faq():
+    d = SITE_ROOT / "content" / "faq"
+    if not d.is_dir():
+        return None
+    missing = [lg for lg in LANGS if not (d / f"{lg}.md").is_file()]
+    if missing:
+        fail(f"content/faq/: {', '.join(missing)}.md が無い（4言語そろえる）")
+    return {lg: read_md(d / f"{lg}.md") for lg in LANGS}
+
+
+def faq_page(lang, faq, published):
+    u = UI[lang]
+    front, md = faq[lang]
+    ctx = Ctx(lang, published, "faq")
+    ctx.faq_all = True
+    body_html = render_body(md, ctx)
+    toc = "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in ctx.toc)
+    body = f"""<article class="col-n post">
+  <p class="crumb"><a href="{LANGS[lang][1]}">← panovi</a></p>
+  <h1>{esc(front['title'])}</h1>
+  <p class="lead">{esc(front['description'])}</p>
+  <nav class="toc" aria-label="{esc(u['toc'])}"><b>{esc(u['toc'])}</b><ol>{toc}</ol></nav>
+  <div class="prose">
+{body_html}
+{cta(lang, "faq")}
+  </div>
+</article>"""
+    paths = {lg: faq_path(lg) for lg in LANGS}
+    head = (faq_ld([(strip_tags(q), strip_tags(" ".join(a))) for q, a in ctx.faq if a])
+            + breadcrumb_ld(lang, [(front["title"], paths[lang])]))
+    kw = [k.strip() for k in front.get("keywords", "").split(",") if k.strip()] + KEYWORDS[lang]
+    out = page(lang, title=f"{front['title']} | {u['suffix']}", desc=u["faq_desc"], path=paths[lang], paths=paths,
+               image="/img/hero.jpg", body=body, extra_head=head, keywords=list(dict.fromkeys(kw)))
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", front.get("updated", "")):
+        fail(f"content/faq/{lang}.md: updated: 2026-11-13 の形で、最後に直した日を書く（サイトマップの lastmod）")
+    if len(ctx.faq) < 5:
+        fail(f"content/faq/{lang}.md: 問い（###）が少なすぎる: {len(ctx.faq)}")
+    return out, ctx.warnings, len(ctx.faq)
 
 
 def feed(lang, posts):
@@ -716,7 +810,11 @@ def home_seo(lang, home_html):
     FAQ は画面に出ている文をそのまま使う（構造化データと表示を食い違わせない）。"""
     pairs = re.findall(r"<details><summary>(.*?)</summary>\s*<p>(.*?)</p></details>", home_html, flags=re.S)
     kw = f'<meta name="keywords" content="{esc(", ".join(KEYWORDS[lang] + CAT_KEYWORDS["everyday"][lang] + CAT_KEYWORDS["sports"][lang]))}">\n'
-    return (kw + faq_ld([(strip_tags(q), strip_tags(a)) for q, a in pairs])).rstrip("\n")
+    org = ld({"@context": "https://schema.org", "@type": "Organization", "name": "starclip", "url": SITE + "/",
+              "logo": SITE + "/img/icon.png", "brand": {"@type": "Brand", "name": "panovi"}})
+    site = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "panovi", "url": SITE + LANGS[lang][1],
+               "inLanguage": LANGS[lang][0]})
+    return (kw + org + site + faq_ld([(strip_tags(q), strip_tags(a)) for q, a in pairs])).rstrip("\n")
 
 
 def llms_txt(posts):
@@ -745,6 +843,7 @@ def llms_txt(posts):
            f"- [日本語サイト]({SITE}/): 機能・体験・料金・よくある質問",
            f"- [Português]({SITE}/pt/) / [Español]({SITE}/es/)",
            f"- [panovi viewer]({SITE}/viewer/en/): zoom and pan any ultra-wide video (YouTube or mp4) in the browser",
+           f"- FAQ: [English]({SITE}/en/faq/) / [日本語]({SITE}/faq/) / [Português]({SITE}/pt/faq/) / [Español]({SITE}/es/faq/)",
            ""]
     names = {"en": "Guides (English)", "ja": "使いかた（日本語）", "pt": "Guias (Português)", "es": "Guías (Español)"}
     for lg in ("en", "ja", "pt", "es"):
@@ -761,8 +860,14 @@ def splice(text, start, end, new, where):
     return text[:i + len(start)] + "\n" + new + ("\n" if new else "") + text[j:]
 
 
-def sitemap_block(posts):
+def sitemap_block(posts, has_faq=False, faq_date=None):
     out = []
+    if has_faq:
+        paths = {lg: faq_path(lg) for lg in LANGS}
+        alts = "\n".join(f'    <xhtml:link rel="alternate" hreflang="{LANGS[lg][0]}" href="{SITE}{pp}"/>' for lg, pp in paths.items())
+        alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{paths["en"]}"/>'
+        for lg in LANGS:
+            out.append(f"  <url>\n    <loc>{SITE}{paths[lg]}</loc>\n    <lastmod>{faq_date}</lastmod>\n{alts}\n  </url>")
     for slug_or_none in [None] + [p.slug for p in posts]:
         paths = {lg: blog_path(lg, slug_or_none) for lg in LANGS}
         last = max(p.date for p in posts) if slug_or_none is None and posts else \
@@ -784,6 +889,41 @@ def write(root, rel, text, written):
         path.write_text(text, encoding="utf-8")
         print("wrote", rel)
     written.add(path.resolve())
+
+
+STATIC_FILES = {  # PAGES のパス → ファイル
+    "/": "index.html", "/en/": "en/index.html", "/pt/": "pt/index.html", "/es/": "es/index.html",
+}
+
+
+def static_file(path):
+    if path in STATIC_FILES:
+        return STATIC_FILES[path]
+    return path.lstrip("/") + ("index.html" if path.endswith("/") else "")
+
+
+def seo_pass(root, written):
+    """ブログ以外のページ（トップ・プライバシー・ビューア・その使い方）の <head> をそろえる。
+    canonical はその言語のURLに置き換える（pt / es は英語版から作るので、英語のURLのまま来る）。"""
+    for kind, paths in L.PAGES.items():
+        for code, pth in paths.items():
+            rel = static_file(pth)
+            f = root / rel
+            s = f.read_text(encoding="utf-8")
+            url = SITE + pth
+            canon = f'<link rel="canonical" href="{url}">'
+            if 'rel="canonical"' in s:
+                s = re.sub(r'<link rel="canonical" href="[^"]*">', canon, s)
+            else:
+                s = re.sub(r'(<title>.*?</title>\n)', lambda m: m.group(1) + canon + "\n", s, count=1, flags=re.S)
+            if "og:title" in s:
+                if 'property="og:url"' in s:
+                    s = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', s)
+                else:
+                    s = s.replace('<meta property="og:title"', f'<meta property="og:url" content="{url}">\n<meta property="og:title"', 1)
+            if "og:image" in s and "twitter:card" not in s:
+                s = re.sub(r'(<meta property="og:image"[^>]*>\n)', lambda m: m.group(1) + '<meta name="twitter:card" content="summary_large_image">\n', s, count=1)
+            write(root, rel, s, written)
 
 
 def remove_stale(root, written):
@@ -874,10 +1014,17 @@ def main():
         home = splice(home, "<!-- blog:latest:start -->", "<!-- blog:latest:end -->", latest_block(lg, posts), HOME_FILE[lg])
         home = splice(home, "<!-- seo:start -->", "<!-- seo:end -->", home_seo(lg, home), HOME_FILE[lg])
         write(root, HOME_FILE[lg], home, written)
+    faq = load_faq()
+    if faq:
+        for lg in LANGS:
+            out, w, n = faq_page(lg, faq, published)
+            warnings += w
+            write(root, f"{faq_path(lg).lstrip('/')}index.html", out, written)
     write(root, "llms.txt", llms_txt(posts), written)
+    seo_pass(root, written)
     sm = root / "sitemap.xml"
     write(root, "sitemap.xml", splice(sm.read_text(encoding="utf-8"), "<!-- blog:start -->", "<!-- blog:end -->",
-                                      sitemap_block(posts), "sitemap.xml"), written)
+                                      sitemap_block(posts, bool(faq), faq["ja"][0].get("updated") if faq else None), "sitemap.xml"), written)
     remove_stale(root, written)
     check_links(root, written)
 

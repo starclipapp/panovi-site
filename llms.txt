@@ -19,23 +19,28 @@ Key facts:
 - [日本語サイト](https://panovi.app/): 機能・体験・料金・よくある質問
 - [Português](https://panovi.app/pt/) / [Español](https://panovi.app/es/)
 - [panovi viewer](https://panovi.app/viewer/en/): zoom and pan any ultra-wide video (YouTube or mp4) in the browser
+- FAQ: [English](https://panovi.app/en/faq/) / [日本語](https://panovi.app/faq/) / [Português](https://panovi.app/pt/faq/) / [Español](https://panovi.app/es/faq/)
 
 ## Guides (English)
 
 - [Getting started with panovi — shooting your first video](https://panovi.app/en/blog/first-video/): How to shoot an edge-to-edge panoramic video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.
 - [Placing your iPhones for a clean stitch — the tripod and the shallow V](https://panovi.app/en/blog/tripod-setup/): How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam in your panoramic video. Plus how to use the setup check and the 3-second preview.
+- [Film a whole soccer match — where to set up, the remote and the battery](https://panovi.app/en/blog/whole-match/): How to film a match from start to finish as a panoramic video, with both goals in frame, without touching the tripod. Where to set up, a third iPhone as a remote, power save, free space, and pricing for long stitches.
 
 ## 使いかた（日本語）
 
 - [はじめての panovi — 最初の1本を撮るまで](https://panovi.app/blog/first-video/): iPhone 2台と三脚で、端から端まで入ったパノラマ動画（パノラマビデオ）を撮る手順。つなぐ・置く・撮る・つなげる・寄って見る、を順に説明します。
 - [きれいにつながる置き方 — 三脚と「ハの字」のコツ](https://panovi.app/blog/tripod-setup/): パノラマ動画をきれいにつなぐために。2台のiPhoneを1本の三脚に載せる金具の組み方と、つなぎ目が目立たない置き方のコツ。配置の確認と3秒の確認の使い方も。
+- [サッカーの試合を、まるごと撮る — 置き場所・リモコン・電池の段取り](https://panovi.app/blog/whole-match/): 三脚に置いたまま、両ゴールまで入れて試合を最後までパノラマ動画で撮るための段取り。置き場所、3台目のリモコン、省エネ、空き容量、長い結合の料金まで。
 
 ## Guias (Português)
 
 - [Primeiros passos com o panovi — até o seu primeiro vídeo](https://panovi.app/pt/blog/first-video/): Como gravar um vídeo panorâmico, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.
 - [Como posicionar para uma emenda perfeita — o tripé e o segredo do “V”](https://panovi.app/pt/blog/tripod-setup/): Como montar o suporte para colocar dois iPhones em um só tripé e como posicioná-los para a emenda do vídeo panorâmico ficar bonita. E como usar a verificação de alinhamento e a prévia de 3 segundos.
+- [Filme o jogo de futebol inteiro — onde colocar, controle remoto e bateria](https://panovi.app/pt/blog/whole-match/): Como se preparar para filmar um jogo do começo ao fim em vídeo panorâmico, com as duas traves na imagem e o tripé parado. Onde colocar, o terceiro iPhone como controle, economia de energia, espaço livre e o preço das uniões longas.
 
 ## Guías (Español)
 
 - [Tu primer video con panovi — paso a paso](https://panovi.app/es/blog/first-video/): Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.
 - [Cómo colocarlos para una unión limpia — el trípode y la forma de V](https://panovi.app/es/blog/tripod-setup/): Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión del video panorámico se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.
+- [Graba el partido de fútbol completo — ubicación, control remoto y batería](https://panovi.app/es/blog/whole-match/): Cómo preparar todo para grabar un partido entero en video panorámico, con el trípode fijo y las dos porterías en la imagen. Ubicación, un tercer iPhone como control remoto, ahorro de energía, espacio libre y el precio de las uniones largas.

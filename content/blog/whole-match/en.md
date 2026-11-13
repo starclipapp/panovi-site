@@ -57,6 +57,24 @@ The only thing that can cost money is a **long stitch of 3 minutes or longer**. 
 
 ![A moment zoomed in from the same footage](/img/soccer_zoom.jpg "Zoom in wherever you want, all from the same video")
 
+## Frequently asked questions
+
+### Can I film a whole soccer match without a camera operator?
+
+Yes. Set two iPhones side by side on a tripod, and you can film from kickoff to the final whistle in one video with both goals in frame. No one has to pan the camera, so whoever is filming can focus on watching and cheering too.
+
+### How many iPhones do I need?
+
+Two for filming. A third iPhone can be a remote in your hand, so you can start and stop recording or check the batteries without touching the cameras. You can film without a remote too.
+
+### Does it cost anything to film a whole match?
+
+Recording is free, for any length. Stitches of 3 minutes or longer can be tried 3 times for free, and after that it is an event pass (24 hours) or a one-time unlock. For a tournament or match day, one event pass lets you stitch as many videos as you like.
+
+### Will the battery last until the end of the match?
+
+It depends on the model, the temperature and the length of the match. While recording, turn the screen off with "power save", and plug a portable battery into each of the two iPhones for peace of mind.
+
 ## Read next
 
 - [Getting started with panovi — shooting your first video](post:first-video)

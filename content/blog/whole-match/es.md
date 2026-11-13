@@ -57,6 +57,24 @@ Lo único que puede costar dinero son las **uniones largas, de 3 minutos o más*
 
 ![Una escena acercada del mismo video](/img/soccer_zoom.jpg "Del mismo video, puedes acercarte a lo que quieras ver")
 
+## Preguntas frecuentes
+
+### ¿Puedo grabar un partido de fútbol completo sin un camarógrafo?
+
+Sí. Si pones dos iPhone uno al lado del otro en un trípode, grabas desde el saque inicial hasta el final del partido en un solo video con las dos porterías. Nadie tiene que mover la cámara, así que quien graba también puede concentrarse en ver el partido y alentar.
+
+### ¿Cuántos iPhone necesito?
+
+Dos para grabar. Si tienes un tercer iPhone, puede ser tu control remoto: inicias y detienes la grabación o revisas la batería sin tocar las cámaras. Sin control remoto también puedes grabar.
+
+### ¿Cuesta dinero grabar un partido?
+
+Grabar es gratis, sin importar los minutos. Las uniones de 3 minutos o más las puedes probar gratis 3 veces, y después eliges entre el pase de evento (24 horas) y la compra única. Para un día de partido o de torneo, con un solo pase de evento puedes unir todos los videos que quieras.
+
+### ¿La batería dura hasta el final del partido?
+
+Depende del modelo, la temperatura y la duración del partido. Mientras grabas, usa el “ahorro de energía” para apagar la pantalla, y conecta los dos iPhone a una batería externa para ir tranquilo.
+
 ## Sigue leyendo
 
 - [Tu primer video con panovi — paso a paso](post:first-video)

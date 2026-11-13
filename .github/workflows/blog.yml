@@ -8,7 +8,7 @@ on:
     - cron: "5 21 * * *"   # 毎日 06:05 JST（21:05 UTC）
   push:
     branches: [main]
-    paths: ["content/blog/**", "tools/blog/**"]
+    paths: ["content/**", "tools/**", "index.html", "en/index.html"]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -36,3 +38,12 @@ jobs:
           git add -A
           git commit -m "ブログ: 予約した記事を公開する（$(TZ=Asia/Tokyo date +%F)）"
           git push
+      # Bing などへ、変わったページを知らせる（push のときは push 前から、毎朝のときは今回の公開分）
+      - name: indexnow
+        run: |
+          BASE="${{ github.event.before }}"
+          if [ "${{ github.event_name }}" != "push" ] || [ -z "$BASE" ]; then BASE="$(git rev-parse HEAD~1)"; fi
+          if [ "${{ github.event_name }}" != "push" ] && [ "$(git log -1 --format=%an)" != "panovi-blog-bot" ]; then
+            echo "今回は公開なし"; exit 0
+          fi
+          python3 tools/blog/indexnow.py "$BASE" HEAD

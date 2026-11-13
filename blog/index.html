@@ -23,6 +23,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/img/icon.png">
 <link rel="apple-touch-icon" href="/img/icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "panovi の使いかた", "description": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi の使いかた。運動会・旅行・サッカーで使うコツや新機能のお知らせ。", "inLanguage": "ja", "url": "https://panovi.app/blog/", "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://panovi.app/blog/first-video/", "name": "はじめての panovi — 最初の1本を撮るまで"}, {"@type": "ListItem", "position": 2, "url": "https://panovi.app/blog/tripod-setup/", "name": "きれいにつながる置き方 — 三脚と「ハの字」のコツ"}, {"@type": "ListItem", "position": 3, "url": "https://panovi.app/blog/whole-match/", "name": "サッカーの試合を、まるごと撮る — 置き場所・リモコン・電池の段取り"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "panovi", "item": "https://panovi.app/"}, {"@type": "ListItem", "position": 2, "name": "使いかた", "item": "https://panovi.app/blog/"}]}</script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#04201f;--ink2:#062b29;--paper:#f4f3ee;--dim:#9fb0ac;--green:#00f994;
@@ -101,6 +103,12 @@ a{color:var(--green)}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}
+.toc{margin-top:26px;padding:18px 22px;border:1px solid var(--rule);border-radius:12px;background:var(--ink2)}
+.toc b{font-size:13px;color:var(--green);letter-spacing:.06em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2 220px;font-size:14.5px}
+.toc a{color:var(--paper);text-decoration:none}
+.toc a:hover{color:var(--green)}
+.prose h3{scroll-margin-top:76px}.prose h2{scroll-margin-top:76px}
 .prose table{width:100%;border-collapse:collapse;font-size:.92em}
 .prose th,.prose td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid var(--rule)}
 .prose th{color:var(--green);font-weight:700;white-space:nowrap}
@@ -138,6 +146,7 @@ a{color:var(--green)}
     <nav class="nav-links">
       <a class="wide" href="/">panovi について</a>
       <a href="/blog/" aria-current="page">使いかた</a>
+      <a class="wide" href="/faq/">よくある質問</a>
       <a class="btn btn-fill btn-sm" href="https://apps.apple.com/jp/app/id6797261654" data-appstore="nav">App Store</a>
     </nav>
   </div>
@@ -148,14 +157,16 @@ a{color:var(--green)}
   <p>はじめての1本から、旅行やスポーツで使うコツ、新しい機能まで。panovi を使いこなすための記事をまとめています。</p>
 </section>
 <div class="col">
-  <div class="filters" role="group"><button type="button" aria-pressed="true" data-cat="">すべて</button><button type="button" aria-pressed="false" data-cat="start">はじめて</button></div>
-  <div class="cards"><a class="card big" href="/blog/first-video/" data-cat="start"><div class="pic"><img src="/img/wide.jpg" alt="2台のiPhoneで撮って1本にした、山頂からの超ワイド映像" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">まずはここから</span><time datetime="2026-11-13">2026年11月13日</time></div><h2>はじめての panovi — 最初の1本を撮るまで</h2><p>iPhone 2台と三脚で、端から端まで入ったパノラマ動画（パノラマビデオ）を撮る手順。つなぐ・置く・撮る・つなげる・寄って見る、を順に説明します。</p></div></a><a class="card" href="/blog/tripod-setup/" data-cat="start"><div class="pic"><img src="/img/tripod_standing.jpg" alt="三脚に載せ、2台のレンズが中央で近づくハの字に置いたiPhone" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">はじめて</span><time datetime="2026-11-13">2026年11月13日</time></div><h2>きれいにつながる置き方 — 三脚と「ハの字」のコツ</h2><p>パノラマ動画をきれいにつなぐために。2台のiPhoneを1本の三脚に載せる金具の組み方と、つなぎ目が目立たない置き方のコツ。配置の確認と3秒の確認の使い方も。</p></div></a></div>
+  <div class="filters" role="group"><button type="button" aria-pressed="true" data-cat="">すべて</button><button type="button" aria-pressed="false" data-cat="start">はじめて</button><button type="button" aria-pressed="false" data-cat="sports">スポーツ</button></div>
+  <div class="cards"><a class="card big" href="/blog/first-video/" data-cat="start"><div class="pic"><img src="/img/wide.jpg" alt="2台のiPhoneで撮って1本にした、山頂からの超ワイド映像" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">まずはここから</span><time datetime="2026-11-13">2026年11月13日</time></div><h2>はじめての panovi — 最初の1本を撮るまで</h2><p>iPhone 2台と三脚で、端から端まで入ったパノラマ動画（パノラマビデオ）を撮る手順。つなぐ・置く・撮る・つなげる・寄って見る、を順に説明します。</p></div></a><a class="card" href="/blog/tripod-setup/" data-cat="start"><div class="pic"><img src="/img/tripod_standing.jpg" alt="三脚に載せ、2台のレンズが中央で近づくハの字に置いたiPhone" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">はじめて</span><time datetime="2026-11-13">2026年11月13日</time></div><h2>きれいにつながる置き方 — 三脚と「ハの字」のコツ</h2><p>パノラマ動画をきれいにつなぐために。2台のiPhoneを1本の三脚に載せる金具の組み方と、つなぎ目が目立たない置き方のコツ。配置の確認と3秒の確認の使い方も。</p></div></a><a class="card" href="/blog/whole-match/" data-cat="sports"><div class="pic"><img src="/img/soccer_wide_poster.jpg" alt="サッカーのグラウンドを端から端まで入れた超ワイドの一場面" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">スポーツ</span><time datetime="2026-11-13">2026年11月13日</time></div><h2>サッカーの試合を、まるごと撮る — 置き場所・リモコン・電池の段取り</h2><p>三脚に置いたまま、両ゴールまで入れて試合を最後までパノラマ動画で撮るための段取り。置き場所、3台目のリモコン、省エネ、空き容量、長い結合の料金まで。</p></div></a></div>
 </div>
 </main>
 <footer class="col foot">
   <span>© 2026 starclip</span>
   <span>撮った映像は、あなたのiPhoneの中だけに。</span>
   <a href="/">panovi</a>
+  <a href="/blog/">使いかた</a>
+  <a href="/faq/">よくある質問</a>
   <a href="/blog/feed.xml">RSS</a>
   <a href="/privacy/">プライバシーポリシー</a>
   <span class="foot-lang" role="group" aria-label="言語"><a href="/blog/" lang="ja" hreflang="ja" aria-current="page">日本語</a><a href="/en/blog/" lang="en" hreflang="en">English</a><a href="/pt/blog/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/blog/" lang="es" hreflang="es">Español</a></span>

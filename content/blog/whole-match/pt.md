@@ -57,6 +57,24 @@ A única coisa que pode custar dinheiro são as **uniões longas, de 3 minutos o
 
 ![Uma cena com zoom do mesmo vídeo](/img/soccer_zoom.jpg "Do mesmo vídeo, você dá zoom onde quiser")
 
+## Perguntas frequentes
+
+### Dá para filmar um jogo de futebol inteiro sem cinegrafista?
+
+Dá. Coloque dois iPhones lado a lado em um tripé e você grava do pontapé inicial ao apito final em um só vídeo, com as duas traves na imagem. Ninguém precisa mover a câmera, então quem está gravando também pode assistir ao jogo e torcer.
+
+### De quantos iPhones eu preciso?
+
+Dois para filmar. Um terceiro vira um controle remoto na sua mão: sem tocar nas câmeras, você inicia e para a gravação ou confere a bateria. Dá para filmar sem o controle também.
+
+### Filmar um jogo inteiro custa alguma coisa?
+
+Gravar é grátis, com qualquer duração. Uniões de 3 minutos ou mais podem ser testadas 3 vezes de graça; depois, passe de evento (24 horas) ou compra única. Para um dia de torneio ou de jogo, um passe de evento basta para unir quantos vídeos quiser.
+
+### A bateria aguenta até o fim do jogo?
+
+Depende do modelo, da temperatura e da duração do jogo. Durante a gravação, use a economia de energia para apagar a tela e deixe uma bateria externa ligada em cada iPhone para ficar tranquilo.
+
 ## Leia também
 
 - [Primeiros passos com o panovi — até o seu primeiro vídeo](post:first-video)

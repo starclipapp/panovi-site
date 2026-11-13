@@ -1,6 +1,9 @@
+# 検索エンジンも AI のクローラー（GPTBot・ClaudeBot・PerplexityBot・Google-Extended など）も、公開ページは読んでよい
 User-agent: *
 Allow: /
 Disallow: /content/
 Disallow: /tools/
+Disallow: /20/
+Disallow: /archive_20261028/
 
 Sitemap: https://panovi.app/sitemap.xml

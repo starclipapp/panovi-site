@@ -410,6 +410,9 @@ MAIN_TEXT = [
       "<h2>Dúvidas comuns.</h2>",
       "<h2>Lo que quizá te preguntes.</h2>"),
     # FAQ: AI や検索でよく聞かれる問いに、そのまま答える2つ
+    T('<a class="btn btn-line" href="/en/faq/">See all questions</a>',
+      '<a class="btn btn-line" href="/pt/faq/">Ver todas as perguntas</a>',
+      '<a class="btn btn-line" href="/es/faq/">Ver todas las preguntas</a>'),
     T('<summary>Can I shoot a panoramic video on iPhone?</summary>',
       '<summary>Dá para gravar vídeo panorâmico no iPhone?</summary>',
       '<summary>¿Se puede grabar video panorámico con el iPhone?</summary>'),

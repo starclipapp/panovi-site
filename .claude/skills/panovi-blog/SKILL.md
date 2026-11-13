@@ -22,8 +22,9 @@ description: panovi の使いかたブログの次の記事を書く（日本語
 5. **`meta.txt`** を書く。date は CALENDAR.md の日付（過去の日付なら次の金曜）。image はサイトにある画像。
 6. **訳す**。en / pt（ブラジル）/ es（中南米・tú）。見出し・画像・`{{appstore}}` の数は日本語と同じに。
    言葉づかいは各言語のトップページ（`en/index.html` `pt/index.html` `es/index.html`）に合わせる。
-7. **確かめる**。`sh tools/build_site.sh` が通ること。予約記事は
+7. **SEO/GEO チェックリスト**（README の末尾）を1項目ずつ確かめる。広く聞かれる問いは `content/faq/<lang>.md` にも足して `updated:` を直す。
+8. **確かめる**。`sh tools/build_site.sh` が通ること。予約記事は
    `python3 tools/blog/build.py --preview <scratchpad>/preview` で作って見た目も確かめる。
-8. CALENDAR.md の状態を「予約済み（4言語）」にする。commit はユーザーに聞いてから。
+9. CALENDAR.md の状態を「予約済み（4言語）」にする。commit はユーザーに聞いてから。
 
 書き終えたら、題・公開日・確かめられなかった事実（あれば）を短く報告する。
