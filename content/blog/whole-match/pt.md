@@ -1,6 +1,6 @@
 ---
 title: Filme o jogo de futebol inteiro — onde colocar, controle remoto e bateria
-description: Como se preparar para filmar um jogo do começo ao fim, com as duas traves na imagem e o tripé parado. Onde colocar, o terceiro iPhone como controle, economia de energia, espaço livre e o preço das uniões longas.
+description: Como se preparar para filmar um jogo do começo ao fim em vídeo panorâmico, com as duas traves na imagem e o tripé parado. Onde colocar, o terceiro iPhone como controle, economia de energia, espaço livre e o preço das uniões longas.
 image_alt: Cena ultra-ampla de um campo de futebol, de ponta a ponta
 ---
 

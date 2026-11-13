@@ -1,6 +1,6 @@
 ---
 title: Como posicionar para uma emenda perfeita — o tripé e o segredo do “V”
-description: Como montar o suporte para colocar dois iPhones em um só tripé e como posicioná-los para a emenda ficar bonita. E como usar a verificação de alinhamento e a prévia de 3 segundos.
+description: Como montar o suporte para colocar dois iPhones em um só tripé e como posicioná-los para a emenda do vídeo panorâmico ficar bonita. E como usar a verificação de alinhamento e a prévia de 3 segundos.
 image_alt: Dois iPhones no tripé, em um V aberto, com as lentes bem próximas no centro
 ---
 

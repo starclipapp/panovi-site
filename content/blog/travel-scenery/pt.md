@@ -1,6 +1,6 @@
 ---
 title: Paisagens de viagem, tão amplas quanto você viu — 6 dicas para usar em viagens
-description: Dicas para guardar o alto da montanha, a praia e a cidade em vídeos ultra-amplos. Incluir algo em movimento, nivelar o tripé, cuidar da bateria e do espaço, e o que fazer quando voltar para casa.
+description: Dicas para guardar o alto da montanha, a praia e a cidade em vídeos panorâmicos. Incluir algo em movimento, nivelar o tripé, cuidar da bateria e do espaço, e o que fazer quando voltar para casa.
 image_alt: Cena ultra-ampla do cume do Monte Kintoki, com o Monte Fuji ao fundo
 ---
 

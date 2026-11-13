@@ -3,7 +3,7 @@
 <channel>
   <title>panovi guides</title>
   <link>https://panovi.app/en/blog/</link>
-  <description>How to use panovi, the app that turns two iPhones into one ultra-wide video: guides, shooting tips and news.</description>
+  <description>How to use panovi, the panoramic video app that turns two iPhones into one ultra-wide video: guides, tips for sports days, travel and soccer, and news.</description>
   <language>en</language>
   <item>
     <title>Getting started with panovi — shooting your first video</title>
@@ -11,7 +11,7 @@
     <guid>https://panovi.app/en/blog/first-video/</guid>
     <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     <category>Getting started</category>
-    <description>How to shoot an edge-to-edge ultra-wide video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.</description>
+    <description>How to shoot an edge-to-edge panoramic video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.</description>
   </item>
   <item>
     <title>Placing your iPhones for a clean stitch — the tripod and the shallow V</title>
@@ -19,7 +19,7 @@
     <guid>https://panovi.app/en/blog/tripod-setup/</guid>
     <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     <category>Getting started</category>
-    <description>How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam. Plus how to use the setup check and the 3-second preview.</description>
+    <description>How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam in your panoramic video. Plus how to use the setup check and the 3-second preview.</description>
   </item>
 </channel>
 </rss>

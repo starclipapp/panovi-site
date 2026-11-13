@@ -17,6 +17,7 @@ description: panovi の使いかたブログの次の記事を書く（日本語
 4. **`ja.md` を書く**。既存の記事（`content/blog/first-video/ja.md` など）と同じ口調・長さ。
    リードで「誰の・どんな場面に効くか」を言い、見出しは具体的に。最後は「次に読む」と `{{appstore}}`。
    リンクは `post:` `home:#` `viewer:` を使う。
+   `description` とリードには検索語（パノラマ動画／パノラマビデオ・場面の言葉）を自然に1回入れる。訳でも各言語の検索語（panoramic video / vídeo panorâmico / video panorámico）を入れる。
 5. **`meta.txt`** を書く。date は CALENDAR.md の日付（過去の日付なら次の金曜）。image はサイトにある画像。
 6. **訳す**。en / pt（ブラジル）/ es（中南米・tú）。見出し・画像・`{{appstore}}` の数は日本語と同じに。
    言葉づかいは各言語のトップページ（`en/index.html` `pt/index.html` `es/index.html`）に合わせる。

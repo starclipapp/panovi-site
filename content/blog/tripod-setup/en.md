@@ -1,6 +1,6 @@
 ---
 title: Placing your iPhones for a clean stitch — the tripod and the shallow V
-description: How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam. Plus how to use the setup check and the 3-second preview.
+description: How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam in your panoramic video. Plus how to use the setup check and the 3-second preview.
 image_alt: Two iPhones on a tripod, set in a shallow V with their lenses meeting near the center
 ---
 

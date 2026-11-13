@@ -1,6 +1,6 @@
 ---
 title: Cómo colocarlos para una unión limpia — el trípode y la forma de V
-description: Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.
+description: Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión del video panorámico se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.
 image_alt: Dos iPhone en un trípode, en forma de V, con las cámaras juntas cerca del centro
 ---
 

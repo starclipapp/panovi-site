@@ -1,10 +1,10 @@
 ---
 title: Getting started with panovi — shooting your first video
-description: How to shoot an edge-to-edge ultra-wide video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.
+description: How to shoot an edge-to-edge panoramic video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.
 image_alt: An ultra-wide view from a mountain summit, shot on two iPhones and stitched into one
 ---
 
-panovi is an app that turns the left and right footage from two iPhones, set side by side on a tripod, into one ultra-wide video. This post walks you through everything from installing the app to finishing your first video. Once you get used to it, setup takes just a few minutes.
+panovi is an app that turns the left and right footage from two iPhones, set side by side on a tripod, into one ultra-wide panoramic video. This post walks you through everything from installing the app to finishing your first video. Once you get used to it, setup takes just a few minutes.
 
 ![When you shoot, capture everything, edge to edge](/img/wide.jpg "When you shoot, capture everything, edge to edge")
 

@@ -1,10 +1,10 @@
 ---
 title: Tu primer video con panovi — paso a paso
-description: Cómo grabar un video ultrapanorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.
+description: Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.
 image_alt: Video ultrapanorámico desde la cima de una montaña, grabado con dos iPhone y unido en uno solo
 ---
 
-panovi es una app que une las imágenes de la izquierda y de la derecha en un solo video ultrapanorámico. Solo pones dos iPhone uno al lado del otro en un trípode. En este artículo te explicamos, paso a paso, todo lo que pasa desde que instalas la app hasta que tienes tu primer video. Con un poco de práctica, la preparación toma unos minutos.
+panovi es una app que une las imágenes de la izquierda y de la derecha en un solo video panorámico de gran amplitud. Solo pones dos iPhone uno al lado del otro en un trípode. En este artículo te explicamos, paso a paso, todo lo que pasa desde que instalas la app hasta que tienes tu primer video. Con un poco de práctica, la preparación toma unos minutos.
 
 ![Al grabar, deja todo dentro, de extremo a extremo](/img/wide.jpg "Al grabar, deja todo dentro, de extremo a extremo")
 

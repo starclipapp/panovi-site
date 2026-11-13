@@ -1,6 +1,6 @@
 ---
 title: Film a whole soccer match — where to set up, the remote and the battery
-description: How to film a match from start to finish with both goals in frame, without touching the tripod. Where to set up, a third iPhone as a remote, power save, free space, and pricing for long stitches.
+description: How to film a match from start to finish as a panoramic video, with both goals in frame, without touching the tripod. Where to set up, a third iPhone as a remote, power save, free space, and pricing for long stitches.
 image_alt: A frame of ultra-wide footage showing a soccer field from end to end
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Keep the view as wide as you saw it — 6 tips for using panovi on your travels
-description: Tips for capturing summits, seashores and cityscapes as ultra-wide videos. Include something that moves, keep it level, plan for battery and storage, and enjoy it when you get home.
+description: Tips for capturing summits, seashores and cityscapes as panoramic videos. Include something that moves, keep it level, plan for battery and storage, and enjoy it when you get home.
 image_alt: A frame of an ultra-wide view from the summit of Mt. Kintoki, all the way to Mt. Fuji
 ---
 

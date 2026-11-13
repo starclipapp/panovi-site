@@ -3,7 +3,7 @@
 <channel>
   <title>Guías de panovi</title>
   <link>https://panovi.app/es/blog/</link>
-  <description>Cómo usar panovi, la app que convierte dos iPhone en un video ultrapanorámico: guías, consejos de grabación y novedades.</description>
+  <description>Cómo usar panovi, la app de video panorámico que convierte dos iPhone en un solo video: guías, consejos para viajes y fútbol, y novedades.</description>
   <language>es</language>
   <item>
     <title>Tu primer video con panovi — paso a paso</title>
@@ -11,7 +11,7 @@
     <guid>https://panovi.app/es/blog/first-video/</guid>
     <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     <category>Primeros pasos</category>
-    <description>Cómo grabar un video ultrapanorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.</description>
+    <description>Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.</description>
   </item>
   <item>
     <title>Cómo colocarlos para una unión limpia — el trípode y la forma de V</title>
@@ -19,7 +19,7 @@
     <guid>https://panovi.app/es/blog/tripod-setup/</guid>
     <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     <category>Primeros pasos</category>
-    <description>Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.</description>
+    <description>Cómo armar el soporte para poner dos iPhone en un solo trípode y cómo colocarlos para que la unión del video panorámico se vea limpia. Además, cómo usar la verificación de alineación y la prueba de 3 segundos.</description>
   </item>
 </channel>
 </rss>

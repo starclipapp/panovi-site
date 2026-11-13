@@ -1,6 +1,6 @@
 ---
 title: Graba el partido de fútbol completo — ubicación, control remoto y batería
-description: Cómo preparar todo para grabar un partido entero con el trípode fijo y las dos porterías en la imagen. Ubicación, un tercer iPhone como control remoto, ahorro de energía, espacio libre y el precio de las uniones largas.
+description: Cómo preparar todo para grabar un partido entero en video panorámico, con el trípode fijo y las dos porterías en la imagen. Ubicación, un tercer iPhone como control remoto, ahorro de energía, espacio libre y el precio de las uniones largas.
 image_alt: Una escena ultrapanorámica con la cancha de fútbol completa, de extremo a extremo
 ---
 

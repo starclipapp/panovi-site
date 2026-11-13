@@ -1,6 +1,6 @@
 ---
 title: Paisajes de viaje tan amplios como los ves — 6 trucos para tus viajes
-description: Trucos para guardar cimas, playas y ciudades en video ultrapanorámico. Incluye algo en movimiento, nivela el trípode, prepara batería y espacio, y disfrútalo al volver a casa.
+description: Trucos para guardar cimas, playas y ciudades en video panorámico. Incluye algo en movimiento, nivela el trípode, prepara batería y espacio, y disfrútalo al volver a casa.
 image_alt: Una escena ultrapanorámica desde la cima del monte Kintoki, con el monte Fuji incluido
 ---
 

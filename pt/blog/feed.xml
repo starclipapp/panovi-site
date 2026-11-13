@@ -3,7 +3,7 @@
 <channel>
   <title>Guias do panovi</title>
   <link>https://panovi.app/pt/blog/</link>
-  <description>Como usar o panovi, o app que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas de gravação e novidades.</description>
+  <description>Como usar o panovi, o app de vídeo panorâmico que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas para viagens e futebol, e novidades.</description>
   <language>pt-BR</language>
   <item>
     <title>Primeiros passos com o panovi — até o seu primeiro vídeo</title>
@@ -11,7 +11,7 @@
     <guid>https://panovi.app/pt/blog/first-video/</guid>
     <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     <category>Primeiros passos</category>
-    <description>Como gravar um vídeo ultra-amplo, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.</description>
+    <description>Como gravar um vídeo panorâmico, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.</description>
   </item>
   <item>
     <title>Como posicionar para uma emenda perfeita — o tripé e o segredo do “V”</title>
@@ -19,7 +19,7 @@
     <guid>https://panovi.app/pt/blog/tripod-setup/</guid>
     <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     <category>Primeiros passos</category>
-    <description>Como montar o suporte para colocar dois iPhones em um só tripé e como posicioná-los para a emenda ficar bonita. E como usar a verificação de alinhamento e a prévia de 3 segundos.</description>
+    <description>Como montar o suporte para colocar dois iPhones em um só tripé e como posicioná-los para a emenda do vídeo panorâmico ficar bonita. E como usar a verificação de alinhamento e a prévia de 3 segundos.</description>
   </item>
 </channel>
 </rss>

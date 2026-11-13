@@ -1,10 +1,10 @@
 ---
 title: Primeiros passos com o panovi — até o seu primeiro vídeo
-description: Como gravar um vídeo ultra-amplo, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.
+description: Como gravar um vídeo panorâmico, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.
 image_alt: Vista ultra-ampla do alto de uma montanha, gravada com dois iPhones e unida em um só vídeo
 ---
 
-O panovi é um app que transforma as imagens da esquerda e da direita em um só vídeo ultra-amplo. Basta colocar dois iPhones lado a lado em um tripé. Neste artigo, mostramos passo a passo o caminho desde instalar o app até ter o seu primeiro vídeo. Com um pouco de prática, a preparação leva poucos minutos.
+O panovi é um app que transforma as imagens da esquerda e da direita em um só vídeo panorâmico ultra-amplo. Basta colocar dois iPhones lado a lado em um tripé. Neste artigo, mostramos passo a passo o caminho desde instalar o app até ter o seu primeiro vídeo. Com um pouco de prática, a preparação leva poucos minutos.
 
 ![Ao filmar, capture tudo, de ponta a ponta](/img/wide.jpg "Ao filmar, capture tudo, de ponta a ponta")
 

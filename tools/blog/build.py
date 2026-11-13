@@ -67,7 +67,7 @@ UI = {
     "ja": {
         "nav": "使いかた", "home": "panovi について", "blog_title": "panovi の使いかた",
         "blog_lead": "はじめての1本から、旅行やスポーツで使うコツ、新しい機能まで。panovi を使いこなすための記事をまとめています。",
-        "blog_desc": "2台のiPhoneで超ワイド動画を撮るアプリ panovi の使いかた・撮影のコツ・新機能のお知らせ。",
+        "blog_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi の使いかた。運動会・旅行・サッカーで使うコツや新機能のお知らせ。",
         "all": "すべて", "latest": "使いかた・ヒント", "latest_more": "記事をすべて見る",
         "latest_lead": "はじめての1本から、旅行やスポーツで使うコツまで。",
         "start_here": "まずはここから", "read": "読む",
@@ -75,11 +75,12 @@ UI = {
         "cta_btn": "App Store で入手", "back": "記事の一覧へ", "feed": "RSS",
         "foot_note": "撮った映像は、あなたのiPhoneの中だけに。", "privacy": "プライバシーポリシー",
         "lang": "言語", "scheduled": "予約", "draft": "下書き",
+        "suffix": "panovi パノラマ動画アプリ",
     },
     "en": {
         "nav": "Guides", "home": "About panovi", "blog_title": "panovi guides",
         "blog_lead": "From your first video to tips for travel and sports, plus what’s new. Everything you need to get the most out of panovi.",
-        "blog_desc": "How to use panovi, the app that turns two iPhones into one ultra-wide video: guides, shooting tips and news.",
+        "blog_desc": "How to use panovi, the panoramic video app that turns two iPhones into one ultra-wide video: guides, tips for sports days, travel and soccer, and news.",
         "all": "All", "latest": "Guides & tips", "latest_more": "See all guides",
         "latest_lead": "From your first video to tips for travel and sports.",
         "start_here": "Start here", "read": "Read",
@@ -87,11 +88,12 @@ UI = {
         "cta_btn": "Get it on the App Store", "back": "All guides", "feed": "RSS",
         "foot_note": "Your footage stays on your iPhones.", "privacy": "Privacy Policy",
         "lang": "Language", "scheduled": "Scheduled", "draft": "Draft",
+        "suffix": "panovi panoramic video app",
     },
     "pt": {
         "nav": "Guias", "home": "Sobre o panovi", "blog_title": "Guias do panovi",
         "blog_lead": "Do primeiro vídeo às dicas para viagens e esportes, além das novidades. Tudo para você aproveitar o panovi ao máximo.",
-        "blog_desc": "Como usar o panovi, o app que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas de gravação e novidades.",
+        "blog_desc": "Como usar o panovi, o app de vídeo panorâmico que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas para viagens e futebol, e novidades.",
         "all": "Todos", "latest": "Guias e dicas", "latest_more": "Ver todos os guias",
         "latest_lead": "Do primeiro vídeo às dicas para viagens e esportes.",
         "start_here": "Comece por aqui", "read": "Ler",
@@ -99,11 +101,12 @@ UI = {
         "cta_btn": "Baixar na App Store", "back": "Todos os guias", "feed": "RSS",
         "foot_note": "Suas gravações ficam só nos seus iPhones.", "privacy": "Política de Privacidade",
         "lang": "Idioma", "scheduled": "Agendado", "draft": "Rascunho",
+        "suffix": "panovi, app de vídeo panorâmico",
     },
     "es": {
         "nav": "Guías", "home": "Acerca de panovi", "blog_title": "Guías de panovi",
         "blog_lead": "Desde tu primer video hasta consejos para viajes y deportes, además de las novedades. Todo para sacarle el máximo provecho a panovi.",
-        "blog_desc": "Cómo usar panovi, la app que convierte dos iPhone en un video ultrapanorámico: guías, consejos de grabación y novedades.",
+        "blog_desc": "Cómo usar panovi, la app de video panorámico que convierte dos iPhone en un solo video: guías, consejos para viajes y fútbol, y novedades.",
         "all": "Todos", "latest": "Guías y consejos", "latest_more": "Ver todas las guías",
         "latest_lead": "Desde tu primer video hasta consejos para viajes y deportes.",
         "start_here": "Empieza aquí", "read": "Leer",
@@ -111,6 +114,7 @@ UI = {
         "cta_btn": "Descargar en la App Store", "back": "Todas las guías", "feed": "RSS",
         "foot_note": "Tus grabaciones se quedan solo en tus iPhone.", "privacy": "Política de privacidad",
         "lang": "Idioma", "scheduled": "Programado", "draft": "Borrador",
+        "suffix": "panovi, app de video panorámico",
     },
 }
 MONTHS = {
@@ -559,7 +563,7 @@ def article_page(p, lang, posts, published, today):
 </article>
 {more_html}"""
     paths = {lg: blog_path(lg, p.slug) for lg in LANGS}
-    out = page(lang, title=f"{p.title(lang)} | panovi", desc=p.desc(lang), path=paths[lang], paths=paths,
+    out = page(lang, title=f"{p.title(lang)} | {u['suffix']}", desc=p.desc(lang), path=paths[lang], paths=paths,
                image=p.image, body=body, og_type="article", extra_head=json_ld(p, lang))
     return out, ctx.warnings
 
@@ -587,7 +591,7 @@ def index_page(lang, posts, today):
   <div class="cards">{cards}</div>
 </div>"""
     paths = {lg: blog_path(lg) for lg in LANGS}
-    return page(lang, title=f"{u['blog_title']} | panovi", desc=u["blog_desc"], path=paths[lang], paths=paths,
+    return page(lang, title=f"{u['blog_title']} | {u['suffix']}", desc=u["blog_desc"], path=paths[lang], paths=paths,
                 image=first.image if first else "", body=body, scripts=FILTER_JS)
 
 
