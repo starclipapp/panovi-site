@@ -6,7 +6,7 @@ image_alt: Cena ultra-ampla de um campo de futebol, de ponta a ponta
 
 Quando criamos o panovi, o cenário mais difícil que imaginamos foi um jogo de futebol. É ao ar livre, é longo, os jogadores correm o tempo todo e não dá para repetir. Neste artigo, mostramos como se preparar para filmar o jogo inteiro sem tirar o tripé do lugar. Vale o mesmo para outros esportes de campo, como o rúgbi.
 
-![Um campo de futebol, de ponta a ponta](/img/soccer_wide_poster.jpg "Ultra-amplo, com as duas traves na imagem. O tripé não saiu do lugar nem uma vez")
+![Um campo de futebol, de ponta a ponta](/img/match-wide.jpg "Ultra-amplo, com as duas traves na imagem. O tripé não saiu do lugar nem uma vez")
 
 ## Onde colocar: no prolongamento da linha do meio-campo, o mais alto possível
 
@@ -55,7 +55,7 @@ A única coisa que pode custar dinheiro são as **uniões longas, de 3 minutos o
 - **Dê zoom no app**: toque duas vezes para dar zoom e arraste para os lados. Tudo o que acontece longe da bola também fica guardado na imagem
 - **Compartilhe com o time**: em “Exportar para uso no YouTube”, exporte em tamanho 8K para os detalhes continuarem nítidos até em uma tela grande. Se publicar como não listado, só quem tiver o link consegue assistir
 
-![Uma cena com zoom do mesmo vídeo](/img/soccer_zoom.jpg "Do mesmo vídeo, você dá zoom onde quiser")
+![Uma cena com zoom do mesmo vídeo](/img/match-zoom.jpg "Do mesmo vídeo, você dá zoom onde quiser")
 
 ## Perguntas frequentes
 

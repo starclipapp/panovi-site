@@ -6,7 +6,7 @@ image_alt: A frame of ultra-wide footage showing a soccer field from end to end
 
 When we built panovi, the toughest situation we had in mind was a soccer match. It is outdoors, it is long, the players run all over, and there are no retakes. This post covers how to plan ahead so you can film a whole match from start to finish with the iPhones left on the tripod. The same goes for rugby and other field sports.
 
-![A soccer field from end to end](/img/soccer_wide_poster.jpg "Ultra-wide with both goals in frame. The tripod never moved once")
+![A soccer field from end to end](/img/match-wide.jpg "Ultra-wide with both goals in frame. The tripod never moved once")
 
 ## Where to set up: in line with the halfway line, as high as you can
 
@@ -55,7 +55,7 @@ The only thing that can cost money is a **long stitch of 3 minutes or longer**. 
 - **Zoom in within the app**: double-tap to zoom in, drag to pan left and right. Play away from the ball is all still there in the frame
 - **Share with the team**: use "Export for YouTube" to make it 8K size, and it stays sharp even on a big screen. Set it to unlisted, and only people who have the URL can watch it
 
-![A moment zoomed in from the same footage](/img/soccer_zoom.jpg "Zoom in wherever you want, all from the same video")
+![A moment zoomed in from the same footage](/img/match-zoom.jpg "Zoom in wherever you want, all from the same video")
 
 ## Frequently asked questions
 

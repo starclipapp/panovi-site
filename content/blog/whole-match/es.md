@@ -6,7 +6,7 @@ image_alt: Una escena ultrapanorámica con la cancha de fútbol completa, de ext
 
 Cuando creamos panovi, el caso más exigente que teníamos en mente era un partido de fútbol. Es al aire libre, dura mucho, los jugadores se mueven por todos lados y no se puede repetir. En este artículo te contamos cómo prepararte para grabar un partido completo con el trípode fijo. Lo mismo sirve para el rugby y otros deportes de campo.
 
-![La cancha de fútbol de extremo a extremo](/img/soccer_wide_poster.jpg "Un ultrapanorámico con las dos porterías. El trípode no se movió ni una vez")
+![La cancha de fútbol de extremo a extremo](/img/match-wide.jpg "Un ultrapanorámico con las dos porterías. El trípode no se movió ni una vez")
 
 ## Ubicación: en la prolongación de la línea de medio campo, lo más alto posible
 
@@ -55,7 +55,7 @@ Lo único que puede costar dinero son las **uniones largas, de 3 minutos o más*
 - **Acércate en la app**: toca dos veces para acercarte y arrastra para moverte a los lados. Todo lo que pasa lejos del balón también queda en la imagen
 - **Compártelo con el equipo**: con “Exportar para YouTube” en tamaño 8K, se ve el detalle incluso en una pantalla grande. Si lo publicas como no listado, solo lo ven quienes tienen la URL
 
-![Una escena acercada del mismo video](/img/soccer_zoom.jpg "Del mismo video, puedes acercarte a lo que quieras ver")
+![Una escena acercada del mismo video](/img/match-zoom.jpg "Del mismo video, puedes acercarte a lo que quieras ver")
 
 ## Preguntas frecuentes
 

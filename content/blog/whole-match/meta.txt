@@ -1,4 +1,4 @@
 date: 2026-11-13
 category: sports
-image: /img/soccer_wide_poster.jpg
+image: /img/match-wide.jpg
 order: 4
