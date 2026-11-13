@@ -224,9 +224,9 @@ MAIN_TEXT = [
     T('data-act="out" type="button">Out −</button>', 'data-act="out" type="button">Zoom −</button>', 'data-act="out" type="button">Zoom −</button>'),
     T('data-act="whole" type="button">Whole</button>', 'data-act="whole" type="button">Tudo</button>', 'data-act="whole" type="button">Todo</button>'),
     T('data-act="reset" type="button">Reset</button>', 'data-act="reset" type="button">Redefinir</button>', 'data-act="reset" type="button">Restablecer</button>'),
-    T('<p class="xp-note">A real stitched view from Mt. Kintoki: 4032×1380, about 16 seconds, muted.</p>',
-      '<p class="xp-note">Vista real do Monte Kintoki, já juntada: 4032×1380, cerca de 16 segundos, sem som.</p>',
-      '<p class="xp-note">Vista real unida desde el monte Kintoki: 4032×1380, unos 16 segundos, sin sonido.</p>'),
+    T('<p class="xp-note">A real stitched view from Mt. Kintoki: 4008×1356, about 16 seconds, muted.</p>',
+      '<p class="xp-note">Vista real do Monte Kintoki, já juntada: 4008×1356, cerca de 16 segundos, sem som.</p>',
+      '<p class="xp-note">Vista real unida desde el monte Kintoki: 4008×1356, unos 16 segundos, sin sonido.</p>'),
     T(">Explore freely (panovi viewer)</a>", ">Explorar à vontade (panovi viewer)</a>", ">Explorar libremente (panovi viewer)</a>"),
     T(">How the viewer works</a>", ">Como usar o visualizador</a>", ">Cómo usar el visor</a>"),
     # 03
