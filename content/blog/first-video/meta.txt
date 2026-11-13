@@ -1,0 +1,4 @@
+date: 2026-11-13
+category: start
+image: /img/wide.jpg
+order: 1

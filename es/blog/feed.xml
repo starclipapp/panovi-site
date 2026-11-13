@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Guías de panovi</title>
+  <link>https://panovi.app/es/blog/</link>
+  <description>Cómo usar panovi, la app que convierte dos iPhone en un video ultrapanorámico: guías, consejos de grabación y novedades.</description>
+  <language>es</language>
+  <item>
+    <title>Tu primer video con panovi — paso a paso</title>
+    <link>https://panovi.app/es/blog/first-video/</link>
+    <guid>https://panovi.app/es/blog/first-video/</guid>
+    <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
+    <category>Primeros pasos</category>
+    <description>Cómo grabar un video ultrapanorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.</description>
+  </item>
+</channel>
+</rss>

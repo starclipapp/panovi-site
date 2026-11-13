@@ -1,0 +1,38 @@
+# 予約したブログ記事を、その日の朝に公開する。
+# content/blog/<slug>/meta.txt の date が今日（日本時間）になった記事を作って main へ push する。
+# GitHub Pages は main の直下をそのまま配信しているので、push が公開になる。
+name: blog
+
+on:
+  schedule:
+    - cron: "5 21 * * *"   # 毎日 06:05 JST（21:05 UTC）
+  push:
+    branches: [main]
+    paths: ["content/blog/**", "tools/blog/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: build
+        run: sh tools/build_site.sh
+      - name: commit
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then echo "変更なし"; exit 0; fi
+          git config user.name "panovi-blog-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "ブログ: 予約した記事を公開する（$(TZ=Asia/Tokyo date +%F)）"
+          git push

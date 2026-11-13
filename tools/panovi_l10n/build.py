@@ -105,6 +105,8 @@ MAIN_TEXT = [
     T('<a href="#try">Try it</a>', '<a href="#try">Experimente</a>', '<a href="#try">Pruébalo</a>'),
     T('<a href="#how">How it works</a>', '<a href="#how">Como funciona</a>', '<a href="#how">Cómo funciona</a>'),
     T('<a href="#price">Pricing</a>', '<a href="#price">Preços</a>', '<a href="#price">Precios</a>'),
+    # ブログ（上の帯とフッタ）
+    T('<a href="/en/blog/">Guides</a>', '<a href="/pt/blog/">Guias</a>', '<a href="/es/blog/">Guías</a>', 2),
     # hero
     T('<span class="kicker">two iPhones, one wide frame</span>',
       '<span class="kicker">dois iPhones, uma só imagem</span>',

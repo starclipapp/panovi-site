@@ -1,0 +1,4 @@
+date: 2026-12-11
+category: tips
+image: /img/hero.jpg
+order: 3

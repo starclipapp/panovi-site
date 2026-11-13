@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>panovi guides</title>
+  <link>https://panovi.app/en/blog/</link>
+  <description>How to use panovi, the app that turns two iPhones into one ultra-wide video: guides, shooting tips and news.</description>
+  <language>en</language>
+  <item>
+    <title>Getting started with panovi — shooting your first video</title>
+    <link>https://panovi.app/en/blog/first-video/</link>
+    <guid>https://panovi.app/en/blog/first-video/</guid>
+    <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
+    <category>Getting started</category>
+    <description>How to shoot an edge-to-edge ultra-wide video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.</description>
+  </item>
+</channel>
+</rss>

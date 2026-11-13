@@ -128,4 +128,78 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/viewer/es/guide.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/viewer/en/guide.html"/>
   </url>
+<!-- blog:start -->
+  <url>
+    <loc>https://panovi.app/blog/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/en/blog/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/pt/blog/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/es/blog/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/blog/first-video/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/first-video/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/en/blog/first-video/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/first-video/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/pt/blog/first-video/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/first-video/"/>
+  </url>
+  <url>
+    <loc>https://panovi.app/es/blog/first-video/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://panovi.app/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/first-video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/first-video/"/>
+  </url>
+<!-- blog:end -->
 </urlset>

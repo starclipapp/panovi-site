@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="panovi-blog">
+<title>Guias do panovi | panovi</title>
+<meta name="description" content="Como usar o panovi, o app que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas de gravação e novidades.">
+<link rel="canonical" href="https://panovi.app/pt/blog/">
+<link rel="alternate" hreflang="ja" href="https://panovi.app/blog/">
+<link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/">
+<link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/">
+<link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/">
+<link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/">
+<link rel="alternate" type="application/rss+xml" title="Guias do panovi" href="https://panovi.app/pt/blog/feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guias do panovi | panovi">
+<meta property="og:description" content="Como usar o panovi, o app que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas de gravação e novidades.">
+<meta property="og:url" content="https://panovi.app/pt/blog/">
+<meta property="og:image" content="https://panovi.app/img/wide.jpg">
+<meta property="og:site_name" content="panovi">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" href="/img/icon.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#04201f;--ink2:#062b29;--paper:#f4f3ee;--dim:#9fb0ac;--green:#00f994;
+  --rule:rgba(244,243,238,.13);--sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--paper);font-family:var(--sans);line-height:1.9;
+  font-feature-settings:"palt" 1;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green)}
+.col{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+.col-n{width:min(740px,calc(100% - 40px));margin-inline:auto}
+.nav{position:sticky;top:0;z-index:60;background:rgba(4,32,31,.88);backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.nav-in{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:28px;height:28px;border-radius:7px}
+.brand b{font-size:17px;font-weight:600;letter-spacing:.13em;color:var(--green)}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:22px}
+.nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim)}
+.nav-links a:hover{color:var(--paper)}
+.nav-links a.btn-fill{color:#042a20}
+.nav-links a[aria-current]{color:var(--paper)}
+@media(max-width:640px){.nav-links .wide{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:999px;
+  text-decoration:none;font-size:14.5px;font-weight:700;white-space:nowrap;border:1px solid transparent}
+.btn-fill{background:var(--green);color:#042a20}
+.btn-line{border-color:rgba(244,243,238,.34);color:var(--paper)}
+.btn-line:hover{border-color:var(--green);color:var(--green)}
+.btn-sm{padding:8px 16px;font-size:13px}
+.chip{display:inline-block;font-size:11.5px;letter-spacing:.08em;color:var(--green);
+  border:1px solid rgba(0,249,148,.4);border-radius:999px;padding:2px 11px;line-height:1.7}
+.flag{display:inline-block;font-size:11.5px;color:#042a20;background:#ffd25c;border-radius:4px;padding:1px 8px;margin-left:6px}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;color:var(--dim)}
+/* 一覧 */
+.head{padding:64px 0 28px}
+.head h1{font-size:clamp(30px,5vw,50px);font-weight:800;letter-spacing:-.035em;line-height:1.2}
+.head p{margin-top:14px;max-width:36em;color:var(--dim);font-size:clamp(15px,1.7vw,17px)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 30px}
+.filters button{background:transparent;border:1px solid var(--rule);color:var(--paper);padding:6px 15px;
+  border-radius:999px;font:inherit;font-size:13px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#042a20;font-weight:700}
+.cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));padding-bottom:90px}
+.card{display:flex;flex-direction:column;background:var(--ink2);border:1px solid var(--rule);border-radius:14px;
+  overflow:hidden;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(0,249,148,.5);transform:translateY(-2px)}
+.card .pic{aspect-ratio:16/9;background:#000;overflow:hidden}
+.card .pic img{width:100%;height:100%;object-fit:cover}
+.card .tx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px}
+.card h2{font-size:18px;font-weight:700;line-height:1.5;letter-spacing:-.01em}
+.card p{font-size:14px;color:var(--dim);line-height:1.75}
+.card.big{grid-column:1/-1}
+@media(min-width:860px){.card.big{flex-direction:row}.card.big .pic{flex:0 0 56%;aspect-ratio:auto;min-height:280px}
+  .card.big .tx{padding:34px;justify-content:center}.card.big h2{font-size:24px}}
+.card[hidden]{display:none}
+/* 記事 */
+.post{padding:44px 0 30px}
+.crumb{font-size:13px;margin-bottom:22px}
+.crumb a{color:var(--dim);text-decoration:none}
+.crumb a:hover{color:var(--green)}
+.post h1{margin-top:14px;font-size:clamp(27px,4.4vw,42px);font-weight:800;line-height:1.3;letter-spacing:-.03em}
+.post .lead{margin-top:16px;color:var(--dim);font-size:clamp(15px,1.8vw,17px)}
+.hero-img{margin:30px 0 8px;border-radius:12px;overflow:hidden;border:1px solid var(--rule)}
+.prose{font-size:clamp(15.5px,1.8vw,17px)}
+.prose>*+*{margin-top:1.15em}
+.prose h2{margin-top:2.3em;font-size:clamp(21px,3vw,27px);font-weight:800;line-height:1.4;letter-spacing:-.02em;
+  padding-top:.9em;border-top:1px solid var(--rule)}
+.prose h3{margin-top:1.8em;font-size:19px;font-weight:700}
+.prose p,.prose li{color:#d9e2df}
+.prose strong{color:var(--paper)}
+.prose ul,.prose ol{padding-left:1.3em}
+.prose li+li{margin-top:.45em}
+.prose li::marker{color:var(--green)}
+.prose figure{margin:1.8em 0}
+.prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
+.prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
+.note{padding:18px 22px;border-left:2px solid var(--green);background:rgba(0,249,148,.06);border-radius:0 8px 8px 0}
+.note p{color:var(--dim)}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:2.6em 0 0;padding:24px;
+  border:1px solid rgba(0,249,148,.35);border-radius:14px;
+  background:radial-gradient(120% 160% at 0% 0%,rgba(0,249,148,.12),transparent 60%)}
+.cta img{width:56px;height:56px;border-radius:13px}
+.cta div{flex:1 1 220px}
+.cta b{font-size:18px}
+.cta p{margin:4px 0 0;font-size:14px;color:var(--dim)}
+.more{padding:56px 0 90px}
+.more h2{font-size:20px;font-weight:800;margin-bottom:20px}
+.more .cards{padding-bottom:0}
+.foot{border-top:1px solid var(--rule);padding:30px 0 56px;font-size:13px;color:var(--dim);
+  display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
+.foot a{color:var(--green);text-decoration:none}
+.foot-lang{display:flex;flex-wrap:wrap;gap:6px 16px}
+.foot a[aria-current]{color:var(--paper);pointer-events:none}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1LM1MCM9W5');
+</script>
+</head>
+<body>
+<header class="nav">
+  <div class="col nav-in">
+    <a class="brand" href="/pt/"><img src="/img/icon.png" alt=""><b>panovi</b></a>
+    <nav class="nav-links">
+      <a class="wide" href="/pt/">Sobre o panovi</a>
+      <a href="/pt/blog/" aria-current="page">Guias</a>
+      <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6797261654" data-appstore="nav">App Store</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="col head">
+  <h1>Guias do panovi</h1>
+  <p>Do primeiro vídeo às dicas para viagens e esportes, além das novidades. Tudo para você aproveitar o panovi ao máximo.</p>
+</section>
+<div class="col">
+  <div class="filters" role="group"><button type="button" aria-pressed="true" data-cat="">Todos</button><button type="button" aria-pressed="false" data-cat="start">Primeiros passos</button></div>
+  <div class="cards"><a class="card big" href="/pt/blog/first-video/" data-cat="start"><div class="pic"><img src="/img/wide.jpg" alt="Vista ultra-ampla do alto de uma montanha, gravada com dois iPhones e unida em um só vídeo" loading="lazy"></div><div class="tx"><div class="meta"><span class="chip">Comece por aqui</span><time datetime="2026-11-13">13 de novembro de 2026</time></div><h2>Primeiros passos com o panovi — até o seu primeiro vídeo</h2><p>Como gravar um vídeo ultra-amplo, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.</p></div></a></div>
+</div>
+</main>
+<footer class="col foot">
+  <span>© 2026 starclip</span>
+  <span>Suas gravações ficam só nos seus iPhones.</span>
+  <a href="/pt/">panovi</a>
+  <a href="/pt/blog/feed.xml">RSS</a>
+  <a href="/pt/privacy/">Política de Privacidade</a>
+  <span class="foot-lang" role="group" aria-label="Idioma"><a href="/blog/" lang="ja" hreflang="ja">日本語</a><a href="/en/blog/" lang="en" hreflang="en">English</a><a href="/pt/blog/" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a><a href="/es/blog/" lang="es" hreflang="es">Español</a></span>
+</footer>
+<script>
+document.querySelectorAll('a[data-appstore]').forEach(function(a){
+  a.addEventListener('click',function(){
+    if(window.gtag)gtag('event','appstore_click',{post:a.dataset.appstore,lang:document.documentElement.lang});
+  });
+});
+</script>
+<script>
+(function(){
+  var bs=document.querySelectorAll('.filters button'),cs=document.querySelectorAll('.cards .card');
+  bs.forEach(function(b){b.addEventListener('click',function(){
+    bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    cs.forEach(function(c){c.hidden=!!b.dataset.cat&&c.dataset.cat!==b.dataset.cat;});
+  });});
+})();
+</script></body>
+</html>

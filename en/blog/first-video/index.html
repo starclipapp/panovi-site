@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="panovi-blog">
+<title>Getting started with panovi — shooting your first video | panovi</title>
+<meta name="description" content="How to shoot an edge-to-edge ultra-wide video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.">
+<link rel="canonical" href="https://panovi.app/en/blog/first-video/">
+<link rel="alternate" hreflang="ja" href="https://panovi.app/blog/first-video/">
+<link rel="alternate" hreflang="en" href="https://panovi.app/en/blog/first-video/">
+<link rel="alternate" hreflang="pt-BR" href="https://panovi.app/pt/blog/first-video/">
+<link rel="alternate" hreflang="es" href="https://panovi.app/es/blog/first-video/">
+<link rel="alternate" hreflang="x-default" href="https://panovi.app/en/blog/first-video/">
+<link rel="alternate" type="application/rss+xml" title="panovi guides" href="https://panovi.app/en/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting started with panovi — shooting your first video | panovi">
+<meta property="og:description" content="How to shoot an edge-to-edge ultra-wide video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.">
+<meta property="og:url" content="https://panovi.app/en/blog/first-video/">
+<meta property="og:image" content="https://panovi.app/img/wide.jpg">
+<meta property="og:site_name" content="panovi">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" href="/img/icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Getting started with panovi — shooting your first video", "description": "How to shoot an edge-to-edge ultra-wide video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.", "datePublished": "2026-11-13", "inLanguage": "en", "mainEntityOfPage": "https://panovi.app/en/blog/first-video/", "author": {"@type": "Organization", "name": "starclip"}, "publisher": {"@type": "Organization", "name": "starclip", "logo": {"@type": "ImageObject", "url": "https://panovi.app/img/icon.png"}}, "image": "https://panovi.app/img/wide.jpg"}</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#04201f;--ink2:#062b29;--paper:#f4f3ee;--dim:#9fb0ac;--green:#00f994;
+  --rule:rgba(244,243,238,.13);--sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--paper);font-family:var(--sans);line-height:1.9;
+  font-feature-settings:"palt" 1;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green)}
+.col{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+.col-n{width:min(740px,calc(100% - 40px));margin-inline:auto}
+.nav{position:sticky;top:0;z-index:60;background:rgba(4,32,31,.88);backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.nav-in{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:28px;height:28px;border-radius:7px}
+.brand b{font-size:17px;font-weight:600;letter-spacing:.13em;color:var(--green)}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:22px}
+.nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim)}
+.nav-links a:hover{color:var(--paper)}
+.nav-links a.btn-fill{color:#042a20}
+.nav-links a[aria-current]{color:var(--paper)}
+@media(max-width:640px){.nav-links .wide{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:999px;
+  text-decoration:none;font-size:14.5px;font-weight:700;white-space:nowrap;border:1px solid transparent}
+.btn-fill{background:var(--green);color:#042a20}
+.btn-line{border-color:rgba(244,243,238,.34);color:var(--paper)}
+.btn-line:hover{border-color:var(--green);color:var(--green)}
+.btn-sm{padding:8px 16px;font-size:13px}
+.chip{display:inline-block;font-size:11.5px;letter-spacing:.08em;color:var(--green);
+  border:1px solid rgba(0,249,148,.4);border-radius:999px;padding:2px 11px;line-height:1.7}
+.flag{display:inline-block;font-size:11.5px;color:#042a20;background:#ffd25c;border-radius:4px;padding:1px 8px;margin-left:6px}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;color:var(--dim)}
+/* 一覧 */
+.head{padding:64px 0 28px}
+.head h1{font-size:clamp(30px,5vw,50px);font-weight:800;letter-spacing:-.035em;line-height:1.2}
+.head p{margin-top:14px;max-width:36em;color:var(--dim);font-size:clamp(15px,1.7vw,17px)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 30px}
+.filters button{background:transparent;border:1px solid var(--rule);color:var(--paper);padding:6px 15px;
+  border-radius:999px;font:inherit;font-size:13px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#042a20;font-weight:700}
+.cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));padding-bottom:90px}
+.card{display:flex;flex-direction:column;background:var(--ink2);border:1px solid var(--rule);border-radius:14px;
+  overflow:hidden;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(0,249,148,.5);transform:translateY(-2px)}
+.card .pic{aspect-ratio:16/9;background:#000;overflow:hidden}
+.card .pic img{width:100%;height:100%;object-fit:cover}
+.card .tx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px}
+.card h2{font-size:18px;font-weight:700;line-height:1.5;letter-spacing:-.01em}
+.card p{font-size:14px;color:var(--dim);line-height:1.75}
+.card.big{grid-column:1/-1}
+@media(min-width:860px){.card.big{flex-direction:row}.card.big .pic{flex:0 0 56%;aspect-ratio:auto;min-height:280px}
+  .card.big .tx{padding:34px;justify-content:center}.card.big h2{font-size:24px}}
+.card[hidden]{display:none}
+/* 記事 */
+.post{padding:44px 0 30px}
+.crumb{font-size:13px;margin-bottom:22px}
+.crumb a{color:var(--dim);text-decoration:none}
+.crumb a:hover{color:var(--green)}
+.post h1{margin-top:14px;font-size:clamp(27px,4.4vw,42px);font-weight:800;line-height:1.3;letter-spacing:-.03em}
+.post .lead{margin-top:16px;color:var(--dim);font-size:clamp(15px,1.8vw,17px)}
+.hero-img{margin:30px 0 8px;border-radius:12px;overflow:hidden;border:1px solid var(--rule)}
+.prose{font-size:clamp(15.5px,1.8vw,17px)}
+.prose>*+*{margin-top:1.15em}
+.prose h2{margin-top:2.3em;font-size:clamp(21px,3vw,27px);font-weight:800;line-height:1.4;letter-spacing:-.02em;
+  padding-top:.9em;border-top:1px solid var(--rule)}
+.prose h3{margin-top:1.8em;font-size:19px;font-weight:700}
+.prose p,.prose li{color:#d9e2df}
+.prose strong{color:var(--paper)}
+.prose ul,.prose ol{padding-left:1.3em}
+.prose li+li{margin-top:.45em}
+.prose li::marker{color:var(--green)}
+.prose figure{margin:1.8em 0}
+.prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
+.prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
+.note{padding:18px 22px;border-left:2px solid var(--green);background:rgba(0,249,148,.06);border-radius:0 8px 8px 0}
+.note p{color:var(--dim)}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:2.6em 0 0;padding:24px;
+  border:1px solid rgba(0,249,148,.35);border-radius:14px;
+  background:radial-gradient(120% 160% at 0% 0%,rgba(0,249,148,.12),transparent 60%)}
+.cta img{width:56px;height:56px;border-radius:13px}
+.cta div{flex:1 1 220px}
+.cta b{font-size:18px}
+.cta p{margin:4px 0 0;font-size:14px;color:var(--dim)}
+.more{padding:56px 0 90px}
+.more h2{font-size:20px;font-weight:800;margin-bottom:20px}
+.more .cards{padding-bottom:0}
+.foot{border-top:1px solid var(--rule);padding:30px 0 56px;font-size:13px;color:var(--dim);
+  display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
+.foot a{color:var(--green);text-decoration:none}
+.foot-lang{display:flex;flex-wrap:wrap;gap:6px 16px}
+.foot a[aria-current]{color:var(--paper);pointer-events:none}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LM1MCM9W5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1LM1MCM9W5');
+</script>
+</head>
+<body>
+<header class="nav">
+  <div class="col nav-in">
+    <a class="brand" href="/en/"><img src="/img/icon.png" alt=""><b>panovi</b></a>
+    <nav class="nav-links">
+      <a class="wide" href="/en/">About panovi</a>
+      <a href="/en/blog/">Guides</a>
+      <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6797261654" data-appstore="nav">App Store</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="col-n post">
+  <p class="crumb"><a href="/en/blog/">← All guides</a></p>
+  <div class="meta"><span class="chip">Getting started</span><time datetime="2026-11-13">November 13, 2026</time></div>
+  <h1>Getting started with panovi — shooting your first video</h1>
+  
+  <div class="prose">
+<p>panovi is an app that turns the left and right footage from two iPhones, set side by side on a tripod, into one ultra-wide video. This post walks you through everything from installing the app to finishing your first video. Once you get used to it, setup takes just a few minutes.</p>
+<figure><img src="/img/wide.jpg" alt="When you shoot, capture everything, edge to edge" loading="lazy"><figcaption>When you shoot, capture everything, edge to edge</figcaption></figure>
+<h2>What you need</h2>
+<ul><li><strong>Two iPhones</strong> (iOS 18 or later). They can be different models. The app picks a lens both can use</li><li><strong>One tripod, plus a mount that holds the two side by side</strong>. See &quot;<a href="/en/#tripod">Placing your iPhones for a clean stitch</a>&quot; for details with photos</li><li>The second iPhone can be one you borrow from family or a friend. Recording and transfer are free, so they only need to install the free app. You don&#x27;t need to share an Apple ID</li></ul>
+<div class="note"><p><strong>Want to try it with one iPhone first?</strong> The app has sample videos built in. Before you find a second iPhone, you can see what a two-iPhone stitch looks like.</p></div>
+<h2>1. Pair the two iPhones</h2>
+<ol><li>Open panovi on the first iPhone and tap <strong>&quot;Create group&quot;</strong>. A QR code appears on the screen</li><li>Open panovi on the second iPhone and use <strong>&quot;Scan QR code&quot;</strong> to scan the first iPhone&#x27;s QR code</li><li>On the second iPhone, choose <strong>&quot;Use as camera&quot;</strong></li></ol>
+<p>Now the two are paired. No internet is used, so they pair just the same on a field or a mountaintop with no signal.</p>
+<h2>2. Set them side by side on the tripod</h2>
+<p>Set the two iPhones side by side on the tripod, <strong>turned so their lenses meet near the center</strong>. Decide which side each one films with <strong>&quot;Tap to choose your side&quot;</strong> on the screen.</p>
+<p>The trick is to angle both slightly inward, so the same scenery shows up at the inner edge of each. Tap <strong>&quot;Check the setup&quot;</strong> and the screen tells you how much they overlap, so you can adjust the angle while you watch.</p>
+<p>Then tap <strong>&quot;Preview 3 seconds of motion&quot;</strong> and it stitches a short test clip on the spot and shows it to you. You can check that the seam looks clean before the real thing.</p>
+<h2>3. Shoot</h2>
+<p>Tap <strong>&quot;Start recording&quot;</strong> and both iPhones start recording at the same time. Once they are on the tripod, you don&#x27;t touch them again. You never have to aim the camera, so you can focus on what is happening in front of you instead of on filming.</p>
+<p>There is no limit on recording length. While recording, you can also use <strong>power save</strong>, which turns the screen off to save battery.</p>
+<h2>4. Stitch</h2>
+<p>When you stop recording, one iPhone receives the other&#x27;s footage and stitches left and right into one video. It lines them up using the overlap so the seam doesn&#x27;t stand out, and it also evens out differences in brightness and color between the two sides.</p>
+<p>Use <strong>&quot;Save to Camera Roll&quot;</strong> to keep the finished video in the Photos app. <strong>Stitches under 3 minutes are always free, with no limit on how many.</strong></p>
+<h2>5. Zoom in</h2>
+<p>This is where panovi gets fun. Each side records in 4K, so you keep far more detail than one iPhone filming the same width. You can watch the stitched video and <strong>double-tap to zoom in, then drag to pan left and right</strong>.</p>
+<figure><img src="/img/zoom.jpg" alt="When you watch, zoom in. A 1:1 crop from the same footage" loading="lazy"><figcaption>When you watch, zoom in. This is a 1:1 crop from the same footage</figcaption></figure>
+<p>The whole scene and a close-up of whatever catches your eye, all from the same video. With panovi, you don&#x27;t have to choose between zooming out and zooming in when you shoot.</p>
+<p>You can also get a feel for the result in the <a href="/en/#try">Try it section</a> of this site.</p>
+<h2>Read next</h2>
+<ul><li><a href="/en/#faq">FAQ</a></li></ul>
+<aside class="cta"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>Try panovi</b><p>Recording is free for any length. Stitches under 3 minutes are always free.</p></div><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="first-video">Get it on the App Store</a></aside>
+  </div>
+</article>
+
+</main>
+<footer class="col foot">
+  <span>© 2026 starclip</span>
+  <span>Your footage stays on your iPhones.</span>
+  <a href="/en/">panovi</a>
+  <a href="/en/blog/feed.xml">RSS</a>
+  <a href="/en/privacy/">Privacy Policy</a>
+  <span class="foot-lang" role="group" aria-label="Language"><a href="/blog/first-video/" lang="ja" hreflang="ja">日本語</a><a href="/en/blog/first-video/" lang="en" hreflang="en" aria-current="page">English</a><a href="/pt/blog/first-video/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/blog/first-video/" lang="es" hreflang="es">Español</a></span>
+</footer>
+<script>
+document.querySelectorAll('a[data-appstore]').forEach(function(a){
+  a.addEventListener('click',function(){
+    if(window.gtag)gtag('event','appstore_click',{post:a.dataset.appstore,lang:document.documentElement.lang});
+  });
+});
+</script>
+</body>
+</html>
