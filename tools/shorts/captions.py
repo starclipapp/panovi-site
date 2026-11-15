@@ -19,19 +19,19 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 # t3, t3s: 端から端へ流すときの文字と場所 / t4: 寄るときの文字（<span class=g> は緑）/ t5a, t5b: 終わりのカード
 CAPTIONS = {
     "ja": dict(t1="iPhone 2台で撮って", l="左のiPhone", r="右のiPhone", t2="1本の超ワイド動画に",
-               t3="端から端まで<br>動いたまま、1本に", t3s="箱根・金時山の山頂から",
+               t3="パノラマ写真じゃない<br>動くパノラマ", t3s="箱根・金時山の山頂から",
                t4="あとから<br><span class=g>見たいところへ寄れる</span>",
                t5a="iPhone 2台で、パノラマ動画", t5b="App Store で「panovi」を検索"),
     "en": dict(t1="Shot on two iPhones", l="Left iPhone", r="Right iPhone", t2="…into one ultra&#8209;wide video",
-               t3="Edge to edge,<br>all in motion", t3s="From the summit of Mt. Kintoki, Hakone",
+               t3="Not a photo —<br>a moving panorama", t3s="From the summit of Mt. Kintoki, Hakone",
                t4="Later, zoom in<br><span class=g>wherever you like</span>",
                t5a="Panoramic video with two iPhones", t5b="Search “panovi” on the App Store"),
     "pt": dict(t1="Filmado com 2 iPhones", l="iPhone da esquerda", r="iPhone da direita", t2="…vira um só vídeo ultra&#8209;amplo",
-               t3="De ponta a ponta,<br>tudo em movimento", t3s="Do topo do Monte Kintoki, em Hakone",
+               t3="Não é foto:<br>é panorama em movimento", t3s="Do topo do Monte Kintoki, em Hakone",
                t4="Depois, aproxime<br><span class=g>onde quiser</span>",
                t5a="Vídeo panorâmico com 2 iPhones", t5b="Procure “panovi” na App Store"),
     "es": dict(t1="Grabado con 2 iPhone", l="iPhone izquierdo", r="iPhone derecho", t2="…se vuelve un solo video ultra ancho",
-               t3="De punta a punta,<br>todo en movimiento", t3s="Desde la cima del monte Kintoki, Hakone",
+               t3="No es una foto:<br>es un panorama en movimiento", t3s="Desde la cima del monte Kintoki, Hakone",
                t4="Después, acércate<br><span class=g>a donde quieras</span>",
                t5a="Video panorámico con 2 iPhone", t5b="Busca “panovi” en el App Store"),
 }
