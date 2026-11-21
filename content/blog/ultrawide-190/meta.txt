@@ -1,0 +1,4 @@
+date: 2026-11-28
+category: news
+image: /img/ultrawide-190-card.jpg
+draft: yes
