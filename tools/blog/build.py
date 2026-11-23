@@ -53,6 +53,7 @@ def company_name(lang):
 
 
 YOUTUBE = "https://www.youtube.com/@panoviapp"  # panovi の公式チャンネル（2026-11-14 開設）
+X_URL = "https://x.com/panoviapp"  # panovi の公式 X（2026-11-24 開設）
 
 
 def company_org(lang):
@@ -65,7 +66,7 @@ def company_org(lang):
                 "addressLocality": "Aki-ku, Hiroshima", "streetAddress": "15-5 Nakano"}
     return {"@type": "Organization", "name": company_name(lang), "address": addr,
             "brand": {"@type": "Brand", "name": "panovi"}, "url": SITE + LANGS[lang][1] + "company/",
-            "sameAs": [YOUTUBE]}
+            "sameAs": [YOUTUBE, X_URL]}
 
 
 # 原稿のファイル名の言語 → (html lang / hreflang, サイトのパスの頭)
@@ -614,6 +615,7 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
   <a href="{faq_path(lang)}">{esc(u['faq'])}</a>
   <a href="{blog_path(lang)}feed.xml">{u['feed']}</a>
   <a href="{YOUTUBE}" target="_blank" rel="noopener">YouTube</a>
+  <a href="{X_URL}" target="_blank" rel="noopener">X</a>
   <a href="{privacy}">{esc(u['privacy'])}</a>
   <a class="foot-sub" href="{company_path(lang)}">{esc(u['company'])}</a>
   {lang_links(paths, lang)}
@@ -923,6 +925,7 @@ def llms_txt(posts):
            "## App and site", "",
            "- [App Store](https://apps.apple.com/app/id6797261654): panovi on the App Store",
            f"- [YouTube]({YOUTUBE}): official channel with sample panoramic videos",
+           f"- [X]({X_URL}): official account (news and sample clips)",
            f"- [English site]({SITE}/en/): features, demo, pricing, FAQ",
            f"- [日本語サイト]({SITE}/): 機能・体験・料金・よくある質問",
            f"- [Português]({SITE}/pt/) / [Español]({SITE}/es/)",
