@@ -7,7 +7,7 @@ keywords: vídeo panorâmico 190 graus, dois iPhones ultra-angular, vídeo panor
 
 O panovi agora consegue **transformar cerca de 190° em um só vídeo panorâmico com dois iPhones na ultra-angular**. Olhando para a frente, tudo do seu lado direito ao seu lado esquerdo — e um pouco atrás dos dois — entra em um só vídeo. A ultra-angular de um iPhone cobre cerca de 105°, então é quase o dobro da largura.
 
-![Uma cena de cerca de 190° gravada com dois iPhones na ultra-angular. Nas bordas esquerda e direita aparece a grade um pouco atrás dos lados da câmera](/img/ultrawide-190.jpg "Cerca de 190° com dois iPhones na ultra-angular. As bordas esquerda e direita ficam um pouco atrás dos lados da câmera (uma cena do vídeo salvo, reduzida para esta página)")
+![Uma cena de cerca de 190° gravada com dois iPhones na ultra-angular. Nas bordas esquerda e direita aparece a grade um pouco atrás dos lados da câmera](/img/ultrawide-190.jpg "Cerca de 190° com dois iPhones na ultra-angular. As bordas esquerda e direita ficam um pouco atrás dos lados da câmera (uma cena do vídeo salvo, reduzida para 2400×582 nesta página; o vídeo original tem 4868×1264)")
 
 ## Quão largo é?
 

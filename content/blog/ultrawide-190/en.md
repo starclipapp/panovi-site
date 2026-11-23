@@ -7,7 +7,7 @@ keywords: 190 degree panoramic video, two iPhones ultra wide, iPhone ultra wide 
 
 panovi can now **turn about 190° into one panoramic video with two iPhones set to Ultra Wide**. While facing forward, everything from your right side to your left side — and a little behind both — goes into one video. One iPhone's Ultra Wide camera covers about 105°, so this is close to twice as wide.
 
-![A frame of about 190° shot with two iPhones set to Ultra Wide. At the left and right edges you can see the fence a little behind the camera's sides](/img/ultrawide-190.jpg "About 190° with two iPhones on Ultra Wide. The left and right edges are a little behind the camera's sides (a frame from the saved video, scaled down for this page)")
+![A frame of about 190° shot with two iPhones set to Ultra Wide. At the left and right edges you can see the fence a little behind the camera's sides](/img/ultrawide-190.jpg "About 190° with two iPhones on Ultra Wide. The left and right edges are a little behind the camera's sides (a frame from the saved video, scaled down to 2400×582 for this page; the original video is 4868×1264)")
 
 ## How wide is it?
 
