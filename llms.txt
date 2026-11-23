@@ -25,6 +25,7 @@ Key facts:
 
 ## Guides (English)
 
+- [About 190° with two iPhones — Ultra Wide on both, from straight ahead to just behind your sides in one panoramic video](https://panovi.app/en/blog/ultrawide-190/): Set two iPhones to Ultra Wide and angle them outward, and one panoramic video covers about 190°, from straight ahead to a little behind your left and right sides. One iPhone's Ultra Wide covers about 105°. Here is why this was hard, and how to shoot it.
 - [You can now shoot with one iPhone — wide and ultra wide at the same time](https://panovi.app/en/blog/one-iphone/): The new “Record with one phone” records with the wide and ultra wide lenses at the same time and turns them into one video. Here is how it works, from zooming while you shoot and recording your zoom to fixing how close you get afterward.
 - [How to lend your iPhone safely — keep it on panovi with Guided Access](https://panovi.app/en/blog/borrow-iphone/): The second iPhone for a panoramic video can be one you borrow from family or a friend. With Guided Access, built into every iPhone, the borrowed iPhone stays on the panovi screen — no photos, no messages, no notifications. Here is how to set it up, shoot, and clean up afterward, in about three minutes.
 - [Getting started with panovi — shooting your first video](https://panovi.app/en/blog/first-video/): How to shoot an edge-to-edge panoramic video with two iPhones and a tripod. We walk through it in order — pair, place, shoot, stitch, and zoom in.
@@ -33,6 +34,7 @@ Key facts:
 
 ## 使いかた（日本語）
 
+- [iPhone 2台で約190度 — 超広角どうしで、真横の少し後ろまで1本のパノラマ動画に](https://panovi.app/blog/ultrawide-190/): 超広角のiPhone 2台を外向きに開いて置くと、正面から左右の真横の少し後ろまで、約190度が1本のパノラマ動画に入ります。1台の超広角は約105度。なぜ難しかったのか、どう撮るのかをやさしく紹介します。
 - [iPhone 1台でも撮れるようになりました — 広角と超広角で同時に録る新機能](https://panovi.app/blog/one-iphone/): 新しい「1台で撮る」は、広角レンズと超広角レンズで同時に録画して1本の動画にします。撮影中のズーム、ズームの記録、あとから寄り方を直す方法まで。
 - [iPhoneを安心して貸すには？ — 「アクセスガイド」で panovi の画面だけにする](https://panovi.app/blog/borrow-iphone/): パノラマ動画の2台目は、家族や友達に借りたiPhoneで撮れます。iPhoneに最初から入っている「アクセスガイド」を使えば、貸したiPhoneは panovi の画面から動かず、写真もメッセージも通知も見られません。設定から撮影後の片付けまで、3分で分かる手順です。
 - [はじめての panovi — 最初の1本を撮るまで](https://panovi.app/blog/first-video/): iPhone 2台と三脚で、端から端まで入ったパノラマ動画（パノラマビデオ）を撮る手順。つなぐ・置く・撮る・つなげる・寄って見る、を順に説明します。
@@ -41,6 +43,7 @@ Key facts:
 
 ## Guias (Português)
 
+- [Cerca de 190° com dois iPhones — na ultra-angular, da frente até um pouco atrás dos lados em um só vídeo panorâmico](https://panovi.app/pt/blog/ultrawide-190/): Coloque dois iPhones na ultra-angular e vire-os para fora, e um só vídeo panorâmico cobre cerca de 190°, da frente até um pouco atrás dos seus lados esquerdo e direito. A ultra-angular de um iPhone cobre cerca de 105°. Veja por que isso era difícil e como gravar.
 - [Agora dá para gravar com um iPhone só — grande-angular e ultra-angular ao mesmo tempo](https://panovi.app/pt/blog/one-iphone/): O novo “Gravar com um iPhone” grava com a lente grande-angular e a ultra-angular ao mesmo tempo e une tudo em um só vídeo. Zoom durante a gravação, registro do zoom e como ajustar o enquadramento depois.
 - [Como emprestar o iPhone com segurança? — Use o “Acesso Guiado” para deixar só o panovi na tela](https://panovi.app/pt/blog/borrow-iphone/): O segundo iPhone do seu vídeo panorâmico pode ser emprestado de alguém da família ou de um amigo. Com o “Acesso Guiado”, que já vem no iPhone, o aparelho emprestado fica preso ao panovi e ninguém vê fotos, mensagens nem notificações. Da configuração à limpeza depois da gravação, em 3 minutos de leitura.
 - [Primeiros passos com o panovi — até o seu primeiro vídeo](https://panovi.app/pt/blog/first-video/): Como gravar um vídeo panorâmico, de ponta a ponta, com dois iPhones e um tripé. Conectar, posicionar, gravar, unir e dar zoom, passo a passo.
@@ -49,6 +52,7 @@ Key facts:
 
 ## Guías (Español)
 
+- [Cerca de 190° con dos iPhone — en ultra gran angular, desde el frente hasta un poco detrás de los costados en un solo video panorámico](https://panovi.app/es/blog/ultrawide-190/): Pon dos iPhone en ultra gran angular y gíralos hacia afuera, y un solo video panorámico cubre cerca de 190°, desde el frente hasta un poco detrás de tus costados izquierdo y derecho. El ultra gran angular de un iPhone cubre cerca de 105°. Te contamos por qué era difícil y cómo grabarlo.
 - [Ahora puedes grabar con un solo iPhone — gran angular y ultra gran angular a la vez](https://panovi.app/es/blog/one-iphone/): El nuevo modo “Grabar con un iPhone” graba al mismo tiempo con el lente gran angular y el ultra gran angular, y los une en un solo video. Te explicamos el zoom al grabar, cómo se guarda el zoom y cómo corregir el acercamiento después.
 - [¿Cómo prestar tu iPhone sin preocuparte? — Deja solo panovi en pantalla con Acceso guiado](https://panovi.app/es/blog/borrow-iphone/): El segundo iPhone para tu video panorámico puede ser prestado por un familiar o un amigo. Con Acceso guiado, que viene incluido en todos los iPhone, el iPhone prestado se queda fijo en panovi y nadie puede ver sus fotos, mensajes ni notificaciones. Te explicamos en 3 minutos desde la configuración hasta qué hacer después de grabar.
 - [Tu primer video con panovi — paso a paso](https://panovi.app/es/blog/first-video/): Cómo grabar un video panorámico de extremo a extremo con dos iPhone y un trípode. Te explicamos en orden cómo conectar, colocar, grabar, unir y acercarte.
