@@ -190,9 +190,9 @@ MAIN_TEXT = [
     T("<h3>About 190° with two on Ultra Wide</h3>",
       "<h3>Cerca de 190° com dois na ultra-angular</h3>",
       "<h3>Cerca de 190° con dos en ultra gran angular</h3>"),
-    T("<p>A frame from the saved video. The left and right edges are a little behind the camera’s sides.</p>",
-      "<p>Uma cena do vídeo salvo. As bordas esquerda e direita ficam um pouco atrás das laterais da câmera.</p>",
-      "<p>Una escena del video guardado. Los bordes izquierdo y derecho quedan un poco detrás de los costados de la cámara.</p>"),
+    T("<p>A frame from the saved video (scaled down for this page). The left and right edges are a little behind the camera’s sides.</p>",
+      "<p>Uma cena do vídeo salvo (reduzida para esta página). As bordas esquerda e direita ficam um pouco atrás das laterais da câmera.</p>",
+      "<p>Una escena del video guardado (reducida para esta página). Los bordes izquierdo y derecho quedan un poco detrás de los costados de la cámara.</p>"),
     # 01
     T('<span class="eyebrow">01 — The whole scene, and your kid</span>',
       '<span class="eyebrow">01 — A cena inteira e o seu filho</span>',

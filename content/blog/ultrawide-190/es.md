@@ -7,7 +7,7 @@ keywords: video panorámico 190 grados, dos iPhone ultra gran angular, video pan
 
 panovi ahora puede **convertir cerca de 190° en un solo video panorámico con dos iPhone en ultra gran angular**. Mirando al frente, todo desde tu costado derecho hasta tu costado izquierdo — y un poco detrás de ambos — entra en un solo video. El ultra gran angular de un iPhone cubre cerca de 105°, así que es casi el doble de ancho.
 
-![Una escena de cerca de 190° grabada con dos iPhone en ultra gran angular. En los bordes izquierdo y derecho se ve la reja un poco detrás de los costados de la cámara](/img/ultrawide-190.jpg "Cerca de 190° con dos iPhone en ultra gran angular. Los bordes izquierdo y derecho quedan un poco detrás de los costados de la cámara (una escena del video guardado)")
+![Una escena de cerca de 190° grabada con dos iPhone en ultra gran angular. En los bordes izquierdo y derecho se ve la reja un poco detrás de los costados de la cámara](/img/ultrawide-190.jpg "Cerca de 190° con dos iPhone en ultra gran angular. Los bordes izquierdo y derecho quedan un poco detrás de los costados de la cámara (una escena del video guardado, reducida para esta página)")
 
 ## ¿Qué tan ancho es?
 
