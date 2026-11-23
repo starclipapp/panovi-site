@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<!-- X（@panoviapp）の投稿に貼る短い入口。/en/ へ utm_source=x を付けて送り、
+     Google Analytics で X から来た人を数える（X のアプリ内ブラウザは参照元を落とすことがあるため）。 -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://panovi.app/en/">
+<meta http-equiv="refresh" content="0; url=/en/?utm_source=x&amp;utm_medium=social&amp;utm_campaign=x">
+<script>
+(function () {
+  var q = "utm_source=x&utm_medium=social&utm_campaign=x";
+  var extra = location.search.replace(/^\?/, "");
+  location.replace("/en/?" + q + (extra ? "&" + extra : "") + location.hash);
+})();
+</script>
+<title>panovi</title></head>
+<body><p><a href="/en/?utm_source=x&amp;utm_medium=social&amp;utm_campaign=x">panovi</a></p></body></html>
