@@ -1083,7 +1083,11 @@ def main():
 
     all_posts = load_posts()
     if a.preview:
-        posts = all_posts
+        # 訳がまだの下書き（日本語だけなど）は、確認用でも出さずに知らせる（4言語そろわないと作れないため）
+        for p in all_posts:
+            if p.missing:
+                print(f"確認用から外した: {p.slug}（{', '.join(p.missing)}.md が無い）")
+        posts = [p for p in all_posts if not p.missing]
     else:
         posts = [p for p in all_posts if not p.draft and p.date <= today]
     for p in posts:

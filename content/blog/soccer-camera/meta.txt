@@ -1,0 +1,4 @@
+date: 2026-12-18
+category: sports
+image: /img/hero-join-soccer-poster.jpg
+draft: yes
