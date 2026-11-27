@@ -33,6 +33,7 @@ blog/ ほか各言語の一覧・feed.xml、sitemap.xml、トップページの�
    image: /img/hero.jpg      一覧とSNSで使う画像（サイトにあるファイル）
    order: 5                  入門の順番（start のときだけ意味がある。1 が「まずはここから」）
    draft: no                 yes なら日付が来ても出さない
+   top: 1                    トップの「使いかた・ヒント」に入門の次に出す順番（任意。今は whole-match=1・recital=2）
    ```
 
 3. `ja.md` を書く → `en.md` `pt.md` `es.md` に訳す（Claude Code なら `/panovi-blog` で下書きから訳まで頼める）

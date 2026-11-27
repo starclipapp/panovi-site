@@ -249,6 +249,8 @@ class Post:
         if self.image and not (SITE_ROOT / self.image.lstrip("/")).is_file():
             fail(f"{d}/meta.txt: image のファイルが無い: {self.image}")
         self.order = int(meta.get("order", "999"))
+        # トップの「使いかた・ヒント」に入門の次に必ず出す順番（任意。1 が先）。公開日までは出ない
+        self.top = int(meta.get("top", "0"))
         self.modified = None
         self.draft = meta.get("draft", "no").lower() in ("yes", "true", "1")
         # 書き直した日（任意）。無ければ公開日。構造化データの dateModified に使う
@@ -837,16 +839,19 @@ def feed(lang, posts):
 
 
 def latest_block(lang, posts):
-    """トップページに差し込む「使いかた・ヒント」の節（入門1本＋新しい順に2本）。"""
+    """トップページに差し込む「使いかた・ヒント」の節（入門1本＋top の記事＋新しい順。あわせて4本）。"""
     u = UI[lang]
     if not posts:
         return ""
     # 初めて来た人のために、入門（はじめての記事で order が一番小さいもの）を必ず先頭に置く
     starts = sorted([p for p in posts if p.category == "start"], key=lambda p: (p.order, p.date))
-    pick = starts[:1] + [p for p in posts if p not in starts[:1]]
+    # 次に、よく検索される場面の記事（meta.txt の top。サッカーの試合・発表会など）。posts は公開済みだけなので、予約中の記事は出ない
+    tops = sorted([p for p in posts if p.top and p not in starts[:1]], key=lambda p: p.top)
+    head = starts[:1] + tops
+    pick = head + [p for p in posts if p not in head]
     items = "".join(
         f'<a class="bl-card" href="{blog_path(lang, p.slug)}"><span class="bl-cat">{esc(CAT[p.category][lang])}</span>'
-        f'<b>{esc(p.title(lang))}</b></a>' for p in pick[:3])
+        f'<b>{esc(p.title(lang))}</b></a>' for p in pick[:4])
     return f"""<section class="sec" id="guides">
   <div class="col">
     <span class="eyebrow">guides</span>
