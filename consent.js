@@ -3,7 +3,7 @@
    それ以外の地域は今までどおり読み込む。どの地域でも「許可しない」を選んだ人には読み込まない。
    選び直しはプライバシーポリシーの「Cookie の設定を変える」（panoviConsent.open()）から。 */
 (function () {
-  var ID = "G-1LM1MCM9W5", KEY = "panovi-consent";
+  var ID = "G-66MNHHN4NJ", KEY = "panovi-consent";
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { dataLayer.push(arguments); };
   gtag("js", new Date());
