@@ -528,16 +528,7 @@ a{color:var(--green)}
 .co th{width:34%;color:var(--dim);font-weight:500;padding-right:16px}
 """
 
-GTAG = '<script src="/consent.js?v=20261113"></script>'  # GA の読み込みと EU などの Cookie の同意（/consent.js）
-
-# App Store へのクリックを数える（記事ごと）。利用者を増やすのが目的なので、どの記事が効いたかを見る
-CLICK_JS = """<script>
-document.querySelectorAll('a[data-appstore]').forEach(function(a){
-  a.addEventListener('click',function(){
-    if(window.gtag)gtag('event','appstore_click',{post:a.dataset.appstore,lang:document.documentElement.lang});
-  });
-});
-</script>"""
+GTAG = '<script src="/consent.js?v=20261128"></script>'  # GA の読み込みと EU などの Cookie の同意（/consent.js）
 
 FILTER_JS = """<script>
 (function(){
@@ -620,7 +611,6 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
   <a class="foot-sub" href="{company_path(lang)}">{esc(u['company'])}</a>
   {lang_links(paths, lang)}
 </footer>
-{CLICK_JS}
 {L.LANG_MENU_JS}
 {scripts}</body>
 </html>

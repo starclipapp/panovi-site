@@ -81,4 +81,27 @@
     else document.addEventListener("DOMContentLoaded", banner);
   }
   window.panoviConsent = { open: banner };
+
+  // App Store へのボタン・リンクが押されたら appstore_click を送る（どのページのどこからかも）。
+  // 全ページのリンクをここ1か所で数える。GA を読み込んでいない人（同意していない人）からは送らない。
+  //   page: ページのパス（/ や /en/blog/first-video/）
+  //   placement: 押した場所。nav（上の帯）・cta（記事の終わりの枠）・footer・それ以外は節の id か class（top・price・end など）
+  //   post: ブログ記事の slug（記事の中の枠のときだけ。data-appstore の値）
+  //   lang: ページの言語
+  function where(a) {
+    if (a.closest("header, nav")) return "nav";
+    if (a.closest("aside.cta")) return "cta";
+    if (a.closest("footer")) return "footer";
+    var s = a.closest("section");
+    if (s) return s.id || (s.className || "").split(/\s+/).filter(function (c) { return c && c !== "sec" && c !== "alt"; })[0] || "section";
+    return "body";
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || !loaded) return;
+    var p = { page: location.pathname, placement: where(a), lang: document.documentElement.lang, transport_type: "beacon" };
+    var post = a.getAttribute("data-appstore");
+    if (post && post !== "nav") p.post = post;
+    gtag("event", "appstore_click", p);
+  });
 })();

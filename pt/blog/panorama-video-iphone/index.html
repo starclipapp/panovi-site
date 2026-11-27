@@ -144,7 +144,7 @@ a{color:var(--green)}
 .co tr:last-child th,.co tr:last-child td{border-bottom:1px solid var(--rule)}
 .co th{width:34%;color:var(--dim);font-weight:500;padding-right:16px}
 </style>
-<script src="/consent.js?v=20261113"></script>
+<script src="/consent.js?v=20261128"></script>
 </head>
 <body>
 <header class="nav">
@@ -213,13 +213,6 @@ a{color:var(--green)}
   <a class="foot-sub" href="/pt/company/">Empresa</a>
   <span class="foot-lang" role="group" aria-label="Idioma"><a href="/blog/panorama-video-iphone/" lang="ja" hreflang="ja">日本語</a><a href="/en/blog/panorama-video-iphone/" lang="en" hreflang="en">English</a><a href="/pt/blog/panorama-video-iphone/" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a><a href="/es/blog/panorama-video-iphone/" lang="es" hreflang="es">Español</a></span>
 </footer>
-<script>
-document.querySelectorAll('a[data-appstore]').forEach(function(a){
-  a.addEventListener('click',function(){
-    if(window.gtag)gtag('event','appstore_click',{post:a.dataset.appstore,lang:document.documentElement.lang});
-  });
-});
-</script>
 <script>document.addEventListener('click',function(e){document.querySelectorAll('details.nav-lang[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script>
 </body>
 </html>

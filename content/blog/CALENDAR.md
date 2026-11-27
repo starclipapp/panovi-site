@@ -60,7 +60,7 @@
 
 ## 記事を出したあとに見るもの
 
-- Google Analytics: 記事ごとの閲覧数と `appstore_click`（記事 `post` と言語 `lang` つき）
+- Google Analytics: 記事ごとの閲覧数と `appstore_click`（ページ `page`・場所 `placement`・言語 `lang`、記事の終わりの枠なら記事 `post` つき）
 - Search Console: 記事ごとの検索語。よく来る検索語は次の記事の題やリードに使う
 - App Store Connect: 公開した週のダウンロード数（App 分析 → 参照元）
 

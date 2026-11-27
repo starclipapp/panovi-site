@@ -99,7 +99,7 @@ keywords: 検索語をカンマ区切りで（任意。言語ごとの基本語�
 - トップページから記事へリンクしたいときは、`index.html` と `en/index.html` の置きたい場所に
   `<!-- blog:post:<slug>:start --><!-- blog:post:<slug>:end -->` を書く。公開されると生成器が4言語で
   「くわしい手順：記事の題 →」のリンクを入れる（公開前は空なので、予約中の記事でも先に置いておける）
-- `{{appstore}}` は App Store へのボタン。押された数は記事ごとに Google Analytics の `appstore_click` で見られる
+- `{{appstore}}` は App Store へのボタン。押された数は記事ごとに Google Analytics の `appstore_click` で見られる（数えるのは /consent.js。サイトの App Store へのリンクは全部、ページ `page`・場所 `placement` つきで数える）
 - 4言語で **見出し・画像・`{{appstore}}` の数がそろっていない**と作るときに止まる（訳し漏れの検出）
 - en/pt/es に日本語の文字が残っていても止まる。「」は “ ” にする
 
