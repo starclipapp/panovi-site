@@ -365,6 +365,7 @@ def render_body(md, ctx):
     for b in blocks:
         lines = b.split("\n")
         first = lines[0]
+        n_out = len(out)
         if b.strip() == "{{appstore}}":
             out.append(cta(ctx.lang, ctx.slug))
         elif first.startswith("### "):
@@ -405,7 +406,8 @@ def render_body(md, ctx):
             if any(re.match(r"(- |\d+\. |#|>)", ln) for ln in lines[1:]):
                 fail(f"{ctx.slug}/{ctx.lang}: 見出し・箇条書きの前後には空行を入れる: {first[:40]!r}")
             out.append(f"<p>{inline(joiner.join(ln.strip() for ln in lines), ctx)}</p>")
-        if ctx.in_faq and ctx.faq and not first.startswith("#"):
+        # 未公開の記事へのリンクだけの箇条書きは出さない（out が増えない）ので、前の段落を二重に入れない
+        if ctx.in_faq and ctx.faq and not first.startswith("#") and len(out) > n_out:
             ctx.faq[-1][1].append(out[-1])
     return "\n".join(out)
 

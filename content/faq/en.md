@@ -1,7 +1,7 @@
 ---
 title: Frequently asked questions
 description: Common questions about panovi, the panoramic video app for iPhone — what you need, how to shoot, pricing, and what to do when something doesn't work.
-updated: 2026-11-13
+updated: 2026-11-28
 keywords: panoramic video app, panorama video iPhone, panoramic video with two iPhones, film whole soccer match fixed camera, record school sports day, record whole school play, ultra wide video iPhone, 360 camera alternative
 ---
 
@@ -22,6 +22,10 @@ Yes. panovi is a rebuilt new version (2.0) of “Panorama Video” on the App St
 ### How is panovi different from a 360 camera?
 
 A 360 camera spreads its pixels in every direction, so each direction gets less detail and faraway subjects come out small. panovi puts its pixels only in the direction you want to film, so even when you film wide, subjects stay big and striking. You don't need to buy any special gear, either.
+
+### How is panovi different from an auto-tracking camera?
+
+panovi doesn't follow the ball or the players. Two iPhones stay side by side on a tripod and capture the field from edge to edge in one video. Because the camera never turns, what happens away from the ball stays in the picture too. To see your child up close, double-tap the stitched video to zoom in and drag to pan left and right.
 
 ### Does panovi work on Android?
 
@@ -71,9 +75,15 @@ The longer you film, the more you use, because each side records in 4K. If there
 
 Yes. Capture everything from edge to edge, then zoom in on your child when you watch. Once it is on the tripod you don't have to aim the camera, so you can focus on what is happening in front of you instead of on filming.
 
+- [Where to put the tripod when filming a recital or school play](post:recital)
+
 ### Can I film a whole soccer match with a fixed camera?
 
 Yes. Set the tripod in line with the halfway line and place two iPhones side by side, and you can film the whole match to the end in one video with both goals in frame. No one has to pan the camera. “[Film a whole soccer match](post:whole-match)” covers how to plan it.
+
+### Where should I put the tripod to film a youth soccer match?
+
+In line with the halfway line, as high up as you can. It's easier to get both goals in, players in front and behind overlap less, and the whole play is easier to follow. Use a stand or a bank if there is one. “[Film a whole soccer match](post:whole-match)” walks through the setup.
 
 ### What can I do with a third iPhone as a remote?
 
@@ -82,6 +92,10 @@ Without touching the cameras, you can start and stop recording, check the seam, 
 ### Can I shoot with just one iPhone?
 
 Yes. “Record with one phone” records with the wide and ultra wide lenses at the same time and turns them into one video. You can zoom while you shoot, and the zoom is recorded too, so you can fix how close you get afterward. It works on iPhones that have an ultra wide lens and can record with two lenses at the same time.
+
+### How is it different from filming with one phone or one wide-angle camera?
+
+When one camera has to take in the whole field, each player ends up small. panovi records each side in 4K and joins them, so it keeps more detail than one camera covering the same width, and it stays easier to see when you zoom in later. If you only have one iPhone, there is also “Record with one phone”, which records with the wide and ultra wide lenses at the same time and makes one video (on iPhones that have an ultra wide lens and can record with two lenses at once).
 
 ### Can I shoot handheld, without a tripod?
 
@@ -108,6 +122,10 @@ Yes. “Export for YouTube” turns it into a wide video at 8K size, or an 8K + 
 ### How do I watch on a big computer screen and zoom in?
 
 Paste the URL of a video you published on YouTube, or of an mp4, into [panovi viewer](viewer:), and you can zoom and pan around inside your browser. Nothing to install and no sign-up.
+
+### Can I share the match video with family or the team?
+
+Yes. “Save to Camera Roll” puts the finished video in the Photos app, so you can share it like any other video. If you post it to YouTube with “Export for YouTube”, people can zoom and pan on a big computer screen with [panovi viewer](viewer:). Before sharing with the team, get permission from the people in the video.
 
 ## Pricing
 

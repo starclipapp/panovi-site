@@ -1,7 +1,7 @@
 ---
 title: Perguntas frequentes
 description: As perguntas mais comuns sobre o panovi: o que você precisa, como gravar, preços e o que fazer quando algo não dá certo.
-updated: 2026-11-13
+updated: 2026-11-28
 keywords: app de vídeo panorâmico, vídeo panorâmico iPhone, como gravar vídeo panorâmico no iPhone, filmar jogo de futebol inteiro, câmera fixa futebol, filmar apresentação da escola, alternativa câmera 360
 ---
 
@@ -22,6 +22,10 @@ Sim. O panovi é a nova versão (2.0), refeita do zero, do “Panorama Video” 
 ### Qual a diferença entre o panovi e uma câmera 360°?
 
 Uma câmera 360° espalha os pixels em todas as direções, então cada direção fica com menos detalhes e o que está longe sai pequeno. O panovi usa os pixels só na direção que você quer gravar, então a imagem é ampla, mas continua grande e cheia de impacto. E você não precisa comprar nenhum equipamento especial.
+
+### Qual a diferença para uma câmera que segue a bola automaticamente?
+
+O panovi não segue a bola nem os jogadores. Os dois iPhones ficam lado a lado no tripé e gravam o campo de ponta a ponta em um só vídeo. Como a câmera não muda de direção, o que acontece longe da bola também fica na imagem. Para ver seu filho de perto, toque duas vezes no vídeo unido para dar zoom e arraste para os lados.
 
 ### O panovi funciona no Android?
 
@@ -71,9 +75,15 @@ Depende da duração: cada lado grava em 4K, então quanto mais tempo você grav
 
 Dá. Grave tudo, de ponta a ponta, e na hora de assistir dê zoom no seu filho. Depois de colocar no tripé, você não precisa mover a câmera, então pode prestar atenção no que está acontecendo, e não na filmagem.
 
+- [Onde colocar o tripé para filmar a apresentação da escola?](post:recital)
+
 ### Dá para filmar um jogo de futebol inteiro com a câmera parada?
 
 Dá. Coloque o tripé no prolongamento da linha do meio-campo, com os dois iPhones lado a lado, e você grava o jogo até o fim em um só vídeo, com as duas traves na imagem. Ninguém precisa mover a câmera. Explicamos a preparação em “[Filme o jogo de futebol inteiro](post:whole-match)”.
+
+### Onde colocar o tripé para filmar um jogo de futebol infantil?
+
+No prolongamento da linha do meio-campo, no lugar mais alto que der. Assim fica mais fácil pegar as duas traves, os jogadores da frente e do fundo se sobrepõem menos e dá para acompanhar melhor o jogo todo. Se houver arquibancada ou barranco, use. Explicamos a preparação em “[Filme o jogo de futebol inteiro](post:whole-match)”.
 
 ### O que dá para fazer com um terceiro iPhone como controle remoto?
 
@@ -82,6 +92,10 @@ Sem tocar nas câmeras, você inicia e para a gravação, confere a emenda, vê 
 ### Dá para gravar com um iPhone só?
 
 Dá. O “Gravar com um iPhone” grava com a lente grande-angular e a ultra-angular ao mesmo tempo e une tudo em um só vídeo. Você pode dar zoom durante a gravação, e o movimento do zoom também fica registrado, então dá para ajustar o enquadramento depois. Funciona nos iPhones que têm lente ultra-angular e conseguem gravar com as duas lentes ao mesmo tempo.
+
+### Qual a diferença para filmar com um celular só ou uma câmera grande-angular?
+
+Quando uma câmera só precisa pegar o campo inteiro, cada jogador fica pequeno. O panovi grava cada lado em 4K e une os dois, então guarda mais detalhes do que uma câmera só cobrindo a mesma largura, e a imagem continua fácil de ver quando você dá zoom depois. Se você só tem um iPhone, também existe o “Gravar com um iPhone”, que grava com a lente grande-angular e a ultra-angular ao mesmo tempo e faz um só vídeo (nos iPhones que têm lente ultra-angular e conseguem gravar com as duas lentes ao mesmo tempo).
 
 ### Dá para gravar com o iPhone na mão, sem tripé?
 
@@ -108,6 +122,10 @@ Dá. Em “Exportar para uso no YouTube”, você cria um vídeo horizontal em t
 ### Como assistir dando zoom na tela grande do computador?
 
 Cole o link de um vídeo publicado no YouTube, ou a URL de um mp4, no [panovi viewer](viewer:) e você dá zoom e se move pela imagem no navegador. Não precisa instalar nada nem criar conta.
+
+### Dá para mostrar o vídeo do jogo para a família ou para o time?
+
+Dá. Em “Salvar em Fotos”, o vídeo pronto vai para o app Fotos, e você compartilha como qualquer outro vídeo. Se publicar no YouTube com “Exportar para uso no YouTube”, dá para assistir dando zoom na tela grande do computador com o [panovi viewer](viewer:). Antes de mostrar para o time, peça permissão para as pessoas que aparecem no vídeo.
 
 ## Preços
 

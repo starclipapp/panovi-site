@@ -1,7 +1,7 @@
 ---
 title: Preguntas frecuentes
 description: Lo que más nos preguntan sobre panovi, la app de video panorámico para iPhone. Qué necesitas, cómo grabar, precios y qué hacer cuando algo no sale bien.
-updated: 2026-11-13
+updated: 2026-11-28
 keywords: app de video panorámico, video panorámico iPhone, grabar video panorámico con iPhone, grabar partido de fútbol completo, cámara fija fútbol, grabar festival deportivo escolar, alternativa a cámara 360, diferencia con cámara 360
 ---
 
@@ -22,6 +22,10 @@ Sí. panovi es la nueva versión (2.0) de “Panorama Video” del App Store, he
 ### ¿En qué se diferencia panovi de una cámara 360°?
 
 panovi concentra los píxeles solo hacia donde quieres grabar. Una cámara 360° reparte sus píxeles en todas direcciones, así que cada dirección recibe menos y lo que está lejos se ve pequeño. Con panovi, aunque grabes amplio, todo conserva su tamaño e impacto. Además, no tienes que comprar equipo especial.
+
+### ¿En qué se diferencia de una cámara que sigue la pelota automáticamente?
+
+panovi no sigue la pelota ni a los jugadores. Los dos iPhone quedan uno al lado del otro en el trípode y graban la cancha de punta a punta en un solo video. Como la cámara no cambia de dirección, lo que pasa lejos de la pelota también queda en la imagen. Para ver a tu hijo de cerca, toca dos veces el video unido para acercarte y arrastra para moverte a los lados.
 
 ### ¿panovi funciona en Android?
 
@@ -71,9 +75,15 @@ Depende de cuánto grabes: cada lado se graba en 4K, así que cuanto más larga 
 
 Sí. Grabas todo de extremo a extremo y, al verlo, te acercas a tu hijo. Una vez en el trípode, no tienes que mover la cámara, así que puedes concentrarte en lo que pasa frente a ti y no en grabar.
 
+- [¿Dónde poner el trípode para grabar el festival del colegio?](post:recital)
+
 ### ¿Puedo grabar un partido de fútbol completo con una cámara fija?
 
 Sí. Pon el trípode en la prolongación de la línea de medio campo con los dos iPhone lado a lado, y grabarás el partido de principio a fin en un solo video con las dos porterías. Nadie tiene que mover la cámara. Te explicamos cómo prepararlo en “[Graba el partido de fútbol completo](post:whole-match)”.
+
+### ¿Dónde pongo el trípode para grabar un partido de fútbol infantil?
+
+En la prolongación de la línea de medio campo, lo más alto que puedas. Así es más fácil que entren las dos porterías, los jugadores de adelante y de atrás se tapan menos y se sigue mejor todo el juego. Si hay tribuna o un talud, úsalos. Te explicamos cómo prepararlo en “[Graba el partido de fútbol completo](post:whole-match)”.
 
 ### ¿Qué puedo hacer si uso un tercer iPhone como control remoto?
 
@@ -82,6 +92,10 @@ Sin tocar las cámaras, puedes iniciar y detener la grabación, revisar la zona 
 ### ¿Puedo grabar con un solo iPhone?
 
 Sí. “Grabar con un iPhone” graba al mismo tiempo con el lente gran angular y el ultra gran angular, y los une en un solo video. Puedes hacer zoom mientras grabas, y el movimiento del zoom se guarda, así que puedes corregir el acercamiento después. Funciona en los iPhone que tienen lente ultra gran angular y pueden grabar con dos lentes al mismo tiempo.
+
+### ¿En qué se diferencia de grabar con un solo celular o una cámara gran angular?
+
+Cuando una sola cámara tiene que abarcar toda la cancha, cada jugador sale pequeño. panovi graba cada lado en 4K y los une, así que guarda más detalle que una sola cámara cubriendo el mismo ancho, y se sigue viendo bien cuando te acercas después. Si solo tienes un iPhone, también está “Grabar con un iPhone”, que graba al mismo tiempo con el lente gran angular y el ultra gran angular y hace un solo video (en los iPhone que tienen lente ultra gran angular y pueden grabar con dos lentes al mismo tiempo).
 
 ### ¿Puedo grabar con el iPhone en la mano, sin trípode?
 
@@ -108,6 +122,10 @@ Sí. Con “Exportar para YouTube” puedes crear un video horizontal en tamaño
 ### ¿Cómo veo el video en la pantalla grande de la computadora y me acerco?
 
 Pega la URL de un video que publicaste en YouTube, o la URL de un mp4, en [panovi viewer](viewer:), y podrás acercarte y moverte dentro del navegador. No hace falta instalar nada ni registrarse.
+
+### ¿Puedo mostrar el video del partido a la familia o al equipo?
+
+Sí. Con “Guardar en Fotos”, el video terminado queda en la app Fotos y lo compartes como cualquier otro video. Si lo subes a YouTube con “Exportar para YouTube”, se puede ver acercándose en la pantalla grande de la computadora con [panovi viewer](viewer:). Antes de mostrarlo al equipo, pide permiso a las personas que salen en el video.
 
 ## Precios
 
