@@ -674,6 +674,9 @@ def json_ld(p, lang, faq=()):
         "author": company_org(lang),
         "publisher": dict(company_org(lang), logo={"@type": "ImageObject", "url": f"{SITE}/img/icon.png"}),
     }
+    if lang == "ja":
+        d["about"]["alternateName"] = "パノビ"
+        d["about"]["description"] = "panovi（パノビ）は、パノラマビデオ（Panorama Video）を短くした名前のiPhoneアプリ。"
     if p.image:
         d["image"] = f"{SITE}{p.image}"
     d["dateModified"] = p.modified.isoformat()
