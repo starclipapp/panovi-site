@@ -571,10 +571,12 @@ h2 em{font-style:normal;color:var(--green)}
     <span class="eyebrow">guides</span>
     <h2>Guides &amp; tips</h2>
     <p class="body">From your first video to tips for travel and sports.</p>
-    <div class="bl-list"><a class="bl-card" href="/en/blog/first-video/"><span class="bl-cat">Getting started</span><b>Getting started with panovi — shooting your first video</b></a><a class="bl-card" href="/en/blog/whole-match/"><span class="bl-cat">Sports</span><b>Film a whole soccer match — where to set up, the remote and the battery</b></a><a class="bl-card" href="/en/blog/panorama-video-iphone/"><span class="bl-cat">Getting started</span><b>How to shoot panoramic video on iPhone — how it differs from Pano photos, and 3 ways to do it</b></a><a class="bl-card" href="/en/blog/ultrawide-190/"><span class="bl-cat">What’s new</span><b>About 190° with two iPhones — Ultra Wide on both, from straight ahead to just behind your sides in one panoramic video</b></a></div>
+    <div class="bl-list"><a class="bl-card" href="/en/blog/first-video/"><span class="bl-cat">Getting started</span><b>Getting started with panovi — shooting your first video</b></a><a class="bl-card" href="/en/blog/whole-match/"><span class="bl-cat">Sports</span><b>Film a whole soccer match — where to set up, the remote and the battery</b></a><a class="bl-card" href="/en/blog/ultrawide-190/"><span class="bl-cat">What’s new</span><b>About 190° with two iPhones — Ultra Wide on both, from straight ahead to just behind your sides in one panoramic video</b></a><a class="bl-card" href="/en/blog/panorama-video-iphone/"><span class="bl-cat">Getting started</span><b>How to shoot panoramic video on iPhone — how it differs from Pano photos, and 3 ways to do it</b></a><a class="bl-card" href="/en/blog/one-iphone/"><span class="bl-cat">What’s new</span><b>You can now shoot with one iPhone — wide and ultra wide at the same time</b></a><a class="bl-card" href="/en/blog/borrow-iphone/"><span class="bl-cat">Getting started</span><b>How to lend your iPhone safely — keep it on panovi with Guided Access</b></a></div>
     <div class="links"><a class="btn btn-line" href="/en/blog/">See all guides</a></div>
   </div>
-  <style>.bl-list{display:grid;gap:14px;margin-top:34px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+  <style>.bl-list{display:grid;gap:14px;margin-top:34px;grid-template-columns:1fr}
+  @media (min-width:620px){.bl-list{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:900px){.bl-list{grid-template-columns:repeat(3,1fr)}}
   .bl-card{display:flex;flex-direction:column;gap:8px;padding:22px 24px;border:1px solid var(--rule);border-radius:14px;
     text-decoration:none;background:var(--ink2);transition:border-color .2s}
   .bl-card:hover{border-color:var(--green)}

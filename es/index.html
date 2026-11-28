@@ -554,10 +554,12 @@ h2 em{font-style:normal;color:var(--green)}
     <span class="eyebrow">guides</span>
     <h2>Guías y consejos</h2>
     <p class="body">Desde tu primer video hasta consejos para viajes y deportes.</p>
-    <div class="bl-list"><a class="bl-card" href="/es/blog/first-video/"><span class="bl-cat">Primeros pasos</span><b>Tu primer video con panovi — paso a paso</b></a><a class="bl-card" href="/es/blog/whole-match/"><span class="bl-cat">Deportes</span><b>Graba el partido de fútbol completo — ubicación, control remoto y batería</b></a><a class="bl-card" href="/es/blog/panorama-video-iphone/"><span class="bl-cat">Primeros pasos</span><b>¿Cómo grabar video panorámico con iPhone? — la diferencia con la foto panorámica y 3 formas de hacerlo</b></a><a class="bl-card" href="/es/blog/ultrawide-190/"><span class="bl-cat">Novedades</span><b>Cerca de 190° con dos iPhone — en ultra gran angular, desde el frente hasta un poco detrás de los costados en un solo video panorámico</b></a></div>
+    <div class="bl-list"><a class="bl-card" href="/es/blog/first-video/"><span class="bl-cat">Primeros pasos</span><b>Tu primer video con panovi — paso a paso</b></a><a class="bl-card" href="/es/blog/whole-match/"><span class="bl-cat">Deportes</span><b>Graba el partido de fútbol completo — ubicación, control remoto y batería</b></a><a class="bl-card" href="/es/blog/ultrawide-190/"><span class="bl-cat">Novedades</span><b>Cerca de 190° con dos iPhone — en ultra gran angular, desde el frente hasta un poco detrás de los costados en un solo video panorámico</b></a><a class="bl-card" href="/es/blog/panorama-video-iphone/"><span class="bl-cat">Primeros pasos</span><b>¿Cómo grabar video panorámico con iPhone? — la diferencia con la foto panorámica y 3 formas de hacerlo</b></a><a class="bl-card" href="/es/blog/one-iphone/"><span class="bl-cat">Novedades</span><b>Ahora puedes grabar con un solo iPhone — gran angular y ultra gran angular a la vez</b></a><a class="bl-card" href="/es/blog/borrow-iphone/"><span class="bl-cat">Primeros pasos</span><b>¿Cómo prestar tu iPhone sin preocuparte? — Deja solo panovi en pantalla con Acceso guiado</b></a></div>
     <div class="links"><a class="btn btn-line" href="/es/blog/">Ver todas las guías</a></div>
   </div>
-  <style>.bl-list{display:grid;gap:14px;margin-top:34px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+  <style>.bl-list{display:grid;gap:14px;margin-top:34px;grid-template-columns:1fr}
+  @media (min-width:620px){.bl-list{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:900px){.bl-list{grid-template-columns:repeat(3,1fr)}}
   .bl-card{display:flex;flex-direction:column;gap:8px;padding:22px 24px;border:1px solid var(--rule);border-radius:14px;
     text-decoration:none;background:var(--ink2);transition:border-color .2s}
   .bl-card:hover{border-color:var(--green)}

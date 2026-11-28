@@ -891,7 +891,7 @@ def feed(lang, posts):
 
 
 def latest_block(lang, posts):
-    """トップページに差し込む「使いかた・ヒント」の節（入門1本＋top の記事＋新しい順。あわせて4本）。"""
+    """トップページに差し込む「使いかた・ヒント」の節（入門1本＋top の記事＋新しい順。あわせて6本・パソコンで3列×2段）。"""
     u = UI[lang]
     if not posts:
         return ""
@@ -903,7 +903,7 @@ def latest_block(lang, posts):
     pick = head + [p for p in posts if p not in head]
     items = "".join(
         f'<a class="bl-card" href="{blog_path(lang, p.slug)}"><span class="bl-cat">{esc(CAT[p.category][lang])}</span>'
-        f'<b>{esc(p.title(lang))}</b></a>' for p in pick[:4])
+        f'<b>{esc(p.title(lang))}</b></a>' for p in pick[:6])
     return f"""<section class="sec" id="guides">
   <div class="col">
     <span class="eyebrow">guides</span>
@@ -912,7 +912,9 @@ def latest_block(lang, posts):
     <div class="bl-list">{items}</div>
     <div class="links"><a class="btn btn-line" href="{blog_path(lang)}">{esc(u['latest_more'])}</a></div>
   </div>
-  <style>.bl-list{{display:grid;gap:14px;margin-top:34px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}}
+  <style>.bl-list{{display:grid;gap:14px;margin-top:34px;grid-template-columns:1fr}}
+  @media (min-width:620px){{.bl-list{{grid-template-columns:repeat(2,1fr)}}}}
+  @media (min-width:900px){{.bl-list{{grid-template-columns:repeat(3,1fr)}}}}
   .bl-card{{display:flex;flex-direction:column;gap:8px;padding:22px 24px;border:1px solid var(--rule);border-radius:14px;
     text-decoration:none;background:var(--ink2);transition:border-color .2s}}
   .bl-card:hover{{border-color:var(--green)}}
