@@ -55,7 +55,8 @@ a{color:inherit}
 .nav-in{display:flex;align-items:center;gap:18px;height:64px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
 .brand img{width:30px;height:30px;border-radius:8px}
-.brand b{font-size:18px;font-weight:600;letter-spacing:.13em;color:var(--green)}
+@font-face{font-family:"panovi-logo";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/inter-700-panovi.woff2) format("woff2");unicode-range:U+61,U+69,U+6E-70,U+76}
+.brand b{font-family:"panovi-logo",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:.1em;color:var(--green)}
 .nav-links{margin-left:auto;display:flex;align-items:center;gap:16px}
 .nav-links a{text-decoration:none;font-size:13.5px;color:var(--dim);letter-spacing:.04em;white-space:nowrap;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--paper)}
