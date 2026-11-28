@@ -1,4 +1,4 @@
-date: 2026-12-15
+date: 2026-11-28
 category: sports
 image: /img/watch-and-cheer-cover.jpg
 langs: ja
