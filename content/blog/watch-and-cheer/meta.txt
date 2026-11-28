@@ -1,0 +1,4 @@
+date: 2026-12-15
+category: sports
+image: /img/watch-and-cheer-cover.jpg
+langs: ja
