@@ -795,12 +795,48 @@ def load_faq():
     return {lg: read_md(d / f"{lg}.md") for lg in LANGS}
 
 
+# FAQ ページの問いを、押すと開く形（<details>）にする。答えの文は最初から HTML に入れておく（検索や AI が読めるように）
+FAQ_STYLE = """<style>
+.prose details.qa{border-top:1px solid var(--rule);scroll-margin-top:76px}
+.prose details.qa+details.qa{margin-top:0}
+.prose h2+details.qa{margin-top:.6em}
+.prose details.qa:has(+h2),.prose details.qa:last-of-type{border-bottom:1px solid var(--rule)}
+.prose details.qa summary{list-style:none;cursor:pointer;padding:18px 40px 18px 0;position:relative}
+.prose details.qa summary::-webkit-details-marker{display:none}
+.prose details.qa summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  color:var(--green);font-size:24px;font-weight:300;line-height:1;transition:transform .25s}
+.prose details.qa[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.prose details.qa summary h3{margin:0;font-size:17px;line-height:1.6}
+.prose details.qa summary:hover h3{color:var(--green)}
+.prose details.qa .a{padding:0 0 14px}
+.prose details.qa .a>:first-child{margin-top:0}
+</style>
+"""
+FAQ_JS = """<script>
+(function(){function o(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);
+var d=e&&(e.tagName==="DETAILS"?e:e.closest("details"));if(d){d.open=true;d.scrollIntoView();}}
+addEventListener("hashchange",o);o();})();
+</script>"""
+
+
+def faq_accordion(html):
+    out = []
+    for part in re.split(r"(?=<h[23][ >])", html):
+        m = re.match(r'<h3 id="([^"]*)">(.*?)</h3>\s*', part, flags=re.S)
+        if m:
+            out.append(f'<details class="qa" id="{m[1]}"><summary><h3>{m[2]}</h3></summary>\n'
+                       f'<div class="a">{part[m.end():].rstrip()}</div></details>\n')
+        else:
+            out.append(part)
+    return "".join(out)
+
+
 def faq_page(lang, faq, published):
     u = UI[lang]
     front, md = faq[lang]
     ctx = Ctx(lang, published, "faq")
     ctx.faq_all = True
-    body_html = render_body(md, ctx)
+    body_html = faq_accordion(render_body(md, ctx))
     toc = "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in ctx.toc)
     body = f"""<article class="col-n post">
   <p class="crumb"><a href="{LANGS[lang][1]}">← panovi</a></p>
@@ -811,9 +847,10 @@ def faq_page(lang, faq, published):
 {body_html}
 {cta(lang, "faq")}
   </div>
-</article>"""
+</article>
+{FAQ_JS}"""
     paths = {lg: faq_path(lg) for lg in LANGS}
-    head = (faq_ld([(strip_tags(q), strip_tags(" ".join(a))) for q, a in ctx.faq if a])
+    head = FAQ_STYLE + (faq_ld([(strip_tags(q), strip_tags(" ".join(a))) for q, a in ctx.faq if a])
             + breadcrumb_ld(lang, [(front["title"], paths[lang])]))
     kw = [k.strip() for k in front.get("keywords", "").split(",") if k.strip()] + KEYWORDS[lang]
     out = page(lang, title=f"{front['title']} | {u['suffix']}", desc=u["faq_desc"], path=paths[lang], paths=paths,
