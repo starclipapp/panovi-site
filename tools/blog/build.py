@@ -1,4 +1,4 @@
-"""panovi の使いかたブログ（4言語）を content/blog/ の原稿から作る。
+"""panovi の使い方ガイド（ブログ・4言語）を content/blog/ の原稿から作る。
 
     python3 tools/blog/build.py                 # 今日（日本時間）までの記事を公開する
     python3 tools/blog/build.py --today 2026-12-25   # その日になったつもりで作る
@@ -76,6 +76,7 @@ LANGS = {
     "pt": ("pt-BR", "/pt/"),
     "es": ("es", "/es/"),
 }
+VIEWER = {"ja": "/viewer/", "en": "/viewer/en/", "pt": "/viewer/pt/", "es": "/viewer/es/"}
 HOME_FILE = {"ja": "index.html", "en": "en/index.html", "pt": "pt/index.html", "es": "es/index.html"}
 VIEWER = {"ja": "/viewer/", "en": "/viewer/en/", "pt": "/viewer/pt/", "es": "/viewer/es/"}
 VIEWER_GUIDE = {"ja": "/viewer/guide.html", "en": "/viewer/en/guide.html",
@@ -94,56 +95,56 @@ CAT = {
 # 画面の決まり文句
 UI = {
     "ja": {
-        "nav": "ガイド", "home": "panovi について", "blog_title": "panovi の使いかた",
+        "nav": "ガイド", "home": "panovi について", "blog_title": "panovi ガイド — 使い方とヒント",
         "blog_lead": "はじめての1本から、旅行やスポーツで使うコツ、新しい機能まで。panovi を使いこなすための記事をまとめています。",
-        "blog_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi の使いかた。運動会・旅行・サッカーで使うコツや新機能のお知らせ。",
-        "post_link": "くわしい手順", "all": "すべて", "latest": "使いかた・ヒント", "latest_more": "記事をすべて見る",
+        "blog_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi の使い方ガイド。運動会・旅行・サッカーで使うコツや新機能のお知らせ。",
+        "post_link": "くわしい手順", "all": "すべて", "latest": "ガイド", "latest_more": "記事をすべて見る",
         "latest_lead": "はじめての1本から、旅行やスポーツで使うコツまで。",
         "start_here": "まずはここから", "read": "読む",
         "cta_h": "panovi を試してみる", "cta_p": "撮影は何分でも無料。3分未満の結合はずっと無料です。",
-        "cta_btn": "App Store で入手", "back": "記事の一覧へ", "feed": "RSS",
+        "cta_btn": "App Store で入手", "back": "記事の一覧へ", "feed": "RSS", "price": "料金",
         "foot_note": "撮った映像は、あなたのiPhoneの中だけに。", "privacy": "プライバシーポリシー",
         "company": "運営会社", "company_title": "運営会社", "faq": "FAQ", "faq_lead": "panovi について、よく聞かれることをまとめました。準備するもの、撮り方、料金、うまくいかないときまで。", "faq_desc": "iPhone 2台でパノラマ動画（パノラマビデオ）を撮るアプリ panovi のよくある質問。必要なもの、撮影の長さ、サッカーの試合の撮り方、料金、プライバシーまで。", "faq_more": "すべての質問を見る", "toc": "目次",
         "lang": "言語", "scheduled": "予約", "draft": "下書き",
         "suffix": "panovi パノラマ動画アプリ",
     },
     "en": {
-        "nav": "Guides", "home": "About panovi", "blog_title": "panovi guides",
+        "nav": "Guides", "home": "About panovi", "blog_title": "panovi guides — how-tos and tips",
         "blog_lead": "From your first video to tips for travel and sports, plus what’s new. Everything you need to get the most out of panovi.",
         "blog_desc": "How to use panovi, the panoramic video app that turns two iPhones into one ultra-wide video: guides, tips for sports days, travel and soccer, and news.",
-        "post_link": "Step-by-step guide", "all": "All", "latest": "Guides & tips", "latest_more": "See all guides",
+        "post_link": "Step-by-step guide", "all": "All", "latest": "Guides", "latest_more": "See all guides",
         "latest_lead": "From your first video to tips for travel and sports.",
         "start_here": "Start here", "read": "Read",
         "cta_h": "Try panovi", "cta_p": "Recording is free for any length. Stitches under 3 minutes are always free.",
-        "cta_btn": "Get it on the App Store", "back": "All guides", "feed": "RSS",
+        "cta_btn": "Get it on the App Store", "back": "All guides", "feed": "RSS", "price": "Pricing",
         "foot_note": "Your footage stays on your iPhones.", "privacy": "Privacy Policy",
         "company": "Company", "company_title": "Company", "faq": "FAQ", "faq_lead": "Common questions about panovi — what you need, how to shoot, pricing, and what to do when something goes wrong.", "faq_desc": "FAQ for panovi, the app that makes panoramic video with two iPhones: what you need, recording length, filming a whole soccer match, pricing and privacy.", "faq_more": "See all questions", "toc": "Contents",
         "lang": "Language", "scheduled": "Scheduled", "draft": "Draft",
         "suffix": "panovi panoramic video app",
     },
     "pt": {
-        "nav": "Guias", "home": "Sobre o panovi", "blog_title": "Guias do panovi",
+        "nav": "Guias", "home": "Sobre o panovi", "blog_title": "Guias do panovi — como usar e dicas",
         "blog_lead": "Do primeiro vídeo às dicas para viagens e esportes, além das novidades. Tudo para você aproveitar o panovi ao máximo.",
         "blog_desc": "Como usar o panovi, o app de vídeo panorâmico que transforma dois iPhones em um vídeo ultra-amplo: guias, dicas para viagens e futebol, e novidades.",
-        "post_link": "Passo a passo", "all": "Todos", "latest": "Guias e dicas", "latest_more": "Ver todos os guias",
+        "post_link": "Passo a passo", "all": "Todos", "latest": "Guias", "latest_more": "Ver todos os guias",
         "latest_lead": "Do primeiro vídeo às dicas para viagens e esportes.",
         "start_here": "Comece por aqui", "read": "Ler",
         "cta_h": "Experimente o panovi", "cta_p": "Gravar é grátis, sem limite de tempo. Uniões com menos de 3 minutos são sempre grátis.",
-        "cta_btn": "Baixar na App Store", "back": "Todos os guias", "feed": "RSS",
+        "cta_btn": "Baixar na App Store", "back": "Todos os guias", "feed": "RSS", "price": "Preços",
         "foot_note": "Suas gravações ficam só nos seus iPhones.", "privacy": "Política de Privacidade",
         "company": "Empresa", "company_title": "Empresa responsável", "faq": "FAQ", "faq_lead": "As perguntas mais comuns sobre o panovi: o que você precisa, como gravar, preços e o que fazer quando algo não dá certo.", "faq_desc": "Perguntas frequentes sobre o panovi, o app que faz vídeo panorâmico com dois iPhones: o que precisa, tempo de gravação, como filmar um jogo de futebol inteiro, preços e privacidade.", "faq_more": "Ver todas as perguntas", "toc": "Índice",
         "lang": "Idioma", "scheduled": "Agendado", "draft": "Rascunho",
         "suffix": "panovi, app de vídeo panorâmico",
     },
     "es": {
-        "nav": "Guías", "home": "Acerca de panovi", "blog_title": "Guías de panovi",
+        "nav": "Guías", "home": "Acerca de panovi", "blog_title": "Guías de panovi — cómo usarlo y consejos",
         "blog_lead": "Desde tu primer video hasta consejos para viajes y deportes, además de las novedades. Todo para sacarle el máximo provecho a panovi.",
         "blog_desc": "Cómo usar panovi, la app de video panorámico que convierte dos iPhone en un solo video: guías, consejos para viajes y fútbol, y novedades.",
-        "post_link": "Paso a paso", "all": "Todos", "latest": "Guías y consejos", "latest_more": "Ver todas las guías",
+        "post_link": "Paso a paso", "all": "Todos", "latest": "Guías", "latest_more": "Ver todas las guías",
         "latest_lead": "Desde tu primer video hasta consejos para viajes y deportes.",
         "start_here": "Empieza aquí", "read": "Leer",
         "cta_h": "Prueba panovi", "cta_p": "Grabar es gratis, sin límite de tiempo. Las uniones de menos de 3 minutos son siempre gratis.",
-        "cta_btn": "Descargar en la App Store", "back": "Todas las guías", "feed": "RSS",
+        "cta_btn": "Descargar en la App Store", "back": "Todas las guías", "feed": "RSS", "price": "Precios",
         "foot_note": "Tus grabaciones se quedan solo en tus iPhone.", "privacy": "Política de privacidad",
         "company": "Empresa", "company_title": "Empresa responsable", "faq": "FAQ", "faq_lead": "Las preguntas más comunes sobre panovi: qué necesitas, cómo grabar, precios y qué hacer cuando algo no sale bien.", "faq_desc": "Preguntas frecuentes sobre panovi, la app que hace video panorámico con dos iPhone: qué necesitas, duración de grabación, cómo grabar un partido de fútbol completo, precios y privacidad.", "faq_more": "Ver todas las preguntas", "toc": "Contenido",
         "lang": "Idioma", "scheduled": "Programado", "draft": "Borrador",
@@ -249,7 +250,7 @@ class Post:
         if self.image and not (SITE_ROOT / self.image.lstrip("/")).is_file():
             fail(f"{d}/meta.txt: image のファイルが無い: {self.image}")
         self.order = int(meta.get("order", "999"))
-        # トップの「使いかた・ヒント」に入門の次に必ず出す順番（任意。1 が先）。公開日までは出ない
+        # トップの「ガイド」に入門の次に必ず出す順番（任意。1 が先）。公開日までは出ない
         self.top = int(meta.get("top", "0"))
         self.modified = None
         self.draft = meta.get("draft", "no").lower() in ("yes", "true", "1")
@@ -600,6 +601,7 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
     <a class="brand" href="{home}"><img src="/img/icon.png" alt=""><b>panovi</b></a>
     <nav class="nav-links">
       <a class="wide" href="{home}">{esc(u['home'])}</a>
+      <a class="wide" href="{home}#price">{esc(u['price'])}</a>
       <div class="nav-read"><a href="{blog_path(lang)}"{' aria-current="page"' if path == blog_path(lang) else ''}>{esc(u['nav'])}</a><a href="{faq_path(lang)}"{' aria-current="page"' if path == faq_path(lang) else ''}>{esc(u['faq'])}</a></div>
       {L.lang_menu(LANGS[lang][0], {LANGS[lg][0]: pp for lg, pp in (menu_paths or paths).items()})}
       <a class="btn btn-fill btn-sm" href="{appstore(lang)}" data-appstore="nav">App Store</a>
@@ -613,6 +615,7 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
   <span>© 2026 panovi</span>
   <span>{esc(u['foot_note'])}</span>
   <a href="{home}">panovi</a>
+  <a href="{VIEWER[lang]}">panovi viewer</a>
   <a href="{blog_path(lang)}">{esc(u['nav'])}</a>
   <a href="{faq_path(lang)}">{esc(u['faq'])}</a>
   <a href="{blog_path(lang)}feed.xml">{u['feed']}</a>
@@ -891,7 +894,7 @@ def feed(lang, posts):
 
 
 def latest_block(lang, posts):
-    """トップページに差し込む「使いかた・ヒント」の節（入門1本＋top の記事＋新しい順。あわせて6本・パソコンで3列×2段）。"""
+    """トップページに差し込む「ガイド」の節（入門1本＋top の記事＋新しい順。あわせて6本・パソコンで3列×2段）。"""
     u = UI[lang]
     if not posts:
         return ""
@@ -981,7 +984,7 @@ def llms_txt(posts):
            f"- [panovi viewer]({SITE}/viewer/en/): zoom and pan any ultra-wide video (YouTube or mp4) in the browser",
            f"- FAQ: [English]({SITE}/en/faq/) / [日本語]({SITE}/faq/) / [Português]({SITE}/pt/faq/) / [Español]({SITE}/es/faq/)",
            ""]
-    names = {"en": "Guides (English)", "ja": "使いかた（日本語）", "pt": "Guias (Português)", "es": "Guías (Español)"}
+    names = {"en": "Guides (English)", "ja": "使い方ガイド（日本語）", "pt": "Guias (Português)", "es": "Guías (Español)"}
     for lg in ("en", "ja", "pt", "es"):
         out += [f"## {names[lg]}", ""]
         out += [f"- [{p.title(lg)}]({SITE}{blog_path(lg, p.slug)}): {p.desc(lg)}" for p in posts if lg in p.langs]

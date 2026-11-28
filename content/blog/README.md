@@ -1,4 +1,4 @@
-# panovi の使いかたブログ — 書き方と公開のしくみ
+# panovi の使い方ガイド（ブログ） — 書き方と公開のしくみ
 
 目的は **panovi を使ってみたいと思う人を増やすこと**。興味を持った人が迷わず最初の1本を撮れ、
 撮った人がもっと使いこなせる記事を、2週間に1本のペースで出す。予定は [CALENDAR.md](CALENDAR.md)。
@@ -11,7 +11,7 @@ content/blog/<slug>/ja.md en.md pt.md es.md   4言語の本文（日本語が正
         │
         ▼  tools/build_site.sh（= 多言語の生成 → tools/blog/build.py → 検査）
 blog/<slug>/  en/blog/<slug>/  pt/blog/<slug>/  es/blog/<slug>/   記事ページ
-blog/ ほか各言語の一覧・feed.xml、sitemap.xml、トップページの「使いかた・ヒント」
+blog/ ほか各言語の一覧・feed.xml、sitemap.xml、トップページの「ガイド」
 ```
 
 - **予約公開**: `meta.txt` の `date` が今日（日本時間）になると公開される。
@@ -33,7 +33,7 @@ blog/ ほか各言語の一覧・feed.xml、sitemap.xml、トップページの�
    image: /img/hero.jpg      一覧とSNSで使う画像（サイトにあるファイル）
    order: 5                  入門の順番（start のときだけ意味がある。1 が「まずはここから」）
    draft: no                 yes なら日付が来ても出さない
-   top: 1                    トップの「使いかた・ヒント」に入門の次に出す順番（任意。今は whole-match=1・recital=2・soccer-camera=3・ultrawide-190=4。カードは6枚で、残りの1枚以上は新しい順）
+   top: 1                    トップの「ガイド」に入門の次に出す順番（任意。今は whole-match=1・recital=2・soccer-camera=3・ultrawide-190=4。カードは6枚で、残りの1枚以上は新しい順）
    langs: ja                 出す言語（任意。無ければ4言語）。ja だけの記事は ja.md だけでよく、ほかの言語の一覧・RSS・トップ・llms.txt には出ない。ほかの言語からの post: リンクは文字だけになる
    ```
 

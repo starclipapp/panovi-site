@@ -21,6 +21,12 @@
         }
         body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif; background: var(--bg-deep); color: var(--text); line-height: 1.9; }
         .wrap { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+        @font-face { font-family: "panovi-logo"; font-weight: 700; font-display: swap; src: url(/fonts/inter-700-panovi.woff2) format("woff2"); unicode-range: U+61, U+69, U+6E-70, U+76; }
+        .topbar { display: flex; align-items: center; gap: 18px; margin-bottom: 36px; font-size: 14px; }
+        .topbar .logo { font-family: "panovi-logo", -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; font-size: 17px; letter-spacing: .1em; color: var(--accent); text-decoration: none; }
+        .topbar nav { margin-left: auto; display: flex; gap: 16px; }
+        .topbar nav a { color: var(--text-dim); text-decoration: none; }
+        .topbar nav a:hover { color: var(--text); }
         .brand { font-size: 14px; letter-spacing: 2px; color: var(--text-dim); margin-bottom: 8px; }
         .brand a { color: var(--text-dim); text-decoration: none; }
         h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
@@ -42,7 +48,7 @@
 </head>
 <body>
 <div class="wrap">
-    <div class="brand"><a href="/es/">panovi</a></div>
+    <header class="topbar"><a class="logo" href="/es/">panovi</a><nav><a href="/es/#price">Precios</a><a href="/es/blog/">Guías</a><a href="/es/faq/">FAQ</a></nav></header>
     <h1>Política de privacidad</h1>
     <p class="updated">Última actualización: 13 de noviembre de 2026 — <a href="/privacy/" lang="ja" hreflang="ja">日本語</a> · <a href="/en/privacy/" lang="en" hreflang="en">English</a> · <a href="/pt/privacy/" lang="pt-BR" hreflang="pt-BR">Português</a></p>
 

@@ -65,6 +65,8 @@ def finish(s, lang, label):
 
 
 HTML_LANG = {"pt": "pt-BR", "es": "es"}
+PRICE_WORD = {"pt": "Preços", "es": "Precios"}
+GUIDES_WORD = {"pt": "Guias", "es": "Guías"}
 DIR = {"pt": "pt", "es": "es"}
 
 
@@ -131,6 +133,8 @@ MAIN_TEXT = [
       "O panovi é um app para fazer vídeos panorâmicos.",
       "panovi es una app para crear videos panorámicos."),
     # トップの文を減らした（2026-11-28・Q45）
+    T('<a href="/en/blog/feed.xml">RSS</a>', '<a href="/pt/blog/feed.xml">RSS</a>', '<a href="/es/blog/feed.xml">RSS</a>'),
+    T('<a href="/en/blog/">More in the guides →</a>', '<a href="/pt/blog/">Mais nos guias →</a>', '<a href="/es/blog/">Más en las guías →</a>'),
     T('Set two iPhones side by side on a tripod, and you get one video, edge to edge.',
       'Coloque dois iPhones lado a lado num tripé e tenha um só vídeo, de ponta a ponta.',
       'Pon dos iPhone uno al lado del otro en un trípode y obtén un solo video, de extremo a extremo.'),
@@ -468,7 +472,8 @@ def privacy_table(lang):
     return [
         ('<html lang="en">', f'<html lang="{code}">', 1),
         (L.others("privacy", "en"), L.others("privacy", code), 1),
-        ('<div class="brand"><a href="/en/">panovi</a></div>', f'<div class="brand"><a href="/{d}/">panovi</a></div>', 1),
+        ('<header class="topbar"><a class="logo" href="/en/">panovi</a><nav><a href="/en/#price">Pricing</a><a href="/en/blog/">Guides</a><a href="/en/faq/">FAQ</a></nav></header>',
+         f'<header class="topbar"><a class="logo" href="/{d}/">panovi</a><nav><a href="/{d}/#price">{PRICE_WORD[lang]}</a><a href="/{d}/blog/">{GUIDES_WORD[lang]}</a><a href="/{d}/faq/">FAQ</a></nav></header>', 1),
         ('<a href="https://panovi.app/en/">About the app</a>',
          f'<a href="https://panovi.app/{d}/">' + {"pt": "Sobre o app", "es": "Acerca de la app"}[lang] + "</a>", 1),
         ("https://policies.google.com/technologies/partner-sites",

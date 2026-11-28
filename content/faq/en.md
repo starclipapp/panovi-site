@@ -99,7 +99,7 @@ When one camera has to take in the whole field, each player ends up small. panov
 
 ### Can I shoot handheld, without a tripod?
 
-Yes. With “Record with one phone” you don’t need a tripod. It records with the wide and ultra wide lenses of a single iPhone at the same time, so you can just hold it and shoot whenever the moment strikes, on a walk or on a trip. When you shoot with two iPhones, use a tripod to keep both pointed and fixed.
+Yes. With “Record with one phone” you don’t need a tripod. It records with the wide and ultra wide lenses of a single iPhone at the same time, so you can just hold it and shoot whenever the moment strikes, on a walk or on a trip. When you shoot with two iPhones, use a tripod to keep both pointed and fixed. If a video turns out shaky, “Videos on This Device” → “Make a Stabilized Copy” steadies it afterward (the original stays as it is).
 
 ## Stitching, saving and watching
 

@@ -34,7 +34,7 @@ Key facts:
 - [Placing your iPhones for a clean stitch — the tripod and the shallow V](https://panovi.app/en/blog/tripod-setup/): How to build the mount that holds two iPhones on one tripod, and how to place them for a clean seam in your panoramic video. Plus how to use the setup check and the 3-second preview.
 - [Film a whole soccer match — where to set up, the remote and the battery](https://panovi.app/en/blog/whole-match/): How to film a match from start to finish as a panoramic video, with both goals in frame, without touching the tripod. Where to set up, a third iPhone as a remote, power save, free space, and pricing for long stitches.
 
-## 使いかた（日本語）
+## 使い方ガイド（日本語）
 
 - [iPhoneでパノラマ動画を撮るには？ — 写真のパノラマとの違いと、3つの方法](https://panovi.app/blog/panorama-video-iphone/): iPhoneのカメラの「パノラマ」は写真です。動いたままのパノラマ動画（パノラマビデオ）を撮るには、超広角で撮る・panovi の1台モード・iPhone 2台で撮る、の3つの方法があります。違いと選び方を比べます。
 - [iPhone 2台で約190度 — 超広角どうしで、真横の少し後ろまで1本のパノラマ動画に](https://panovi.app/blog/ultrawide-190/): 超広角のiPhone 2台を外向きに開いて置くと、正面から左右の真横の少し後ろまで、約190度が1本のパノラマ動画に入ります。1台の超広角は約105度。なぜ難しかったのか、どう撮るのかをやさしく紹介します。

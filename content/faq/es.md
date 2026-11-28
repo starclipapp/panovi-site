@@ -99,7 +99,7 @@ Cuando una sola cámara tiene que abarcar toda la cancha, cada jugador sale pequ
 
 ### ¿Puedo grabar con el iPhone en la mano, sin trípode?
 
-Sí. Con “Grabar con un iPhone” no necesitas trípode. Graba al mismo tiempo con el gran angular y el ultra gran angular de un solo iPhone, así que puedes sostenerlo en la mano y grabar cuando quieras, en un paseo o en un viaje. Si grabas con dos iPhone, usa un trípode para dejarlos fijos y bien orientados.
+Sí. Con “Grabar con un iPhone” no necesitas trípode. Graba al mismo tiempo con el gran angular y el ultra gran angular de un solo iPhone, así que puedes sostenerlo en la mano y grabar cuando quieras, en un paseo o en un viaje. Si grabas con dos iPhone, usa un trípode para dejarlos fijos y bien orientados. Si un video queda movido, “Videos en este iPhone” → “Crear copia estabilizada” lo estabiliza después (el original se queda igual).
 
 ## Unir, guardar y ver
 

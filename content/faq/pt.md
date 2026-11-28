@@ -99,7 +99,7 @@ Quando uma câmera só precisa pegar o campo inteiro, cada jogador fica pequeno.
 
 ### Dá para gravar com o iPhone na mão, sem tripé?
 
-Dá. Com o “Gravar com um iPhone” você não precisa de tripé. Ele grava ao mesmo tempo com a grande-angular e a ultra-angular de um só iPhone, então dá para segurar na mão e gravar quando der vontade, num passeio ou numa viagem. Para gravar com dois iPhones, use um tripé para deixar os dois fixos e alinhados.
+Dá. Com o “Gravar com um iPhone” você não precisa de tripé. Ele grava ao mesmo tempo com a grande-angular e a ultra-angular de um só iPhone, então dá para segurar na mão e gravar quando der vontade, num passeio ou numa viagem. Para gravar com dois iPhones, use um tripé para deixar os dois fixos e alinhados. Se um vídeo ficar tremido, “Vídeos neste iPhone” → “Criar cópia estabilizada” estabiliza depois (o original continua igual).
 
 ## Unir, salvar e assistir
 
