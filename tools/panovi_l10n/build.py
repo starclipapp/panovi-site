@@ -76,7 +76,8 @@ def main_table(lang):
         ('<html lang="en">', f'<html lang="{code}">', 1),
         (L.nav("en"), L.nav(code), 1),
         (L.foot("en"), L.foot(code), 1),
-        (APPSTORE_JP, APPSTORE_ANY, 3),
+        # en はもとから国を指定しない形（2026-11-28）。jp の形が残っていたら0回で止まる
+        (APPSTORE_JP, APPSTORE_ANY, 0),
         ("/viewer/en/guide.html", f"/viewer/{d}/guide.html", 1),
         ("/viewer/en/", f"/viewer/{d}/", 2),
         ("/en/privacy/", f"/{d}/privacy/", 1),
@@ -438,7 +439,7 @@ MAIN_TEXT = [
       "<p>Os preços estão na App Store. E nada de equipamento especial: dois iPhones que você já tem e um tripé.</p>",
       "<p>Consulta los precios en el App Store. Y sin equipo especial: dos iPhone que ya tienes y un trípode.</p>"),
     # FAQ（en/ja は 08 の次が 11 と飛んでいる。pt/es は 09 にそろえる）
-    T('<span class="eyebrow">11 — FAQ</span>',
+    T('<span class="eyebrow">09 — FAQ</span>',
       '<span class="eyebrow">09 — Perguntas frequentes</span>',
       '<span class="eyebrow">09 — Preguntas frecuentes</span>'),
     T("<h2>Things you may wonder.</h2>",
