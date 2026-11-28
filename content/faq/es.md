@@ -15,10 +15,6 @@ panovi es una app para iPhone que une las imágenes de la izquierda y de la dere
 
 Sí. El modo “Pano” de la cámara del iPhone hace fotos (imágenes fijas), pero con panovi puedes hacer un video panorámico en el que la gente y las nubes siguen en movimiento. Comparamos las distintas formas en “[¿Cómo grabar video panorámico con iPhone?](post:panorama-video-iphone)”.
 
-### ¿panovi es la misma app que “Panorama Video” en el App Store?
-
-Sí. panovi es la nueva versión (2.0) de “Panorama Video” del App Store, hecha de nuevo desde cero. No se conecta con la versión anterior, así que actualiza los dos iPhone a la última versión antes de usarla.
-
 ### ¿En qué se diferencia panovi de una cámara 360°?
 
 panovi concentra los píxeles solo hacia donde quieres grabar. Una cámara 360° reparte sus píxeles en todas direcciones, así que cada dirección recibe menos y lo que está lejos se ve pequeño. Con panovi, aunque grabes amplio, todo conserva su tamaño e impacto. Además, no tienes que comprar equipo especial.
@@ -187,7 +183,7 @@ No. Tampoco hay que iniciar sesión.
 
 ### ¿Qué hago si los dos iPhone no se conectan?
 
-Toca “Restablecer la conexión” y vuelve a escanear el código QR. No se conecta con la versión anterior (Panorama Video 1.x), así que revisa también que los dos iPhone tengan la última versión.
+Toca “Restablecer la conexión” y vuelve a escanear el código QR. Revisa también que los dos iPhone tengan la última versión.
 
 ### ¿Qué hago si la unión se ve desalineada?
 

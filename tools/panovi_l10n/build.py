@@ -92,9 +92,9 @@ MAIN_TEXT = [
     # 構造化データ（SoftwareApplication）
     # ★"url": "…/en/" は WebSite（ブログの生成器が差し込む）にも出るので、downloadUrl まで含めて1つに絞る
     T('"url": "https://panovi.app/en/", "downloadUrl"', '"url": "https://panovi.app/pt/", "downloadUrl"', '"url": "https://panovi.app/es/", "downloadUrl"'),
-    T('"alternateName": ["panovi panoramic video", "Panorama Video"]',
-      '"alternateName": ["panovi vídeo panorâmico", "Panorama Video"]',
-      '"alternateName": ["panovi video panorámico", "Panorama Video"]'),
+    T('"alternateName": ["panovi panoramic video"]',
+      '"alternateName": ["panovi vídeo panorâmico"]',
+      '"alternateName": ["panovi video panorámico"]'),
     T('"description": "Turn two iPhones into one panoramic, ultra-wide video. For sports days, recitals, travel and soccer matches."',
       '"description": "Transforme dois iPhones em um só vídeo panorâmico, ultra-amplo. Para jogos das crianças, apresentações da escola, viagens e futebol."',
       '"description": "Convierte dos iPhone en un solo video panorámico. Para partidos de los niños, festivales escolares, viajes y fútbol."'),

@@ -686,7 +686,7 @@ def json_ld(p, lang, faq=()):
     }
     if lang == "ja":
         d["about"]["alternateName"] = "パノビ"
-        d["about"]["description"] = "panovi（パノビ）は、パノラマビデオ（Panorama Video）を短くした名前のiPhoneアプリ。"
+        d["about"]["description"] = "panovi（パノビ）は、パノラマビデオを短くした名前のiPhoneアプリ。"
     if p.image:
         d["image"] = f"{SITE}{p.image}"
     d["dateModified"] = p.modified.isoformat()

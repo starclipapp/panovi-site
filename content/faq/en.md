@@ -15,10 +15,6 @@ panovi is an iPhone app that turns the left and right footage from two iPhones, 
 
 Yes. The iPhone camera's Pano mode makes a still photo, but with panovi you get a panoramic video where people and clouds keep moving. For a detailed comparison of the ways to do it, see “[How do you shoot a panoramic video on iPhone?](post:panorama-video-iphone)”.
 
-### Is panovi the same app as “Panorama Video” on the App Store?
-
-Yes. panovi is a rebuilt new version (2.0) of “Panorama Video” on the App Store. It can't connect to the previous version, so update both iPhones to the latest version before you use it.
-
 ### How is panovi different from a 360 camera?
 
 A 360 camera spreads its pixels in every direction, so each direction gets less detail and faraway subjects come out small. panovi puts its pixels only in the direction you want to film, so even when you film wide, subjects stay big and striking. You don't need to buy any special gear, either.
@@ -187,7 +183,7 @@ No. There is no login either.
 
 ### What if the two iPhones won't connect?
 
-Tap “Reset the connection” and scan the QR code again. panovi can't connect to the previous version (Panorama Video 1.x), so also check that both iPhones are updated to the latest version.
+Tap “Reset the connection” and scan the QR code again. Also check that both iPhones are updated to the latest version.
 
 ### What if the seam looks misaligned?
 
