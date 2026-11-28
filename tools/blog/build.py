@@ -744,9 +744,9 @@ def article_page(p, lang, posts, published, today):
     ctx = Ctx(lang, published, p.slug)
     body_html = render_body(p.text[lang][1], ctx)
     u = UI[lang]
-    # 本文の中に同じ画像があるときは、上に重ねて出さない
+    # 本文の中に同じ画像があるとき・本文が動画で始まるときは、上に重ねて出さない（顔の写真は一覧と SNS 用）
     hero = (f'<figure class="hero-img"><img src="{esc(p.image)}" alt="{esc(p.alt(lang))}"></figure>'
-            if p.image and f'src="{esc(p.image)}"' not in body_html else "")
+            if p.image and f'src="{esc(p.image)}"' not in body_html and not body_html.startswith('<figure class="vid">') else "")
     # 次に読む: 同じ分類 → ほかの記事、新しい順に3本
     others = [q for q in posts if q.slug != p.slug]
     others.sort(key=lambda q: (q.category != p.category, -q.date.toordinal()))

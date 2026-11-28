@@ -1,0 +1,4 @@
+date: 2026-12-02
+category: sports
+image: /img/film-whole-cover.jpg
+langs: ja
