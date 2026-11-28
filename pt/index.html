@@ -145,6 +145,18 @@ h2 em{font-style:normal;color:var(--green)}
 .trio img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block}
 .trio figcaption{margin-top:8px;font-size:12.5px;color:var(--dim);line-height:1.6}
 .trio .n{display:block;color:var(--green);font-weight:700}
+.kit{margin-top:56px}
+.kit h3,.tip h3{font-size:19px;font-weight:700;letter-spacing:-.01em;line-height:1.5}
+.kit>p,.tip p{margin-top:8px;color:var(--dim);font-size:clamp(15px,1.7vw,17px)}
+.kit .trio{margin-top:18px}
+.kit .trio figcaption{margin-top:10px;font-size:15px;color:var(--paper);font-weight:700;line-height:1.5}
+.go{display:inline-block;margin-top:14px;color:var(--green);font-weight:700;font-size:15px;text-decoration:none}
+.go:hover{text-decoration:underline}
+.tips{margin-top:44px;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+@media(min-width:700px){.tips{grid-template-columns:1fr 1fr}}
+.tip{background:var(--ink);padding:28px 26px}
+.howmore{margin-top:30px}
+.howmore .go{margin-top:0;font-size:17px}
 .lb{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.93);display:flex;align-items:center;justify-content:center;padding:28px;cursor:zoom-out}
 .lb[hidden]{display:none}
 .lb img{max-width:100%;max-height:100%;border-radius:4px}
@@ -459,26 +471,30 @@ h2 em{font-style:normal;color:var(--green)}
       <div class="step"><b>02</b><h3>Posicionar</h3><p>Coloque no tripé. A tela mostra a sobreposição.</p></div>
       <div class="step"><b>03</b><h3>Filmar e juntar</h3><p>Grave e junte. O tremor é estabilizado automaticamente.</p></div>
     </div>
-    <div class="trio">
-      <figure>
-        <a class="zoom" href="/img/tripod_parts.jpg"><img src="/img/tripod_parts.jpg" alt="Uma placa dupla com dois suportes MagSafe parafusados" loading="lazy"></a>
-        <figcaption><span class="n">1. Monte</span>Sem ferramentas</figcaption>
-      </figure>
-      <figure>
-        <a class="zoom" href="/img/tripod_rig.jpg"><img src="/img/tripod_rig.jpg" alt="O suporte pronto, visto de frente: os iPhones se prendem com ímã aos dois anéis MagSafe" loading="lazy"></a>
-        <figcaption><span class="n">2. Pronto</span>Os iPhones se prendem com ímã</figcaption>
-      </figure>
-      <figure>
-        <a class="zoom" href="/img/tripod_standing.jpg"><img src="/img/tripod_standing.jpg" alt="No tripé, os dois iPhones inclinados para que as lentes fiquem próximas no centro" loading="lazy"></a>
-        <figcaption><span class="n">3. Posicione</span>Incline para dentro</figcaption>
-      </figure>
+    <div class="kit" id="tripod">
+      <h3>O suporte do tripé: só duas peças</h3>
+      <p><a href="https://www.amazon.co.jp/dp/B0HFZNJWCX?tag=petanote-22" target="_blank" rel="noopener sponsored">Uma placa</a> e <a href="https://link.amazon/B0cYKJkFr" target="_blank" rel="noopener sponsored">suportes MagSafe</a> (Amazon). Sem ferramentas.</p>
+      <div class="trio">
+        <figure>
+          <a class="zoom" href="/img/tripod_parts.jpg"><img src="/img/tripod_parts.jpg" alt="Uma placa dupla com dois suportes MagSafe parafusados" loading="lazy"></a>
+          <figcaption>Monte</figcaption>
+        </figure>
+        <figure>
+          <a class="zoom" href="/img/tripod_rig.jpg"><img src="/img/tripod_rig.jpg" alt="O suporte pronto, visto de frente: os iPhones se prendem com ímã aos dois anéis MagSafe" loading="lazy"></a>
+          <figcaption>Prenda com ímã</figcaption>
+        </figure>
+        <figure>
+          <a class="zoom" href="/img/tripod_standing.jpg"><img src="/img/tripod_standing.jpg" alt="No tripé, os dois iPhones inclinados para que as lentes fiquem próximas no centro" loading="lazy"></a>
+          <figcaption>Incline para dentro</figcaption>
+        </figure>
+      </div>
+      <a class="go" href="/pt/blog/tripod-setup/">Dicas de posicionamento →</a>
     </div>
-    <ul class="list" style="margin-top:26px">
-      <li id="borrow"><strong>O segundo iPhone pode ser emprestado.</strong> Quem empresta não paga nada → <a href="/pt/blog/borrow-iphone/">Como emprestar com segurança</a></li>
-      <li id="tripod"><strong>Só duas peças.</strong> <a href="https://www.amazon.co.jp/dp/B0HFZNJWCX?tag=petanote-22" target="_blank" rel="noopener sponsored">Uma placa</a> e <a href="https://link.amazon/B0cYKJkFr" target="_blank" rel="noopener sponsored">suportes MagSafe</a> (Amazon) → <a href="/pt/blog/tripod-setup/">Dicas de posicionamento</a></li>
-      <li id="lend"><strong>Dois vídeos já no app Fotos? Junte depois.</strong> Também dá para estabilizar só um → <a href="/pt/faq/">FAQ</a></li>
-    </ul>
-    <p class="body" style="margin-top:22px"><a href="/pt/blog/">Mais nos guias →</a></p>
+    <div class="tips">
+      <div class="tip" id="borrow"><h3>O segundo iPhone pode ser emprestado</h3><p>Quem empresta não paga nada.</p><a class="go" href="/pt/blog/borrow-iphone/">Como emprestar com segurança →</a></div>
+      <div class="tip" id="lend"><h3>Dois vídeos já no app Fotos? Junte depois</h3><p>Junte em um só dois vídeos gravados separadamente.</p><a class="go" href="/pt/faq/">Perguntas frequentes →</a></div>
+    </div>
+    <p class="howmore"><a class="go" href="/pt/blog/">Mais nos guias →</a></p>
   </div>
 </section>
 
