@@ -86,9 +86,12 @@
   // 全ページのリンクをここ1か所で数える。GA を読み込んでいない人（同意していない人）からは送らない。
   //   page: ページのパス（/ や /en/blog/first-video/）
   //   placement: 押した場所。nav（上の帯）・cta（記事の終わりの枠）・footer・それ以外は節の id か class（top・price・end など）
+  //     data-place のある所の中なら、その値（記事の題の下 top・本文のとちゅうの枠 mid・「いるもの」の箱 box）
   //   post: ブログ記事の slug（記事の中の枠のときだけ。data-appstore の値）
   //   lang: ページの言語
   function where(a) {
+    var dp = a.closest("[data-place]");
+    if (dp) return dp.getAttribute("data-place");
     if (a.closest("header, nav")) return "nav";
     if (a.closest("aside.cta")) return "cta";
     if (a.closest("footer")) return "footer";
@@ -104,4 +107,19 @@
     if (post && post !== "nav") p.post = post;
     gtag("event", "appstore_click", p);
   });
+
+  // どこまで読んだか。GA が自分で数える 90%（scroll）に加えて、25・50・75% を scroll_depth で送る（1ページ1回ずつ）。
+  //   percent_scrolled: 25・50・75　page: ページのパス　lang: ページの言語
+  var depthSent = {};
+  window.addEventListener("scroll", function () {
+    if (!loaded) return;
+    var h = document.documentElement;
+    var pct = (window.scrollY + window.innerHeight) / Math.max(h.scrollHeight, 1) * 100;
+    [25, 50, 75].forEach(function (m) {
+      if (pct >= m && !depthSent[m]) {
+        depthSent[m] = 1;
+        gtag("event", "scroll_depth", { percent_scrolled: m, page: location.pathname, lang: h.lang });
+      }
+    });
+  }, { passive: true });
 })();

@@ -4,9 +4,21 @@ description: How to film a match from start to finish as a panoramic video, with
 image_alt: A frame of ultra-wide footage showing a soccer field from end to end
 ---
 
-When we built panovi, the toughest situation we had in mind was a soccer match. It is outdoors, it is long, the players run all over, and there are no retakes. This post covers how to plan ahead so you can film a whole match from start to finish with the iPhones left on the tripod. The same goes for rugby and other field sports.
+{{video:/img/hero-join-soccer.mp4|/img/hero-join-soccer-poster.jpg|Two iPhones' footage becomes one ultra-wide video (no sound)}}
 
-![A soccer field from end to end](/img/match-wide.jpg "Ultra-wide with both goals in frame. The tripod never moved once")
+{{appstore:top}}
+
+With panovi, you can film a whole soccer match with both goals in frame, **just by setting two iPhones side by side on a tripod**. No one has to pan the camera. Afterward, you can **zoom in** wherever you want to look.
+
+{{box:What you need}}
+- Two iPhones (one can be borrowed from family)
+- A tripod and a mount that holds both iPhones ([how to build it](post:tripod-setup))
+- The panovi app (free to use, with in-app purchases) → [App Store](https://apps.apple.com/app/id6797261654)
+
+![A soccer field from end to end](/img/match-wide.jpg "When you film: get everything in, goal to goal")
+![A moment zoomed in from the same footage](/img/match-zoom.jpg "When you watch: zoom in wherever you like, from the same video")
+
+This guide walks you through filming a match from start to finish with the tripod left in place. The same goes for rugby and other field sports.
 
 ## Where to set up: in line with the halfway line, as high as you can
 
@@ -41,14 +53,12 @@ There is no limit on recording length. What decides how long you can keep going 
 
 After you stop recording, each recorded set appears in your library. With **"Stitch and save all"**, you can stitch them all in order in one go, however many there are, such as the first and second halves. Stitching takes time, so if you get it done in the car or on the train home, you can watch on the big screen as soon as you walk in.
 
-{{appstore}}
+{{appstore:mid}}
 
 ## After the match
 
 - **Zoom in within the app**: double-tap to zoom in, drag to pan left and right. Play away from the ball is all still there in the frame
 - **Share with the team**: use "Export for YouTube" to make it 8K size, and it stays sharp even on a big screen. Set it to unlisted, and only people who have the URL can watch it
-
-![A moment zoomed in from the same footage](/img/match-zoom.jpg "Zoom in wherever you want, all from the same video")
 
 ## Frequently asked questions
 

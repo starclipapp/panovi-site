@@ -4,9 +4,21 @@ description: Como se preparar para filmar um jogo do começo ao fim em vídeo pa
 image_alt: Cena ultra-ampla de um campo de futebol, de ponta a ponta
 ---
 
-Quando criamos o panovi, o cenário mais difícil que imaginamos foi um jogo de futebol. É ao ar livre, é longo, os jogadores correm o tempo todo e não dá para repetir. Neste artigo, mostramos como se preparar para filmar o jogo inteiro sem tirar o tripé do lugar. Vale o mesmo para outros esportes de campo, como o rúgbi.
+{{video:/img/hero-join-soccer.mp4|/img/hero-join-soccer-poster.jpg|As imagens de dois iPhones viram um só vídeo ultra-amplo (sem som)}}
 
-![Um campo de futebol, de ponta a ponta](/img/match-wide.jpg "Ultra-amplo, com as duas traves na imagem. O tripé não saiu do lugar nem uma vez")
+{{appstore:top}}
+
+Com o panovi, você filma um jogo de futebol inteiro, com as duas traves na imagem, **só colocando dois iPhones lado a lado em um tripé**. Ninguém precisa mover a câmera. Depois, você **dá zoom** onde quiser olhar.
+
+{{box:O que você precisa}}
+- Dois iPhones (um pode ser emprestado de alguém da família)
+- Um tripé e um suporte para os dois iPhones ([como montar](post:tripod-setup))
+- O app panovi (grátis para usar, com compras dentro do app) → [App Store](https://apps.apple.com/app/id6797261654)
+
+![Um campo de futebol, de ponta a ponta](/img/match-wide.jpg "Ao filmar: deixe tudo na imagem, de trave a trave")
+![Uma cena com zoom do mesmo vídeo](/img/match-zoom.jpg "Ao assistir: dê zoom onde quiser, no mesmo vídeo")
+
+Este guia mostra como filmar um jogo do começo ao fim com o tripé parado. Vale também para rúgbi e outros esportes de campo.
 
 ## Onde colocar: no prolongamento da linha do meio-campo, o mais alto possível
 
@@ -41,14 +53,12 @@ Não há limite de duração. O que decide se a gravação vai até o fim é a b
 
 Quando você para a gravação, cada par de vídeos aparece na biblioteca. Com **“Unir e salvar todos”**, o app une em sequência quantos houver, como o primeiro e o segundo tempo. A união leva um tempo, então faça isso no carro ou no trem de volta. Ao chegar em casa, já dá para assistir na tela grande.
 
-{{appstore}}
+{{appstore:mid}}
 
 ## Depois de filmar
 
 - **Dê zoom no app**: toque duas vezes para dar zoom e arraste para os lados. Tudo o que acontece longe da bola também fica guardado na imagem
 - **Compartilhe com o time**: em “Exportar para uso no YouTube”, exporte em tamanho 8K para os detalhes continuarem nítidos até em uma tela grande. Se publicar como não listado, só quem tiver o link consegue assistir
-
-![Uma cena com zoom do mesmo vídeo](/img/match-zoom.jpg "Do mesmo vídeo, você dá zoom onde quiser")
 
 ## Perguntas frequentes
 

@@ -108,6 +108,18 @@ a{color:var(--green)}
 .prose li::marker{color:var(--green)}
 .prose figure{margin:1.8em 0}
 .prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose .vid video{display:block;width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#000}
+.prose .vid{margin:1.2em 0 0}
+.getapp{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:18px 0 0}
+.getapp .btn{padding:13px 26px;font-size:15.5px}
+.getapp span{font-size:13.5px;color:var(--dim)}
+.prose .box{margin:1.8em 0;padding:20px 22px;background:var(--ink2);border:1px solid var(--rule);border-radius:12px}
+.prose .box b{display:block;font-size:17px}
+.prose .box ul{margin:.6em 0 0}
+.prose .pair{display:grid;gap:14px;margin:1.8em 0}
+.prose .pair figure{margin:0}
+.prose .pair img{width:100%;aspect-ratio:2/1;object-fit:cover}
+@media(min-width:620px){.prose .pair{grid-template-columns:1fr 1fr}}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}

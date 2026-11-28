@@ -108,6 +108,18 @@ a{color:var(--green)}
 .prose li::marker{color:var(--green)}
 .prose figure{margin:1.8em 0}
 .prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose .vid video{display:block;width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#000}
+.prose .vid{margin:1.2em 0 0}
+.getapp{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:18px 0 0}
+.getapp .btn{padding:13px 26px;font-size:15.5px}
+.getapp span{font-size:13.5px;color:var(--dim)}
+.prose .box{margin:1.8em 0;padding:20px 22px;background:var(--ink2);border:1px solid var(--rule);border-radius:12px}
+.prose .box b{display:block;font-size:17px}
+.prose .box ul{margin:.6em 0 0}
+.prose .pair{display:grid;gap:14px;margin:1.8em 0}
+.prose .pair figure{margin:0}
+.prose .pair img{width:100%;aspect-ratio:2/1;object-fit:cover}
+@media(min-width:620px){.prose .pair{grid-template-columns:1fr 1fr}}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}
@@ -167,8 +179,12 @@ a{color:var(--green)}
   <h1>Filme o jogo de futebol inteiro — onde colocar, controle remoto e bateria</h1>
   
   <div class="prose">
-<p>Quando criamos o panovi, o cenário mais difícil que imaginamos foi um jogo de futebol. É ao ar livre, é longo, os jogadores correm o tempo todo e não dá para repetir. Neste artigo, mostramos como se preparar para filmar o jogo inteiro sem tirar o tripé do lugar. Vale o mesmo para outros esportes de campo, como o rúgbi.</p>
-<figure><img src="/img/match-wide.jpg" alt="Um campo de futebol, de ponta a ponta" loading="lazy"><figcaption>Ultra-amplo, com as duas traves na imagem. O tripé não saiu do lugar nem uma vez</figcaption></figure>
+<figure class="vid"><video src="/img/hero-join-soccer.mp4" poster="/img/hero-join-soccer-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="As imagens de dois iPhones viram um só vídeo ultra-amplo (sem som)"></video><figcaption>As imagens de dois iPhones viram um só vídeo ultra-amplo (sem som)</figcaption></figure>
+<p class="getapp" data-place="top"><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Baixar na App Store</a><span>Grátis para usar, com compras dentro do app.</span></p>
+<p>Com o panovi, você filma um jogo de futebol inteiro, com as duas traves na imagem, <strong>só colocando dois iPhones lado a lado em um tripé</strong>. Ninguém precisa mover a câmera. Depois, você <strong>dá zoom</strong> onde quiser olhar.</p>
+<div class="box" data-place="box"><b>O que você precisa</b><ul><li>Dois iPhones (um pode ser emprestado de alguém da família)</li><li>Um tripé e um suporte para os dois iPhones (<a href="/pt/blog/tripod-setup/">como montar</a>)</li><li>O app panovi (grátis para usar, com compras dentro do app) → <a href="https://apps.apple.com/app/id6797261654" target="_blank" rel="noopener">App Store</a></li></ul></div>
+<div class="pair"><figure><img src="/img/match-wide.jpg" alt="Um campo de futebol, de ponta a ponta" loading="lazy"><figcaption>Ao filmar: deixe tudo na imagem, de trave a trave</figcaption></figure><figure><img src="/img/match-zoom.jpg" alt="Uma cena com zoom do mesmo vídeo" loading="lazy"><figcaption>Ao assistir: dê zoom onde quiser, no mesmo vídeo</figcaption></figure></div>
+<p>Este guia mostra como filmar um jogo do começo ao fim com o tripé parado. Vale também para rúgbi e outros esportes de campo.</p>
 <h2 id="onde-colocar-no-prolongamento-da-linha-do-meio-campo-o-mais-">Onde colocar: no prolongamento da linha do meio-campo, o mais alto possível</h2>
 <ul><li>Monte o tripé <strong>no prolongamento da linha do meio-campo</strong> para pegar as duas traves de forma equilibrada</li><li>Filmar <strong>do lugar mais alto possível</strong> diminui a sobreposição entre os jogadores da frente e os do fundo, e fica mais fácil acompanhar o jogo todo. Se houver arquibancada ou um barranco, aproveite</li><li>A emenda fica no meio da tela, perto do círculo central. Escolha um lugar onde ninguém fique passando bem na frente da câmera, e a emenda sai bonita</li></ul>
 <p>Depois de posicionar, use <strong>“Verificar alinhamento”</strong> para ver a sobreposição e <strong>“Ver 3 segundos de movimento”</strong> para conferir se as duas traves aparecem. Faça isso antes do pontapé inicial.</p>
@@ -182,10 +198,9 @@ a{color:var(--green)}
 <ul><li>Durante a gravação, use a <strong>economia de energia</strong> para apagar a tela e a bateria render mais. O indicador de gravação e o tempo decorrido continuam grandes na tela</li><li>Em jogos longos, é bom deixar uma bateria externa ligada em cada iPhone</li><li>Cada lado grava em 4K, então até um jogo só ocupa bastante espaço. Na véspera, confira o espaço livre em <strong>“Vídeos neste iPhone”</strong> e apague os vídeos de que não precisa. Se faltar espaço, o app mostra quanto é preciso, mais ou menos</li></ul>
 <h2 id="una-o-primeiro-e-o-segundo-tempo-de-uma-vez">Una o primeiro e o segundo tempo de uma vez</h2>
 <p>Quando você para a gravação, cada par de vídeos aparece na biblioteca. Com <strong>“Unir e salvar todos”</strong>, o app une em sequência quantos houver, como o primeiro e o segundo tempo. A união leva um tempo, então faça isso no carro ou no trem de volta. Ao chegar em casa, já dá para assistir na tela grande.</p>
-<aside class="cta"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>Experimente o panovi</b><p>Grátis para usar, com compras dentro do app.</p></div><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Baixar na App Store</a></aside>
+<aside class="cta" data-place="mid"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>Experimente o panovi</b><p>Grátis para usar, com compras dentro do app.</p></div><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Baixar na App Store</a></aside>
 <h2 id="depois-de-filmar">Depois de filmar</h2>
 <ul><li><strong>Dê zoom no app</strong>: toque duas vezes para dar zoom e arraste para os lados. Tudo o que acontece longe da bola também fica guardado na imagem</li><li><strong>Compartilhe com o time</strong>: em “Exportar para uso no YouTube”, exporte em tamanho 8K para os detalhes continuarem nítidos até em uma tela grande. Se publicar como não listado, só quem tiver o link consegue assistir</li></ul>
-<figure><img src="/img/match-zoom.jpg" alt="Uma cena com zoom do mesmo vídeo" loading="lazy"><figcaption>Do mesmo vídeo, você dá zoom onde quiser</figcaption></figure>
 <h2 id="perguntas-frequentes">Perguntas frequentes</h2>
 <h3 id="dá-para-filmar-um-jogo-de-futebol-inteiro-sem-cinegrafista">Dá para filmar um jogo de futebol inteiro sem cinegrafista?</h3>
 <p>Dá. Coloque dois iPhones lado a lado em um tripé e você grava do pontapé inicial ao apito final em um só vídeo, com as duas traves na imagem. Ninguém precisa mover a câmera, então quem está gravando também pode assistir ao jogo e torcer.</p>

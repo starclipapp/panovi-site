@@ -4,9 +4,21 @@ description: Cómo preparar todo para grabar un partido entero en video panorám
 image_alt: Una escena ultrapanorámica con la cancha de fútbol completa, de extremo a extremo
 ---
 
-Cuando creamos panovi, el caso más exigente que teníamos en mente era un partido de fútbol. Es al aire libre, dura mucho, los jugadores se mueven por todos lados y no se puede repetir. En este artículo te contamos cómo prepararte para grabar un partido completo con el trípode fijo. Lo mismo sirve para el rugby y otros deportes de campo.
+{{video:/img/hero-join-soccer.mp4|/img/hero-join-soccer-poster.jpg|Las imágenes de dos iPhone se convierten en un solo video ultrapanorámico (sin sonido)}}
 
-![La cancha de fútbol de extremo a extremo](/img/match-wide.jpg "Un ultrapanorámico con las dos porterías. El trípode no se movió ni una vez")
+{{appstore:top}}
+
+Con panovi, grabas un partido de fútbol entero, con las dos porterías en la imagen, **solo poniendo dos iPhone uno al lado del otro en un trípode**. Nadie tiene que mover la cámara. Después, puedes **acercarte** a lo que quieras ver.
+
+{{box:Qué necesitas}}
+- Dos iPhone (uno puede ser prestado por alguien de la familia)
+- Un trípode y un soporte para los dos iPhone ([cómo armarlo](post:tripod-setup))
+- La app panovi (gratis, con compras dentro de la app) → [App Store](https://apps.apple.com/app/id6797261654)
+
+![La cancha de fútbol de extremo a extremo](/img/match-wide.jpg "Al grabar: deja todo en la imagen, de portería a portería")
+![Una escena acercada del mismo video](/img/match-zoom.jpg "Al verlo: acércate a lo que quieras, en el mismo video")
+
+Esta guía muestra cómo grabar un partido de principio a fin con el trípode fijo. Sirve también para rugby y otros deportes de campo.
 
 ## Ubicación: en la prolongación de la línea de medio campo, lo más alto posible
 
@@ -41,14 +53,12 @@ No hay límite de duración. Lo que decide cuánto puedes grabar es la batería 
 
 Cuando detienes la grabación, cada grabación aparece en la biblioteca. Con **“Unir y guardar todos”** se unen en orden, de una vez, todas las que haya, como el primer y el segundo tiempo. La unión toma tiempo, así que si la haces en el auto o en el tren de regreso, al llegar a casa ya puedes verlo en la pantalla grande.
 
-{{appstore}}
+{{appstore:mid}}
 
 ## Después de grabar
 
 - **Acércate en la app**: toca dos veces para acercarte y arrastra para moverte a los lados. Todo lo que pasa lejos del balón también queda en la imagen
 - **Compártelo con el equipo**: con “Exportar para YouTube” en tamaño 8K, se ve el detalle incluso en una pantalla grande. Si lo publicas como no listado, solo lo ven quienes tienen la URL
-
-![Una escena acercada del mismo video](/img/match-zoom.jpg "Del mismo video, puedes acercarte a lo que quieras ver")
 
 ## Preguntas frecuentes
 

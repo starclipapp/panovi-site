@@ -108,6 +108,18 @@ a{color:var(--green)}
 .prose li::marker{color:var(--green)}
 .prose figure{margin:1.8em 0}
 .prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose .vid video{display:block;width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#000}
+.prose .vid{margin:1.2em 0 0}
+.getapp{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:18px 0 0}
+.getapp .btn{padding:13px 26px;font-size:15.5px}
+.getapp span{font-size:13.5px;color:var(--dim)}
+.prose .box{margin:1.8em 0;padding:20px 22px;background:var(--ink2);border:1px solid var(--rule);border-radius:12px}
+.prose .box b{display:block;font-size:17px}
+.prose .box ul{margin:.6em 0 0}
+.prose .pair{display:grid;gap:14px;margin:1.8em 0}
+.prose .pair figure{margin:0}
+.prose .pair img{width:100%;aspect-ratio:2/1;object-fit:cover}
+@media(min-width:620px){.prose .pair{grid-template-columns:1fr 1fr}}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}
@@ -167,8 +179,12 @@ a{color:var(--green)}
   <h1>Graba el partido de fútbol completo — ubicación, control remoto y batería</h1>
   
   <div class="prose">
-<p>Cuando creamos panovi, el caso más exigente que teníamos en mente era un partido de fútbol. Es al aire libre, dura mucho, los jugadores se mueven por todos lados y no se puede repetir. En este artículo te contamos cómo prepararte para grabar un partido completo con el trípode fijo. Lo mismo sirve para el rugby y otros deportes de campo.</p>
-<figure><img src="/img/match-wide.jpg" alt="La cancha de fútbol de extremo a extremo" loading="lazy"><figcaption>Un ultrapanorámico con las dos porterías. El trípode no se movió ni una vez</figcaption></figure>
+<figure class="vid"><video src="/img/hero-join-soccer.mp4" poster="/img/hero-join-soccer-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Las imágenes de dos iPhone se convierten en un solo video ultrapanorámico (sin sonido)"></video><figcaption>Las imágenes de dos iPhone se convierten en un solo video ultrapanorámico (sin sonido)</figcaption></figure>
+<p class="getapp" data-place="top"><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Descargar en la App Store</a><span>Gratis, con compras dentro de la app.</span></p>
+<p>Con panovi, grabas un partido de fútbol entero, con las dos porterías en la imagen, <strong>solo poniendo dos iPhone uno al lado del otro en un trípode</strong>. Nadie tiene que mover la cámara. Después, puedes <strong>acercarte</strong> a lo que quieras ver.</p>
+<div class="box" data-place="box"><b>Qué necesitas</b><ul><li>Dos iPhone (uno puede ser prestado por alguien de la familia)</li><li>Un trípode y un soporte para los dos iPhone (<a href="/es/blog/tripod-setup/">cómo armarlo</a>)</li><li>La app panovi (gratis, con compras dentro de la app) → <a href="https://apps.apple.com/app/id6797261654" target="_blank" rel="noopener">App Store</a></li></ul></div>
+<div class="pair"><figure><img src="/img/match-wide.jpg" alt="La cancha de fútbol de extremo a extremo" loading="lazy"><figcaption>Al grabar: deja todo en la imagen, de portería a portería</figcaption></figure><figure><img src="/img/match-zoom.jpg" alt="Una escena acercada del mismo video" loading="lazy"><figcaption>Al verlo: acércate a lo que quieras, en el mismo video</figcaption></figure></div>
+<p>Esta guía muestra cómo grabar un partido de principio a fin con el trípode fijo. Sirve también para rugby y otros deportes de campo.</p>
 <h2 id="ubicación-en-la-prolongación-de-la-línea-de-medio-campo-lo-m">Ubicación: en la prolongación de la línea de medio campo, lo más alto posible</h2>
 <ul><li>Si pones el trípode <strong>en la prolongación de la línea de medio campo</strong>, las dos porterías quedan dentro de forma equilibrada</li><li>Si grabas <strong>desde lo más alto posible</strong>, los jugadores de adelante tapan menos a los de atrás y se ve mejor el movimiento de todo el equipo. Si hay gradas o un terraplén, aprovéchalos</li><li>La unión queda en el centro de la imagen, cerca del círculo central. Elige un lugar donde sea difícil que alguien pase justo enfrente, y la unión se verá limpia</li></ul>
 <p>Cuando esté colocado, revisa la superposición con <strong>“Verificar alineación”</strong> y comprueba con <strong>“Ver 3 segundos de movimiento”</strong> que entren las dos porterías. Hazlo antes del saque inicial.</p>
@@ -182,10 +198,9 @@ a{color:var(--green)}
 <ul><li>Mientras grabas, usa el <strong>ahorro de energía</strong> para apagar la pantalla y que la batería rinda más. El indicador de grabación y el tiempo transcurrido siguen viéndose en grande</li><li>Para un partido largo, conviene tener los dos iPhone conectados a una batería externa</li><li>Cada lado se graba en 4K, así que incluso un solo partido necesita bastante espacio libre. El día anterior, revisa el espacio en <strong>“Videos en este iPhone”</strong> y borra los videos que no necesites. Si no alcanza, la app te dice cuánto espacio hace falta más o menos</li></ul>
 <h2 id="une-el-primer-y-el-segundo-tiempo-de-una-vez">Une el primer y el segundo tiempo de una vez</h2>
 <p>Cuando detienes la grabación, cada grabación aparece en la biblioteca. Con <strong>“Unir y guardar todos”</strong> se unen en orden, de una vez, todas las que haya, como el primer y el segundo tiempo. La unión toma tiempo, así que si la haces en el auto o en el tren de regreso, al llegar a casa ya puedes verlo en la pantalla grande.</p>
-<aside class="cta"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>Prueba panovi</b><p>Gratis, con compras dentro de la app.</p></div><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Descargar en la App Store</a></aside>
+<aside class="cta" data-place="mid"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>Prueba panovi</b><p>Gratis, con compras dentro de la app.</p></div><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Descargar en la App Store</a></aside>
 <h2 id="después-de-grabar">Después de grabar</h2>
 <ul><li><strong>Acércate en la app</strong>: toca dos veces para acercarte y arrastra para moverte a los lados. Todo lo que pasa lejos del balón también queda en la imagen</li><li><strong>Compártelo con el equipo</strong>: con “Exportar para YouTube” en tamaño 8K, se ve el detalle incluso en una pantalla grande. Si lo publicas como no listado, solo lo ven quienes tienen la URL</li></ul>
-<figure><img src="/img/match-zoom.jpg" alt="Una escena acercada del mismo video" loading="lazy"><figcaption>Del mismo video, puedes acercarte a lo que quieras ver</figcaption></figure>
 <h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>
 <h3 id="puedo-grabar-un-partido-de-fútbol-completo-sin-un-camarógraf">¿Puedo grabar un partido de fútbol completo sin un camarógrafo?</h3>
 <p>Sí. Si pones dos iPhone uno al lado del otro en un trípode, grabas desde el saque inicial hasta el final del partido en un solo video con las dos porterías. Nadie tiene que mover la cámara, así que quien graba también puede concentrarse en ver el partido y alentar.</p>

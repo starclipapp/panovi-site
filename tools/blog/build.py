@@ -356,9 +356,10 @@ def inline(s, ctx):
     return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, s)
 
 
-def cta(lang, slug):
+def cta(lang, slug, place=""):
     u = UI[lang]
-    return (f'<aside class="cta"><img src="/img/icon.png" alt="" width="56" height="56">'
+    dp = f' data-place="{esc(place)}"' if place else ""
+    return (f'<aside class="cta"{dp}><img src="/img/icon.png" alt="" width="56" height="56">'
             f'<div><b>{esc(u["cta_h"])}</b><p>{esc(u["cta_p"])}</p></div>'
             f'<a class="btn btn-fill" href="{appstore(lang)}" data-appstore="{esc(slug)}">{esc(u["cta_btn"])}</a></aside>')
 
@@ -373,6 +374,38 @@ def render_body(md, ctx):
         n_out = len(out)
         if b.strip() == "{{appstore}}":
             out.append(cta(ctx.lang, ctx.slug))
+        elif b.strip() == "{{appstore:mid}}":
+            # 本文のとちゅうの枠。GA の placement は mid（記事の終わりの枠は cta のまま）
+            out.append(cta(ctx.lang, ctx.slug, "mid"))
+        elif b.strip() == "{{appstore:top}}":
+            # 題のすぐ下の小さなボタン。GA の placement は top
+            u = UI[ctx.lang]
+            out.append(f'<p class="getapp" data-place="top"><a class="btn btn-fill" href="{appstore(ctx.lang)}" '
+                       f'data-appstore="{esc(ctx.slug)}">{esc(u["cta_btn"])}</a><span>{esc(u["cta_p"])}</span></p>')
+        elif m := re.fullmatch(r"\{\{video:([^|}]+)\|([^|}]+)\|([^}]+)\}\}", b.strip()):
+            # 音なし・くり返しの短い動画（{{video:動画|ポスター画像|説明}}）
+            src, poster, cap = (x.strip() for x in m.groups())
+            for x in (src, poster):
+                if not (SITE_ROOT / x.lstrip("/")).is_file():
+                    fail(f"{ctx.slug}/{ctx.lang}: 動画・画像が無い: {x}")
+            out.append(f'<figure class="vid"><video src="{esc(src)}" poster="{esc(poster)}" autoplay muted loop playsinline '
+                       f'preload="metadata" aria-label="{esc(cap)}"></video><figcaption>{inline(cap, ctx)}</figcaption></figure>')
+        elif m := re.fullmatch(r"\{\{box:([^}]+)\}\}", first.strip()):
+            # 小さな箱（{{box:見出し}} のあとに箇条書き）
+            if not all(ln.startswith("- ") for ln in lines[1:]) or len(lines) < 2:
+                fail(f"{ctx.slug}/{ctx.lang}: {{{{box:…}}}} のあとは箇条書きにする")
+            items = "".join(f"<li>{inline(ln[2:], ctx)}</li>" for ln in lines[1:])
+            out.append(f'<div class="box" data-place="box"><b>{inline(m.group(1), ctx)}</b><ul>{items}</ul></div>')
+        elif len(lines) == 2 and all(re.fullmatch(r'!\[[^\]]*\]\([^)\s]+(?:\s+"[^"]*")?\)', ln.strip()) for ln in lines):
+            # 2枚を並べる（同じ段落に画像を2行）
+            figs = ""
+            for ln in lines:
+                alt, src, cap = re.fullmatch(r'!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)', ln.strip()).groups()
+                if not (SITE_ROOT / src.lstrip("/")).is_file():
+                    fail(f"{ctx.slug}/{ctx.lang}: 画像が無い: {src}")
+                figs += (f'<figure><img src="{esc(src)}" alt="{esc(alt)}" loading="lazy">'
+                         + (f"<figcaption>{inline(cap, ctx)}</figcaption>" if cap else "") + "</figure>")
+            out.append(f'<div class="pair">{figs}</div>')
         elif first.startswith("### "):
             out.append(f'<h3 id="{anchor(first[4:], ctx.ids)}">{inline(first[4:], ctx)}</h3>')
             if ctx.in_faq:
@@ -500,6 +533,18 @@ a{color:var(--green)}
 .prose li::marker{color:var(--green)}
 .prose figure{margin:1.8em 0}
 .prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose .vid video{display:block;width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#000}
+.prose .vid{margin:1.2em 0 0}
+.getapp{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:18px 0 0}
+.getapp .btn{padding:13px 26px;font-size:15.5px}
+.getapp span{font-size:13.5px;color:var(--dim)}
+.prose .box{margin:1.8em 0;padding:20px 22px;background:var(--ink2);border:1px solid var(--rule);border-radius:12px}
+.prose .box b{display:block;font-size:17px}
+.prose .box ul{margin:.6em 0 0}
+.prose .pair{display:grid;gap:14px;margin:1.8em 0}
+.prose .pair figure{margin:0}
+.prose .pair img{width:100%;aspect-ratio:2/1;object-fit:cover}
+@media(min-width:620px){.prose .pair{grid-template-columns:1fr 1fr}}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}

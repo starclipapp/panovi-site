@@ -108,6 +108,18 @@ a{color:var(--green)}
 .prose li::marker{color:var(--green)}
 .prose figure{margin:1.8em 0}
 .prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose .vid video{display:block;width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#000}
+.prose .vid{margin:1.2em 0 0}
+.getapp{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:18px 0 0}
+.getapp .btn{padding:13px 26px;font-size:15.5px}
+.getapp span{font-size:13.5px;color:var(--dim)}
+.prose .box{margin:1.8em 0;padding:20px 22px;background:var(--ink2);border:1px solid var(--rule);border-radius:12px}
+.prose .box b{display:block;font-size:17px}
+.prose .box ul{margin:.6em 0 0}
+.prose .pair{display:grid;gap:14px;margin:1.8em 0}
+.prose .pair figure{margin:0}
+.prose .pair img{width:100%;aspect-ratio:2/1;object-fit:cover}
+@media(min-width:620px){.prose .pair{grid-template-columns:1fr 1fr}}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}
@@ -167,8 +179,12 @@ a{color:var(--green)}
   <h1>少年サッカーの試合を三脚でまるごと撮る — 置き場所・リモコン・電池の段取り</h1>
   
   <div class="prose">
-<p>panovi（パノビ）を作るとき、いちばん厳しい場面として想定したのがサッカーの試合です。屋外で、長くて、選手は動き回り、撮り直しはできません。この記事では、三脚に置きっぱなしで、ピッチ全体を取りこぼさずに試合を最後まで撮るための段取りを紹介します。ラグビーなど、ほかのフィールドスポーツでも同じです。</p>
-<figure><img src="/img/match-wide.jpg" alt="サッカーのグラウンドを端から端まで" loading="lazy"><figcaption>両ゴールまで入れた超ワイド。三脚は一度も動かしていません</figcaption></figure>
+<figure class="vid"><video src="/img/hero-join-soccer.mp4" poster="/img/hero-join-soccer-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="2台のiPhoneの映像が、1本の横長の動画になります（無音）"></video><figcaption>2台のiPhoneの映像が、1本の横長の動画になります（無音）</figcaption></figure>
+<p class="getapp" data-place="top"><a class="btn btn-fill" href="https://apps.apple.com/jp/app/id6797261654" data-appstore="whole-match">App Store で入手</a><span>基本無料で使えます（アプリ内課金あり）。</span></p>
+<p>panovi（パノビ）なら、サッカーの試合は<strong>iPhone 2台を三脚に並べて置くだけ</strong>で、両ゴールまで入れて最後まで撮れます。カメラを振る人はいりません。撮ったあとは、見たいところへ<strong>寄って</strong>見られます。</p>
+<div class="box" data-place="box"><b>いるもの</b><ul><li>iPhone 2台（1台は家族のiPhoneを借りてもOK）</li><li>三脚1本と、2台を並べる金具（<a href="/blog/tripod-setup/">組み方</a>）</li><li>アプリ panovi（基本無料・アプリ内課金あり）→ <a href="https://apps.apple.com/jp/app/id6797261654" target="_blank" rel="noopener">App Store</a></li></ul></div>
+<div class="pair"><figure><img src="/img/match-wide.jpg" alt="サッカーのグラウンドを端から端まで" loading="lazy"><figcaption>撮るとき：両ゴールまで、全部入れておく</figcaption></figure><figure><img src="/img/match-zoom.jpg" alt="同じ映像から寄った一場面" loading="lazy"><figcaption>見るとき：同じ1本から、見たいところへ寄る</figcaption></figure></div>
+<p>この記事では、三脚に置きっぱなしで試合を最後まで撮るための段取りを紹介します。ラグビーなど、ほかのフィールドスポーツでも同じです。</p>
 <h2 id="置き場所-ハーフウェーラインの延長-なるべく高く">置き場所：ハーフウェーラインの延長、なるべく高く</h2>
 <ul><li><strong>ハーフウェーラインの延長上</strong>に三脚を立てると、左右のゴールまでがバランスよく入ります</li><li><strong>なるべく高い場所</strong>から撮ると、手前の選手と奥の選手の重なりが減り、全体の動きが見やすくなります。スタンドや土手があれば使いましょう</li><li>つなぎ目は画面の真ん中、センターサークルのあたりにきます。目の前を人が横切りにくい場所を選ぶと、つなぎ目がきれいです</li></ul>
 <p>置いたら<strong>「配置を確認」</strong>で重なりを見て、<strong>「3秒で動きを確認」</strong>で両ゴールが入っているかを確かめます。キックオフの前に済ませておきましょう。</p>
@@ -182,10 +198,9 @@ a{color:var(--green)}
 <ul><li>録画中は<strong>省エネ</strong>で画面を消しておくと、電池の減りを抑えられます。録画中の印と経過時間は大きく出たままです</li><li>長い試合なら、2台ともモバイルバッテリーをつないでおくと安心です</li><li>左右それぞれを4Kで記録するので、試合1本でもまとまった空き容量が要ります。前日に<strong>「この端末の動画」</strong>で空き容量を見て、いらない動画を片付けておきましょう。足りないときはアプリが必要な目安を教えてくれます</li></ul>
 <h2 id="前半と後半をまとめてつなぐ">前半と後半をまとめてつなぐ</h2>
 <p>録画を止めたあと、撮った組はライブラリに並びます。<strong>「すべて結合して保存」</strong>を使えば、前半・後半など何本あっても順番にまとめてつなげます。結合は時間がかかるので、帰りの車や電車の中で済ませておくと、家に着いたらすぐ大画面で見られます。</p>
-<aside class="cta"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>panovi を試してみる</b><p>基本無料で使えます（アプリ内課金あり）。</p></div><a class="btn btn-fill" href="https://apps.apple.com/jp/app/id6797261654" data-appstore="whole-match">App Store で入手</a></aside>
+<aside class="cta" data-place="mid"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>panovi を試してみる</b><p>基本無料で使えます（アプリ内課金あり）。</p></div><a class="btn btn-fill" href="https://apps.apple.com/jp/app/id6797261654" data-appstore="whole-match">App Store で入手</a></aside>
 <h2 id="撮ったあとは">撮ったあとは</h2>
 <ul><li><strong>アプリで寄って見る</strong>：ダブルタップで拡大、ドラッグで左右へ。ボールのない所の動きも、全部画面の中に残っています</li><li><strong>チームで共有する</strong>：「YouTube 用に書き出し」で8Kサイズにすれば、大画面でも細かさが残ります。限定公開にしておけば、URLを知っている人だけで見られます</li></ul>
-<figure><img src="/img/match-zoom.jpg" alt="同じ映像から寄った一場面" loading="lazy"><figcaption>同じ1本から、見たいところへ寄れます</figcaption></figure>
 <h2 id="よくある質問">よくある質問</h2>
 <h3 id="サッカーの試合全体を-カメラマンなしで撮れますか">サッカーの試合全体を、カメラマンなしで撮れますか？</h3>
 <p>撮れます。三脚に2台のiPhoneを並べて置けば、両ゴールまで入った1本の映像で、キックオフから試合終了まで撮れます。カメラを振る人はいらないので、撮る人も観戦や応援に集中できます。</p>

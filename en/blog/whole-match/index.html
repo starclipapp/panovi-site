@@ -108,6 +108,18 @@ a{color:var(--green)}
 .prose li::marker{color:var(--green)}
 .prose figure{margin:1.8em 0}
 .prose figure img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.prose .vid video{display:block;width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#000}
+.prose .vid{margin:1.2em 0 0}
+.getapp{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:18px 0 0}
+.getapp .btn{padding:13px 26px;font-size:15.5px}
+.getapp span{font-size:13.5px;color:var(--dim)}
+.prose .box{margin:1.8em 0;padding:20px 22px;background:var(--ink2);border:1px solid var(--rule);border-radius:12px}
+.prose .box b{display:block;font-size:17px}
+.prose .box ul{margin:.6em 0 0}
+.prose .pair{display:grid;gap:14px;margin:1.8em 0}
+.prose .pair figure{margin:0}
+.prose .pair img{width:100%;aspect-ratio:2/1;object-fit:cover}
+@media(min-width:620px){.prose .pair{grid-template-columns:1fr 1fr}}
 .prose figcaption{margin-top:9px;font-size:13px;color:var(--dim)}
 .prose code{font-size:.9em;background:rgba(244,243,238,.08);padding:1px 6px;border-radius:4px}
 .tbl{overflow-x:auto}
@@ -167,8 +179,12 @@ a{color:var(--green)}
   <h1>Film a whole soccer match — where to set up, the remote and the battery</h1>
   
   <div class="prose">
-<p>When we built panovi, the toughest situation we had in mind was a soccer match. It is outdoors, it is long, the players run all over, and there are no retakes. This post covers how to plan ahead so you can film a whole match from start to finish with the iPhones left on the tripod. The same goes for rugby and other field sports.</p>
-<figure><img src="/img/match-wide.jpg" alt="A soccer field from end to end" loading="lazy"><figcaption>Ultra-wide with both goals in frame. The tripod never moved once</figcaption></figure>
+<figure class="vid"><video src="/img/hero-join-soccer.mp4" poster="/img/hero-join-soccer-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Two iPhones&#x27; footage becomes one ultra-wide video (no sound)"></video><figcaption>Two iPhones&#x27; footage becomes one ultra-wide video (no sound)</figcaption></figure>
+<p class="getapp" data-place="top"><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Get it on the App Store</a><span>Free to use, with in-app purchases.</span></p>
+<p>With panovi, you can film a whole soccer match with both goals in frame, <strong>just by setting two iPhones side by side on a tripod</strong>. No one has to pan the camera. Afterward, you can <strong>zoom in</strong> wherever you want to look.</p>
+<div class="box" data-place="box"><b>What you need</b><ul><li>Two iPhones (one can be borrowed from family)</li><li>A tripod and a mount that holds both iPhones (<a href="/en/blog/tripod-setup/">how to build it</a>)</li><li>The panovi app (free to use, with in-app purchases) → <a href="https://apps.apple.com/app/id6797261654" target="_blank" rel="noopener">App Store</a></li></ul></div>
+<div class="pair"><figure><img src="/img/match-wide.jpg" alt="A soccer field from end to end" loading="lazy"><figcaption>When you film: get everything in, goal to goal</figcaption></figure><figure><img src="/img/match-zoom.jpg" alt="A moment zoomed in from the same footage" loading="lazy"><figcaption>When you watch: zoom in wherever you like, from the same video</figcaption></figure></div>
+<p>This guide walks you through filming a match from start to finish with the tripod left in place. The same goes for rugby and other field sports.</p>
 <h2 id="where-to-set-up-in-line-with-the-halfway-line-as-high-as-you">Where to set up: in line with the halfway line, as high as you can</h2>
 <ul><li>Set the tripod up <strong>in line with the halfway line</strong> and both goals fit into the frame evenly</li><li>Filming from <strong>as high a spot as you can</strong> means players in front overlap less with players behind them, so the whole flow of play is easier to follow. If there are stands or a bank, use them</li><li>The seam sits in the middle of the frame, around the center circle. Pick a spot where people are unlikely to walk right in front of the camera, and the seam stays clean</li></ul>
 <p>Once set up, use <strong>&quot;Check the setup&quot;</strong> to check the overlap, and <strong>&quot;Preview 3 seconds of motion&quot;</strong> to make sure both goals are in frame. Get this done before kickoff.</p>
@@ -182,10 +198,9 @@ a{color:var(--green)}
 <ul><li>While recording, use <strong>power save</strong> to turn the screen off and save battery. The recording indicator and elapsed time stay large on screen</li><li>For a long match, plugging a portable battery into each of the two iPhones gives you peace of mind</li><li>Each side records in 4K, so even one match needs a good amount of free space. The day before, check your free space in <strong>&quot;Videos on This Device&quot;</strong> and clear out videos you don&#x27;t need. If there isn&#x27;t enough, the app tells you roughly how much you need</li></ul>
 <h2 id="stitch-the-first-and-second-halves-together">Stitch the first and second halves together</h2>
 <p>After you stop recording, each recorded set appears in your library. With <strong>&quot;Stitch and save all&quot;</strong>, you can stitch them all in order in one go, however many there are, such as the first and second halves. Stitching takes time, so if you get it done in the car or on the train home, you can watch on the big screen as soon as you walk in.</p>
-<aside class="cta"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>Try panovi</b><p>Free to use, with in-app purchases.</p></div><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Get it on the App Store</a></aside>
+<aside class="cta" data-place="mid"><img src="/img/icon.png" alt="" width="56" height="56"><div><b>Try panovi</b><p>Free to use, with in-app purchases.</p></div><a class="btn btn-fill" href="https://apps.apple.com/app/id6797261654" data-appstore="whole-match">Get it on the App Store</a></aside>
 <h2 id="after-the-match">After the match</h2>
 <ul><li><strong>Zoom in within the app</strong>: double-tap to zoom in, drag to pan left and right. Play away from the ball is all still there in the frame</li><li><strong>Share with the team</strong>: use &quot;Export for YouTube&quot; to make it 8K size, and it stays sharp even on a big screen. Set it to unlisted, and only people who have the URL can watch it</li></ul>
-<figure><img src="/img/match-zoom.jpg" alt="A moment zoomed in from the same footage" loading="lazy"><figcaption>Zoom in wherever you want, all from the same video</figcaption></figure>
 <h2 id="frequently-asked-questions">Frequently asked questions</h2>
 <h3 id="can-i-film-a-whole-soccer-match-without-a-camera-operator">Can I film a whole soccer match without a camera operator?</h3>
 <p>Yes. Set two iPhones side by side on a tripod, and you can film from kickoff to the final whistle in one video with both goals in frame. No one has to pan the camera, so whoever is filming can focus on watching and cheering too.</p>
