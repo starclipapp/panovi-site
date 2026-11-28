@@ -1,0 +1,4 @@
+date: 2026-12-06
+category: everyday
+image: /img/ultrawide-190-angles.jpg
+langs: ja

@@ -1,0 +1,4 @@
+date: 2026-12-01
+category: sports
+image: /img/tripod_parts.jpg
+langs: ja
