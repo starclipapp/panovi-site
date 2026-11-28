@@ -86,7 +86,7 @@
   // 全ページのリンクをここ1か所で数える。GA を読み込んでいない人（同意していない人）からは送らない。
   //   page: ページのパス（/ や /en/blog/first-video/）
   //   placement: 押した場所。nav（上の帯）・cta（記事の終わりの枠）・footer・それ以外は節の id か class（top・price・end など）
-  //     data-place のある所の中なら、その値（記事の題の下 top・本文のとちゅうの枠 mid・「いるもの」の箱 box）
+  //     data-place のある所の中なら、その値（記事の題の下 top・本文のとちゅうの枠 mid・「いるもの」の箱 box・借りてOK のあと borrow など、記事の {{appstore:名前}}）
   //   post: ブログ記事の slug（記事の中の枠のときだけ。data-appstore の値）
   //   lang: ページの言語
   function where(a) {

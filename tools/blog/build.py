@@ -382,6 +382,9 @@ def render_body(md, ctx):
             u = UI[ctx.lang]
             out.append(f'<p class="getapp" data-place="top"><a class="btn btn-fill" href="{appstore(ctx.lang)}" '
                        f'data-appstore="{esc(ctx.slug)}">{esc(u["cta_btn"])}</a><span>{esc(u["cta_p"])}</span></p>')
+        elif m := re.fullmatch(r"\{\{appstore:([a-z0-9-]+)\}\}", b.strip()):
+            # ほかの場所の枠（{{appstore:borrow}} など）。GA の placement はその名前
+            out.append(cta(ctx.lang, ctx.slug, m.group(1)))
         elif m := re.fullmatch(r"\{\{video:([^|}]+)\|([^|}]+)\|([^}]+)\}\}", b.strip()):
             # 音なし・くり返しの短い動画（{{video:動画|ポスター画像|説明}}）
             src, poster, cap = (x.strip() for x in m.groups())
