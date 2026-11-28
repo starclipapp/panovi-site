@@ -68,7 +68,7 @@ It works when both iPhones have an Ultra Wide camera. If one doesn’t, both rec
 
 ### Does it change the price or how long I can record?
 
-No. Recording is free for any length, and stitching videos under 3 minutes is always free with no limit.
+No. Pricing and recording time are the same as with the usual two-iPhone setup. panovi is free to use, with in-app purchases.
 
 ## Read next
 

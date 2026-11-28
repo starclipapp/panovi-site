@@ -102,7 +102,7 @@ Quando parar a gravação, toque em **“Unir gravações”** para juntar tudo 
 
 Na hora de assistir, **toque duas vezes para ampliar e arraste para os lados**. O palco inteiro e o rosto do seu filho, tudo no mesmo vídeo.
 
-Uniões de menos de 3 minutos são sempre grátis. **Uniões de 3 minutos ou mais**, como uma apresentação, podem ser testadas 3 vezes de graça; depois, você escolhe entre o **passe de evento (24 horas)** e a **compra única**. Nada é cobrado sem você decidir: antes de usar uma vez grátis, a tela pergunta, e ela só conta quando o vídeo é salvo com sucesso. Não é assinatura. Veja os detalhes em [preços](home:#price).
+O panovi é grátis para usar, com compras dentro do app. Veja os detalhes na [App Store](https://apps.apple.com/app/id6797261654).
 
 ## Perguntas frequentes
 

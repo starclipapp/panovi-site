@@ -12,7 +12,7 @@ Paisagens que não cabem em um iPhone só cabem inteiras, de ponta a ponta, em u
 
 Uma paisagem parada dá para registrar com a foto panorâmica. Se é para gravar em vídeo, **inclua algo em movimento**: nuvens passando, ondas chegando, um trem correndo, pessoas indo e vindo. Quando você assistir de novo, a sensação de estar lá muda completamente.
 
-Gravar de 20 a 30 segundos em cada lugar já basta. **Uniões de menos de 3 minutos são sempre grátis, sem limite**, então você pode fazer quantos vídeos quiser dos pequenos momentos da viagem.
+Gravar de 20 a 30 segundos em cada lugar já basta, e você pode fazer quantos vídeos curtos da viagem quiser. O panovi é grátis para usar, com compras dentro do app.
 
 ## 2. Deixe o tripé nivelado
 

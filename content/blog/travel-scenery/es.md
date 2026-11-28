@@ -12,7 +12,7 @@ Hay paisajes que no caben en un solo iPhone. Con panovi caben de extremo a extre
 
 Un paisaje quieto también se puede capturar con una foto panorámica. Si vas a grabar video, **incluye algo que se mueva**: nubes que pasan, olas que llegan, un tren en marcha, gente que va y viene. Al volver a verlo, la sensación de estar ahí es otra cosa.
 
-Con unos 20 a 30 segundos por lugar es suficiente. **Las uniones de menos de 3 minutos son siempre gratis y sin límite**, así que para pequeños recuerdos de viaje puedes hacer todos los videos que quieras sin preocuparte.
+Con unos 20 a 30 segundos por lugar es suficiente, y puedes hacer todos los videos cortos de viaje que quieras. panovi es gratis, con compras dentro de la app.
 
 ## 2. Nivela el trípode
 

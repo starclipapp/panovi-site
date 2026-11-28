@@ -68,7 +68,7 @@ Funciona quando os dois iPhones têm câmera ultra-angular. Se um deles não tiv
 
 ### Muda o preço ou o tempo de gravação?
 
-Não. Gravar é grátis por qualquer tempo, e unir vídeos de menos de 3 minutos é sempre grátis e sem limite.
+Não. O preço e o tempo de gravação são os mesmos do jeito normal com dois iPhones. O panovi é grátis para usar, com compras dentro do app.
 
 ## Leia também
 

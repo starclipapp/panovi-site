@@ -1,6 +1,6 @@
 ---
 title: Film a whole soccer match — where to set up, the remote and the battery
-description: How to film a match from start to finish as a panoramic video, with both goals in frame, without touching the tripod. Where to set up, a third iPhone as a remote, power save, free space, and pricing for long stitches.
+description: How to film a match from start to finish as a panoramic video, with both goals in frame, without touching the tripod. Where to set up, a third iPhone as a remote, power save and free space.
 image_alt: A frame of ultra-wide footage showing a soccer field from end to end
 ---
 
@@ -41,14 +41,7 @@ There is no limit on recording length. What decides how long you can keep going 
 
 After you stop recording, each recorded set appears in your library. With **"Stitch and save all"**, you can stitch them all in order in one go, however many there are, such as the first and second halves. Stitching takes time, so if you get it done in the car or on the train home, you can watch on the big screen as soon as you walk in.
 
-## Pricing for long stitches
-
-The only thing that can cost money is a **long stitch of 3 minutes or longer**. Recording, transfer and the setup check are free, for any length and any number.
-
-- Stitches of 3 minutes or longer can be tried **3 times for free**
-- After that, choose between an **event pass (24 hours)** and a **one-time unlock**
-- An event pass gives you unlimited long stitches for 24 hours from the first stitch you use it on. The clock starts **when you first use it**, so buying it the night before costs you nothing. For a match day or a tournament day, one pass is all you need
-- If you will keep filming every week, we recommend the one-time unlock: pay once, unlimited forever. It is not a subscription
+{{appstore}}
 
 ## After the match
 
@@ -69,7 +62,7 @@ Two for filming. A third iPhone can be a remote in your hand, so you can start a
 
 ### Does it cost anything to film a whole match?
 
-Recording is free, for any length. Stitches of 3 minutes or longer can be tried 3 times for free, and after that it is an event pass (24 hours) or a one-time unlock. For a tournament or match day, one event pass lets you stitch as many videos as you like.
+Recording is free, for any length. panovi is free to use, with in-app purchases. See the [App Store](https://apps.apple.com/app/id6797261654) for details.
 
 ### Will the battery last until the end of the match?
 
@@ -79,6 +72,5 @@ It depends on the model, the temperature and the length of the match. While reco
 
 - [Getting started with panovi — shooting your first video](post:first-video)
 - [Placing your iPhones for a clean stitch — the tripod and the shallow V](post:tripod-setup)
-- [Pricing in detail](home:#price)
 
 {{appstore}}

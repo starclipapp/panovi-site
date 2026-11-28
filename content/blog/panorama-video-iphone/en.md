@@ -57,7 +57,7 @@ No. With panovi, everything from shooting to stitching happens on your iPhone. Y
 
 ### Is it free to use?
 
-Recording, transfer and checking the setup are free for as long as you like. Stitches under 3 minutes are also free forever, with no limit on how many. Only for long stitches of 3 minutes or more, you can try it free 3 times, and after that you pick an event pass (24 hours) or a one-time unlock. It is not a monthly subscription.
+Yes, it is free to use, with in-app purchases. Recording, transfer and checking the setup are free for as long as you like. See the [App Store](https://apps.apple.com/app/id6797261654) for details.
 
 ### Which iPhones does it work on?
 

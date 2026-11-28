@@ -42,7 +42,7 @@ No hay límite de duración. Mientras grabas, puedes usar el **ahorro de energí
 
 Cuando detienes la grabación, uno de los iPhone recibe el video del otro y une la izquierda y la derecha en un solo video. La app alinea las imágenes usando la zona donde se superponen, para que la unión no se note, y también iguala las diferencias de brillo y color entre los dos lados.
 
-Con **“Guardar en Fotos”** guardas el video terminado en la app Fotos. **Las uniones de menos de 3 minutos son siempre gratis y sin límite.**
+Con **“Guardar en Fotos”** guardas el video terminado en la app Fotos. panovi es gratis, con compras dentro de la app.
 
 ## 5. Acércate
 

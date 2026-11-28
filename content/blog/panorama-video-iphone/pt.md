@@ -57,7 +57,7 @@ Não. No panovi, tudo acontece dentro do iPhone, da gravação à união. També
 
 ### Dá para usar de graça?
 
-Gravar, transferir e verificar o alinhamento é grátis, por quantos minutos você quiser. Uniões de menos de 3 minutos também são sempre grátis, sem limite. Só as uniões longas, de 3 minutos ou mais, podem ser testadas grátis 3 vezes. Depois, você escolhe entre o passe de evento (24 horas) e a compra única. Não é assinatura mensal.
+Sim, é grátis para usar, com compras dentro do app. Gravar, transferir e verificar o alinhamento é grátis, por quantos minutos você quiser. Veja os detalhes na [App Store](https://apps.apple.com/app/id6797261654).
 
 ### Em quais iPhones funciona?
 

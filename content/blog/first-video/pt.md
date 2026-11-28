@@ -42,7 +42,7 @@ Não há limite de duração. Durante a gravação, você pode usar a **economia
 
 Quando você para a gravação, um dos iPhones recebe o vídeo do outro e une a esquerda e a direita em um só vídeo. Ele alinha as imagens pela sobreposição, para a emenda não aparecer, e também iguala as diferenças de brilho e de cor entre os dois lados.
 
-Toque em **“Salvar em Fotos”** para guardar o vídeo pronto no app Fotos. **Uniões de menos de 3 minutos são sempre grátis, sem limite.**
+Toque em **“Salvar em Fotos”** para guardar o vídeo pronto no app Fotos. O panovi é grátis para usar, com compras dentro do app.
 
 ## 5. Dê zoom para assistir
 

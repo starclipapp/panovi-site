@@ -1,6 +1,6 @@
 ---
 title: Graba el partido de fútbol completo — ubicación, control remoto y batería
-description: Cómo preparar todo para grabar un partido entero en video panorámico, con el trípode fijo y las dos porterías en la imagen. Ubicación, un tercer iPhone como control remoto, ahorro de energía, espacio libre y el precio de las uniones largas.
+description: Cómo preparar todo para grabar un partido entero en video panorámico, con el trípode fijo y las dos porterías en la imagen. Ubicación, un tercer iPhone como control remoto, ahorro de energía y espacio libre.
 image_alt: Una escena ultrapanorámica con la cancha de fútbol completa, de extremo a extremo
 ---
 
@@ -41,14 +41,7 @@ No hay límite de duración. Lo que decide cuánto puedes grabar es la batería 
 
 Cuando detienes la grabación, cada grabación aparece en la biblioteca. Con **“Unir y guardar todos”** se unen en orden, de una vez, todas las que haya, como el primer y el segundo tiempo. La unión toma tiempo, así que si la haces en el auto o en el tren de regreso, al llegar a casa ya puedes verlo en la pantalla grande.
 
-## El precio de las uniones largas
-
-Lo único que puede costar dinero son las **uniones largas, de 3 minutos o más**. Grabar, transferir y verificar la alineación es gratis, sin importar los minutos ni cuántas veces.
-
-- Las uniones de 3 minutos o más las puedes probar **gratis 3 veces**
-- Después, eliges entre el **pase de evento (24 horas)** y **Ilimitado (compra única)**
-- Con el pase de evento, desde la primera unión en la que lo usas tienes 24 horas para hacer todas las uniones largas que quieras. El tiempo empieza a contar **cuando lo usas por primera vez**, así que comprarlo el día anterior no te hace perder nada. Para un día de partido o de torneo, un pase alcanza
-- Si vas a seguir grabando cada semana, te recomendamos Ilimitado: pagas una vez y lo usas sin límite para siempre. No es una suscripción
+{{appstore}}
 
 ## Después de grabar
 
@@ -69,7 +62,7 @@ Dos para grabar. Si tienes un tercer iPhone, puede ser tu control remoto: inicia
 
 ### ¿Cuesta dinero grabar un partido?
 
-Grabar es gratis, sin importar los minutos. Las uniones de 3 minutos o más las puedes probar gratis 3 veces, y después eliges entre el pase de evento (24 horas) y la compra única. Para un día de partido o de torneo, con un solo pase de evento puedes unir todos los videos que quieras.
+Grabar es gratis, sin importar los minutos. panovi es gratis, con compras dentro de la app. Mira los detalles en la [App Store](https://apps.apple.com/app/id6797261654).
 
 ### ¿La batería dura hasta el final del partido?
 
@@ -79,6 +72,5 @@ Depende del modelo, la temperatura y la duración del partido. Mientras grabas, 
 
 - [Tu primer video con panovi — paso a paso](post:first-video)
 - [Cómo colocarlos para una unión limpia — el trípode y la forma de V](post:tripod-setup)
-- [Todos los detalles del precio](home:#price)
 
 {{appstore}}

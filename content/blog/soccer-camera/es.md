@@ -58,7 +58,7 @@ panovi es una app que **coloca dos iPhone uno al lado del otro en un trípode y 
 
 Necesitas dos iPhone, un trípode y un soporte para ponerlos uno al lado del otro. Puedes usar un iPhone prestado de tu familia o de un amigo. Si los dos iPhone tienen lente ultra gran angular, puedes grabar hasta unos 190 grados (el ancho cambia según cómo los coloques).
 
-Grabar es gratis, sin importar los minutos, y las uniones de menos de 3 minutos son siempre gratis. Lo único que puede costar dinero son las uniones largas, de 3 minutos o más, que puedes probar gratis 3 veces. Después, eliges entre el **pase de evento (24 horas)** e **Ilimitado (compra única)**. No hay suscripción.
+panovi es gratis, con compras dentro de la app. No hay suscripción.
 
 ## Tabla comparativa
 
@@ -69,7 +69,7 @@ Grabar es gratis, sin importar los minutos, y las uniones de menos de 3 minutos 
 | Cámara que sigue el balón | Sí | Solo lo que sigue | Depende del producto | Equipo propio | Cambia según el producto. Revisa los costos además del aparato |
 | Cámara 360° | Sí | Sí | Sí, pero los píxeles se reparten en todas las direcciones | Una cámara 360° | Equipo propio |
 | Una cámara de acción | Sí | Suelen entrar, pero los lejanos salen pequeños | Sí, con el detalle de una sola cámara | Cámara y algo para sujetarla | Equipo propio |
-| Dos iPhone (panovi) | Sí | Sí | Sí (4K de cada lado) | Dos iPhone, trípode y soporte | Sin cámara propia y sin suscripción. Solo las uniones de 3 minutos o más pueden costar dinero |
+| Dos iPhone (panovi) | Sí | Sí | Sí (4K de cada lado) | Dos iPhone, trípode y soporte | Sin cámara propia y sin suscripción. Gratis, con compras dentro de la app |
 
 ## El trípode y dónde colocarlo
 

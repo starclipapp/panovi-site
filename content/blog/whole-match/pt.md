@@ -1,6 +1,6 @@
 ---
 title: Filme o jogo de futebol inteiro — onde colocar, controle remoto e bateria
-description: Como se preparar para filmar um jogo do começo ao fim em vídeo panorâmico, com as duas traves na imagem e o tripé parado. Onde colocar, o terceiro iPhone como controle, economia de energia, espaço livre e o preço das uniões longas.
+description: Como se preparar para filmar um jogo do começo ao fim em vídeo panorâmico, com as duas traves na imagem e o tripé parado. Onde colocar, o terceiro iPhone como controle, economia de energia e espaço livre.
 image_alt: Cena ultra-ampla de um campo de futebol, de ponta a ponta
 ---
 
@@ -41,14 +41,7 @@ Não há limite de duração. O que decide se a gravação vai até o fim é a b
 
 Quando você para a gravação, cada par de vídeos aparece na biblioteca. Com **“Unir e salvar todos”**, o app une em sequência quantos houver, como o primeiro e o segundo tempo. A união leva um tempo, então faça isso no carro ou no trem de volta. Ao chegar em casa, já dá para assistir na tela grande.
 
-## O preço das uniões longas
-
-A única coisa que pode custar dinheiro são as **uniões longas, de 3 minutos ou mais**. Gravar, transferir e verificar o alinhamento é grátis, com qualquer duração e quantas vezes quiser.
-
-- Uniões de 3 minutos ou mais: você pode testar **3 vezes de graça**
-- Depois, escolha entre o **passe de evento (24 horas)** e o **Ilimitado (compra única)**
-- Com o passe de evento, você faz quantas uniões longas quiser durante 24 horas, a partir da primeira união em que usa o passe. O tempo começa a contar **quando você usa pela primeira vez**, então comprar na véspera não faz você perder nada. Para um dia de jogo ou de torneio, um passe basta
-- Se você vai filmar toda semana, a melhor escolha é a compra única: paga uma vez e usa sem limite para sempre. Não é assinatura
+{{appstore}}
 
 ## Depois de filmar
 
@@ -69,7 +62,7 @@ Dois para filmar. Um terceiro vira um controle remoto na sua mão: sem tocar nas
 
 ### Filmar um jogo inteiro custa alguma coisa?
 
-Gravar é grátis, com qualquer duração. Uniões de 3 minutos ou mais podem ser testadas 3 vezes de graça; depois, passe de evento (24 horas) ou compra única. Para um dia de torneio ou de jogo, um passe de evento basta para unir quantos vídeos quiser.
+Gravar é grátis, com qualquer duração. O panovi é grátis para usar, com compras dentro do app. Veja os detalhes na [App Store](https://apps.apple.com/app/id6797261654).
 
 ### A bateria aguenta até o fim do jogo?
 
@@ -79,6 +72,5 @@ Depende do modelo, da temperatura e da duração do jogo. Durante a gravação, 
 
 - [Primeiros passos com o panovi — até o seu primeiro vídeo](post:first-video)
 - [Como posicionar para uma emenda perfeita — o tripé e o segredo do “V”](post:tripod-setup)
-- [Preços em detalhes](home:#price)
 
 {{appstore}}

@@ -31,7 +31,7 @@ Aquí está la diferencia con una cámara normal. Aunque hagas zoom, **la grabac
 
 Al tocar “Combinar y revisar”, la app alinea las imágenes de los dos lentes. Con **“Ver 3 segundos”** revisas rápido cómo queda, y con **“Guardar en Fotos”** lo guardas en la app Fotos.
 
-Los precios funcionan igual que con dos iPhone. **Los videos de menos de 3 minutos son siempre gratis y sin límite.** Los de 3 minutos o más los puedes probar gratis 3 veces, y después eliges entre el pase de evento (24 horas) y la compra única.
+El precio es igual que con dos iPhone: gratis, con compras dentro de la app.
 
 > **Si no se superponen bien**: al grabar paisajes lejanos, las imágenes se superponen de forma más limpia.
 

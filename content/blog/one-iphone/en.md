@@ -31,7 +31,7 @@ Here is what sets it apart from an ordinary camera. Even when you zoom in, **the
 
 Tap “Combine and review” and the app lines up the footage from the two lenses. Use **“Preview 3 seconds”** to check a short clip of the result, then **“Save to Photos”** to keep it in the Photos app.
 
-Pricing works the same way as with two iPhones. **Stitches under 3 minutes are free forever, with no limit on how many.** For 3 minutes or longer, you can try it free 3 times, and after that you pick an event pass or a one-time unlock.
+Pricing is the same as with two iPhones: free to use, with in-app purchases.
 
 > **When the two don’t line up well**: Filming distant scenery makes them easier to line up cleanly.
 

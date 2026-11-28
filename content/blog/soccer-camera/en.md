@@ -58,7 +58,7 @@ panovi is an app that **puts two iPhones side by side on a tripod and turns the 
 
 You need two iPhones, one tripod and a mount to hold the two side by side. Borrowing an iPhone from family or a friend is fine. If both iPhones have an ultra wide lens, you can film as wide as about 190 degrees (the width depends on how you set them up).
 
-Recording is free for any length, and stitches under 3 minutes are always free. The only thing that can cost money is a long stitch of 3 minutes or longer, which you can try 3 times for free. After that, choose between an **event pass (24 hours)** and a **one-time unlock**. There is no subscription.
+panovi is free to use, with in-app purchases. There is no subscription.
 
 ## Side-by-side comparison
 
@@ -69,7 +69,7 @@ Recording is free for any length, and stitches under 3 minutes are always free. 
 | Auto-tracking camera | Yes | Only what it follows | Depends on the product | Dedicated equipment | Differs by product. Check costs beyond the camera itself |
 | 360 camera | Yes | Yes | Yes, but the pixels are spread in every direction | A 360 camera | Dedicated equipment |
 | One action camera | Yes | Usually, but distant players are small | Yes, with one camera's worth of detail | A camera and something to mount it | Dedicated equipment |
-| Two iPhones (panovi) | Yes | Yes | Yes (4K on each side) | Two iPhones, a tripod and a mount | No dedicated camera and no subscription. Only stitches of 3 minutes or longer may cost money |
+| Two iPhones (panovi) | Yes | Yes | Yes (4K on each side) | Two iPhones, a tripod and a mount | No dedicated camera and no subscription. Free to use, with in-app purchases |
 
 ## The tripod and where to set up
 

@@ -12,7 +12,7 @@ Views too wide for one iPhone fit edge to edge in a single panovi video. Unlike 
 
 A still scene can be captured with a photo panorama. If you are shooting video, **include one thing that moves**, like drifting clouds, rolling waves, a passing train or people coming and going. It makes a huge difference to how alive it feels when you watch it again.
 
-20 to 30 seconds in one spot is plenty. **Stitches under 3 minutes are always free, with no limit on how many**, so you can make as many short travel clips as you like without a second thought.
+20 to 30 seconds in one spot is plenty, and you can make as many short travel clips as you like. panovi is free to use, with in-app purchases.
 
 ## 2. Keep the tripod level
 

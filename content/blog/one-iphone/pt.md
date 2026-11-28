@@ -31,7 +31,7 @@ Durante a gravação, você pode **dar zoom como na câmera de sempre**. Toque n
 
 Ao tocar em “Combinar e revisar”, o app alinha as imagens das duas lentes. Confira rapidamente o resultado em **“Prévia de 3 segundos”** e depois toque em **“Salvar em Fotos”** para guardar o vídeo no app Fotos.
 
-A forma de cobrança é a mesma de quando você usa dois iPhones. **Vídeos de menos de 3 minutos são sempre grátis, sem limite.** Os de 3 minutos ou mais podem ser testados grátis 3 vezes. Depois, você escolhe entre o passe de evento (24 horas) e a compra única.
+O preço é o mesmo de quando você usa dois iPhones: grátis para usar, com compras dentro do app.
 
 > **Se as imagens não se encaixarem bem**: gravar paisagens distantes ajuda as imagens a se encaixarem melhor.
 

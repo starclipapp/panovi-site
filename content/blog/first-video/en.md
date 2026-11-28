@@ -42,7 +42,7 @@ There is no limit on recording length. While recording, you can also use **power
 
 When you stop recording, one iPhone receives the other's footage and stitches left and right into one video. It lines them up using the overlap so the seam doesn't stand out, and it also evens out differences in brightness and color between the two sides.
 
-Use **"Save to Camera Roll"** to keep the finished video in the Photos app. **Stitches under 3 minutes are always free, with no limit on how many.**
+Use **"Save to Camera Roll"** to keep the finished video in the Photos app. panovi is free to use, with in-app purchases.
 
 ## 5. Zoom in
 

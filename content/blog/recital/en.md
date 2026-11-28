@@ -102,7 +102,7 @@ When you stop recording, tap **"Stitch recordings"** to join the two into one vi
 
 When watching, **double-tap to zoom in and drag to pan left and right**. The whole stage and your child's face, all from the same video.
 
-Stitches under 3 minutes are always free. **Stitches of 3 minutes or more**, like a recital, can be tried 3 times for free, and after that you choose between an **event pass (24 hours)** and a **one-time unlock**. You are never charged without your say: before a free use is spent, the screen asks you first, and it only counts when the save succeeds. It is not a subscription. See [pricing](home:#price) for details.
+panovi is free to use, with in-app purchases. See the [App Store](https://apps.apple.com/app/id6797261654) for details.
 
 ## Frequently asked questions
 

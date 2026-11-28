@@ -58,7 +58,7 @@ O panovi é um app que **coloca dois iPhones lado a lado num tripé e transforma
 
 Você precisa de dois iPhones, um tripé e um suporte para deixar os dois lado a lado. Pode usar um iPhone emprestado da família ou de um amigo. Se os dois iPhones tiverem lente ultra-angular, dá para filmar até cerca de 190 graus (a largura muda conforme o posicionamento).
 
-Gravar é grátis, com qualquer duração, e as uniões de menos de 3 minutos são sempre grátis. A única coisa que pode custar dinheiro são as uniões longas, de 3 minutos ou mais, que você pode testar 3 vezes de graça. Depois, escolha entre o **passe de evento (24 horas)** e o **Ilimitado (compra única)**. Não tem assinatura.
+O panovi é grátis para usar, com compras dentro do app. Não há assinatura.
 
 ## Tabela comparativa
 
@@ -69,7 +69,7 @@ Gravar é grátis, com qualquer duração, e as uniões de menos de 3 minutos s�
 | Câmera que segue a bola | Sim | Só o que ela acompanha | Depende do produto | Equipamento próprio | Muda de produto para produto. Confira os custos além do aparelho |
 | Câmera 360° | Sim | Sim | Dá, mas os pixels se dividem em todas as direções | Uma câmera 360° | Equipamento próprio |
 | Uma câmera de ação | Sim | Costuma caber, mas os distantes ficam pequenos | Dá, com o detalhe de uma câmera só | Câmera e algo para prender | Equipamento próprio |
-| Dois iPhones (panovi) | Sim | Sim | Sim (4K de cada lado) | Dois iPhones, tripé e suporte | Sem câmera própria e sem assinatura. Só as uniões de 3 minutos ou mais podem custar dinheiro |
+| Dois iPhones (panovi) | Sim | Sim | Sim (4K de cada lado) | Dois iPhones, tripé e suporte | Sem câmera própria e sem assinatura. Grátis, com compras dentro do app |
 
 ## O tripé e onde colocar
 
