@@ -1,0 +1,4 @@
+date: 2026-11-30
+category: sports
+image: /img/match-zoom.jpg
+langs: ja

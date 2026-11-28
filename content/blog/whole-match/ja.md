@@ -80,6 +80,7 @@ panovi（パノビ）を作るとき、いちばん厳しい場面として想�
 
 - [はじめての panovi — 最初の1本を撮るまで](post:first-video)
 - [きれいにつながる置き方 — 三脚と「ハの字」のコツ](post:tripod-setup)
+- [少年サッカーの試合、スマホでどう撮る？ — 立つ位置・高さ・設定と、当日の持ち物](post:soccer-video-tips)
 - [料金のくわしい説明](home:#price)
 
 {{appstore}}

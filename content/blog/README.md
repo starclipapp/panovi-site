@@ -34,6 +34,7 @@ blog/ ほか各言語の一覧・feed.xml、sitemap.xml、トップページの�
    order: 5                  入門の順番（start のときだけ意味がある。1 が「まずはここから」）
    draft: no                 yes なら日付が来ても出さない
    top: 1                    トップの「使いかた・ヒント」に入門の次に出す順番（任意。今は whole-match=1・recital=2）
+   langs: ja                 出す言語（任意。無ければ4言語）。ja だけの記事は ja.md だけでよく、ほかの言語の一覧・RSS・トップ・llms.txt には出ない。ほかの言語からの post: リンクは文字だけになる
    ```
 
 3. `ja.md` を書く → `en.md` `pt.md` `es.md` に訳す（Claude Code なら `/panovi-blog` で下書きから訳まで頼める）

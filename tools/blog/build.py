@@ -255,10 +255,14 @@ class Post:
         self.draft = meta.get("draft", "no").lower() in ("yes", "true", "1")
         # 書き直した日（任意）。無ければ公開日。構造化データの dateModified に使う
         self.modified = dt.date.fromisoformat(meta["updated"]) if meta.get("updated") else self.date
+        # 出す言語（任意。例 langs: ja）。無ければ4言語。日本語だけの記事は、ほかの言語の一覧・RSS・トップに出ない
+        self.langs = [lg.strip() for lg in meta.get("langs", ",".join(LANGS)).split(",") if lg.strip()]
+        if not self.langs or any(lg not in LANGS for lg in self.langs):
+            fail(f"{d}/meta.txt: langs は {', '.join(LANGS)} から選ぶ（カンマ区切り）")
         self.text = {}
-        missing = [lg for lg in LANGS if not (d / f"{lg}.md").is_file()]
+        missing = [lg for lg in self.langs if not (d / f"{lg}.md").is_file()]
         self.missing = missing
-        for lg in LANGS:
+        for lg in self.langs:
             if lg not in missing:
                 self.text[lg] = read_md(d / f"{lg}.md")
 
@@ -547,7 +551,8 @@ FILTER_JS = """<script>
 
 def hreflang_links(paths):
     lines = [f'<link rel="alternate" hreflang="{LANGS[lg][0]}" href="{SITE}{p}">' for lg, p in paths.items()]
-    lines.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{paths["en"]}">')
+    if "en" in paths:
+        lines.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{paths["en"]}">')
     return "\n".join(lines)
 
 
@@ -558,7 +563,8 @@ def lang_links(paths, cur):
     return f'<span class="foot-lang" role="group" aria-label="{UI[cur]["lang"]}">{links}</span>'
 
 
-def page(lang, *, title, desc, path, paths, image, body, og_type="website", extra_head="", scripts="", keywords=None):
+def page(lang, *, title, desc, path, paths, image, body, og_type="website", extra_head="", scripts="", keywords=None,
+         menu_paths=None):
     u = UI[lang]
     img = f"{SITE}{image}" if image else f"{SITE}/img/hero.jpg"
     home = LANGS[lang][1]
@@ -594,7 +600,7 @@ def page(lang, *, title, desc, path, paths, image, body, og_type="website", extr
     <nav class="nav-links">
       <a class="wide" href="{home}">{esc(u['home'])}</a>
       <div class="nav-read"><a href="{blog_path(lang)}"{' aria-current="page"' if path == blog_path(lang) else ''}>{esc(u['nav'])}</a><a href="{faq_path(lang)}"{' aria-current="page"' if path == faq_path(lang) else ''}>{esc(u['faq'])}</a></div>
-      {L.lang_menu(LANGS[lang][0], {LANGS[lg][0]: pp for lg, pp in paths.items()})}
+      {L.lang_menu(LANGS[lang][0], {LANGS[lg][0]: pp for lg, pp in (menu_paths or paths).items()})}
       <a class="btn btn-fill btn-sm" href="{appstore(lang)}" data-appstore="nav">App Store</a>
     </nav>
   </div>
@@ -708,8 +714,11 @@ def article_page(p, lang, posts, published, today):
   </div>
 </article>
 {more_html}"""
-    paths = {lg: blog_path(lg, p.slug) for lg in LANGS}
+    paths = {lg: blog_path(lg, p.slug) for lg in p.langs}
+    # 言語の切りかえ: その言語の記事が無ければ、その言語のブログ一覧へ
+    menu = {lg: paths.get(lg, blog_path(lg)) for lg in LANGS}
     out = page(lang, title=f"{p.title(lang)} | {u['suffix']}", desc=p.desc(lang), path=paths[lang], paths=paths,
+               menu_paths=menu,
                image=p.image, body=body, og_type="article", extra_head=json_ld(p, lang, ctx.faq),
                keywords=p.keywords(lang))
     return out, ctx.warnings
@@ -935,7 +944,7 @@ def llms_txt(posts):
     names = {"en": "Guides (English)", "ja": "使いかた（日本語）", "pt": "Guias (Português)", "es": "Guías (Español)"}
     for lg in ("en", "ja", "pt", "es"):
         out += [f"## {names[lg]}", ""]
-        out += [f"- [{p.title(lg)}]({SITE}{blog_path(lg, p.slug)}): {p.desc(lg)}" for p in posts]
+        out += [f"- [{p.title(lg)}]({SITE}{blog_path(lg, p.slug)}): {p.desc(lg)}" for p in posts if lg in p.langs]
         out.append("")
     return "\n".join(out)
 
@@ -961,13 +970,15 @@ def sitemap_block(posts, has_faq=False, faq_date=None):
     for lg in LANGS:
         out.append(f"  <url>\n    <loc>{SITE}{paths[lg]}</loc>\n    <lastmod>{COMPANY_PAGE_DATE}</lastmod>\n{alts}\n  </url>")
     for slug_or_none in [None] + [p.slug for p in posts]:
-        paths = {lg: blog_path(lg, slug_or_none) for lg in LANGS}
+        langs = next((p.langs for p in posts if p.slug == slug_or_none), LANGS)
+        paths = {lg: blog_path(lg, slug_or_none) for lg in langs}
         last = max(p.date for p in posts) if slug_or_none is None and posts else \
             next((p.date for p in posts if p.slug == slug_or_none), None)
         alts = "\n".join(f'    <xhtml:link rel="alternate" hreflang="{LANGS[lg][0]}" href="{SITE}{pp}"/>'
                          for lg, pp in paths.items())
-        alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{paths["en"]}"/>'
-        for lg in LANGS:
+        if "en" in paths:
+            alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{paths["en"]}"/>'
+        for lg in langs:
             lm = f"\n    <lastmod>{last}</lastmod>" if last else ""
             out.append(f"  <url>\n    <loc>{SITE}{paths[lg]}</loc>{lm}\n{alts}\n  </url>")
     return "\n".join(out)
@@ -1033,7 +1044,7 @@ def remove_stale(root, written):
 def check_published(p):
     if p.missing:
         fail(f"{p.slug}: 公開日を過ぎたが、{', '.join(p.missing)}.md が無い（4言語そろえてから公開する）")
-    for lg in ("en", "pt", "es"):
+    for lg in [lg for lg in ("en", "pt", "es") if lg in p.langs]:
         front, body = p.text[lg]
         s = " ".join(front.values()) + body
         if JP.search(s):
@@ -1042,7 +1053,7 @@ def check_published(p):
     # 4言語で画像・見出しの数がそろっているか（訳し漏れ・段落の落としを見つける）
     shape = {lg: (len(re.findall(r"^## ", p.text[lg][1], flags=re.M)),
                   len(re.findall(r"^!\[", p.text[lg][1], flags=re.M)),
-                  p.text[lg][1].count("{{appstore}}")) for lg in LANGS}
+                  p.text[lg][1].count("{{appstore}}")) for lg in p.langs}
     if len(set(shape.values())) != 1:
         fail(f"{p.slug}: 言語によって見出し・画像・App Store の数が違う（見出し, 画像, App Store）: {shape}")
 
@@ -1097,24 +1108,28 @@ def main():
         check_published(p)
     posts.sort(key=lambda p: (p.date, -p.order), reverse=True)
     published = {p.slug for p in posts}
+    # 言語ごとの公開記事（langs: ja の記事は日本語だけ）。post: のリンクも、その言語に無ければ文字だけになる
+    by_lang = {lg: [p for p in posts if lg in p.langs] for lg in LANGS}
+    pub_lang = {lg: {p.slug for p in by_lang[lg]} for lg in LANGS}
 
     written, warnings = set(), []
     for lg in LANGS:
-        for p in posts:
-            out, w = article_page(p, lg, posts, published, today)
+        posts_lg = by_lang[lg]
+        for p in posts_lg:
+            out, w = article_page(p, lg, posts_lg, pub_lang[lg], today)
             warnings += w
             write(root, f"{blog_path(lg, p.slug).lstrip('/')}index.html", out, written)
-        write(root, f"{blog_path(lg).lstrip('/')}index.html", index_page(lg, posts, today), written)
-        write(root, f"{blog_path(lg).lstrip('/')}feed.xml", feed(lg, posts), written)
+        write(root, f"{blog_path(lg).lstrip('/')}index.html", index_page(lg, posts_lg, today), written)
+        write(root, f"{blog_path(lg).lstrip('/')}feed.xml", feed(lg, posts_lg), written)
         home = (root / HOME_FILE[lg]).read_text(encoding="utf-8")
-        home = splice(home, "<!-- blog:latest:start -->", "<!-- blog:latest:end -->", latest_block(lg, posts), HOME_FILE[lg])
-        home = post_links(lg, home, posts)
+        home = splice(home, "<!-- blog:latest:start -->", "<!-- blog:latest:end -->", latest_block(lg, posts_lg), HOME_FILE[lg])
+        home = post_links(lg, home, posts_lg)
         home = splice(home, "<!-- seo:start -->", "<!-- seo:end -->", home_seo(lg, home), HOME_FILE[lg])
         write(root, HOME_FILE[lg], home, written)
     faq = load_faq()
     if faq:
         for lg in LANGS:
-            out, w, n = faq_page(lg, faq, published)
+            out, w, n = faq_page(lg, faq, pub_lang[lg])
             warnings += w
             write(root, f"{faq_path(lg).lstrip('/')}index.html", out, written)
     for lg in LANGS:
